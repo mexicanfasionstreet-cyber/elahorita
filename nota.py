@@ -1,4 +1,4 @@
-﻿"""Nota pedida a mano: /nota <tema o enlace> desde Telegram.
+"""Nota pedida a mano: /nota <tema o enlace> desde Telegram.
 
 Hace lo mismo que el flujo automatico pero sin ranking: investiga el tema, saca el
 articulo, escribe el guion, monta voz, subtitulos y video, y lo manda al chat.
@@ -87,6 +87,7 @@ def construir(args):
     # algunos medios bloquean la lectura: se prueban los siguientes del grupo
     candidatos = [link] + [it["link"] for it in (grupo[1:5] if not tema.lower().startswith("http") else [])]
     art = {"texto": "", "descripcion": "", "palabras": 0}
+    foto = ""
     for i, cand in enumerate(candidatos, 1):
         real, foto_c = resolver_enlace(cand, cache)
         if not tema.lower().startswith("http") and i <= len(grupo):

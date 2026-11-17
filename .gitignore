@@ -1,0 +1,21 @@
+# secretos: nunca al repo
+.env
+
+# python
+__pycache__/
+*.pyc
+*.py.bak
+
+# temporales de trabajo
+.tmp/
+.tmp2/
+
+# videos: viven en el Release, no en el historial
+docs/videos/*.mp4
+docs/videos/*-portada.jpg
+
+build/
+*.bak
+*.bak2
+docs/videos/*.mov
+

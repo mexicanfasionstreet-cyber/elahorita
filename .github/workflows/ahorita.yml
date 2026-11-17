@@ -1,0 +1,62 @@
+name: El Ahorita
+
+# Una sola tuberia: cada 15 minutos el orquestador decide que toca.
+# La hora se calcula en Tijuana dentro del script, asi que el cambio de horario
+# no exige tocar los cron.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      forzar_franja:
+        description: "Mandar candidatas ahora mismo"
+        type: boolean
+        default: false
+
+concurrency:
+  group: el-ahorita
+  cancel-in-progress: false
+
+jobs:
+  pasada:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          pip install --quiet edge-tts pillow
+
+      - name: Secretos
+        run: |
+          cat > .env <<'FIN'
+          DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}
+          TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
+          FIN
+
+      - name: Pasada
+        run: |
+          if [ "${{ inputs.forzar_franja }}" = "true" ]; then
+            python orquestador.py --franja
+          else
+            python orquestador.py
+          fi
+
+      - name: Guardar estado
+        if: always()
+        run: |
+          git config user.name "el-ahorita"
+          git config user.email "bot@elahorita.local"
+          git add -A datos docs
+          git diff --quiet --cached || git commit -m "estado: $(date -u +%Y-%m-%dT%H:%M)"
+          git push || echo "sin cambios que subir"

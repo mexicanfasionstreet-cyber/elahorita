@@ -1,0 +1,448 @@
+{
+ "_comment": "El Ahorita. Noticias de Mexico y el mundo. Generado el 2026-11-17 por herramientas/consolidar-fuentes.py; validar con herramientas/probar-fuentes.py antes de tocar.",
+ "sources": [
+  {
+   "name": "El Universal",
+   "short": "Universal",
+   "url": "https://news.google.com/rss/search?q=site:eluniversal.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Gob.mx",
+   "short": "GobMX",
+   "url": "https://news.google.com/rss/search?q=site:gob.mx+when:2d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "official",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Milenio",
+   "short": "Milenio",
+   "url": "https://news.google.com/rss/search?q=site:milenio.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Reuters",
+   "short": "Reuters",
+   "url": "https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "weight": 5.0,
+   "lang": "en",
+   "region": "global",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Sismologico",
+   "short": "SSN",
+   "url": "https://news.google.com/rss/search?q=site:ssn.unam.mx+when:7d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "official",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "AP",
+   "short": "AP",
+   "url": "https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "weight": 4.5,
+   "lang": "en",
+   "region": "global",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "AP",
+   "short": "APesp",
+   "url": "https://news.google.com/rss/search?q=site:apnews.com+when:2d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.5,
+   "lang": "en",
+   "region": "global",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "BBC Mundo",
+   "short": "BBCMundo",
+   "url": "https://feeds.bbci.co.uk/mundo/rss.xml",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "global",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "BBC News",
+   "short": "BBC",
+   "url": "https://feeds.bbci.co.uk/news/rss.xml",
+   "weight": 4.5,
+   "lang": "en",
+   "region": "uk",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "CNN es",
+   "short": "CNNes",
+   "url": "https://news.google.com/rss/search?q=site:cnnespanol.cnn.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "us",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "EFE",
+   "short": "EFE",
+   "url": "https://news.google.com/rss/search?q=site:efe.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "es",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "El Financiero",
+   "short": "Financiero",
+   "url": "https://news.google.com/rss/search?q=site:elfinanciero.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "El Pais",
+   "short": "ElPais",
+   "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "es",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "El Pais Mexico",
+   "short": "ElPaisMX",
+   "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/mexico/portada",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Proceso",
+   "short": "Proceso",
+   "url": "https://news.google.com/rss/search?q=site:proceso.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Al Jazeera",
+   "short": "AlJazeera",
+   "url": "https://www.aljazeera.com/xml/rss/all.xml",
+   "weight": 4.0,
+   "lang": "en",
+   "region": "qa",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Aristegui",
+   "short": "Aristegui",
+   "url": "https://news.google.com/rss/search?q=site:aristeguinoticias.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "DW es",
+   "short": "DW",
+   "url": "https://news.google.com/rss/search?q=site:dw.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "de",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "El Economista",
+   "short": "Economista",
+   "url": "https://news.google.com/rss/search?q=site:eleconomista.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Expansion",
+   "short": "Expansion",
+   "url": "https://news.google.com/rss/search?q=site:expansion.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "La Jornada",
+   "short": "Jornada",
+   "url": "https://www.jornada.com.mx/rss/edicion.xml",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "N+",
+   "short": "Nmas",
+   "url": "https://news.google.com/rss/search?q=site:nmas.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "NYT World",
+   "short": "NYT",
+   "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+   "weight": 4.0,
+   "lang": "en",
+   "region": "us",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Reforma",
+   "short": "Reforma",
+   "url": "https://www.reforma.com/rss/portada.xml",
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "France24 Espanol",
+   "short": "F24",
+   "url": "https://www.france24.com/es/rss",
+   "weight": 3.5,
+   "lang": "es",
+   "region": "fr",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "NPR",
+   "short": "NPR",
+   "url": "https://feeds.npr.org/1001/rss.xml",
+   "weight": 3.5,
+   "lang": "en",
+   "region": "us",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Sin Embargo",
+   "short": "SinEmbargo",
+   "url": "https://news.google.com/rss/search?q=site:sinembargo.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 3.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "The Guardian World",
+   "short": "Guardian",
+   "url": "https://www.theguardian.com/world/rss",
+   "weight": 3.5,
+   "lang": "en",
+   "region": "uk",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Washington Post World",
+   "short": "WaPo",
+   "url": "https://feeds.washingtonpost.com/rss/world",
+   "weight": 3.5,
+   "lang": "en",
+   "region": "us",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Zeta Tijuana",
+   "short": "Zeta",
+   "url": "https://zetatijuana.com/feed/",
+   "weight": 3.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "CNBC",
+   "short": "CNBC",
+   "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+   "weight": 3.0,
+   "lang": "en",
+   "region": "us",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "El Debate",
+   "short": "Debate",
+   "url": "https://news.google.com/rss/search?q=site:debate.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "El Imparcial",
+   "short": "Imparcial",
+   "url": "https://news.google.com/rss/search?q=site:elimparcial.com+when:2d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "El Informador",
+   "short": "Informador",
+   "url": "https://news.google.com/rss/search?q=site:informador.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Forbes MX",
+   "short": "ForbesMX",
+   "url": "https://news.google.com/rss/search?q=site:forbes.com.mx+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "Lopez-Doriga",
+   "short": "LD",
+   "url": "https://lopezdoriga.com/feed/",
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Politico",
+   "short": "Politico",
+   "url": "https://rss.politico.com/politics-news.xml",
+   "weight": 3.0,
+   "lang": "en",
+   "region": "us",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "24 Horas",
+   "short": "24H",
+   "url": "https://www.24-horas.mx/feed/",
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "Diario de Juarez",
+   "short": "Diario",
+   "url": "https://news.google.com/rss/search?q=site:diario.mx+when:2d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "El CEO",
+   "short": "ElCEO",
+   "url": "https://elceo.com/feed/",
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "generic": false
+  },
+  {
+   "name": "La Silla Rota",
+   "short": "SillaRota",
+   "url": "https://news.google.com/rss/search?q=site:lasillarota.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  },
+  {
+   "name": "SDP",
+   "short": "SDP",
+   "url": "https://news.google.com/rss/search?q=site:sdpnoticias.com+when:1d&hl=es-419&gl=MX&ceid=MX:es-419",
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "kind": "news",
+   "mirror": true,
+   "aggregator": true
+  }
+ ]
+}

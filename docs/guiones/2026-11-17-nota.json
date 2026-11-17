@@ -1,0 +1,31 @@
+{
+ "origen": "nota_manual",
+ "tema": "salario minimo Mexico 2027",
+ "palabras": 187,
+ "segundos_estimados": 69.3,
+ "historias": [
+  {
+   "titulo": "Salario mínimo 2027: qué implica el aumento para el pago de impuestos y cuotas del IMSS - Infobae",
+   "link": "https://www.infobae.com/mexico/2026/11/17/salario-minimo-2027-que-implica-el-aumento-para-el-pago-de-impuestos-y-cuotas-del-imss/",
+   "seccion": "economia",
+   "medios": 1,
+   "score": 0,
+   "imagen": true,
+   "imagen_url": "https://www.infobae.com/resizer/v2/E45IPC3LAVEQLJ3XJ4CWMLSSCM.png?auth=e24f8f43fe9e32ae309e58e8ff85bf97399b825952ad25c0939d2bf9606916bc&smart=true&width=1024&height=512&quality=85",
+   "region": "mx",
+   "horas": 1.0
+  }
+ ],
+ "guion": {
+  "gancho": "El salario mínimo de 2027 todavía no tiene cifra, pero ya se está negociando y te va a tocar el bolsillo.",
+  "notas": [
+   {
+    "kicker": "ECONOMÍA",
+    "texto": "El aumento al salario mínimo de 2027 todavía no tiene una cifra aprobada. Se está discutiendo en la Conasami, y el monto que se fije va a cambiar el pago de ISR y las cuotas del IMSS, según cuánto gane cada trabajador. El Consejo de Representantes, con sector obrero, patronal y gobierno, abre sesión permanente entre el 23 y el 27 de noviembre. El 30 de noviembre cierra el plazo para que sindicatos y cámaras presenten propuestas técnicas. Desde el 1 de diciembre el Consejo puede votar y emitir la resolución, y el nuevo monto entra en vigor el 1 de enero de 2027. Hoy el salario mínimo general es de 315.04 pesos diarios, y en la Zona Libre de la Frontera Norte es de 440.87 pesos. Los planteamientos van desde 12 por ciento de la CTM y la CROC, 13 por ciento de la UNT y hasta 15 a 18 por ciento del Congreso del Trabajo.",
+    "pantalla": "Conasami discute el salario mínimo 2027"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "SALARIO MÍNIMO 2027 EN NEGOCIACIÓN"
+ }
+}

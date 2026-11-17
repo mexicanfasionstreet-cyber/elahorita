@@ -1,0 +1,30 @@
+{
+ "Excelsior": {
+  "name": "Excelsior",
+  "url": "https://www.excelsior.com.mx/rss/",
+  "ok": true,
+  "items": 44,
+  "nota": "<![CDATA[Jensen Huang afirma estar listo para regresar como CEO de Nvi"
+ },
+ "El Sol de Mexico": {
+  "name": "El Sol de Mexico",
+  "url": "https://www.elsoldemexico.com.mx/rss.xml",
+  "ok": true,
+  "items": 100,
+  "nota": "U2 prepara un espectáculo especial para la NFL"
+ },
+ "La Opinion": {
+  "name": "La Opinion",
+  "url": "https://laopinion.com/feed/",
+  "ok": true,
+  "items": 50,
+  "nota": "Capturan en San Diego a narco guatemalteco por quien EE.UU. ofrecía 10"
+ },
+ "Emeequis": {
+  "name": "Emeequis",
+  "url": "https://www.emeequis.com/feed/",
+  "ok": true,
+  "items": 12,
+  "nota": "Jensen Huang dice que está arrepentido y quiere volver a NVIDIA"
+ }
+}

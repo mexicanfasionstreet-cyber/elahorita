@@ -1,0 +1,27 @@
+{
+ "origen": "ia",
+ "palabras": 179,
+ "segundos_estimados": 66.3,
+ "historias": [
+  {
+   "titulo": "Jensen Huang rompe su silencio tras el escándalo y dice que está dispuesto a regresar de consejero delegado a Nvidia",
+   "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
+   "seccion": "economia",
+   "medios": 7,
+   "score": 94.5,
+   "imagen": true
+  }
+ ],
+ "guion": {
+  "gancho": "El fundador de Nvidia quiere volver a su puesto, pero la junta tiene la última palabra.",
+  "notas": [
+   {
+    "kicker": "ECONOMIA",
+    "texto": "Jensen Huang habló por primera vez desde que dejó Nvidia. Dijo que está dispuesto a regresar como consejero delegado de la empresa de chips. En un comunicado en X, contó que ha recibido llamadas de empleados, inversores, socios y clientes pidiéndole que vuelva. Aclaró que solo regresaría si la junta de directores decide que eso conviene a los accionistas, a los empleados, a la compañía y a Estados Unidos. La salida de Huang ocurrió en medio de un escándalo por sus relaciones extramatrimoniales. Una de ellas fue con Alice Huang, creadora de Megaspeed, empresa de Singapur que compró unos cuatro mil ochocientos millones de dólares en chips de inteligencia artificial de Nvidia. Según un reporte de The New York Times, funcionarios de inteligencia de Estados Unidos determinaron que Alice Huang era una operadora de Pekín que desvió chips a China. El país asiático negó que ella haya espiado a su favor.",
+    "pantalla": "Jensen Huang dice que volvería a Nvidia"
+   }
+  ],
+  "cierre": "En El Ahorita seguimos pendientes de lo que pasa en la tecnología.",
+  "gancho_pantalla": "JENSEN HUANG QUIERE VOLVER"
+ }
+}

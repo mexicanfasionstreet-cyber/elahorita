@@ -1,0 +1,40 @@
+{
+ "origen": "ia",
+ "palabras": 188,
+ "segundos_estimados": 69.6,
+ "historias": [
+  {
+   "titulo": "Jensen Huang rompe su silencio tras el escándalo y dice que está dispuesto a regresar de consejero delegado a Nvidia",
+   "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
+   "seccion": "economia",
+   "medios": 7,
+   "score": 94.9,
+   "imagen": true
+  },
+  {
+   "titulo": "Xi y Sheinbaum inauguran “una nueva era de cooperación” entre China y México",
+   "link": "https://elpais.com/internacional/2026-11-17/xi-y-sheinbaum-dan-inicio-a-una-nueva-era-de-cooperacion-entre-china-y-mexico.html",
+   "seccion": "mundo",
+   "medios": 7,
+   "score": 93.4,
+   "imagen": true
+  }
+ ],
+ "guion": {
+  "gancho": "Jensen Huang quiere volver a Nvidia y Sheinbaum se reúne con Xi Jinping.",
+  "notas": [
+   {
+    "kicker": "ECONOMIA",
+    "pantalla": "Jensen Huang dice que está dispuesto a regresar a Nvidia",
+    "texto": "Jensen Huang habló por primera vez desde que dejó Nvidia. Dijo que está dispuesto a regresar como consejero delegado. En un comunicado en X, contó que ha recibido una cascada de llamadas de empleados, inversores, socios y clientes para que vuelva. Aclaró que solo regresaría si la junta de directores decide que es lo mejor para los accionistas, los empleados, la compañía y Estados Unidos."
+   },
+   {
+    "kicker": "MUNDO",
+    "pantalla": "Xi Jinping y Sheinbaum inauguran nueva era de cooperación",
+    "texto": "Xi Jinping recibió a Claudia Sheinbaum en la residencia oficial de Qilin, en Shenzhen, en el marco de la cumbre del APEC. Es el primer viaje de Sheinbaum a China como mandataria y busca abrir mercado a los productos mexicanos y explorar proyectos de cooperación. La cita llega en plena negociación entre México y Estados Unidos sobre el futuro del TMEC. Sheinbaum confirmó que mañana tendrá un encuentro muy, muy breve con Donald Trump durante la cena de líderes. Xi describió a China y México como buenos amigos a ambos lados del Pacífico y pidió llevar los vínculos a un nivel más alto."
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos mañana.",
+  "gancho_pantalla": "HUANG Y SHEINBAUM HOY"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "pendientes": {
+  "n1": {
+   "titulo": "Jensen Huang rompe su silencio tras el escándalo y dice que está dispuesto a regresar de consejero delegado a Nvidia",
+   "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
+   "seccion": "economia",
+   "score": 94.5,
+   "medios": 7,
+   "imagen": true
+  },
+  "n2": {
+   "titulo": "Xi y Sheinbaum inauguran “una nueva era de cooperación” entre China y México",
+   "link": "https://elpais.com/internacional/2026-11-17/xi-y-sheinbaum-dan-inicio-a-una-nueva-era-de-cooperacion-entre-china-y-mexico.html",
+   "seccion": "mundo",
+   "score": 93.1,
+   "medios": 7,
+   "imagen": true
+  },
+  "n3": {
+   "titulo": "Trump says US taking 'very seriously' any Iranian plot against Washington",
+   "link": "https://www.bbc.co.uk/news/articles/cq808vzd3nnpo?at_medium=RSS&at_campaign=rss",
+   "seccion": "mundo",
+   "score": 77.0,
+   "medios": 3,
+   "imagen": true
+  }
+ },
+ "offset": 135201031,
+ "elegidas": []
+}

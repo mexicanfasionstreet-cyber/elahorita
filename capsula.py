@@ -382,11 +382,16 @@ def construir(args):
     for i, s in enumerate(segs):
         destino = slides_dir / f"{i:02d}-{s['id']}.png"
         if s["id"] == "cierre":
-            base = foto("", slides_dir / f"{i:02d}-fuente.img")
+            # la tarjeta de cierre va tal cual, sin etiqueta ni caja de titular
             if CIERRE.exists():
-                base = Image.open(CIERRE).convert("RGB")
-        else:
-            base = foto(foto_de(s["id"]), slides_dir / f"{i:02d}-fuente.img")
+                im = Image.open(CIERRE).convert("RGB").resize((ANCHO, ALTO), Image.LANCZOS)
+            else:
+                im = diapositiva(degradado(), s["kicker"], textos.get("cierre", ""))
+            im.save(destino, "PNG")
+            rutas.append(destino)
+            print(f"  diapositiva {destino.name} (cierre de marca)")
+            continue
+        base = foto(foto_de(s["id"]), slides_dir / f"{i:02d}-fuente.img")
         fuente_txt, es_mx, horas, medios = "", True, 99.0, 1
         idx = int(s["id"][4:]) - 1 if s["id"].startswith("nota") else 0
         if 0 <= idx < len(historias):

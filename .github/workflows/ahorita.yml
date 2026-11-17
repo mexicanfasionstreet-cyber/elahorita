@@ -1,11 +1,13 @@
 name: El Ahorita
 
-# Una sola tuberia: cada 15 minutos el orquestador decide que toca.
+# Una sola tuberia: cada 5 minutos el orquestador decide que toca.
+# El cron de GitHub es "mejor esfuerzo": a veces salta pasadas. Para uso serio,
+# disparar tambien desde fuera (cron-job.org) contra la API de GitHub.
 # La hora se calcula en Tijuana dentro del script, asi que el cambio de horario
 # no exige tocar los cron.
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       forzar_franja:

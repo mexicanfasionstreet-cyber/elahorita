@@ -44,6 +44,17 @@ jobs:
           TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
           FIN
 
+      - name: Revisar clave
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, ".")
+          import config
+          k = config.LLAVE
+          print(f"clave: {len(k)} caracteres · empieza por sk-: {k.startswith('sk-')}")
+          print(f"base: {config.BASE_URL} · modelo: {config.MODELO}")
+          PY
+
       - name: Pasada
         run: |
           if [ "${{ inputs.forzar_franja }}" = "true" ]; then

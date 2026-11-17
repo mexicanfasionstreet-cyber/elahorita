@@ -24,6 +24,14 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
+
+# lee las claves del .env del proyecto (YT_CLIENT_ID / YT_CLIENT_SECRET)
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+try:
+    import config  # noqa: F401  (carga .env al importarse)
+except Exception:  # noqa: BLE001
+    config = None
 
 SCOPE = "https://www.googleapis.com/auth/youtube.upload"
 DEVICE = "https://oauth2.googleapis.com/device/code"
@@ -41,8 +49,10 @@ def post(url, datos):
 
 
 def main():
-    cid = os.environ.get("YT_CLIENT_ID") or (sys.argv[1] if len(sys.argv) > 1 else "")
-    csec = os.environ.get("YT_CLIENT_SECRET") or (sys.argv[2] if len(sys.argv) > 2 else "")
+    cid = (os.environ.get("YT_CLIENT_ID") or (sys.argv[1] if len(sys.argv) > 1 else "")
+           or (getattr(config, "YT_CLIENT_ID", "") if config else ""))
+    csec = (os.environ.get("YT_CLIENT_SECRET") or (sys.argv[2] if len(sys.argv) > 2 else "")
+            or (getattr(config, "YT_CLIENT_SECRET", "") if config else ""))
     if not cid or not csec:
         print("Faltan YT_CLIENT_ID y YT_CLIENT_SECRET.")
         print("Créalos en https://console.cloud.google.com/apis/credentials")

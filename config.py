@@ -28,6 +28,10 @@ MODELO = os.environ.get("LLM_MODEL", "deepseek-chat")
 VOZ = os.environ.get("CAPSULA_VOZ", "es-MX-JorgeNeural")
 VOZ_RITMO = os.environ.get("CAPSULA_VOZ_RITMO", "+10%")
 
+YT_CLIENT_ID = os.environ.get("YT_CLIENT_ID", "").strip()
+YT_CLIENT_SECRET = os.environ.get("YT_CLIENT_SECRET", "").strip()
+YT_REFRESH = os.environ.get("YT_REFRESH_TOKEN", "").strip()
+
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 

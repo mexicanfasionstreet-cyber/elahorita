@@ -1,31 +1,31 @@
 {
  "origen": "nota_manual",
- "tema": "salario minimo Mexico 2027",
- "palabras": 187,
- "segundos_estimados": 69.3,
+ "tema": "Tijuana garita Otay tiempos de espera",
+ "palabras": 162,
+ "segundos_estimados": 60.0,
  "historias": [
   {
-   "titulo": "Salario mínimo 2027: qué implica el aumento para el pago de impuestos y cuotas del IMSS - Infobae",
-   "link": "https://www.infobae.com/mexico/2026/11/17/salario-minimo-2027-que-implica-el-aumento-para-el-pago-de-impuestos-y-cuotas-del-imss/",
-   "seccion": "economia",
-   "medios": 1,
+   "titulo": "Garitas de Otay y San Ysidro registran filas de hasta 110 minutos (Datos actualizados a las 7:00 am PST) Los cruces fronterizos entre Baja California y Estados Unidos registran demoras importantes la mañana de este martes. La garita de Otay Mesa se posici - tijuanaenlinea.com",
+   "link": "https://www.tijuanaenlinea.com/garitas/2026/11/17/garitas-de-otay-y-san-ysidro-registran-filas-de-hasta-110-minutos-2/",
+   "seccion": "migracion",
+   "medios": 4,
    "score": 0,
-   "imagen": true,
-   "imagen_url": "https://www.infobae.com/resizer/v2/E45IPC3LAVEQLJ3XJ4CWMLSSCM.png?auth=e24f8f43fe9e32ae309e58e8ff85bf97399b825952ad25c0939d2bf9606916bc&smart=true&width=1024&height=512&quality=85",
+   "imagen": false,
+   "imagen_url": "",
    "region": "mx",
    "horas": 1.0
   }
  ],
  "guion": {
-  "gancho": "El salario mínimo de 2027 todavía no tiene cifra, pero ya se está negociando y te va a tocar el bolsillo.",
+  "gancho": "Si hoy cruzas a Estados Unidos por Tijuana, esto te conviene saber antes de salir.",
   "notas": [
    {
-    "kicker": "ECONOMÍA",
-    "texto": "El aumento al salario mínimo de 2027 todavía no tiene una cifra aprobada. Se está discutiendo en la Conasami, y el monto que se fije va a cambiar el pago de ISR y las cuotas del IMSS, según cuánto gane cada trabajador. El Consejo de Representantes, con sector obrero, patronal y gobierno, abre sesión permanente entre el 23 y el 27 de noviembre. El 30 de noviembre cierra el plazo para que sindicatos y cámaras presenten propuestas técnicas. Desde el 1 de diciembre el Consejo puede votar y emitir la resolución, y el nuevo monto entra en vigor el 1 de enero de 2027. Hoy el salario mínimo general es de 315.04 pesos diarios, y en la Zona Libre de la Frontera Norte es de 440.87 pesos. Los planteamientos van desde 12 por ciento de la CTM y la CROC, 13 por ciento de la UNT y hasta 15 a 18 por ciento del Congreso del Trabajo.",
-    "pantalla": "Conasami discute el salario mínimo 2027"
+    "kicker": "MIGRACION",
+    "texto": "Este martes 17 de noviembre, la garita de Otay Mesa amaneció con las filas más largas de la frontera de Baja California. El corte de las 7 de la mañana marca 110 minutos de demora tanto en el carril normal como en Ready Lane, y solo hay dos carriles abiertos en cada uno. En San Ysidro la espera es de 80 minutos en el carril normal, 60 en Ready Lane y 20 en Sentri. Si vas a pie, el cruce peatonal de San Ysidro anda en 30 minutos, y PedWest en lo mismo. En Mexicali, Calexico West reporta 75 minutos en carril normal y Ready Lane, mientras Calexico East está mucho más ligero, con 30 minutos. Pasar hasta 110 minutos a vuelta de rueda gasta gasolina y cansa a quien cruza diario. Si puedes, considera horarios alternos o el carril Sentri.",
+    "pantalla": "Otay Mesa con 110 minutos de espera"
    }
   ],
-  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
-  "gancho_pantalla": "SALARIO MÍNIMO 2027 EN NEGOCIACIÓN"
+  "cierre": "Esto es El Ahorita, al momento.",
+  "gancho_pantalla": "FILAS EN LA FRONTERA HOY"
  }
 }

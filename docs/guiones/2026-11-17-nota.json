@@ -1,8 +1,8 @@
 {
  "origen": "nota_manual",
- "tema": "Tijuana garita Otay tiempos de espera",
- "palabras": 162,
- "segundos_estimados": 60.0,
+ "tema": "Tijuana garita de otay tiempos de espera",
+ "palabras": 176,
+ "segundos_estimados": 65.2,
  "historias": [
   {
    "titulo": "Garitas de Otay y San Ysidro registran filas de hasta 110 minutos (Datos actualizados a las 7:00 am PST) Los cruces fronterizos entre Baja California y Estados Unidos registran demoras importantes la mañana de este martes. La garita de Otay Mesa se posici - tijuanaenlinea.com",
@@ -10,22 +10,22 @@
    "seccion": "migracion",
    "medios": 4,
    "score": 0,
-   "imagen": false,
-   "imagen_url": "",
+   "imagen": true,
+   "imagen_url": "https://www.tijuanaenlinea.com/wp-content/uploads/2026/07/garitasbot.jpg",
    "region": "mx",
    "horas": 1.0
   }
  ],
  "guion": {
-  "gancho": "Si hoy cruzas a Estados Unidos por Tijuana, esto te conviene saber antes de salir.",
+  "gancho": "Si cruzas hoy a Estados Unidos, esto te conviene saber antes de salir de casa.",
   "notas": [
    {
     "kicker": "MIGRACION",
-    "texto": "Este martes 17 de noviembre, la garita de Otay Mesa amaneció con las filas más largas de la frontera de Baja California. El corte de las 7 de la mañana marca 110 minutos de demora tanto en el carril normal como en Ready Lane, y solo hay dos carriles abiertos en cada uno. En San Ysidro la espera es de 80 minutos en el carril normal, 60 en Ready Lane y 20 en Sentri. Si vas a pie, el cruce peatonal de San Ysidro anda en 30 minutos, y PedWest en lo mismo. En Mexicali, Calexico West reporta 75 minutos en carril normal y Ready Lane, mientras Calexico East está mucho más ligero, con 30 minutos. Pasar hasta 110 minutos a vuelta de rueda gasta gasolina y cansa a quien cruza diario. Si puedes, considera horarios alternos o el carril Sentri.",
+    "texto": "Este martes 17 de noviembre, la garita de Otay Mesa registra la mayor saturación, con demoras de hasta 110 minutos. Aplica igual para el carril normal y para Ready Lane, y solo hay dos carriles abiertos en cada uno. En San Ysidro el carril normal va en 80 minutos y Ready Lane en 60, con siete y once carriles abiertos. Sentri es la opción más rápida en ambos cruces: 20 minutos en San Ysidro y 30 en Otay Mesa. En peatonal, Otay Mesa normal marca 90 minutos, mientras que PedWest normal está en 30 y su Ready Lane en 5. En Mexicali, Calexico West va en 75 minutos normal y Ready Lane, y Calexico East en 30. Pasar hasta 110 minutos a vuelta de rueda implica gasto continuo de gasolina y fatiga para miles de automovilistas transfronterizos. Los tiempos son un corte a las 7 de la mañana, hora del Pacífico.",
     "pantalla": "Otay Mesa con 110 minutos de espera"
    }
   ],
-  "cierre": "Esto es El Ahorita, al momento.",
-  "gancho_pantalla": "FILAS EN LA FRONTERA HOY"
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente corte.",
+  "gancho_pantalla": "FILAS EN GARITAS HOY"
  }
 }

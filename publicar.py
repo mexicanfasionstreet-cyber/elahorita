@@ -52,6 +52,25 @@ def token_de_acceso():
     return datos["access_token"]
 
 
+def canal(acceso=None):
+    """Dice a que canal pertenece el token: evita subir al canal equivocado."""
+    acceso = acceso or token_de_acceso()
+    url = ("https://www.googleapis.com/youtube/v3/channels"
+           "?part=snippet&mine=true")
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {acceso}"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            datos = json.load(r)
+    except urllib.error.HTTPError as e:
+        detalle = e.read()[:300].decode("utf-8", "replace")
+        raise SystemExit(f"YouTube rechazo la consulta ({e.code}): {detalle}")
+    items = datos.get("items") or []
+    if not items:
+        return None
+    it = items[0]
+    return {"id": it["id"], "nombre": it["snippet"]["title"]}
+
+
 def textos(video, guion_path=None):
     """Titulo y descripcion a partir del guion, si existe."""
     titulo, descripcion = video.stem.replace("-", " ").title(), ""
@@ -139,7 +158,16 @@ def main():
     ap.add_argument("--privacidad", default="public",
                     choices=["public", "unlisted", "private"])
     ap.add_argument("--solo-titulo", action="store_true")
+    ap.add_argument("--canal", action="store_true", help="solo decir a que canal apunta el token")
     args = ap.parse_args()
+
+    if args.canal:
+        info = canal()
+        if not info:
+            print("el token no tiene ningun canal asociado")
+            return 1
+        print(f"canal: {info['nombre']}  ·  id {info['id']}")
+        return 0
 
     titulo, descripcion = textos(Path(args.video), args.guion)
     if args.solo_titulo:

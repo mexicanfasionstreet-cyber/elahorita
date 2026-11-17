@@ -148,6 +148,9 @@ def subir(video, titulo, descripcion, privacidad="public", categoria="25"):
     except urllib.error.HTTPError as e:
         detalle = e.read()[:400].decode("utf-8", "replace")
         raise SystemExit(f"fallo la subida ({e.code}): {detalle}")
+    snip = respuesta.get("snippet") or {}
+    if snip.get("channelTitle"):
+        print(f"  canal: {snip['channelTitle']}  ·  id {snip.get('channelId', '')}")
     return respuesta.get("id", "")
 
 
@@ -162,6 +165,8 @@ def main():
     args = ap.parse_args()
 
     if args.canal:
+        print("nota: leer el canal necesita el permiso youtube.readonly.")
+        print("con el token actual la verificacion sale al subir un video en privado.\n")
         info = canal()
         if not info:
             print("el token no tiene ningun canal asociado")

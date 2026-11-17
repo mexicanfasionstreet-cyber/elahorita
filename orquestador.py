@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime
@@ -68,8 +69,30 @@ def correr(comando, avisar=True):
     return False
 
 
+def subir_a_youtube(video):
+    """Sube el video al canal si hay credenciales. Devuelve el enlace o None."""
+    import config
+    if not (config.YT_CLIENT_ID and config.YT_CLIENT_SECRET and config.YT_REFRESH):
+        return None
+    privacidad = os.environ.get("YT_PRIVACIDAD", "public")
+    print(f"  subiendo a YouTube ({privacidad})")
+    hecho = subprocess.run(
+        [sys.executable, str(RAIZ / "publicar.py"), "--video", str(video),
+         "--privacidad", privacidad],
+        cwd=RAIZ, capture_output=True, text=True, errors="replace")
+    print(hecho.stdout[-1500:])
+    if hecho.returncode != 0:
+        bot.mandar(f"<b>No se pudo subir a YouTube</b>\n<pre>"
+                   f"{(hecho.stderr or hecho.stdout)[-500:]}</pre>")
+        return None
+    for linea in (hecho.stdout or "").splitlines():
+        if "youtube.com/shorts/" in linea:
+            return linea.split()[-1]
+    return None
+
+
 def armar_video(link="", tema=""):
-    """Guion -> voz -> video -> chat para una historia o un tema."""
+    """Guion -> voz -> video -> chat (y YouTube) para una historia o un tema."""
     sello = datetime.now(TZ).strftime("%Y-%m-%d")
     if tema:
         if not correr([str(RAIZ / "nota.py"), tema]):
@@ -84,10 +107,14 @@ def armar_video(link="", tema=""):
     if not correr([str(RAIZ / "capsula.py"), "--guion", str(destino)]):
         return False
     video = RAIZ / "docs" / "videos" / f"{sello}-elegida.mp4"
-    if video.exists():
-        bot.mandar_video(video, "El Ahorita · la nota que elegiste")
-        return True
-    return False
+    if not video.exists():
+        return False
+    enlace = subir_a_youtube(video)
+    pie = "El Ahorita · la nota que elegiste"
+    if enlace:
+        pie += f"\n{enlace}"
+    bot.mandar_video(video, pie)
+    return True
 
 
 def atender_telegram():

@@ -29,32 +29,30 @@ LINEA_BASE = 150         # linea base del texto dentro de la banda
 ROJO = (225, 6, 0)
 BLANCO = (255, 255, 255)
 
-FUENTE = RAIZ / "marca" / "fuentes" / "Archivo-Variable.ttf"
+# Se usa la estatica: con la variable, PIL mide distinto de lo que dibuja y los
+# subtitulos se salian de cuadro. Archivo Black es el peso 800/900 de la familia.
+FUENTE = RAIZ / "marca" / "fuentes" / "ArchivoBlack-Regular.ttf"
 TAM_FUENTE = 62
 MAX_ANCHO = ANCHO - 180
 MAX_PALABRAS = 6
 
 
-def fuente(tam=TAM_FUENTE, peso=800):
+def fuente(tam=TAM_FUENTE, peso=None):
     try:
-        f = ImageFont.truetype(str(FUENTE), tam)
-        f.set_variation_by_axes([100, peso])
-        return f
+        return ImageFont.truetype(str(FUENTE), tam)
     except Exception:  # noqa: BLE001
         try:
             return ImageFont.truetype(str(RAIZ / "marca" / "fuentes"
-                                          / "ArchivoBlack-Regular.ttf"), tam)
+                                          / "Archivo-Variable.ttf"), tam)
         except Exception:  # noqa: BLE001
             return ImageFont.load_default()
 
 
-def paginas(palabras):
-    """Agrupa las palabras en renglones que quepan en el ancho (6 palabras max)."""
-    f = fuente()
+def paginas(palabras, por_renglon=5):
+    """Agrupa las palabras en renglones cortos; el tamano se ajusta al dibujar."""
     salida, actual = [], []
     for p in palabras:
-        prueba = " ".join([x["texto"] for x in actual] + [p["texto"]])
-        if actual and (f.getlength(prueba) > MAX_ANCHO or len(actual) >= MAX_PALABRAS):
+        if actual and len(actual) >= por_renglon:
             salida.append(actual)
             actual = [p]
         else:
@@ -64,23 +62,34 @@ def paginas(palabras):
     return salida
 
 
+def tamano_que_cabe(bloque, tope=MAX_ANCHO, tam_max=TAM_FUENTE, tam_min=34):
+    """Baja el tamano de letra hasta que el renglon quepa en el ancho."""
+    for tam in range(tam_max, tam_min - 1, -2):
+        f = fuente(tam)
+        ancho = sum(f.getlength(p["texto"]) for p in bloque) + f.getlength(" ") * (len(bloque) - 1)
+        if ancho <= tope:
+            return tam, f, ancho
+    f = fuente(tam_min)
+    ancho = sum(f.getlength(p["texto"]) for p in bloque) + f.getlength(" ") * (len(bloque) - 1)
+    return tam_min, f, ancho
+
+
 def dibujar(bloque, activa):
     """Banda transparente con el renglon; la palabra `activa` va en pastilla roja."""
     im = Image.new("RGBA", (ANCHO, ALTO_BANDA), (0, 0, 0, 0))
     if not bloque:
         return im
     d = ImageDraw.Draw(im)
-    f = fuente()
+    tam, f, ancho_total = tamano_que_cabe(bloque)
     espacios = f.getlength(" ")
-    ancho_total = sum(f.getlength(p["texto"]) for p in bloque) + espacios * (len(bloque) - 1)
     x = (ANCHO - ancho_total) / 2
     for i, p in enumerate(bloque):
         ancho = f.getlength(p["texto"])
         if i == activa:
             d.rounded_rectangle(
-                [x - 12, LINEA_BASE - TAM_FUENTE - 8, x + ancho + 12, LINEA_BASE + 14],
+                [x - 12, LINEA_BASE - tam - 8, x + ancho + 12, LINEA_BASE + 14],
                 radius=10, fill=ROJO)
-        d.text((x, LINEA_BASE - TAM_FUENTE), p["texto"], font=f, fill=BLANCO)
+        d.text((x, LINEA_BASE - tam), p["texto"], font=f, fill=BLANCO)
         x += ancho + espacios
     return im
 

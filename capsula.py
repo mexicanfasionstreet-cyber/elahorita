@@ -135,15 +135,14 @@ def imresize_cover(im, size):
 
 
 def degradado():
-    """Fondo de marca para cuando no hay foto (o para el cierre)."""
+    """Fondo de marca para cuando no hay foto: negro que baja a rojo profundo,
+    para que se lea como diseño y no como un error."""
     im = Image.new("RGB", (ANCHO, ALTO), NEGRO)
     d = ImageDraw.Draw(im)
     for y in range(ALTO):
-        t = y / ALTO
-        r = int(10 + 26 * t)
-        g = int(10 + 20 * t)
-        b = int(16 + 34 * t)
-        d.line([(0, y), (ANCHO, y)], fill=(r, g, b))
+        t = (y / ALTO) ** 1.6
+        d.line([(0, y), (ANCHO, y)],
+               fill=(int(14 + 62 * t), int(14 + 8 * t), int(14 + 6 * t)))
     return im
 
 

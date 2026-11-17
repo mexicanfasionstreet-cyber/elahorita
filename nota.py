@@ -102,8 +102,10 @@ def construir(args):
     else:
         print(f"  material: {art['palabras']} palabras")
 
+    if not foto:
+        foto = art.get("imagen", "")       # enlaces directos: og:image del articulo
     if not titulo:
-        titulo = art["descripcion"][:110] or tema
+        titulo = art.get("titulo") or art["descripcion"][:110] or tema
 
     from aggregate import classify
     slug = (classify(titulo, art["texto"]) or ["industria"])[0]

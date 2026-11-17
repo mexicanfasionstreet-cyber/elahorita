@@ -54,6 +54,12 @@ PARRAFO = re.compile(r"<p\b[^>]*>(.*?)</p>", re.I | re.S)
 ARTICLE = re.compile(r"<article\b[^>]*>(.*?)</article>", re.I | re.S)
 META = re.compile(r"""<meta[^>]+(?:name|property)=["'](og:description|description)["'][^>]+content=["']([^"']+)["']""",
                   re.I)
+# og:image puede venir con el content antes o despues de la propiedad
+OG_IMG = [
+    re.compile(r"""<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']""", re.I),
+    re.compile(r"""<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']""", re.I),
+]
+OG_TITLE = re.compile(r"""<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']""", re.I)
 
 
 def _limpiar_html(html):
@@ -81,7 +87,8 @@ def parrafos(html, minimo=70):
 
 def articulo(url, timeout=TIMEOUT):
     """Devuelve {'texto', 'descripcion', 'palabras', 'url'} del articulo."""
-    vacio = {"texto": "", "descripcion": "", "palabras": 0, "url": url}
+    vacio = {"texto": "", "descripcion": "", "imagen": "", "titulo": "",
+             "palabras": 0, "url": url}
     try:
         req = urllib.request.Request(url, headers={
             "User-Agent": UA,
@@ -100,13 +107,24 @@ def articulo(url, timeout=TIMEOUT):
     if m:
         desc = clean_text(m.group(2))
 
+    imagen = ""
+    for rx in OG_IMG:
+        m = rx.search(html)
+        if m and m.group(1).startswith("http"):
+            imagen = m.group(1)
+            break
+    titulo = ""
+    m = OG_TITLE.search(html)
+    if m:
+        titulo = clean_text(m.group(1))
+
     html = _limpiar_html(html)
     pars = parrafos(html)
     texto = " ".join(pars)
     if len(texto) > MAX_CHARS:
         texto = texto[:MAX_CHARS].rsplit(" ", 1)[0] + "…"
 
-    return {"texto": texto, "descripcion": desc,
+    return {"texto": texto, "descripcion": desc, "imagen": imagen, "titulo": titulo,
             "palabras": len(texto.split()), "url": final}
 
 

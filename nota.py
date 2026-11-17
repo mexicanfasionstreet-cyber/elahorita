@@ -113,7 +113,12 @@ def construir(args):
         "la_publican": medios,
     }]
 
-    guion_txt = guion.parsear(guion.llamar_llm(guion.SISTEMA, guion.prompt_usuario(mat)))
+    try:
+        guion_txt = guion.parsear(guion.llamar_llm(guion.SISTEMA, guion.prompt_usuario(mat)))
+    except Exception as e:  # noqa: BLE001
+        print(f"  aviso: sin IA ({type(e).__name__}: {e}); se usa la plantilla")
+        guion_txt = guion.plantilla([{"title": titulo, "excerpt": art["texto"][:400],
+                                      "seccion": slug}])
     if not args.sin_verificar:
         try:
             antes = json.loads(json.dumps(guion_txt, ensure_ascii=False))

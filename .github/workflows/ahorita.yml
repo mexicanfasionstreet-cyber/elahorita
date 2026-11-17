@@ -40,23 +40,19 @@ jobs:
 
       - name: Secretos
         run: |
-          cat > .env <<'FIN'
-          DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY || secrets.LLM_API_KEY }}
-          TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
-          YT_PRIVACIDAD=${{ vars.YT_PRIVACIDAD || 'private' }}
-          FIN
+          {
+            echo "DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY || secrets.LLM_API_KEY }}"
+            echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}"
+            echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}"
+            echo "YT_CLIENT_ID=${{ secrets.YT_CLIENT_ID }}"
+            echo "YT_CLIENT_SECRET=${{ secrets.YT_CLIENT_SECRET }}"
+            echo "YT_REFRESH_TOKEN=${{ secrets.YT_REFRESH_TOKEN }}"
+            echo "YT_PRIVACIDAD=${{ vars.YT_PRIVACIDAD || 'private' }}"
+          } > .env
+          grep -c . .env
 
-      - name: Revisar clave
-        run: |
-          python - <<'PY'
-          import sys
-          sys.path.insert(0, ".")
-          import config
-          k = config.LLAVE
-          print(f"clave: {len(k)} caracteres · empieza por sk-: {k.startswith('sk-')}")
-          print(f"base: {config.BASE_URL} · modelo: {config.MODELO}")
-          PY
+      - name: Revisar claves
+        run: python herramientas/estado-claves.py || true
 
       - name: Pasada
         run: |

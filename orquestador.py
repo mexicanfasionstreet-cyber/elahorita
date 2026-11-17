@@ -49,11 +49,23 @@ def guardar(estado):
     ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-def correr(comando):
-    """Ejecuta un script del proyecto y devuelve si salio bien."""
+def correr(comando, avisar=True):
+    """Ejecuta un script del proyecto; si falla, manda el motivo al chat."""
     print(f"  $ {' '.join(str(c) for c in comando[1:])}")
-    hecho = subprocess.run([sys.executable, *comando], cwd=RAIZ)
-    return hecho.returncode == 0
+    hecho = subprocess.run([sys.executable, *comando], cwd=RAIZ,
+                           capture_output=True, text=True, errors="replace")
+    print(hecho.stdout[-2000:])
+    if hecho.returncode == 0:
+        return True
+    cola = ((hecho.stderr or "") + (hecho.stdout or "")).strip()[-700:]
+    print(cola)
+    if avisar:
+        nombre = Path(comando[0]).name
+        try:
+            bot.mandar(f"<b>Fallo en {nombre}</b>\n<pre>{cola[-600:]}</pre>")
+        except Exception:  # noqa: BLE001
+            pass
+    return False
 
 
 def armar_video(link="", tema=""):

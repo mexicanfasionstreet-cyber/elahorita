@@ -355,13 +355,18 @@ def construir(args):
                 or titular_en_pantalla(s.get("texto", ""))
 
     def foto_de(seg_id):
+        """Foto del segmento: el gancho usa la de la primera nota."""
         if seg_id.startswith("nota"):
             idx = int(seg_id[4:]) - 1
-            if 0 <= idx < len(historias):
-                h = historias[idx]
-                if h.get("imagen_url"):
-                    return h["imagen_url"]      # nota pedida a mano
-                return por_link.get(h.get("link"), {}).get("image", "")
+        elif seg_id == "gancho":
+            idx = 0
+        else:
+            return ""
+        if 0 <= idx < len(historias):
+            h = historias[idx]
+            if h.get("imagen_url"):
+                return h["imagen_url"]          # nota pedida a mano
+            return por_link.get(h.get("link"), {}).get("image", "")
         return ""
 
     def medio_de(url):
@@ -381,9 +386,7 @@ def construir(args):
             if CIERRE.exists():
                 base = Image.open(CIERRE).convert("RGB")
         else:
-            url = foto_de(s["id"]) or (por_link.get(historias[0].get("link"), {})
-                                       .get("image", "") if historias else "")
-            base = foto(url, slides_dir / f"{i:02d}-fuente.img")
+            base = foto(foto_de(s["id"]), slides_dir / f"{i:02d}-fuente.img")
         fuente_txt, es_mx, horas, medios = "", True, 99.0, 1
         idx = int(s["id"][4:]) - 1 if s["id"].startswith("nota") else 0
         if 0 <= idx < len(historias):

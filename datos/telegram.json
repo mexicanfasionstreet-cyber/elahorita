@@ -1,27 +1,27 @@
 {
  "pendientes": {
   "n1": {
-   "titulo": "Jensen Huang rompe su silencio tras el escándalo y dice que está dispuesto a regresar de consejero delegado a Nvidia",
-   "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
-   "seccion": "economia",
-   "score": 94.5,
-   "medios": 7,
+   "titulo": "Sheinbaum confirma reunión con Donald Trump; destaca productividad en cumbre de la APEC",
+   "link": "https://24-horas.mx/mexico/sheinbaum-confirma-reunion-con-donald-trump-en-cumbre-de-la-apec/",
+   "seccion": "mundo",
+   "score": 84.9,
+   "medios": 6,
    "imagen": true
   },
   "n2": {
-   "titulo": "Xi y Sheinbaum inauguran “una nueva era de cooperación” entre China y México",
-   "link": "https://elpais.com/internacional/2026-11-17/xi-y-sheinbaum-dan-inicio-a-una-nueva-era-de-cooperacion-entre-china-y-mexico.html",
-   "seccion": "mundo",
-   "score": 93.1,
-   "medios": 7,
+   "titulo": "Jensen Huang rompe su silencio tras el escándalo y dice que está dispuesto a regresar de consejero delegado a Nvidia",
+   "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
+   "seccion": "economia",
+   "score": 84.1,
+   "medios": 5,
    "imagen": true
   },
   "n3": {
-   "titulo": "Trump says US taking 'very seriously' any Iranian plot against Washington",
-   "link": "https://www.bbc.co.uk/news/articles/cq808vzd3nnpo?at_medium=RSS&at_campaign=rss",
+   "titulo": "NSA Net, red clasificada de la Agencia de Seguridad Nacional de EU, queda fuera de servicio",
+   "link": "https://zetatijuana.com/2026/11/nsa-net-red-clasificada-de-la-agencia-de-seguridad-nacional-de-eu-queda-fuera-de-servicio/",
    "seccion": "mundo",
-   "score": 77.0,
-   "medios": 3,
+   "score": 78.2,
+   "medios": 4,
    "imagen": true
   }
  },

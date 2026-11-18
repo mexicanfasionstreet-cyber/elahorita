@@ -1,8 +1,9 @@
 {
  "franjas": {
-  "2026-11-17-mediodia": "2026-11-17T12:18:23-08:00",
-  "2026-11-17-tarde": "2026-11-17T15:18:47-08:00",
-  "2026-11-17-noche": "2026-11-17T20:01:24-08:00"
+  "2026-11-17-manana": "candidatas (sistema anterior) 12:18",
+  "2026-11-17-tarde": "candidatas (sistema anterior) 15:18",
+  "2026-11-17-noche": "candidatas (sistema anterior) 20:01"
  },
- "videos": []
+ "resumen": "2026-11-17",
+ "comandos": 1
 }

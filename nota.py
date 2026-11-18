@@ -386,6 +386,8 @@ def publicar_y_avisar(destino, video, tema, forzar=False, prueba=False):
         _avisar(f"Esa nota quedo de ~{seg} s: los medios no dieron mas material. "
                 "¿La subo asi?", [[("Subir asi", f"subir:{destino.stem}")]])
         print(f"  corta ({n_pal} palabras): no se sube; se pregunta en el chat")
+        import franjas
+        franjas.registrar_evento("nota_corta", f"{tema[:80]} ({n_pal} palabras)")
         return
     enlace = subir_a_youtube(video, destino)
     if enlace:

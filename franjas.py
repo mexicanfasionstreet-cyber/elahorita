@@ -50,6 +50,7 @@ SEGUNDA_NOTA = 1.15          # la 1a debe ganar por este factor para ir sola
 
 PUBLICADAS = RAIZ / "datos" / "publicadas.json"
 SUBIDAS = RAIZ / "datos" / "subidas.json"
+EVENTOS = RAIZ / "datos" / "eventos.json"
 
 
 # ------------------------------------------------------------------ tiempos
@@ -129,6 +130,28 @@ def registrar_subida(video_id, titulo):
     for viejo in sorted(datos)[:-7]:
         del datos[viejo]
     _escribir(SUBIDAS, datos)
+
+
+def registrar_evento(tipo, texto):
+    """Bitacora del dia para el resumen nocturno (fallos, voz de respaldo, etc.)."""
+    try:
+        ahora = config.ahora()
+        datos = _leer(EVENTOS, {})
+        datos.setdefault(f"{ahora:%Y-%m-%d}", []).append(
+            {"hora": f"{ahora:%H:%M}", "tipo": tipo, "texto": str(texto)[:200]})
+        for viejo in sorted(datos)[:-7]:
+            del datos[viejo]
+        _escribir(EVENTOS, datos)
+    except Exception as e:  # noqa: BLE001  (la bitacora nunca tumba al robot)
+        print(f"  aviso: no se anoto el evento ({type(e).__name__})")
+
+
+def eventos_de(dia):
+    return _leer(EVENTOS, {}).get(f"{dia:%Y-%m-%d}", [])
+
+
+def publicadas_de(dia):
+    return [p for p in _leer(PUBLICADAS, []) if str(p.get("cuando", "")).startswith(f"{dia:%Y-%m-%d}")]
 
 
 def subidas_hoy(ahora=None):

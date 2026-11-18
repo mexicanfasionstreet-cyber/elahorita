@@ -177,6 +177,23 @@ def generar_voz(guion, proveedor="edge"):
                     f"<pre>{html.escape(str(e)[:400])}</pre>")
             usar_voicebox = False
 
+    if usar_voicebox:
+        # Voicebox no da tiempos por palabra: se sacan con Whisper para el karaoke.
+        # Si falla, el video sale igual con la voz de Carla, solo sin subtitulos.
+        fallo = None
+        for s in segs:
+            s["palabras"] = []
+            try:
+                import alinear
+                s["palabras"] = alinear.palabras(s["destino"], s["texto"],
+                                                 duracion(s["destino"]))
+            except Exception as e:  # noqa: BLE001
+                fallo = fallo or e
+                print(f"  sin tiempos por palabra en {s['id']} ({type(e).__name__}: {e})")
+        if fallo:
+            _avisar("<b>Subtitulos incompletos</b>: no se pudieron sacar los tiempos "
+                    f"de la voz de Carla.\n<pre>{html.escape(str(fallo)[:300])}</pre>")
+
     for s in segs:
         destino = s.pop("destino")
         limpio = s["texto"]

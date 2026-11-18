@@ -7,13 +7,16 @@ ademas entra a tu tailnet). Revisa, en orden:
   2. que el servidor responda (/health)
   3. que el perfil exista (/profiles)
   4. que genere una frase con la misma funcion que usa el robot
-  5. te manda el mp3 al chat para que escuches a Carla
+  5. que Whisper saque los tiempos por palabra (subtitulos karaoke)
+  6. arma un video corto de prueba con voz, marca y subtitulos, igual que el
+     robot, y te lo manda al chat (si el video falla, manda solo el audio)
 
 Uso: python herramientas/probar-voicebox.py ["frase a decir"]
 """
 from __future__ import annotations
 
 import html
+import json
 import shutil
 import socket
 import subprocess
@@ -107,10 +110,38 @@ def main():
     dur = voz.duracion(salida)
     print(f"   ok: {dur:.1f} s de audio en {seg:.0f} s")
 
-    print("5. mandar al chat")
-    telegram.mandar_audio(salida, f"Prueba de Voicebox · {nombre} · {dur:.1f} s de audio, "
-                                  f"generado en {seg:.0f} s")
-    print("\nlisto: la conexion con Voicebox funciona")
+    print("5. tiempos por palabra con Whisper")
+    try:
+        import alinear
+        pals = alinear.palabras(salida, frase, dur)
+        con_tiempo = " ".join(f"{p['texto']}@{p['t0']:.1f}" for p in pals[:8])
+        print(f"   ok: {len(pals)} palabras · {con_tiempo} …")
+    except Exception as e:  # noqa: BLE001
+        return fallar("whisper", f"{type(e).__name__}: {e}")
+
+    print("6. video de prueba con subtitulos")
+    guion = RAIZ / "build" / "prueba-voicebox-video.json"
+    guion.write_text(json.dumps({"historias": [], "guion": {
+        "gancho": "Esto es una prueba de El Ahorita con la voz de Carla.",
+        "gancho_pantalla": "PRUEBA DE VOZ",
+        "notas": [{"kicker": "PRUEBA", "pantalla": "Subtitulos sincronizados",
+                   "texto": frase}],
+        "cierre": "Esto es El Ahorita."}}, ensure_ascii=False), encoding="utf-8")
+    pasos = [[sys.executable, str(RAIZ / "voz.py"), "--guion", str(guion),
+              "--proveedor", "voicebox"],
+             [sys.executable, str(RAIZ / "capsula.py"), "--guion", str(guion)]]
+    for paso in pasos:
+        r = subprocess.run(paso, cwd=RAIZ, capture_output=True, text=True, errors="replace")
+        print(r.stdout[-1500:])
+        if r.returncode != 0:
+            print(r.stderr[-1500:])
+            telegram.mandar_audio(salida, f"Prueba de Voicebox · {nombre} · el audio "
+                                          f"funciona, pero el video de prueba fallo")
+            return fallar("video de prueba", (r.stderr or r.stdout)[-500:])
+    video = RAIZ / "docs" / "videos" / f"{guion.stem}.mp4"
+    telegram.mandar_video(video, f"Prueba de Voicebox · {nombre} · voz y subtitulos "
+                                 f"karaoke · {dur:.1f} s de la frase en {seg:.0f} s")
+    print("\nlisto: Voicebox y los subtitulos funcionan")
     return 0
 
 

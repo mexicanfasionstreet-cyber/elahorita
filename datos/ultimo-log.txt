@@ -1,3 +1,76 @@
-2026-11-18 14:55 Tijuana · franja pendiente: ninguna
+2026-11-18 15:01 Tijuana · franja pendiente: tarde
 sin novedades
-sin novedades
+corriendo la franja tarde
+  $ --days 2
+  (24.5 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 40
+
+1212 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+322 nuevas, 3729 en 30 dias)
+
+  secciones revisadas con IA: 4 cambio(s)
+  123 historias desde 18 12:00
+    88.3 peso  30.0 · Detenido en Acapulco el presunto asesino del periodista Eduardo Flores
+    78.1 peso  11.5 · Bloqueos en Veracruz: queman vehículos y colocan ponchallantas en acce
+    75.6 peso  10.5 · Nvidia pide calma a sus empleados tras la dimisión de su fundador y CE
+    74.5 peso   9.0 · Sheinbaum presenta Plan México ante empresarios asiáticos en APEC
+  $ --franja tarde --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-tarde.json --link https://elpais.com/mexico/2026-11-18/detenido-en-acapulco-el-presunto-asesino-del-periodista-eduardo-flores.html --previo  --link https://24-horas.mx/estados/bloqueos-quema-autos-poza-rica-suspenden-clases-veracruz/ --previo  --reserva https://lopezdoriga.com/internacional/el-mundo/nvidia-pide-calma-a-sus-empleados-tras-la-dimision-de-su-fundador-y-ceo-jensen-huang/ --reserva https://www.milenio.com/videos/milenio-al-momento/china-norteamerica-oportunidad-mexicana-david-razu
+  (11.8 s)
+  material nota 1: 0 palabras de https://elpais.com/mexico/2026-11-18/detenido-en-acapulco-el
+  material nota 2: 0 palabras de https://24-horas.mx/estados/bloqueos-quema-autos-poza-rica-s
+aviso: la nota 1 tiene poco material (35 palabras); se quita
+aviso: la nota 2 tiene poco material (36 palabras); se quita
+  material nota 1: 496 palabras de https://lopezdoriga.com/internacional/el-mundo/nvidia-pide-c
+aviso: se usa la historia de reserva: Nvidia pide calma a sus empleados tras la dimisión de su fun
+--- GUION (ia) · 1 nota(s) · 167 palabras ~ 62 s ---
+
+TITULO YOUTUBE: Nvidia pide calma a sus empleados tras la salida de Jensen Huang
+GANCHO: La cúpula de Nvidia intenta sostener al gigante de los chips mientras crece la presión interna para que su fundador regrese.
+
+[ECONOMIA] Colette Kress, directora ejecutiva interina de Nvidia, se reunió este miércoles con los empleados en Santa Clara, California. Fue la primera reunión general desde que Jensen Huang renunció como fundador y director general. Kress dijo que la situación está bajo control y pidió seguir adelante. Aseguró que la ambición, la pasión por innovar y el compromiso con clientes, socios y accionistas no cambian. Huang presentó su renuncia tras admitir varias relaciones extramatrimoniales, entre ellas con una presunta espía china. Un grupo de trabajadores y el propio exdirector han pedido que regrese al cargo. La junta directiva contrató a una firma para buscar un sustituto permanente, y en la reunión también se habló de posibles aumentos salariales. Más de 10 mil de los alrededor de 42 mil empleados de Nvidia han respaldado a Huang y exigen su restitución.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Nvidia pide calma a sus empleados tras la dimisión de su fundador y CE (3 medios)
+  foto nota 1: Jensen Huang -> Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-tarde.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-tarde.json
+  (100.8 s)
+guion 2026-11-18-tarde.json · 167 palabras · proveedor voicebox
+
+    whisper: 21 oidas, 100% de 21 empatadas
+    whisper: 137 oidas, 98% de 137 empatadas
+    whisper: 9 oidas, 100% de 9 empatadas
+  gancho     6.72 s  [voicebox]  21 palabras con tiempo  La cúpula de Nvidia intenta sostener al giga…
+  nota1     44.59 s  [voicebox]  137 palabras con tiempo  Colette Kress, directora ejecutiva interina …
+  cierre     3.04 s  [voicebox]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 55.19 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-18-tarde/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-tarde.json
+  (55.5 s)
+  diapositiva 00-gancho.png
+  diapositiva 01-nota1.png
+  diapositiva 02-cierre.png (cierre de marca)
+  video 00-gancho.mp4 (7.0 s)
+  video 01-nota1.mp4 (44.87 s)
+  video 02-cierre.mp4 (3.32 s)
+subtitulos: 159 estados · 828 cuadros · 55.2 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-18-tarde/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-tarde.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-tarde-portada.jpg
+duracion: 55.2 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-tarde.mp4
+  titulo: Nvidia pide calma a sus empleados tras la salida de Jensen Huang
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/tarNqZGRENM
+

@@ -1,0 +1,37 @@
+{
+ "origen": "ia",
+ "palabras": 167,
+ "segundos_estimados": 61.9,
+ "historias": [
+  {
+   "titulo": "Nvidia pide calma a sus empleados tras la dimisión de su fundador y CEO, Jensen Huang",
+   "link": "https://lopezdoriga.com/internacional/el-mundo/nvidia-pide-calma-a-sus-empleados-tras-la-dimision-de-su-fundador-y-ceo-jensen-huang/",
+   "seccion": "economia",
+   "medios": 3,
+   "score": 75.6,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Anderseidesvik",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+    "credito": "Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Jensen Huang"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Nvidia pide calma a sus empleados tras la salida de Jensen Huang",
+  "gancho": "La cúpula de Nvidia intenta sostener al gigante de los chips mientras crece la presión interna para que su fundador regrese.",
+  "notas": [
+   {
+    "kicker": "ECONOMIA",
+    "texto": "Colette Kress, directora ejecutiva interina de Nvidia, se reunió este miércoles con los empleados en Santa Clara, California. Fue la primera reunión general desde que Jensen Huang renunció como fundador y director general. Kress dijo que la situación está bajo control y pidió seguir adelante. Aseguró que la ambición, la pasión por innovar y el compromiso con clientes, socios y accionistas no cambian. Huang presentó su renuncia tras admitir varias relaciones extramatrimoniales, entre ellas con una presunta espía china. Un grupo de trabajadores y el propio exdirector han pedido que regrese al cargo. La junta directiva contrató a una firma para buscar un sustituto permanente, y en la reunión también se habló de posibles aumentos salariales. Más de 10 mil de los alrededor de 42 mil empleados de Nvidia han respaldado a Huang y exigen su restitución.",
+    "pantalla": "Nvidia pide calma tras la salida de su CEO",
+    "foto": "Jensen Huang"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "NVIDIA SIN JENSEN HUANG"
+ }
+}

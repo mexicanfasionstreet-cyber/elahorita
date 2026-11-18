@@ -136,6 +136,10 @@ def material(notas, con_articulo=True):
         cuerpo, desc = "", ""
         if con_articulo and f.get("link"):
             d = articulo(f["link"])
+            if not d["palabras"]:
+                import time
+                time.sleep(2)          # a veces es un tropiezo de red: un reintento
+                d = articulo(f["link"])
             cuerpo, desc = d["texto"], d["descripcion"]
             print(f"  material nota {i}: {d['palabras']} palabras de {f['link'][:60]}")
         partes.append({
@@ -155,6 +159,33 @@ MATERIAL_MIN = 60   # palabras de entradilla + cuerpo para que una nota se soste
 
 def _palabras_material(m):
     return len((m.get("entradilla", "") + " " + m.get("cuerpo_del_articulo", "")).split())
+
+
+def solo_con_material(notas, mat, reservas=()):
+    """Una nota sin material sale como relleno ("no se conocen detalles..."): fuera.
+
+    Si ninguna de las elegidas tiene material, se prueba con las de reserva.
+    Si tampoco, se queda la primera (el guion saldra corto, pero sin inventar).
+    """
+    buenas = [i for i, m in enumerate(mat) if _palabras_material(m) >= MATERIAL_MIN]
+    for i, m in enumerate(mat):
+        if i not in buenas:
+            print(f"aviso: la nota {i + 1} tiene poco material ({_palabras_material(m)} palabras); "
+                  "se quita")
+    if not buenas:
+        for link in reservas:
+            f = historia_por_link(link)
+            if not f:
+                continue
+            m = material([asegurar_imagen(f)])
+            if _palabras_material(m[0]) >= MATERIAL_MIN:
+                print(f"aviso: se usa la historia de reserva: {f['title'][:60]}")
+                return [f], m
+        print("aviso: ninguna historia tiene material; el guion saldra con lo justo")
+        buenas = [0]
+    notas = [notas[i] for i in buenas]
+    mat = [dict(mat[i], n=k) for k, i in enumerate(buenas, 1)]
+    return notas, mat
 
 
 def prompt_usuario(mat):
@@ -227,7 +258,12 @@ def verificar(guion, mat, timeout=120):
     """Segunda pasada: caza afirmaciones que no estan en el material."""
     usuario = ("MATERIAL:\n" + json.dumps(mat, ensure_ascii=False, indent=1)
                + "\n\nGUION:\n" + json.dumps(guion, ensure_ascii=False, indent=1))
-    return parsear_verificacion(llamar_llm(SISTEMA_VERIFICADOR, usuario, timeout=timeout))
+    try:
+        return parsear_verificacion(llamar_llm(SISTEMA_VERIFICADOR, usuario, timeout=timeout))
+    except (ValueError, json.JSONDecodeError) as e:
+        # a veces el modelo devuelve un JSON mal cerrado: se le pregunta otra vez
+        print(f"  verificador: respuesta ilegible ({e}); se reintenta")
+        return parsear_verificacion(llamar_llm(SISTEMA_VERIFICADOR, usuario, timeout=timeout))
 
 
 def parsear_verificacion(texto):
@@ -291,6 +327,8 @@ def main():
                     help="historia concreta (se puede repetir: 1 o 2 notas)")
     ap.add_argument("--previo", action="append", default=[],
                     help="por cada --link: titulo ya publicado hoy si es seguimiento")
+    ap.add_argument("--reserva", action="append", default=[],
+                    help="historia de repuesto si ninguna elegida tiene material")
     ap.add_argument("--sin-ia", action="store_true")
     ap.add_argument("--sin-articulo", action="store_true",
                     help="no descargar el articulo completo (mas rapido)")
@@ -315,11 +353,8 @@ def main():
         notas = elegir_notas(filas, args.notas or None)
     notas = [asegurar_imagen(f) for f in notas]
     mat = material(notas, con_articulo=not args.sin_articulo)
-    # una segunda nota sin material sale como una frase de relleno: mejor solo la primera
-    if len(mat) == 2 and not args.sin_articulo and _palabras_material(mat[1]) < MATERIAL_MIN:
-        print(f"aviso: la nota 2 tiene poco material ({_palabras_material(mat[1])} palabras); "
-              "el video va con una sola")
-        notas, mat = notas[:1], mat[:1]
+    if not args.sin_articulo:
+        notas, mat = solo_con_material(notas, mat, args.reserva)
 
     guion, origen, problemas = None, "ia", []
     if args.sin_ia:

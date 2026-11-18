@@ -38,6 +38,7 @@ RAIZ = Path(__file__).resolve().parent
 sys.path.insert(0, str(RAIZ))
 
 import config  # noqa: E402
+import fotos  # noqa: E402
 import guion  # noqa: E402
 import material  # noqa: E402
 import telegram as telegram_mod  # noqa: E402
@@ -316,10 +317,10 @@ def construir(args):
         "origen": "nota_manual", "tema": tema, "palabras": n_pal,
         "segundos_estimados": round(n_pal / config.PALABRAS_POR_SEGUNDO, 1),
         "articulos_leidos": [a["url_real"] for a in leidos],
-        "historias": [{"titulo": titulo, "link": link, "seccion": slug, "sensible": sens,
-                       "medios": medios, "score": 0, "imagen": bool(foto),
-                       "imagen_url": foto, "region": region,
-                       "horas": horas_desde(publicado) if publicado else 99.0}],
+        "historias": fotos.para_historias(
+            [{"titulo": titulo, "link": link, "seccion": slug, "sensible": sens,
+              "medios": medios, "score": 0, "region": region,
+              "horas": horas_desde(publicado) if publicado else 99.0}], guion_txt),
         "guion": guion_txt,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
 

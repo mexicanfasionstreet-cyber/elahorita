@@ -263,3 +263,13 @@ def latest(tmp_path, monkeypatch):
         monkeypatch.setattr(guion, "RANKING", ruta)
         return ruta
     return escribir
+
+
+@pytest.fixture(autouse=True)
+def sin_wikipedia(monkeypatch):
+    """Ninguna prueba sale a Wikipedia: sin red, cada nota va con fondo de diseño."""
+    import fotos
+
+    def _sin_red(*a, **k):
+        raise OSError("sin red en pruebas")
+    monkeypatch.setattr(fotos, "_get", _sin_red)

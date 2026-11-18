@@ -75,7 +75,7 @@ jobs:
       - name: Tailscale
         if: ${{ steps.vb.outputs.si == 'true' }}
         continue-on-error: true
-        uses: tailscale/github-action@v2
+        uses: tailscale/github-action@v4
         with:
           authkey: ${{ secrets.TS_AUTHKEY }}
           version: latest

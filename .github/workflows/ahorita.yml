@@ -19,8 +19,9 @@ on:
         type: boolean
         default: false
 
+# la prueba de voz va en su propia cola: si se atora, no bloquea al robot
 concurrency:
-  group: el-ahorita
+  group: ${{ inputs.probar_voz && 'el-ahorita-prueba' || 'el-ahorita' }}
   cancel-in-progress: false
 
 jobs:
@@ -37,6 +38,7 @@ jobs:
           python-version: "3.12"
 
       - name: Dependencias
+        timeout-minutes: 8
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg

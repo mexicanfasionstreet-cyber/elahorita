@@ -75,6 +75,7 @@ jobs:
             echo "YT_CLIENT_SECRET=${{ secrets.YT_CLIENT_SECRET }}"
             echo "YT_REFRESH_TOKEN=${{ secrets.YT_REFRESH_TOKEN }}"
             echo "YT_PRIVACIDAD=${{ vars.YT_PRIVACIDAD || 'private' }}"
+            echo "MUSICA_CREDITO=${{ vars.MUSICA_CREDITO }}"
             # Voicebox se acepta como Variable o como Secret, con cualquiera de
             # los dos nombres del perfil
             echo "VOICEBOX_URL=${{ vars.VOICEBOX_URL || secrets.VOICEBOX_URL }}"

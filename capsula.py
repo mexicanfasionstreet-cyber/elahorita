@@ -106,8 +106,12 @@ def descargar(url, destino: Path, intentos=3):
     if not url or not url.startswith("http"):
         return None
     partes = urllib.parse.urlsplit(url)
+    # Wikimedia pide un User-Agent que diga quien eres; los CDN de medios, uno de navegador
+    wiki = partes.netloc.endswith("wikimedia.org")
     cabeceras = {
-        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "User-Agent": ("ElAhoritaBot/1.0 (https://github.com/mexicanfasionstreet-cyber/elahorita)"
+                       if wiki else
+                       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                        "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"),
         "Accept": "image/avif,image/webp,image/png,image/jpeg,image/*,*/*;q=0.8",
         "Accept-Language": "es-MX,es;q=0.9,en;q=0.8",
@@ -131,15 +135,35 @@ def descargar(url, destino: Path, intentos=3):
     return None
 
 
-def foto(url, destino: Path):
-    """Imagen de fondo: la del articulo, o un degradado de marca si no hay."""
+def foto(url, destino: Path, kicker=""):
+    """Fondo: la foto libre de la nota (fotos.py), o el fondo de diseño si no hay."""
     if descargar(url, destino):
         try:
             im = Image.open(destino).convert("RGB")
             return imresize_cover(im, (ANCHO, ALTO))
         except Exception:  # noqa: BLE001
             pass
-    return degradado()
+    return fondo_diseno(kicker)
+
+
+def fondo_diseno(kicker=""):
+    """Fondo de marca para notas sin foto libre: el degradado con la seccion en
+    letras gigantes y franjas diagonales, para que se lea como diseño y no como hueco."""
+    im = degradado()
+    palabra = (kicker or SELLO).strip().upper()[:12] or SELLO
+    capa = Image.new("RGBA", (ANCHO * 2, ALTO * 2), (0, 0, 0, 0))
+    d = ImageDraw.Draw(capa)
+    for x in range(-ALTO * 2, ANCHO * 2, 90):          # franjas finas a 30 grados
+        d.line([(x, ALTO * 2), (x + int(ALTO * 2 * 0.58), 0)], fill=(255, 255, 255, 10), width=14)
+    fnt = fuente(F_TITULAR, 330)
+    paso = int(330 * 1.02)
+    for fila, y in enumerate(range(0, ALTO * 2, paso)):
+        x = -(fila % 2) * 260
+        color = (*ROJO, 46) if fila % 3 == 1 else (255, 255, 255, 18)
+        d.text((x, y), (palabra + "  ") * 4, font=fnt, fill=color)
+    capa = capa.rotate(12, resample=Image.BICUBIC)
+    capa = capa.crop((ANCHO // 2, ALTO // 2, ANCHO // 2 + ANCHO, ALTO // 2 + ALTO))
+    return Image.alpha_composite(im.convert("RGBA"), capa).convert("RGB")
 
 
 def imresize_cover(im, size):
@@ -381,10 +405,8 @@ def construir(args):
         else:
             return ""
         if 0 <= idx < len(historias):
-            h = historias[idx]
-            if h.get("imagen_url"):
-                return h["imagen_url"]          # nota pedida a mano
-            return por_link.get(h.get("link"), {}).get("image", "")
+            # solo la foto libre que encontro fotos.py; nunca la del medio
+            return (historias[idx].get("foto") or {}).get("url", "")
         return ""
 
     def medio_de(url):
@@ -404,12 +426,13 @@ def construir(args):
             if CIERRE.exists():
                 im = Image.open(CIERRE).convert("RGB").resize((ANCHO, ALTO), Image.LANCZOS)
             else:
-                im = diapositiva(degradado(), s["kicker"], textos.get("cierre", ""))
+                im = diapositiva(fondo_diseno(), s["kicker"], textos.get("cierre", ""))
             im.save(destino, "PNG")
             rutas.append(destino)
             print(f"  diapositiva {destino.name} (cierre de marca)")
             continue
-        base = foto(foto_de(s["id"]), slides_dir / f"{i:02d}-fuente.img")
+        kicker_fondo = segs[1]["kicker"] if s["id"] == "gancho" and len(segs) > 1 else s["kicker"]
+        base = foto(foto_de(s["id"]), slides_dir / f"{i:02d}-fuente.img", kicker_fondo)
         fuente_txt, es_mx, horas, medios = "", True, 99.0, 1
         idx = int(s["id"][4:]) - 1 if s["id"].startswith("nota") else 0
         if 0 <= idx < len(historias):

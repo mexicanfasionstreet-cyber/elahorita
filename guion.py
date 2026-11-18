@@ -65,7 +65,12 @@ Reglas que no puedes romper:
   aparece en el material, no lo escribas. Si falta contexto, di que no se conocen detalles.
 
 Devuelves SOLO un JSON valido, sin texto alrededor, con esta forma:
-{"titulo": "...", "gancho": "...", "gancho_pantalla": "...", "notas": [{"kicker": "SECCION", "pantalla": "...", "texto": "..."}], "cierre": "..."}
+{"titulo": "...", "gancho": "...", "gancho_pantalla": "...", "notas": [{"kicker": "SECCION", "pantalla": "...", "texto": "...", "foto": "..."}], "cierre": "..."}
+"foto" es a quien o que se muestra de fondo en esa nota: el nombre exacto de la
+persona, lugar o institucion como se llama su articulo en Wikipedia ("Jensen Huang",
+"Palacio Nacional", "Tijuana", "Congreso de la Union"). Prefiere al protagonista; si es
+una empresa, a su director o su sede. Nunca a una victima, a un menor ni a un particular
+sin articulo en Wikipedia: en ese caso el lugar donde paso, o vacio "".
 "titulo" es el titulo del video en YouTube: lo que la gente ve antes de darle clic y lo
 que escribe en el buscador.
   * entre 45 y 75 caracteres, en español, escrito normal: mayuscula al inicio y en los
@@ -307,8 +312,9 @@ def parsear_verificacion(texto):
 def conservar_rotulos(antes, corregido):
     """El verificador reescribe el texto; los rotulos que no devuelva se conservan."""
     for i, n in enumerate(corregido.get("notas", [])):
-        if not n.get("pantalla") and i < len(antes.get("notas", [])):
-            n["pantalla"] = antes["notas"][i].get("pantalla", "")
+        for campo in ("pantalla", "foto"):
+            if not n.get(campo) and i < len(antes.get("notas", [])):
+                n[campo] = antes["notas"][i].get(campo, "")
     for campo in ("gancho_pantalla", "titulo"):
         if not (corregido.get(campo) or "").strip():
             corregido[campo] = antes.get(campo, "")
@@ -450,13 +456,14 @@ def main():
     salida = Path(args.json) if args.json else (
         SALIDA / f"{config.ahora():%Y-%m-%d}-{args.franja or 'dia'}.json")
     salida.parent.mkdir(parents=True, exist_ok=True)
+    historias = [{"titulo": f["title"], "link": f["link"], "seccion": f["seccion"],
+                  "medios": f["medios"], "score": f["score"],
+                  "sensible": f.get("sensible") or _sensible(f)} for f in notas]
+    import fotos
+    fotos.para_historias(historias, guion)
     salida.write_text(json.dumps({
         "origen": origen, "palabras": n_pal, "segundos_estimados": round(est, 1),
-        "historias": [{"titulo": f["title"], "link": f["link"], "seccion": f["seccion"],
-                       "medios": f["medios"], "score": f["score"],
-                       "sensible": f.get("sensible") or _sensible(f),
-                       "imagen": bool(f.get("imagen_url")),
-                       "imagen_url": f.get("imagen_url", "")} for f in notas],
+        "historias": historias,
         "guion": guion,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\nguion -> {salida}")

@@ -106,6 +106,22 @@ Telegram es el control remoto. Solo atiende tu chat. Los comandos aparecen en el
 - **Avisos**: si Voicebox no responde (sale con la voz de respaldo), si faltan
   subtítulos o si una franja falla.
 
+### Imágenes y derechos
+
+El video **nunca usa la foto del medio** (casi siempre es de agencia: AP, Reuters,
+Getty, EFE… y una solicitud de retiro es un strike para el canal y la cuenta).
+
+- El guionista dice a quién o qué mostrar en cada nota (`"foto": "Jensen Huang"`).
+- `fotos.py` busca ese artículo en Wikipedia (español y luego inglés) y confirma en
+  Wikimedia Commons que la foto sea **libre** (dominio público, CC0, CC BY, CC BY-SA),
+  que sea foto (jpg, no logos ni mapas) y que tenga al menos 700 px.
+- El crédito va en la descripción: `Fotos: Autor (CC BY-SA 4.0), Wikimedia Commons`.
+- Sin foto libre, o en temas sensibles: **fondo de diseño** de la marca con la sección
+  en letras gigantes.
+- Música: la de `musica/fondo.mp3` es de la Biblioteca de audio de YouTube. Si la pista
+  pide atribución, pon el texto en la variable de Actions `MUSICA_CREDITO` y se agrega
+  a la descripción.
+
 ### Alarma (vigilante)
 
 `.github/workflows/vigilante.yml` revisa cada 30 min, con el cron de GitHub (independiente

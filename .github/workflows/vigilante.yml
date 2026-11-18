@@ -1,0 +1,40 @@
+name: Vigilante
+
+# Revisa cada 30 min que el robot este corriendo. Usa el cron de GitHub, que es
+# independiente de cron-job.org (quien dispara al robot cada 5 min): si este se
+# cae, el vigilante lanza pasadas de emergencia y te avisa por Telegram.
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+    inputs:
+      probar:
+        description: "Mandar al chat un mensaje de prueba con el estado actual"
+        type: boolean
+        default: false
+
+concurrency:
+  group: vigilante
+  cancel-in-progress: false
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      actions: write        # leer pasadas y lanzar una de emergencia
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Vigilar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PROBAR: ${{ inputs.probar && '--probar' || '' }}
+        run: python herramientas/vigilante.py $PROBAR

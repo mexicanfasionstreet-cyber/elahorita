@@ -97,6 +97,20 @@ Telegram es el control remoto. Solo atiende tu chat. Los comandos aparecen en el
 - **Avisos**: si Voicebox no responde (sale con la voz de respaldo), si faltan
   subtítulos o si una franja falla.
 
+### Alarma (vigilante)
+
+`.github/workflows/vigilante.yml` revisa cada 30 min, con el cron de GitHub (independiente
+de cron-job.org, que dispara al robot), que el robot esté corriendo:
+
+- **Sin pasadas en 30 min o más**: lanza una pasada de emergencia y te avisa. Mientras
+  cron-job.org no vuelva, el robot sigue corriendo cada ~30 min.
+- **3 o más pasadas seguidas fallidas**: te avisa con el enlace al último error.
+- El aviso se repite a las 2 h, 6 h y luego cada 12 h mientras siga; cuando se
+  recupera, avisa que volvió.
+
+Para probarla: Actions → **Vigilante** → *Run workflow* → "Mandar al chat un mensaje
+de prueba".
+
 ### Modos de prueba (Actions → El Ahorita → *Run workflow*)
 
 Ninguno sube a YouTube ni guarda estado; el resultado llega a tu chat.

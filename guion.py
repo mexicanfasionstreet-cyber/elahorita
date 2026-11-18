@@ -20,7 +20,6 @@ import re
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime
 from pathlib import Path
 
 import config
@@ -344,7 +343,7 @@ def main():
         print(f"  fuente: {f['title'][:70]} ({f['medios']} medios)")
 
     salida = Path(args.json) if args.json else (
-        SALIDA / f"{datetime.now():%Y-%m-%d}-{args.franja or 'dia'}.json")
+        SALIDA / f"{config.ahora():%Y-%m-%d}-{args.franja or 'dia'}.json")
     salida.parent.mkdir(parents=True, exist_ok=True)
     salida.write_text(json.dumps({
         "origen": origen, "palabras": n_pal, "segundos_estimados": round(est, 1),

@@ -2,9 +2,21 @@
 from __future__ import annotations
 
 import os
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 RAIZ = Path(__file__).resolve().parent
+
+# Todo el proyecto vive en hora de Tijuana. El runner de GitHub esta en UTC: si un
+# script fecha sus archivos con datetime.now() y otro con la hora de Tijuana, desde
+# las 16:00 (00:00 UTC) cada uno busca el archivo del otro con un dia distinto.
+TZ = ZoneInfo("America/Tijuana")
+
+
+def ahora():
+    """La hora actual en Tijuana. Usar siempre esta, nunca datetime.now() a secas."""
+    return datetime.now(TZ)
 
 
 def cargar_env(ruta=None):
@@ -36,8 +48,10 @@ TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 
 VOICEBOX_URL = os.environ.get("VOICEBOX_URL", "").rstrip("/")
-VOICEBOX_PROFILE = os.environ.get("VOICEBOX_PROFILE_ID", "")
-VOICEBOX_TIMEOUT = int(os.environ.get("VOICEBOX_TIMEOUT", "90") or 90)
+VOICEBOX_PROFILE = (os.environ.get("VOICEBOX_PROFILE_ID", "")
+                    or os.environ.get("VOICEBOX_PROFILE", "")).strip()
+VOICEBOX_ENGINE = os.environ.get("VOICEBOX_ENGINE", "").strip()   # vacio = el del perfil
+VOICEBOX_TIMEOUT = int(os.environ.get("VOICEBOX_TIMEOUT", "240") or 240)   # por segmento; ~2.4 s de GPU por s de audio
 
 # palabras por segundo de la voz en español, para estimar duración antes de grabar
 PALABRAS_POR_SEGUNDO = 2.7

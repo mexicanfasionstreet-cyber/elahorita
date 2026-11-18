@@ -15,7 +15,6 @@ import json
 import re
 import sys
 import urllib.parse
-from datetime import datetime
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent
@@ -166,7 +165,7 @@ def construir(args):
     guion_txt, _ = guion.ajustar_longitud(guion_txt)
 
     n_pal = guion.palabras(guion_txt)
-    nombre = f"{datetime.now():%Y-%m-%d}-nota"
+    nombre = f"{config.ahora():%Y-%m-%d}-nota"
     destino = RAIZ / "docs" / "guiones" / f"{nombre}.json"
     destino.parent.mkdir(parents=True, exist_ok=True)
     destino.write_text(json.dumps({

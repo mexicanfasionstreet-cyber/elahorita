@@ -77,73 +77,132 @@ def con_edge_tts(texto, salida):
     return asyncio.run(_edge(texto, salida, config.VOZ, config.VOZ_RITMO))
 
 
-def con_voicebox(texto, salida):
-    """Pide la voz clonada al servidor Voicebox (API REST local/tailnet)."""
-    import time
-
+def _vb_json(ruta, cuerpo=None, timeout=30):
+    """Llamada a la API de Voicebox; los errores traen el detalle que da el servidor."""
     import urllib.error
+    import urllib.request
+
+    datos = json.dumps(cuerpo).encode("utf-8") if cuerpo is not None else None
+    req = urllib.request.Request(
+        f"{config.VOICEBOX_URL}{ruta}", data=datos, method="POST" if datos else "GET",
+        headers={"Content-Type": "application/json"} if datos else {})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        detalle = e.read()[:300].decode("utf-8", "replace")
+        raise RuntimeError(f"Voicebox {ruta} respondio {e.code}: {detalle}") from None
+
+
+def con_voicebox(texto, salida):
+    """Pide la voz clonada al servidor Voicebox (API REST local/tailnet).
+
+    Rutas de la API actual de Voicebox (backend/routes en jamiepine/voicebox):
+      POST /generate        -> {"id", "status": "generating", ...}
+      GET  /history/{id}    -> status: generating | completed | failed
+      GET  /audio/{id}      -> el archivo de audio (normalmente wav)
+    El motor no se manda: Voicebox usa el del perfil. Si hace falta forzarlo,
+    VOICEBOX_ENGINE acepta qwen, chatterbox, luxtts, etc. ("qwen3-tts" no existe).
+    """
+    import time
     import urllib.request
 
     if not (config.VOICEBOX_URL and config.VOICEBOX_PROFILE):
         raise RuntimeError("Voicebox sin configurar")
-    cuerpo = json.dumps({
-        "text": texto, "profile_id": config.VOICEBOX_PROFILE,
-        "language": "es", "engine": "qwen3-tts",
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        f"{config.VOICEBOX_URL}/generate", data=cuerpo,
-        headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        gen = json.load(r)
-    gid = gen.get("generation_id") or gen.get("id")
+    pedido = {"text": texto, "profile_id": config.VOICEBOX_PROFILE, "language": "es"}
+    if config.VOICEBOX_ENGINE:
+        pedido["engine"] = config.VOICEBOX_ENGINE
+    gen = _vb_json("/generate", pedido)
+    gid = gen.get("id") or gen.get("generation_id")
     if not gid:
-        raise RuntimeError(f"Voicebox no devolvio id: {gen}")
+        raise RuntimeError(f"Voicebox no devolvio id: {str(gen)[:200]}")
 
+    estado = gen
     limite = time.time() + config.VOICEBOX_TIMEOUT
-    while time.time() < limite:
-        with urllib.request.urlopen(f"{config.VOICEBOX_URL}/generations/{gid}", timeout=30) as r:
-            estado = json.load(r)
-        if estado.get("status") in ("complete", "completed", "done"):
-            break
+    while estado.get("status") not in ("completed", "complete", "done"):
         if estado.get("status") in ("failed", "error"):
-            raise RuntimeError(f"Voicebox fallo: {estado}")
+            raise RuntimeError(f"Voicebox fallo: {estado.get('error') or estado}")
+        if time.time() > limite:
+            raise RuntimeError(f"Voicebox no termino en {config.VOICEBOX_TIMEOUT} s")
         time.sleep(1.5)
-    else:
-        raise RuntimeError("Voicebox no termino a tiempo")
+        estado = _vb_json(f"/history/{gid}")
 
-    with urllib.request.urlopen(f"{config.VOICEBOX_URL}/generations/{gid}/audio", timeout=60) as r:
+    with urllib.request.urlopen(f"{config.VOICEBOX_URL}/audio/{gid}", timeout=60) as r:
         datos = r.read()
-    salida.write_bytes(datos)
+        tipo = r.headers.get("Content-Type", "")
+    # Voicebox entrega wav; el resto de la tuberia espera mp3
+    crudo = salida.with_suffix(".mp3.src" if "mpeg" in tipo else ".wav")
+    crudo.write_bytes(datos)
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(crudo),
+                    "-c:a", "libmp3lame", "-b:a", "192k", str(salida)], check=True)
+    crudo.unlink(missing_ok=True)
     return salida
 
 
+def _avisar(texto):
+    """Manda un aviso al chat sin romper la tuberia si Telegram falla."""
+    try:
+        import telegram
+        telegram.mandar(texto)
+    except BaseException as e:  # noqa: BLE001  (_llamar usa SystemExit)
+        print(f"  aviso no enviado ({type(e).__name__})")
+
+
 def generar_voz(guion, proveedor="edge"):
-    """Devuelve la lista de segmentos con su audio y su duracion real."""
+    """Devuelve la lista de segmentos con su audio y su duracion real.
+
+    Con Voicebox es todo o nada: si un segmento falla, el video entero se hace
+    con la voz de respaldo, para no mezclar la voz de Carla con la de Dalia.
+    """
+    import html
+
     carpetas = BUILD / guion["_nombre"]
     voces = carpetas / "voz"
     voces.mkdir(parents=True, exist_ok=True)
 
     segs = segmentos_de(guion)
     for i, s in enumerate(segs, 1):
-        limpio = re.sub(r"\s+", " ", s["texto"]).strip()
-        s["texto"] = limpio
-        destino = voces / f"{i:02d}-{s['id']}.mp3"
-        hecho = None
-        if proveedor == "voicebox":
+        s["texto"] = re.sub(r"\s+", " ", s["texto"]).strip()
+        s["destino"] = voces / f"{i:02d}-{s['id']}.mp3"
+
+    usar_voicebox = proveedor == "voicebox"
+    if usar_voicebox:
+        try:
+            for s in segs:
+                con_voicebox(s["texto"], s["destino"])
+                s["voz"], s["palabras"] = "voicebox", []
+        except Exception as e:  # noqa: BLE001
+            print(f"  Voicebox no responde ({e}); se usa la voz de respaldo")
+            _avisar("<b>Voicebox no respondio</b>; este video va con la voz de respaldo.\n"
+                    f"<pre>{html.escape(str(e)[:400])}</pre>")
+            usar_voicebox = False
+
+    if usar_voicebox:
+        # Voicebox no da tiempos por palabra: se sacan con Whisper para el karaoke.
+        # Si falla, el video sale igual con la voz de Carla, solo sin subtitulos.
+        fallo = None
+        for s in segs:
+            s["palabras"] = []
             try:
-                hecho = con_voicebox(limpio, destino)
+                import alinear
+                s["palabras"] = alinear.palabras(s["destino"], s["texto"],
+                                                 duracion(s["destino"]))
             except Exception as e:  # noqa: BLE001
-                print(f"  Voicebox no responde ({e}); se usa la voz de respaldo")
-        palabras = []
-        if hecho is None:
-            palabras = con_edge_tts(limpio, destino)
+                fallo = fallo or e
+                print(f"  sin tiempos por palabra en {s['id']} ({type(e).__name__}: {e})")
+        if fallo:
+            _avisar("<b>Subtitulos incompletos</b>: no se pudieron sacar los tiempos "
+                    f"de la voz de Carla.\n<pre>{html.escape(str(fallo)[:300])}</pre>")
+
+    for s in segs:
+        destino = s.pop("destino")
+        limpio = s["texto"]
+        if not usar_voicebox:
+            s["palabras"] = con_edge_tts(limpio, destino)
             s["voz"] = "edge-tts"
-        else:
-            hecho = hecho
-            s["voz"] = "voicebox"
+        palabras = s["palabras"]
         s["audio"] = str(destino)
         s["dur"] = round(duracion(destino), 2)
-        s["palabras"] = palabras
         print(f"  {s['id']:<8} {s['dur']:>6.2f} s  [{s['voz']}]  "
               f"{len(palabras)} palabras con tiempo  {limpio[:44]}…")
 

@@ -17,21 +17,22 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 RAIZ = Path(__file__).resolve().parent
 sys.path.insert(0, str(RAIZ))
 
+import config  # noqa: E402
 import telegram as bot  # noqa: E402
 
 ESTADO = RAIZ / "datos" / "orquestador.json"
-TZ = ZoneInfo("America/Tijuana")
+TZ = config.TZ
 FRANJAS = [(5, "manana"), (12, "mediodia"), (15, "tarde"), (20, "noche")]
 MARGEN_FRANJA = 2      # horas de ventana para disparar la franja
 
@@ -66,27 +67,34 @@ def correr(comando, avisar=True):
     if avisar:
         nombre = Path(comando[0]).name
         try:
-            bot.mandar(f"<b>Fallo en {nombre}</b>\n<pre>{cola[-600:]}</pre>")
+            # el traceback trae "<module>": sin escapar, Telegram rechaza el
+            # mensaje y el aviso de error se perdia en silencio
+            bot.mandar(f"<b>Fallo en {html.escape(nombre)}</b>\n"
+                       f"<pre>{html.escape(cola[-600:])}</pre>")
         except Exception:  # noqa: BLE001
             pass
     return False
 
 
-def subir_a_youtube(video):
-    """Sube el video al canal si hay credenciales. Devuelve el enlace o None."""
-    import config
+def subir_a_youtube(video, guion_path):
+    """Sube el video al canal si hay credenciales. Devuelve el enlace o None.
+
+    El guion es obligatorio: de ahi salen el titulo y las fuentes de la
+    descripcion. Sin el, el Short subia como "2026 11 17 Elegida" y sin creditos.
+    """
     if not (config.YT_CLIENT_ID and config.YT_CLIENT_SECRET and config.YT_REFRESH):
         return None
-    privacidad = os.environ.get("YT_PRIVACIDAD", "public")
+    # mismo valor por defecto que nota.py: si falta la variable, nunca publico
+    privacidad = os.environ.get("YT_PRIVACIDAD", "private") or "private"
     print(f"  subiendo a YouTube ({privacidad})")
     hecho = subprocess.run(
         [sys.executable, str(RAIZ / "publicar.py"), "--video", str(video),
-         "--privacidad", privacidad],
+         "--guion", str(guion_path), "--privacidad", privacidad],
         cwd=RAIZ, capture_output=True, text=True, errors="replace")
     print(hecho.stdout[-1500:])
     if hecho.returncode != 0:
         bot.mandar(f"<b>No se pudo subir a YouTube</b>\n<pre>"
-                   f"{(hecho.stderr or hecho.stdout)[-500:]}</pre>")
+                   f"{html.escape((hecho.stderr or hecho.stdout)[-500:])}</pre>")
         return None
     for linea in (hecho.stdout or "").splitlines():
         if "youtube.com/shorts/" in linea:
@@ -96,23 +104,32 @@ def subir_a_youtube(video):
 
 def armar_video(link="", tema=""):
     """Guion -> voz -> video -> chat (y YouTube) para una historia o un tema."""
-    sello = datetime.now(TZ).strftime("%Y-%m-%d")
     if tema:
         if not correr([str(RAIZ / "nota.py"), tema]):
             return False
         return True
 
+    # sin enlace, guion.py entra en modo automatico y publica la historia que vaya
+    # arriba en ese momento, no la que elegiste: mejor no hacer nada
+    if not link:
+        bot.mandar("No encontre la historia de ese boton. Usa la lista mas reciente.")
+        return False
+
+    # la ruta del guion la decide el orquestador y se la pasa a guion.py: asi los
+    # dos usan el mismo nombre aunque cambie el dia en UTC
+    sello = config.ahora().strftime("%Y-%m-%d")
     destino = RAIZ / "docs" / "guiones" / f"{sello}-elegida.json"
-    if not correr([str(RAIZ / "guion.py"), "--link", link, "--franja", "elegida"]):
+    if not correr([str(RAIZ / "guion.py"), "--link", link, "--franja", "elegida",
+                   "--json", str(destino)]):
         return False
     if not correr([str(RAIZ / "voz.py"), "--guion", str(destino)]):
         return False
     if not correr([str(RAIZ / "capsula.py"), "--guion", str(destino)]):
         return False
-    video = RAIZ / "docs" / "videos" / f"{sello}-elegida.mp4"
+    video = RAIZ / "docs" / "videos" / f"{destino.stem}.mp4"
     if not video.exists():
         return False
-    enlace = subir_a_youtube(video)
+    enlace = subir_a_youtube(video, destino)
     pie = "El Ahorita · la nota que elegiste"
     if enlace:
         pie += f"\n{enlace}"

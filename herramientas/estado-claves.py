@@ -21,6 +21,8 @@ CLAVES = [
     ("YT_CLIENT_ID", config.YT_CLIENT_ID),
     ("YT_CLIENT_SECRET", config.YT_CLIENT_SECRET),
     ("YT_REFRESH_TOKEN", config.YT_REFRESH),
+    ("VOICEBOX_URL", config.VOICEBOX_URL),
+    ("VOICEBOX_PROFILE", config.VOICEBOX_PROFILE),
 ]
 
 

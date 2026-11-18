@@ -143,6 +143,7 @@ def material(notas, con_articulo=True):
             "entradilla": _recorte(desc or f.get("excerpt") or "", 400),
             "cuerpo_del_articulo": cuerpo[:2200],
             "la_publican": f["medios"],
+            "ya_contado": f.get("seguimiento_de", ""),
         })
     return partes
 
@@ -161,6 +162,9 @@ def prompt_usuario(mat):
             lineas.append(f"entradilla: {m['entradilla']}")
         if m["cuerpo_del_articulo"]:
             lineas.append(f"cuerpo: {m['cuerpo_del_articulo']}")
+        if m.get("ya_contado"):
+            lineas.append(f"SEGUIMIENTO: hoy ya publicamos \"{m['ya_contado']}\". Cuenta "
+                          "solo lo nuevo; el antecedente, en media frase como mucho.")
         lineas.append("")
     return "\n".join(lineas)
 
@@ -274,7 +278,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--notas", type=int, default=0, help="1 o 2; 0 = automatico")
     ap.add_argument("--franja", default="")
-    ap.add_argument("--link", default="", help="publicar una historia concreta")
+    ap.add_argument("--link", action="append", default=[],
+                    help="historia concreta (se puede repetir: 1 o 2 notas)")
+    ap.add_argument("--previo", action="append", default=[],
+                    help="por cada --link: titulo ya publicado hoy si es seguimiento")
     ap.add_argument("--sin-ia", action="store_true")
     ap.add_argument("--sin-articulo", action="store_true",
                     help="no descargar el articulo completo (mas rapido)")
@@ -284,10 +291,14 @@ def main():
     args = ap.parse_args()
 
     if args.link:
-        elegida = historia_por_link(args.link)
-        if not elegida:
-            raise SystemExit("no encontre esa historia en la edicion de hoy")
-        notas = [elegida]
+        notas = []
+        for i, link in enumerate(args.link):
+            elegida = historia_por_link(link)
+            if not elegida:
+                raise SystemExit(f"no encontre esa historia en la edicion de hoy: {link}")
+            if i < len(args.previo) and args.previo[i]:
+                elegida["seguimiento_de"] = args.previo[i]
+            notas.append(elegida)
     else:
         filas = historias_del_dia(3)
         if not filas:

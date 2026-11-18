@@ -1,18 +1,21 @@
-"""Orquestador: decide que hacer en cada corrida del robot.
+"""Orquestador: decide que hacer en cada corrida del robot (cada 5 minutos).
 
-Se ejecuta cada 15 minutos en GitHub Actions. En cada pasada:
+En cada pasada, en este orden:
+  1. Telegram: si tocaste un boton o escribiste /nota, lo atiende.
+  2. Caso especial pendiente: si te pregunto y pasaron 30 min, publica lo mejor.
+  3. Franja (05:00, 12:00, 15:00, 20:00 en Tijuana): actualiza el radar, elige
+     1 o 2 notas de su ventana (ver franjas.py) y publica sola. Si hay 2+ notas
+     de alto impacto, te pregunta.
 
-  1. Atiende Telegram: si tocaste un boton o escribiste /nota, arma ese video.
-  2. Si toca franja (05:00, 12:00, 15:00, 20:00 en Tijuana) y no se ha mandado hoy,
-     actualiza el radar y manda las tres candidatas con botones.
-
-Como la hora se calcula en Tijuana, el cambio de horario se ajusta solo: no hay
-que tocar los cron dos veces al ano.
+/nota solo corre si cabe en el limite diario de YouTube sin quitarle su lugar
+a una franja. Como la hora se calcula en Tijuana, el cambio de horario se
+ajusta solo.
 
 Uso:
-    python orquestador.py              # una pasada (lo que hara el cron)
-    python orquestador.py --estado     # solo dice que haria, sin ejecutar
-    python orquestador.py --franja     # fuerza la franja ahora
+    python orquestador.py                          # una pasada (lo que hace el cron)
+    python orquestador.py --estado                 # que haria, sin ejecutar
+    python orquestador.py --franja tarde           # corre esa franja ahora
+    python orquestador.py --franja tarde --prueba  # video al chat, sin subir ni guardar
 """
 from __future__ import annotations
 
@@ -22,19 +25,18 @@ import json
 import os
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent
 sys.path.insert(0, str(RAIZ))
 
 import config  # noqa: E402
+import franjas  # noqa: E402
 import telegram as bot  # noqa: E402
 
 ESTADO = RAIZ / "datos" / "orquestador.json"
 TZ = config.TZ
-FRANJAS = [(5, "manana"), (12, "mediodia"), (15, "tarde"), (20, "noche")]
-MARGEN_FRANJA = 2      # horas de ventana para disparar la franja
 
 
 def cargar():
@@ -102,25 +104,27 @@ def subir_a_youtube(video, guion_path):
     return None
 
 
-def armar_video(link="", tema=""):
-    """Guion -> voz -> video -> chat (y YouTube) para una historia o un tema."""
-    if tema:
-        if not correr([str(RAIZ / "nota.py"), tema]):
-            return False
-        return True
+def armar_video(links=(), previos=(), nombre="elegida", pie="El Ahorita",
+                origen="elegida", prueba=False):
+    """Guion -> voz -> video -> YouTube -> chat para 1 o 2 historias del ranking.
 
-    # sin enlace, guion.py entra en modo automatico y publica la historia que vaya
-    # arriba en ese momento, no la que elegiste: mejor no hacer nada
-    if not link:
+    Devuelve True si el video quedo hecho (y subido, salvo en prueba).
+    """
+    links = [lk for lk in links if lk]
+    # sin enlace, guion.py entra en modo automatico y publicaria otra historia
+    if not links:
         bot.mandar("No encontre la historia de ese boton. Usa la lista mas reciente.")
         return False
 
     # la ruta del guion la decide el orquestador y se la pasa a guion.py: asi los
     # dos usan el mismo nombre aunque cambie el dia en UTC
     sello = config.ahora().strftime("%Y-%m-%d")
-    destino = RAIZ / "docs" / "guiones" / f"{sello}-elegida.json"
-    if not correr([str(RAIZ / "guion.py"), "--link", link, "--franja", "elegida",
-                   "--json", str(destino)]):
+    carpeta = RAIZ / ("build" if prueba else "docs/guiones")
+    destino = carpeta / f"{sello}-{nombre}.json"
+    comando = [str(RAIZ / "guion.py"), "--franja", nombre, "--json", str(destino)]
+    for i, link in enumerate(links):
+        comando += ["--link", link, "--previo", previos[i] if i < len(previos) else ""]
+    if not correr(comando):
         return False
     if not correr([str(RAIZ / "voz.py"), "--guion", str(destino)]):
         return False
@@ -129,12 +133,27 @@ def armar_video(link="", tema=""):
     video = RAIZ / "docs" / "videos" / f"{destino.stem}.mp4"
     if not video.exists():
         return False
+    if prueba:
+        bot.mandar_video(video, pie + "\n(prueba: no se sube a YouTube)")
+        return True
     enlace = subir_a_youtube(video, destino)
-    pie = "El Ahorita · la nota que elegiste"
     if enlace:
         pie += f"\n{enlace}"
+        datos = json.loads(destino.read_text(encoding="utf-8"))
+        franjas.registrar_publicada(datos.get("historias", []), origen, enlace)
     bot.mandar_video(video, pie)
-    return True
+    return bool(enlace) or not (config.YT_CLIENT_ID and config.YT_REFRESH)
+
+
+def nota_a_mano(texto, estado):
+    """/nota: solo si cabe en el limite diario sin quitarle lugar a una franja."""
+    cupo = franjas.cupo_para_nota(estado)
+    if cupo <= 0:
+        bot.mandar(f"Hoy ya no cabe otra subida: {franjas.subidas_hoy()} hechas y "
+                   f"{franjas.franjas_restantes(estado, config.ahora())} franja(s) por salir "
+                   f"(limite {franjas.LIMITE_SUBIDAS} al dia).")
+        return False
+    return correr([str(RAIZ / "nota.py"), texto])
 
 
 def guardar_offset():
@@ -162,77 +181,190 @@ def guardar_offset():
         print(f"  aviso: no se pudo guardar el offset ({type(e).__name__})")
 
 
-def atender_telegram():
+def atender_telegram(estado):
     """Lee lo que hayas mandado y actua. Devuelve True si hizo algo."""
     decision = bot.recoger(texto_libre=True)
     if decision:
         guardar_offset()
     if not decision:
         return False
+    pendiente = estado.get("pendiente") or {}
+    de_pendiente = bool(pendiente) and decision.get("lote") == pendiente.get("lote")
+
     if decision["accion"] == "publicar":
         historia = decision.get("historia") or {}
         print(f"  elegiste: {historia.get('titulo', '')[:70]}")
-        return armar_video(link=historia.get("link", ""))
+        if de_pendiente:
+            return resolver_pendiente(estado, [historia], "elegiste")
+        return armar_video([historia.get("link", "")], [historia.get("seguimiento_de", "")],
+                           pie="El Ahorita · la nota que elegiste")
+    if decision["accion"] == "ninguna" and de_pendiente:
+        print(f"  ninguna: se salta la franja {pendiente['clave']}")
+        cerrar_franja(estado, pendiente["clave"], "saltada")
+        bot.mandar("Va, esta franja no sale.")
+        return True
     if decision["accion"] == "nota_manual":
         texto = decision.get("texto", "")
         if not texto:
             bot.mandar("Escribe el tema o el enlace despues de /nota")
             return False
         print(f"  nota a mano: {texto[:70]}")
-        return armar_video(tema=texto)
+        return nota_a_mano(texto, estado)
     if decision["accion"] == "subir":
         print(f"  subir nota corta: {decision['guion']}")
+        if franjas.cupo_para_nota(estado) <= 0:
+            bot.mandar("Hoy ya no cabe otra subida sin quitarle lugar a una franja.")
+            return False
         return correr([str(RAIZ / "nota.py"), "--subir", decision["guion"]])
     print("  ninguna: no se publica")
     return True
 
 
-def franja_pendiente(estado, ahora):
-    """Que franja toca, si hay alguna dentro de su ventana y sin mandar."""
-    for hora, nombre in FRANJAS:
-        if not (hora <= ahora.hour < hora + MARGEN_FRANJA):
-            continue
-        clave = f"{ahora:%Y-%m-%d}-{nombre}"
-        if estado["franjas"].get(clave):
-            continue
-        return clave, nombre
-    return None, None
+# ------------------------------------------------------------------ franjas
+def cerrar_franja(estado, clave, como):
+    estado.setdefault("franjas", {})[clave] = f"{como} {config.ahora():%H:%M}"
+    estado.pop("pendiente", None)
+    estado.get("intentos", {}).pop(clave, None)
+    guardar(estado)
 
 
-def mandar_franja(estado, clave):
+def publicar_franja(estado, clave, nombre, historias, como):
+    """Arma y sube el video de la franja; si falla, se reintenta en la proxima pasada."""
+    previos = [h.get("seguimiento_de", "") for h in historias]
+    etiqueta = {"madrugada": "la noche y la madrugada", "manana": "la manana",
+                "tarde": "la tarde", "noche": "el cierre del dia"}.get(nombre, nombre)
+    ok = armar_video([h["link"] for h in historias], previos, nombre=nombre,
+                     pie=f"El Ahorita · {etiqueta}", origen=f"franja-{nombre}")
+    if ok:
+        cerrar_franja(estado, clave, como)
+        return True
+    intentos = estado.setdefault("intentos", {})
+    intentos[clave] = intentos.get(clave, 0) + 1
+    if intentos[clave] >= 2:
+        bot.mandar(f"<b>La franja {html.escape(nombre)} no salio</b> tras 2 intentos. "
+                   "Revisa los avisos de arriba.")
+        cerrar_franja(estado, clave, "fallida")
+    else:
+        guardar(estado)
+    return False
+
+
+def resolver_pendiente(estado, historias, como):
+    p = estado["pendiente"]
+    return publicar_franja(estado, p["clave"], p["nombre"], historias, como)
+
+
+def revisar_pendiente(estado, ahora):
+    """Caso especial sin respuesta: pasado el plazo se publica lo mejor."""
+    p = estado.get("pendiente")
+    if not p:
+        return False
+    limite = datetime.fromisoformat(p["publica_a"])
+    if ahora < limite:
+        print(f"  esperando tu eleccion para {p['nombre']} hasta {limite:%H:%M}")
+        return False
+    elegidas = franjas.elegir(p["opciones"])
+    bot.mandar(f"No elegiste en {franjas.ESPERA_MIN} min: publico "
+               f"<b>{html.escape(elegidas[0]['titulo'][:100])}</b>"
+               + (" y la segunda" if len(elegidas) > 1 else "") + ".")
+    return publicar_franja(estado, p["clave"], p["nombre"], elegidas, "sin respuesta")
+
+
+def preguntar(estado, clave, nombre, opciones, ahora):
+    """Caso especial: 2+ notas de alto impacto. Lista con botones y plazo."""
+    lote = bot.guardar_lote(opciones)
+    publica_a = ahora + timedelta(minutes=franjas.ESPERA_MIN)
+    lineas = [f"<b>El Ahorita · {html.escape(nombre)}</b>: hay {len(opciones)} notas de "
+              "alto impacto. ¿Cual sale?\n"]
+    for i, o in enumerate(opciones, 1):
+        seg = f"\n   seguimiento de: {html.escape(o['seguimiento_de'][:80])}" if o["seguimiento_de"] else ""
+        lineas.append(f"<b>{i}.</b> {html.escape(o['titulo'][:140])}\n"
+                      f"   {o['medios']} medios · peso {o['peso']}{seg}")
+    lineas.append(f"\nSi no eliges, a las {publica_a:%H:%M} publico la mejor.")
+    botones = [[(f"Publicar {i}", f"pub:{lote}:n{i}")] for i in range(1, len(opciones) + 1)]
+    botones.append([("Ninguna (saltar franja)", f"pub:{lote}:nada")])
+    bot.mandar("\n".join(lineas), botones)
+    estado["pendiente"] = {"clave": clave, "nombre": nombre, "lote": lote,
+                           "publica_a": publica_a.isoformat(timespec="seconds"),
+                           "opciones": opciones}
+    guardar(estado)
+
+
+def correr_franja(estado, clave, franja, ahora, prueba=False):
+    """Toca franja: radar, seleccion y publicacion (o pregunta si es caso especial)."""
+    nombre = franja[1]
     if not correr([str(RAIZ / "aggregate.py"), "--days", "2"]):
         print("  fallo el radar; se reintenta en la proxima pasada")
         return False
-    if not correr([str(RAIZ / "telegram.py"), "--candidatas"]):
-        return False
-    estado["franjas"][clave] = datetime.now(TZ).isoformat(timespec="seconds")
-    guardar(estado)
-    return True
+    datos = json.loads((RAIZ / "docs" / "data" / "latest.json").read_text(encoding="utf-8"))
+    filas = franjas.candidatas(datos["items"], franja, ahora)
+    print(f"  {len(filas)} historias desde {franjas.inicio_ventana(franja, ahora):%d %H:%M}")
+    for f in filas[:4]:
+        print(f"   {f['score']:>5} peso {f['peso_cobertura']:>5} · {f['title'][:70]}")
+    if not filas:
+        bot.mandar(f"El Ahorita · {nombre}: no hay historias nuevas en la ventana; no sale video.")
+        if not prueba:
+            cerrar_franja(estado, clave, "sin noticias")
+        return True
+    opciones = [franjas.resumen(f) for f in filas[:3]]
+    if prueba:
+        aviso = " (en serio seria CASO ESPECIAL: te preguntaria)" if franjas.es_especial(filas) else ""
+        return armar_video([o["link"] for o in franjas.elegir(opciones)],
+                           [o["seguimiento_de"] for o in franjas.elegir(opciones)],
+                           nombre=f"prueba-{nombre}", prueba=True,
+                           pie=f"El Ahorita · prueba de la franja {nombre}{aviso}")
+    if franjas.es_especial(filas):
+        print("  caso especial: se pregunta")
+        preguntar(estado, clave, nombre, opciones, ahora)
+        return True
+    return publicar_franja(estado, clave, nombre, franjas.elegir(opciones), "automatica")
+
+
+def franja_pendiente(estado, ahora):
+    """La franja que toca ahora, si no ha salido ni esta esperando respuesta."""
+    franja = franjas.franja_actual(ahora)
+    if not franja:
+        return None, None
+    clave = f"{ahora:%Y-%m-%d}-{franja[1]}"
+    if estado.get("franjas", {}).get(clave):
+        return None, None
+    if (estado.get("pendiente") or {}).get("clave") == clave:
+        return None, None
+    return clave, franja
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--estado", action="store_true")
-    ap.add_argument("--franja", action="store_true")
+    ap.add_argument("--franja", default="",
+                    help="correr esta franja ahora (madrugada, manana, tarde, noche)")
+    ap.add_argument("--prueba", action="store_true",
+                    help="con --franja: arma el video y lo manda al chat, sin subir ni guardar")
     args = ap.parse_args()
 
-    ahora = datetime.now(TZ)
+    ahora = config.ahora()
     estado = cargar()
-    clave, nombre = franja_pendiente(estado, ahora)
-    print(f"{ahora:%Y-%m-%d %H:%M} Tijuana · franja pendiente: {nombre or 'ninguna'}")
+    clave, franja = franja_pendiente(estado, ahora)
+    print(f"{ahora:%Y-%m-%d %H:%M} Tijuana · franja pendiente: "
+          f"{franja[1] if franja else 'ninguna'}")
 
     if args.estado:
         print(json.dumps(estado, ensure_ascii=False, indent=1))
         return 0
 
     if args.franja:
-        print("forzando franja")
-        return 0 if mandar_franja(estado, f"{ahora:%Y-%m-%d}-manual") else 1
+        forzada = franjas.franja_por_nombre(args.franja)
+        print(f"forzando franja {forzada[1]}" + (" (prueba)" if args.prueba else ""))
+        ok = correr_franja(estado, f"{ahora:%Y-%m-%d}-{forzada[1]}", forzada, ahora,
+                           prueba=args.prueba)
+        return 0 if ok else 1
 
-    hubo = atender_telegram()
-    if not hubo and clave:
-        print(f"mandando candidatas de la franja {nombre}")
-        hubo = mandar_franja(estado, clave)
+    hubo = atender_telegram(estado)
+    if not hubo:
+        hubo = revisar_pendiente(estado, ahora)
+    if not hubo and franja:
+        print(f"corriendo la franja {franja[1]}")
+        hubo = correr_franja(estado, clave, franja, ahora)
     if not hubo:
         print("sin novedades")
     return 0

@@ -400,6 +400,8 @@ def publicar_y_avisar(destino, video, tema, forzar=False, prueba=False):
     enlace = subir_a_youtube(video, destino)
     if enlace:
         pie += f"\n{enlace}"
+        import franjas   # para que las franjas no repitan lo que ya salio por /nota
+        franjas.registrar_publicada(datos.get("historias", []), "nota", enlace)
     telegram_mod.mandar_video(video, pie)
     print("enviado al chat" + (f" · {enlace}" if enlace else " · SIN subir"))
 

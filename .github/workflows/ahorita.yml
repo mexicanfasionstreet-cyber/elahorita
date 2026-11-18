@@ -10,10 +10,11 @@ on:
     - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
-      forzar_franja:
-        description: "Mandar candidatas ahora mismo"
-        type: boolean
-        default: false
+      probar_franja:
+        description: "Probar una franja ahora: el video llega al chat y NO se sube ni se guarda nada"
+        type: choice
+        options: ["no", "madrugada", "manana", "tarde", "noche"]
+        default: "no"
       probar_voz:
         description: "Solo probar Voicebox: genera una frase y te la manda al chat"
         type: boolean
@@ -25,7 +26,7 @@ on:
 
 # la prueba de voz va en su propia cola: si se atora, no bloquea al robot
 concurrency:
-  group: ${{ (inputs.probar_voz || inputs.probar_nota) && 'el-ahorita-prueba' || 'el-ahorita' }}
+  group: ${{ (inputs.probar_voz || inputs.probar_nota || (inputs.probar_franja && inputs.probar_franja != 'no')) && 'el-ahorita-prueba' || 'el-ahorita' }}
   cancel-in-progress: false
 
 jobs:
@@ -124,21 +125,23 @@ jobs:
           TEMA: ${{ inputs.probar_nota }}
         run: python nota.py "$TEMA" --prueba
 
+      - name: Probar franja
+        if: ${{ inputs.probar_franja && inputs.probar_franja != 'no' }}
+        env:
+          FRANJA: ${{ inputs.probar_franja }}
+        run: python orquestador.py --franja "$FRANJA" --prueba
+
       - name: Pasada
-        if: ${{ !inputs.probar_voz && !inputs.probar_nota }}
+        if: ${{ !inputs.probar_voz && !inputs.probar_nota && (!inputs.probar_franja || inputs.probar_franja == 'no') }}
         run: |
           set -o pipefail
-          if [ "${{ inputs.forzar_franja }}" = "true" ]; then
-            python orquestador.py --franja 2>&1 | tee datos/ultimo-log.txt
-          else
-            python orquestador.py 2>&1 | tee datos/ultimo-log.txt
-          fi
+          python orquestador.py 2>&1 | tee datos/ultimo-log.txt
           # el log queda en el repo: asi se puede revisar que paso sin acceso a Actions
           tail -c 20000 datos/ultimo-log.txt > datos/ultimo-log.txt.tmp
           mv datos/ultimo-log.txt.tmp datos/ultimo-log.txt
 
       - name: Guardar estado
-        if: ${{ always() && !inputs.probar_voz && !inputs.probar_nota }}
+        if: ${{ always() && !inputs.probar_voz && !inputs.probar_nota && (!inputs.probar_franja || inputs.probar_franja == 'no') }}
         run: |
           git config user.name "el-ahorita"
           git config user.email "bot@elahorita.local"

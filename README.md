@@ -1,9 +1,9 @@
 # El Ahorita
 
 Canal de noticias en YouTube Shorts, **México primero y el mundo como apoyo**. El
-robot busca las noticias más relevantes del día, te las propone por Telegram, monta
-un video vertical de 60-70 s con **1 o 2 notas desarrolladas** —no titulares sueltos—
-y lo sube al canal.
+robot busca las noticias más relevantes, arma un video vertical de 60-70 s con **1 o 2
+notas desarrolladas** —no titulares sueltos— y lo sube **solo**, cuatro veces al día.
+Tú solo decides en casos especiales o cuando pides una nota urgente con `/nota`.
 
 Marca: **El Ahorita** · `@ElAhorita` · *Ahorita sí es ahorita.*
 Promesa: lo más importante de México y el mundo, en menos de un minuto.
@@ -17,42 +17,65 @@ Promesa: lo más importante de México y el mundo, en menos de un minuto.
         │
         ├─ agrupa la misma historia de varios medios  →  cobertura
         ├─ puntúa: cobertura × peso × recencia × pico de entidad × sección
-        └─ elige sin repetir personaje (diversidad)
+        └─ se queda con la ventana de la franja y no repite lo ya publicado
                     │
-      ┌─────────────┴──────────────┐
-      │                            │
-  4 veces al día               tú escribes
-  te manda 3 candidatas        /nota <tema o enlace>
-      │                            │
-   tocas un botón ────────────────┘
+      ┌─────────────┴───────────────────────┐
+      │                                     │
+  caso normal                  2+ notas de alto impacto
+  publica solo                 te pregunta por Telegram
+      │                        (30 min; si no, sale la mejor)
+      └─────────────┬───────────────────────┘
+                    │            tú: /nota <tema o enlace>
+        guion con IA + verificador de datos ◄──┘
                     │
-        guion con IA + verificador de datos
-                    │
-        voz (Voicebox / edge-tts)
+        voz (Voicebox con tu voz / edge-tts de respaldo)
+        + tiempos por palabra con Whisper
                     │
    video 1080×1920: marca, titular, subtítulos karaoke, cierre
                     │
-        sube a YouTube + te manda el enlace al chat
+        sube a YouTube + te manda el video y el enlace al chat
 ```
 
 ### Las cuatro franjas
 
-| Hora (Tijuana) | Trabajo |
-|---|---|
-| 05:00 | Lo que pasó de noche y la agenda del día |
-| 12:00 | La nota grande de la mañana |
-| 15:00 | Actualización: qué cambió desde el mediodía |
-| 20:00 | Cierre: la historia del día completa |
+| Hora (Tijuana) | Qué publica | Ventana de noticias |
+|---|---|---|
+| 05:00 | Lo que pasó de noche y en la madrugada | desde las 20:00 del día anterior |
+| 12:00 | Lo relevante de la mañana | desde las 05:00 |
+| 15:00 | Seguimiento o lo nuevo del mediodía | desde las 12:00 |
+| 20:00 | El cierre del día | desde las 15:00 |
+
+- **1 o 2 notas por video**: una si gana con claridad (15 % o más); dos si la
+  segunda aguanta.
+- **Seguimientos**: una historia ya publicada hoy solo vuelve si los medios
+  publicaron algo después del video anterior, y el guion cuenta solo lo nuevo.
+- **Caso especial**: si 2 o más historias tienen cobertura de alto impacto (peso
+  ≥ `ALTO_IMPACTO`, 35 por defecto: casi todas las fuentes a la vez), te pregunta
+  cuál sale. Si no contestas en 30 min, publica la mejor. *Ninguna* salta la franja.
+- **Si falla**, se reintenta en la siguiente pasada; a la segunda, te avisa.
+- **Límite de YouTube**: 6 subidas al día. Las 4 franjas van primero; las otras 2
+  quedan para `/nota`.
 
 ### La mesa de edición
 
 Telegram es el control remoto. Solo atiende tu chat.
 
-- **Candidatas**: llegan 3 historias con botones *Publicar 1/2/3* y *Ninguna hoy*.
-- **Aprobación automática**: si una nota gana por goleada, se publica sola; si hay
-  empate o tema sensible, te pregunta.
-- **`/nota <tema>`**: pides una historia concreta; busca, investiga y la monta.
+- **`/nota <tema>`**: busca el tema, elige la historia que **coincide** con lo que
+  pediste (no la que más medios tiene), lee hasta 3 artículos y la monta. Si
+  nada coincide bien, te ofrece 3 opciones con botones.
 - **`/nota <enlace>`**: va directo al artículo, sin búsqueda.
+- **Notas cortas**: si un guion queda en menos de ~45 s, el video te llega pero
+  no se sube; tienes el botón *Subir así*.
+- **Avisos**: si Voicebox no responde (sale con la voz de respaldo), si faltan
+  subtítulos o si una franja falla.
+
+### Modos de prueba (Actions → El Ahorita → *Run workflow*)
+
+Ninguno sube a YouTube ni guarda estado; el resultado llega a tu chat.
+
+- **Solo probar Voicebox**: conexión, perfil, una frase y un video corto con subtítulos.
+- **Probar /nota**: escribe un tema.
+- **Probar una franja**: elige madrugada, mañana, tarde o noche.
 
 ---
 
@@ -226,8 +249,8 @@ disparador confiable cada 5 minutos (cron-job.org).
 
 **Pendiente**:
 
-1. Confirmar que Voicebox suena en el runer (Tailscale + Carla-News).
-2. Pasar `YT_PRIVACIDAD` a `public` cuando los videos estén aprobados.
+1. Pasar `YT_PRIVACIDAD` a `public` cuando los videos estén aprobados.
+2. Ajustar `ALTO_IMPACTO` con datos reales de días con sucesos grandes.
 3. Valorar pedir ampliación de cuota a Google si el canal crece a más de 6 clips/día.
 4. Vigilar que el cron siga despertando; si hay huecos, revisar cron-job.org.
 

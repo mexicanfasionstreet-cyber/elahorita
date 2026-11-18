@@ -842,6 +842,8 @@ def build(sources, days, cache_path=None):
         it.pop("_ent", None)
         it.pop("aggregator", None)
         it["also"] = it.get("also", [])
+        ultima = max(it.pop("_ultima", it["published"]), it["published"])
+        it["updated"] = ultima.isoformat().replace("+00:00", "Z")
         it["published"] = it["published"].isoformat().replace("+00:00", "Z")
         # id estable: hash del enlace (hash() de Python cambia en cada proceso y
         # rompería la deduplicación del archivo histórico)
@@ -919,6 +921,10 @@ def merge_items(items):
             merged.append(it)
             continue
 
+        # la nota mas reciente de la historia: sirve para las ventanas de cada
+        # franja y para saber si una historia ya publicada trae datos nuevos
+        twin["_ultima"] = max(twin.get("_ultima", twin["published"]), it["published"],
+                              twin["published"])
         other = it
         if os.environ.get("MERGE_DEBUG"):
             print(f"UNE  [{it['source']}] {it['title'][:72]}")

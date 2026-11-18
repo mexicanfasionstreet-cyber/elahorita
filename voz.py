@@ -165,7 +165,7 @@ def generar_voz(guion, proveedor="edge"):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--guion", default="")
-    ap.add_argument("--proveedor", default="edge", choices=["edge", "voicebox"])
+    ap.add_argument("--proveedor", default="auto", choices=["auto", "edge", "voicebox"])
     args = ap.parse_args()
 
     if args.guion:
@@ -178,6 +178,9 @@ def main():
     guion = json.loads(ruta.read_text(encoding="utf-8"))
     guion = guion.get("guion", guion)  # el archivo envuelve el guion con metadatos
     guion["_nombre"] = ruta.stem
+    if args.proveedor == "auto":
+        args.proveedor = ("voicebox" if (config.VOICEBOX_URL and config.VOICEBOX_PROFILE)
+                          else "edge")
 
     n_pal = guion.get("palabras") or sum(
         len(s.split()) for s in [guion.get("gancho", "")] +

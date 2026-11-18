@@ -48,8 +48,17 @@ jobs:
             echo "YT_CLIENT_SECRET=${{ secrets.YT_CLIENT_SECRET }}"
             echo "YT_REFRESH_TOKEN=${{ secrets.YT_REFRESH_TOKEN }}"
             echo "YT_PRIVACIDAD=${{ vars.YT_PRIVACIDAD || 'private' }}"
+            echo "VOICEBOX_URL=${{ vars.VOICEBOX_URL }}"
+            echo "VOICEBOX_PROFILE_ID=${{ vars.VOICEBOX_PROFILE }}"
           } > .env
           grep -c . .env
+
+      - name: Tailscale
+        if: ${{ secrets.TS_AUTHKEY != '' }}
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.TS_AUTHKEY }}
+          version: latest
 
       - name: Revisar claves
         run: python herramientas/estado-claves.py || true

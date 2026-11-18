@@ -65,16 +65,6 @@ nota noticia noticias tema video quiero haz hazme sobre acerca cual cuales donde
 cuando quien quienes porque pues asi the and for with from
 """.split())
 
-# marcas de que la historia ocurre en Mexico (para la etiqueta MEXICO / MUNDO)
-MARCAS_MX = re.compile(
-    r"\b(mexico|mexican[oa]s?|cdmx|sheinbaum|morena|pemex|cfe|banxico|imss|sat|sep|"
-    r"guardia nacional|fgr|scjn|tijuana|baja california|jalisco|guadalajara|monterrey|"
-    r"nuevo leon|sinaloa|sonora|chihuahua|coahuila|tamaulipas|veracruz|oaxaca|chiapas|"
-    r"guerrero|michoacan|puebla|queretaro|yucatan|quintana roo|cancun|edomex|estado de mexico|"
-    r"zacatecas|durango|hidalgo|morelos|tabasco|campeche|colima|nayarit|aguascalientes|"
-    r"guanajuato|san luis potosi|tlaxcala|baja california sur|los cabos)\b")
-
-
 # ------------------------------------------------------------------ busqueda
 def _norm(texto):
     from aggregate import norm
@@ -210,10 +200,6 @@ def horas_desde(fecha):
     return round(max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600), 1)
 
 
-def es_de_mexico(texto):
-    return bool(MARCAS_MX.search(_norm(texto)))
-
-
 # ------------------------------------------------------------------ telegram
 def _avisar(texto, botones=None):
     try:
@@ -312,9 +298,10 @@ def construir(args):
         titulo = principal.get("titulo") or principal["descripcion"][:110] or tema
     cuerpo = cuerpo_combinado(leidos)
 
-    from aggregate import classify
-    slug = (classify(titulo, cuerpo) or ["industria"])[0]
-    region = "mx" if es_de_mexico(titulo + " " + cuerpo[:1500]) else "mundo"
+    import secciones
+    slug, region = secciones.clasificar(titulo, (principal["descripcion"] + " " + cuerpo)[:1500])
+    ia = secciones.con_ia([{"id": link, "title": titulo, "excerpt": principal["descripcion"]}])
+    slug, region = ia.get(link, (slug, region))
     mat = [{
         "n": 1, "seccion": SECCIONES.get(slug, "AHORITA"), "titular": titulo,
         "entradilla": principal["descripcion"][:400], "cuerpo_del_articulo": cuerpo,

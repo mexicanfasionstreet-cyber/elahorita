@@ -105,7 +105,7 @@ def subir_a_youtube(video, guion_path):
 
 
 def armar_video(links=(), previos=(), nombre="elegida", pie="El Ahorita",
-                origen="elegida", prueba=False):
+                origen="elegida", prueba=False, reservas=()):
     """Guion -> voz -> video -> YouTube -> chat para 1 o 2 historias del ranking.
 
     Devuelve True si el video quedo hecho (y subido, salvo en prueba).
@@ -124,6 +124,8 @@ def armar_video(links=(), previos=(), nombre="elegida", pie="El Ahorita",
     comando = [str(RAIZ / "guion.py"), "--franja", nombre, "--json", str(destino)]
     for i, link in enumerate(links):
         comando += ["--link", link, "--previo", previos[i] if i < len(previos) else ""]
+    for link in reservas:
+        comando += ["--reserva", link]
     if not correr(comando):
         return False
     if not correr([str(RAIZ / "voz.py"), "--guion", str(destino)]):
@@ -228,13 +230,14 @@ def cerrar_franja(estado, clave, como):
     guardar(estado)
 
 
-def publicar_franja(estado, clave, nombre, historias, como):
+def publicar_franja(estado, clave, nombre, historias, como, reservas=()):
     """Arma y sube el video de la franja; si falla, se reintenta en la proxima pasada."""
     previos = [h.get("seguimiento_de", "") for h in historias]
     etiqueta = {"madrugada": "la noche y la madrugada", "manana": "la manana",
                 "tarde": "la tarde", "noche": "el cierre del dia"}.get(nombre, nombre)
     ok = armar_video([h["link"] for h in historias], previos, nombre=nombre,
-                     pie=f"El Ahorita · {etiqueta}", origen=f"franja-{nombre}")
+                     pie=f"El Ahorita · {etiqueta}", origen=f"franja-{nombre}",
+                     reservas=reservas)
     if ok:
         cerrar_franja(estado, clave, como)
         return True
@@ -296,7 +299,15 @@ def correr_franja(estado, clave, franja, ahora, prueba=False):
     if not correr([str(RAIZ / "aggregate.py"), "--days", "2"]):
         print("  fallo el radar; se reintenta en la proxima pasada")
         return False
-    datos = json.loads((RAIZ / "docs" / "data" / "latest.json").read_text(encoding="utf-8"))
+    ruta = RAIZ / "docs" / "data" / "latest.json"
+    datos = json.loads(ruta.read_text(encoding="utf-8"))
+    # las que pueden publicarse se revisan con IA: seccion y region (la etiqueta
+    # del video) mas finas que las del clasificador por palabras
+    import secciones
+    cambios = secciones.refinar(datos["items"])
+    print(f"  secciones revisadas con IA: {cambios} cambio(s)")
+    if cambios:
+        ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=1), encoding="utf-8")
     filas = franjas.candidatas(datos["items"], franja, ahora)
     print(f"  {len(filas)} historias desde {franjas.inicio_ventana(franja, ahora):%d %H:%M}")
     for f in filas[:4]:
@@ -307,17 +318,19 @@ def correr_franja(estado, clave, franja, ahora, prueba=False):
             cerrar_franja(estado, clave, "sin noticias")
         return True
     opciones = [franjas.resumen(f) for f in filas[:3]]
+    elegidas = franjas.elegir(opciones)
+    # de repuesto, por si ninguna elegida se deja leer
+    reservas = [f["link"] for f in filas[len(elegidas):len(elegidas) + 2]]
     if prueba:
         aviso = " (en serio seria CASO ESPECIAL: te preguntaria)" if franjas.es_especial(filas) else ""
-        return armar_video([o["link"] for o in franjas.elegir(opciones)],
-                           [o["seguimiento_de"] for o in franjas.elegir(opciones)],
-                           nombre=f"prueba-{nombre}", prueba=True,
+        return armar_video([o["link"] for o in elegidas], [o["seguimiento_de"] for o in elegidas],
+                           nombre=f"prueba-{nombre}", prueba=True, reservas=reservas,
                            pie=f"El Ahorita · prueba de la franja {nombre}{aviso}")
     if franjas.es_especial(filas):
         print("  caso especial: se pregunta")
         preguntar(estado, clave, nombre, opciones, ahora)
         return True
-    return publicar_franja(estado, clave, nombre, franjas.elegir(opciones), "automatica")
+    return publicar_franja(estado, clave, nombre, elegidas, "automatica", reservas)
 
 
 def franja_pendiente(estado, ahora):

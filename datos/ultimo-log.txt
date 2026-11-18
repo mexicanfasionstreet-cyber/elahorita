@@ -1,3 +1,8 @@
-2026-11-18 13:23 Tijuana · franja pendiente: ninguna
-sin novedades
+2026-11-18 13:28 Tijuana · franja pendiente: ninguna
+[
+ {
+  "accion": "nota_video",
+  "texto": ""
+ }
+]
 sin novedades

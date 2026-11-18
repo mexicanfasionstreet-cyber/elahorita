@@ -69,4 +69,11 @@ jobs:
           git config user.email "bot@elahorita.local"
           git add -A datos docs
           git diff --quiet --cached || git commit -m "estado: $(date -u +%Y-%m-%dT%H:%M)"
-          git push || echo "sin cambios que subir"
+          # el offset de Telegram vive aqui: si el push falla se pierde y el bot
+          # repetiria la misma orden. Se reintenta con rebase.
+          for i in 1 2 3; do
+            if git push; then break; fi
+            echo "push rechazado, reintento $i"
+            git pull --rebase --autostash || true
+            sleep 3
+          done

@@ -21,6 +21,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent
 sys.path.insert(0, str(RAIZ))
 
+import config  # noqa: E402
 import guion  # noqa: E402
 import material  # noqa: E402
 import telegram as telegram_mod  # noqa: E402
@@ -67,6 +68,30 @@ def resolver_enlace(link, cache_path):
     info = enlaces.resolve([link], cache, limit=5).get(link) or {}
     enlaces.save_cache(cache_path, cache)
     return info.get("url") or link, info.get("image") or ""
+
+
+def subir_a_youtube(video, guion_path):
+    """Sube el video de una nota manual. Devuelve el enlace o cadena vacia."""
+    import os
+    import subprocess
+
+    if not (config.YT_CLIENT_ID and config.YT_REFRESH):
+        return ""
+    privacidad = os.environ.get("YT_PRIVACIDAD", "private")
+    print(f"  subiendo a YouTube ({privacidad})")
+    hecho = subprocess.run(
+        [sys.executable, str(RAIZ / "publicar.py"), "--video", str(video),
+         "--guion", str(guion_path), "--privacidad", privacidad],
+        cwd=RAIZ, capture_output=True, text=True, errors="replace")
+    salida = hecho.stdout or ""
+    print(salida[-600:])
+    if hecho.returncode != 0:
+        print((hecho.stderr or "")[-400:])
+        return ""
+    for linea in salida.splitlines():
+        if "youtube.com/shorts/" in linea:
+            return linea.split()[-1]
+    return ""
 
 
 def construir(args):
@@ -182,8 +207,12 @@ def main():
     print(f"\nvideo -> {video}")
 
     if not args.sin_enviar and video.exists():
-        telegram_mod.mandar_video(video, f"El Ahorita · {args.tema[:120]}")
-        print("enviado al chat")
+        enlace = subir_a_youtube(video, destino)
+        pie = f"El Ahorita · {args.tema[:120]}"
+        if enlace:
+            pie += f"\n{enlace}"
+        telegram_mod.mandar_video(video, pie)
+        print("enviado al chat" + (f" · {enlace}" if enlace else " · SIN subir"))
     return 0
 
 

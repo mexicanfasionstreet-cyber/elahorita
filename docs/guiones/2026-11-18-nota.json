@@ -1,31 +1,31 @@
 {
  "origen": "nota_manual",
- "tema": "Tijuana garita Otay tiempos de espera",
- "palabras": 147,
- "segundos_estimados": 54.4,
+ "tema": "google menciona que estan usando ia automatizadas para hackeos",
+ "palabras": 40,
+ "segundos_estimados": 14.8,
  "historias": [
   {
-   "titulo": "San Ysidro satura cruces viales con esperas de hasta 115 minutos (Datos actualizados a las 2:00 PM PST) Los cruces fronterizos entre Baja California y Estados Unidos registran filas de consideración este martes, encabezados por la garita de San Ysidro co - tijuanaenlinea.com",
-   "link": "https://www.tijuanaenlinea.com/garitas/2026/11/17/san-ysidro-satura-cruces-viales-con-esperas-de-hasta-115-minutos/",
-   "seccion": "migracion",
-   "medios": 5,
+   "titulo": "Alerta FBI por ARTEX, la IA que podría acelerar ciberataques - NVI Noticias",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPd3BxdGg3WHBlQnl1WV9oaGtHMTFCMWRKcmJ1VEJIN093RmhQaVlORlNRZWJuNmdMcndUaTl5bExpS1NNTXBFdzZEb2JSb0xGU3lmY24tSmwySFUtcGJ4QS1oa05tX0xNNnRTU1dNQjlURGlRaUZIeUhxYkhpSEdCR0FxcW9tOTM0cnZJX2NFTVVzeHBZOHpPem55Z2U2eWctWnJtalJiMzRndTBVMzNlRHFBUFM?oc=5",
+   "seccion": "clima",
+   "medios": 2,
    "score": 0,
-   "imagen": true,
-   "imagen_url": "https://www.tijuanaenlinea.com/wp-content/uploads/2026/07/garitasbot.jpg",
+   "imagen": false,
+   "imagen_url": "",
    "region": "mx",
    "horas": 1.0
   }
  ],
  "guion": {
-  "gancho": "Si vas a cruzar a Estados Unidos este martes, esto te interesa.",
+  "gancho": "El FBI ya le puso nombre a una inteligencia artificial que podría meter prisa a los ciberataques.",
   "notas": [
    {
-    "kicker": "MIGRACION",
-    "texto": "La garita de San Ysidro es la más saturada este martes en Baja California. El carril general reporta 115 minutos de espera, con 6 carriles abiertos. En Ready Lane son 90 minutos y en Sentri 30. Otay Mesa también trae filas largas: 90 minutos en carril normal y en Ready Lane, aunque Sentri baja a 10 minutos. Los cruces peatonales van más ágiles: 20 minutos en la garita principal de San Ysidro, 15 en PedWest y cero en el Cross Border Express. En Mexicali, Calexico West marca 45 minutos en normal y Calexico East 60. Si puedes usar carril preferencial, conviene revisar los tiempos por carril antes de salir, porque casi dos horas de espera pegan directo al gasto de gasolina y a los tiempos de trabajo o escuela.",
-    "pantalla": "San Ysidro con esperas de hasta 115 minutos"
+    "kicker": "CLIMA",
+    "texto": "El FBI alerta por ARTEX, una inteligencia artificial que podría acelerar los ciberataques.",
+    "pantalla": "FBI alerta por la IA llamada ARTEX"
    }
   ],
-  "cierre": "Esto es El Ahorita, al momento.",
-  "gancho_pantalla": "GARITAS SATURADAS HOY"
+  "cierre": "En El Ahorita seguimos pendientes de lo que se confirme.",
+  "gancho_pantalla": "FBI ALERTA POR ARTEX"
  }
 }

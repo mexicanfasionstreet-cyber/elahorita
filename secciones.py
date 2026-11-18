@@ -301,7 +301,8 @@ SENSIBLES = {
         se quito la vida|se quita la vida|quitarse la vida|autolesion|autolesiones|
         suicide|suicidal|self harm|took his own life|took her own life"""),
     "sexual_menores": _rx("""violacion|violaciones|violada|violado|violador|violadores|abuso sexual|
-        abusos sexuales|agresion sexual|agredir sexualmente|agredio sexualmente|pederasta|pederastia|
+        abusos sexuales|agresion sexual|agredir sexualmente|agredio sexualmente|acoso sexual|
+        hostigamiento sexual|sexual harassment|pederasta|pederastia|
         pedofilia|pedofilo|pornografia infantil|explotacion sexual|trata de personas|abuso infantil|
         maltrato infantil|infanticidio|rape|raped|sexual assault|sexually assaulted|child abuse|
         molested|molestation|grooming"""),

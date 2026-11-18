@@ -19,6 +19,7 @@ from conftest import html_roto, noticia, utc_de
     ("Sentencian a líder de la CTM en Quintana Roo por trata de personas", "sexual_menores"),
     ("Matan a niña de 8 años en ataque armado en Guanajuato", "sexual_menores"),
     ("Joven se quitó la vida en Mexicali; Fiscalía investiga", "suicidio"),
+    ("Canal Sur retira el programa de Manolo Sarria al haber sido denunciado por acoso sexual", "sexual_menores"),
     # no sensibles: un homicidio sin esos elementos, usos legales de "violacion", menores sin dano
     ("Matan en Costa Rica a periodista que denunciaba casos de narcotráfico", ""),
     ("Muere motociclista tras percance en Tlaquepaque", ""),

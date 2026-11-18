@@ -116,3 +116,51 @@ def test_orquestador_respeta_cupo_en_nota(tg, monkeypatch):
     tg.escribe("/nota sismo en Oaxaca")
     orq.atender_telegram({"franjas": {}})
     assert corridas and corridas[0][-1] == "sismo en Oaxaca"
+
+
+# ------------------------------------------------------------------ /notavideo
+def test_notavideo_manda_video_titulo_y_descripcion_sin_subir(tg, monkeypatch, tmp_path):
+    videos, subidas = [], []
+    monkeypatch.setattr(nota.telegram_mod, "mandar_video", lambda v, t="": videos.append(t))
+    monkeypatch.setattr(nota, "subir_a_youtube", lambda v, g: subidas.append(v) or "x")
+    d = tmp_path / "2026-11-18-0940-nota.json"
+    d.write_text(json.dumps({"palabras": 170, "tema": "nvidia",
+                             "historias": [{"titulo": "Nvidia busca CEO", "link": "https://elpais.com/n"}],
+                             "guion": {"titulo": "Nvidia busca nuevo CEO sin Jensen Huang", "gancho": "g"}}))
+    nota.entregar_a_mano(d, Path("v.mp4"), "nvidia")
+    textos = [m["text"] for m in tg.mensajes()]
+    assert not subidas and "No lo subi" in videos[-1]
+    assert any("Nvidia busca nuevo CEO sin Jensen Huang" in t for t in textos)
+    assert any("Fuentes: https://elpais.com/n" in t and "sintetico" in t for t in textos)
+    assert "subir:2026-11-18-0940-nota" in tg.botones()
+    assert orq.franjas.subidas_hoy() == 0
+    assert orq.franjas.publicadas_de(nota.config.ahora())[-1]["origen"] == "a mano"
+
+
+def test_notavideo_no_gasta_cupo(tg, monkeypatch):
+    corridas = []
+    monkeypatch.setattr(orq, "correr", lambda c, avisar=True: corridas.append(c) or True)
+    monkeypatch.setattr(orq.franjas, "cupo_para_nota", lambda e: 0)   # dia lleno
+    tg.escribe("/notavideo sismo en Oaxaca")
+    orq.atender_telegram({"franjas": {}})
+    assert corridas and corridas[0][-2:] == ["sismo en Oaxaca", "--solo-video"]
+
+
+def test_nota_sin_cupo_sugiere_notavideo(tg, monkeypatch):
+    monkeypatch.setattr(orq, "correr", lambda c, avisar=True: pytest.fail("no debia correr"))
+    monkeypatch.setattr(orq.franjas, "cupo_para_nota", lambda e: 0)
+    tg.escribe("/nota sismo en Oaxaca")
+    orq.atender_telegram({"franjas": {}})
+    assert "/notavideo" in tg.mensajes()[-1]["text"]
+
+
+def test_opciones_de_notavideo_siguen_sin_subir(tg, monkeypatch):
+    monkeypatch.setattr(nota, "buscar_tema", lambda t: nota.agrupar([dict(x) for x in RESULTADOS], nota.terminos(t)))
+    monkeypatch.setattr(nota.guion, "llamar_llm", lambda *a, **k: "{}")
+
+    class A(Args):
+        solo_video = True
+    assert nota.construir(A) is None
+    assert "/notavideo" in tg.mensajes()[-1]["text"]
+    tg.toca(tg.botones()[0])
+    assert telegram.recoger(texto_libre=True)["accion"] == "nota_video"

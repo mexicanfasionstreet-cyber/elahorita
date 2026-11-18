@@ -171,7 +171,8 @@ def guardar_lote(historias):
     """Guarda una lista de opciones con su propio identificador y lo devuelve.
 
     Las claves son n1, n2, ... en el orden recibido. Una historia con
-    "tipo": "nota" se arma con nota.py (busqueda de /nota); sin tipo, con el
+    "tipo": "nota" o "notavideo" se arma con nota.py (busqueda de /nota o
+    /notavideo); sin tipo, con el
     ranking del dia.
     """
     estado = _estado()
@@ -217,6 +218,7 @@ def mandar_candidatas(n=3):
 
 COMANDOS = [
     ("nota", "Nota urgente: /nota <tema o enlace>"),
+    ("notavideo", "Solo el video, para subirlo tu (no gasta cupo): /notavideo <tema>"),
     ("estado", "Que sigue, que salio hoy y el cupo de subidas"),
     ("pausa", "Pausa las franjas: /pausa, /pausa 3h, /pausa hoy, /pausa 2d"),
     ("reanudar", "Quita la pausa"),
@@ -289,9 +291,10 @@ def recoger_todas(texto_libre=True):
             lote_de = partes[1]
             if historia == "nada":
                 decisiones.append({"accion": "ninguna", "lote": lote_de})
-            elif historia.get("tipo") == "nota":
-                # opcion de una busqueda de /nota: se arma directo desde su enlace
-                decisiones.append({"accion": "nota_manual", "texto": historia.get("link", "")})
+            elif historia.get("tipo") in ("nota", "notavideo"):
+                # opcion de una busqueda de /nota (o /notavideo): se arma desde su enlace
+                accion = "nota_video" if historia["tipo"] == "notavideo" else "nota_manual"
+                decisiones.append({"accion": accion, "texto": historia.get("link", "")})
                 mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
             else:
                 decisiones.append({"accion": "publicar", "historia": historia, "lote": lote_de})
@@ -309,6 +312,10 @@ def recoger_todas(texto_libre=True):
             decisiones.append({"accion": "nota_manual", "texto": argumento})
             if argumento:
                 mandar("Recibido. Voy por esa nota.")
+        elif comando == "notavideo":
+            decisiones.append({"accion": "nota_video", "texto": argumento})
+            if argumento:
+                mandar("Recibido. Te armo el video para que lo subas tu.")
         elif comando in ("estado", "pausa", "reanudar", "saltar"):
             decisiones.append({"accion": comando, "argumento": argumento})
         else:                                   # /ayuda, /start o algo que no existe

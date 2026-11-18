@@ -65,7 +65,20 @@ Reglas que no puedes romper:
   aparece en el material, no lo escribas. Si falta contexto, di que no se conocen detalles.
 
 Devuelves SOLO un JSON valido, sin texto alrededor, con esta forma:
-{"gancho": "...", "gancho_pantalla": "...", "notas": [{"kicker": "SECCION", "pantalla": "...", "texto": "..."}], "cierre": "..."}
+{"titulo": "...", "gancho": "...", "gancho_pantalla": "...", "notas": [{"kicker": "SECCION", "pantalla": "...", "texto": "..."}], "cierre": "..."}
+"titulo" es el titulo del video en YouTube: lo que la gente ve antes de darle clic y lo
+que escribe en el buscador.
+  * entre 45 y 75 caracteres, en español, escrito normal: mayuscula al inicio y en los
+    nombres propios, nunca todo en mayusculas;
+  * arranca con el nombre que la gente buscaria (persona, empresa, pais o lugar) y dice
+    que paso, con un verbo;
+  * si pasa fuera de Mexico y no es obvio, que se note el pais (EU, España...): la
+    "Camara" o el "Congreso" a secas se leen como los de Mexico;
+  * si hay dos notas, va de la primera; suma la segunda con " y " solo si cabe;
+  * intriga honesta: puede dejar algo por saber, pero no promete nada que el video no
+    cuente. Sin "IMPACTANTE", sin "no vas a creer", sin emojis, hashtags ni punto final;
+  * cumple las reglas de temas sensibles (presunto, nada que identifique a menores).
+  Ejemplo: "La junta de Nvidia busca nuevo CEO y le cierra la puerta a Jensen Huang"
 El gancho es una sola frase que da ganas de escuchar (sin prometer nada falso).
 "gancho_pantalla" es el rotulo del gancho: entre 3 y 7 palabras en mayusculas de
 concepto (ejemplo: "NVIDIA Y CHINA HOY"), sin punto final.
@@ -264,8 +277,9 @@ La frase de la Linea de la Vida (800 911 2000) es una linea de ayuda, no un dato
 dejala tal cual.
 
 Devuelves SOLO JSON:
-{"problemas": ["frase :: motivo"], "guion_corregido": {"gancho": "...", "notas": [{"kicker": "...", "texto": "..."}], "cierre": "..."}}
+{"problemas": ["frase :: motivo"], "guion_corregido": {"titulo": "...", "gancho": "...", "notas": [{"kicker": "...", "texto": "..."}], "cierre": "..."}}
 En guion_corregido elimina o reformula cada problema usando solo lo que esta en el material.
+El "titulo" tambien afirma hechos: revisalo igual y conserva su forma (largo, mayusculas).
 Si no hay problemas, devuelve la lista vacia y el guion identico."""
 
 
@@ -288,6 +302,30 @@ def parsear_verificacion(texto):
         raise ValueError("la verificacion no trae JSON")
     datos = json.loads(m.group(0))
     return datos.get("problemas") or [], datos.get("guion_corregido")
+
+
+def conservar_rotulos(antes, corregido):
+    """El verificador reescribe el texto; los rotulos que no devuelva se conservan."""
+    for i, n in enumerate(corregido.get("notas", [])):
+        if not n.get("pantalla") and i < len(antes.get("notas", [])):
+            n["pantalla"] = antes["notas"][i].get("pantalla", "")
+    for campo in ("gancho_pantalla", "titulo"):
+        if not (corregido.get(campo) or "").strip():
+            corregido[campo] = antes.get(campo, "")
+    return corregido
+
+
+def completar_rotulos(guion, notas=None):
+    """Rotulo del gancho y titulo de YouTube si el modelo no los mando."""
+    notas_g = guion.get("notas") or []
+    primera = (notas_g[0].get("pantalla", "") if notas_g else "").strip()
+    if not (guion.get("gancho_pantalla") or "").strip():
+        guion["gancho_pantalla"] = primera
+    if not (guion.get("titulo") or "").strip():
+        # el titular de la primera nota ya dice quien + que paso; si no hay,
+        # el titular del medio (escrito normal, con sus nombres propios)
+        guion["titulo"] = primera or (notas[0].get("title", "") if notas else "")
+    return guion
 
 
 def _frases(texto):
@@ -321,7 +359,8 @@ def ajustar_longitud(guion, objetivo=185, tolerancia=8):
 
 def plantilla(notas):
     """Guion de respaldo, sin IA: correcto pero plano."""
-    out = {"gancho": notas[0]["title"], "notas": [], "cierre": "Esto es El Ahorita."}
+    out = {"titulo": notas[0]["title"], "gancho": notas[0]["title"], "notas": [],
+           "cierre": "Esto es El Ahorita."}
     for f in notas:
         texto = _recorte(f.get("excerpt") or "", 320) or f["title"]
         out["notas"].append({"kicker": f["seccion"].upper(), "texto": texto})
@@ -386,22 +425,12 @@ def main():
             antes = json.loads(json.dumps(guion, ensure_ascii=False))
             problemas, corregido = verificar(guion, mat)
             if corregido:
-                # el verificador reescribe el texto: se conserva el titular de
-                # pantalla original, que no es un dato sino un rotulo
-                for i, n in enumerate(corregido.get("notas", [])):
-                    if not n.get("pantalla") and i < len(antes.get("notas", [])):
-                        n["pantalla"] = antes["notas"][i].get("pantalla", "")
-                if not corregido.get("gancho_pantalla"):
-                    corregido["gancho_pantalla"] = antes.get("gancho_pantalla", "")
-                guion = corregido
+                guion = conservar_rotulos(antes, corregido)
         except (RuntimeError, ValueError, urllib.error.URLError,
                 json.JSONDecodeError) as e:
             print(f"aviso: no se pudo verificar ({e})")
 
-    # rotulo del gancho: si el modelo no lo mando, se usa el de la primera nota
-    if not (guion.get("gancho_pantalla") or "").strip():
-        notas_g = guion.get("notas") or []
-        guion["gancho_pantalla"] = (notas_g[0].get("pantalla", "") if notas_g else "")
+    guion = completar_rotulos(guion, notas)
     guion, recortado = ajustar_longitud(guion)
     if recortado:
         print("aviso: guion recortado para caber en 60-75 s\n")
@@ -410,6 +439,7 @@ def main():
 
     print(f"--- GUION ({origen}) · {len(notas)} nota(s) · {n_pal} palabras "
           f"~ {est:.0f} s ---\n")
+    print(f"TITULO YOUTUBE: {guion.get('titulo', '')}")
     print(f"GANCHO: {guion['gancho']}\n")
     for n in guion["notas"]:
         print(f"[{n.get('kicker', '')}] {n['texto']}\n")

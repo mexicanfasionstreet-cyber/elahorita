@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -73,6 +74,22 @@ def canal(acceso=None):
     return {"id": it["id"], "nombre": it["snippet"]["title"]}
 
 
+def limpiar_titulo(texto, largo=95):
+    """Titulo listo para YouTube: sin punto final ni comillas, sin gritar, cortado en palabra."""
+    t = re.sub(r"\s+", " ", texto or "").strip().strip('"\'“”«»').strip()
+    t = t.rstrip(".").strip()
+    letras = [c for c in t if c.isalpha()]
+    if len(letras) > 3 and sum(c.isupper() for c in letras) / len(letras) > 0.8:
+        # TODO EN MAYUSCULAS (un rotulo de pantalla): se baja a escritura normal
+        t = t.lower()
+    if t:
+        t = t[0].upper() + t[1:]
+    if len(t) > largo:
+        corte = t[:largo - 1].rsplit(" ", 1)[0].rstrip(" ,.;:-")
+        t = corte + "…"
+    return t
+
+
 def textos(video, guion_path=None):
     """Titulo y descripcion a partir del guion, si existe."""
     titulo, descripcion = video.stem.replace("-", " ").title(), ""
@@ -81,8 +98,13 @@ def textos(video, guion_path=None):
         datos = json.loads(Path(guion_path).read_text(encoding="utf-8"))
         g = datos.get("guion", datos)
         gancho = (g.get("gancho") or "").strip()
-        pantalla = (g.get("gancho_pantalla") or "").strip()
-        titulo = pantalla.capitalize() if pantalla else (gancho or titulo)
+        notas = g.get("notas") or []
+        # el titulo que escribio el guionista; si no hay, el titular de la primera
+        # nota (quien + que paso); el rotulo del gancho solo como ultimo recurso
+        titulo = next((t for t in (g.get("titulo"),
+                                   notas[0].get("pantalla") if notas else "",
+                                   g.get("gancho_pantalla"), gancho)
+                       if (t or "").strip()), titulo)
         partes = [gancho] if gancho else []
         for h in datos.get("historias", []):
             if h.get("link"):
@@ -96,9 +118,7 @@ def textos(video, guion_path=None):
     else:
         descripcion = HASHTAGS
 
-    titulo = titulo.strip()
-    if len(titulo) > 95:                     # YouTube corta a 100
-        titulo = titulo[:92].rstrip(" ,.;:") + "…"
+    titulo = limpiar_titulo(titulo)          # YouTube corta a 100
     if "#shorts" not in descripcion.lower() and "#shorts" not in titulo.lower():
         titulo = (titulo + " #Shorts")[:100]
     return titulo, descripcion[:4900]

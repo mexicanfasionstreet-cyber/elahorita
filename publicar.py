@@ -118,6 +118,9 @@ def subir(video, titulo, descripcion, privacidad="public", categoria="25"):
         "status": {
             "privacyStatus": privacidad,
             "selfDeclaredMadeForKids": False,
+            # voz clonada / sintetica: YouTube pide declarar el contenido alterado
+            # o sintetico realista (status.containsSyntheticMedia, desde oct 2024)
+            "containsSyntheticMedia": True,
         },
     }
     cuerpo = json.dumps(metadatos).encode("utf-8")
@@ -183,6 +186,11 @@ def main():
 
     print(f"subiendo {args.video}\n  titulo: {titulo}")
     vid = subir(args.video, titulo, descripcion, args.privacidad)
+    try:
+        import franjas
+        franjas.registrar_subida(vid, titulo)   # cuenta contra el limite diario
+    except Exception as e:  # noqa: BLE001
+        print(f"  aviso: no se anoto la subida ({type(e).__name__})")
     print(f"\nlisto: https://youtube.com/shorts/{vid}")
     return 0
 

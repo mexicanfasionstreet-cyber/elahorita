@@ -254,14 +254,15 @@ def recoger(texto_libre=False):
                 mandar("Esa lista ya caduco. Usa los botones de la mas reciente.")
                 continue
             _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Anotado")
+            lote_de = partes[1]
             if historia == "nada":
-                decision = {"accion": "ninguna"}
+                decision = {"accion": "ninguna", "lote": lote_de}
             elif historia.get("tipo") == "nota":
                 # opcion de una busqueda de /nota: se arma directo desde su enlace
                 decision = {"accion": "nota_manual", "texto": historia.get("link", "")}
                 mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
             else:
-                decision = {"accion": "publicar", "historia": historia}
+                decision = {"accion": "publicar", "historia": historia, "lote": lote_de}
                 mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
         msg = r.get("message") or {}
         m = (msg.get("text") or "").strip()

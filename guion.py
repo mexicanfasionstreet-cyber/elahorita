@@ -72,6 +72,8 @@ que escribe en el buscador.
     nombres propios, nunca todo en mayusculas;
   * arranca con el nombre que la gente buscaria (persona, empresa, pais o lugar) y dice
     que paso, con un verbo;
+  * si pasa fuera de Mexico y no es obvio, que se note el pais (EU, España...): la
+    "Camara" o el "Congreso" a secas se leen como los de Mexico;
   * si hay dos notas, va de la primera; suma la segunda con " y " solo si cabe;
   * intriga honesta: puede dejar algo por saber, pero no promete nada que el video no
     cuente. Sin "IMPACTANTE", sin "no vas a creer", sin emojis, hashtags ni punto final;

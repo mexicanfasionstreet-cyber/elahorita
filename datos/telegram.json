@@ -1,27 +1,27 @@
 {
  "pendientes": {
   "n1": {
-   "titulo": "El Plan México garantiza condiciones para invertir, expone Sheinbaum al APEC",
-   "link": "https://www.jornada.com.mx/2026/11/17/economia/017n1eco",
+   "titulo": "Hay un Frida Kahlo que no se vende (todavía): México paraliza una subasta en Christie’s",
+   "link": "https://elpais.com/mexico/2026-11-18/hay-un-frida-kahlo-que-no-se-vende-todavia-mexico-paraliza-una-subasta-en-christies.html",
    "seccion": "politica",
-   "score": 89.8,
-   "medios": 7,
+   "score": 97.6,
+   "medios": 8,
    "imagen": true
   },
   "n2": {
    "titulo": "El presidente del consejo de Nvidia asegura que la junta no tiene intención de restituir a Jensen Huang como CEO",
    "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
    "seccion": "politica",
-   "score": 88.0,
-   "medios": 5,
+   "score": 85.7,
+   "medios": 6,
    "imagen": true
   },
   "n3": {
-   "titulo": "El fiscal general de Paraguay renuncia ante la advertencia de un juicio político por el caso Ueno Bank",
-   "link": "https://www.france24.com/es/am%C3%A9rica-latina/20261117-el-fiscal-general-de-paraguay-renuncia-ante-la-advertencia-de-un-juicio-pol%C3%ADtico-por-el-caso-ueno-bank",
-   "seccion": "politica",
-   "score": 80.3,
-   "medios": 4,
+   "titulo": "Directo Latam y el viaje de Sheinbaum a China para la cumbre de la APEC",
+   "link": "https://www.france24.com/es/video/20261117-directo-latam-y-el-viaje-de-sheinbaum-a-china-para-la-cumbre-de-la-apec",
+   "seccion": "mundo",
+   "score": 80.4,
+   "medios": 5,
    "imagen": true
   }
  },

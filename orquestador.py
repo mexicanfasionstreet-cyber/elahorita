@@ -1,14 +1,17 @@
 """Orquestador: decide que hacer en cada corrida del robot (cada 5 minutos).
 
 En cada pasada, en este orden:
-  1. Telegram: si tocaste un boton o escribiste /nota, lo atiende.
+  1. Telegram: botones, /nota y los comandos de control (/estado, /pausa,
+     /reanudar, /saltar, /ayuda), en el orden en que los mandaste.
   2. Caso especial pendiente: si te pregunto y pasaron 30 min, publica lo mejor.
   3. Franja (05:00, 12:00, 15:00, 20:00 en Tijuana): actualiza el radar, elige
      1 o 2 notas de su ventana (ver franjas.py) y publica sola. Si hay 2+ notas
      de alto impacto, te pregunta.
 
 /nota solo corre si cabe en el limite diario de YouTube sin quitarle su lugar
-a una franja. Como la hora se calcula en Tijuana, el cambio de horario se
+a una franja. En pausa, las franjas no salen pero /nota si. A partir de las
+21:00, cuando cierra la franja de la noche (o a las 22:00), manda el resumen
+del dia. Como la hora se calcula en Tijuana, el cambio de horario se
 ajusta solo.
 
 Uso:
@@ -23,6 +26,7 @@ import argparse
 import html
 import json
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime, timedelta
@@ -36,16 +40,42 @@ import franjas  # noqa: E402
 import telegram as bot  # noqa: E402
 
 ESTADO = RAIZ / "datos" / "orquestador.json"
+COMANDOS_VERSION = 1      # subir este numero si cambia la lista de comandos de Telegram
 TZ = config.TZ
 
 
 def cargar():
-    if ESTADO.exists():
-        try:
-            return json.loads(ESTADO.read_text(encoding="utf-8"))
-        except Exception:  # noqa: BLE001
-            pass
-    return {"franjas": {}, "videos": []}
+    try:
+        estado = json.loads(ESTADO.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        estado = {"franjas": {}}
+    return migrar(estado)
+
+
+_ISO = re.compile(r"\d{4}-\d{2}-\d{2}T(\d{2}:\d{2})")
+
+
+def migrar(estado):
+    """Estado del sistema anterior (candidatas por Telegram) -> formato actual.
+
+    Antes la franja de las 12:00 se llamaba "mediodia" y cada franja guardaba la
+    fecha y hora en que mando candidatas. El dia de la migracion no lleva resumen:
+    corrio con el sistema anterior y el resumen diria "no se publico nada".
+    """
+    franjas_viejas = estado.get("franjas", {})
+    if not any(_ISO.match(str(v)) for v in franjas_viejas.values()):
+        return estado
+    nuevas = {}
+    for clave, valor in franjas_viejas.items():
+        m = _ISO.match(str(valor))
+        if clave.endswith("-mediodia"):
+            clave = clave[:-len("mediodia")] + "manana"
+        nuevas[clave] = f"candidatas (sistema anterior) {m.group(1)}" if m else valor
+    estado["franjas"] = nuevas
+    estado.pop("videos", None)
+    estado.setdefault("resumen", f"{config.ahora():%Y-%m-%d}")
+    print("  estado del sistema anterior migrado")
+    return estado
 
 
 def guardar(estado):
@@ -68,6 +98,7 @@ def correr(comando, avisar=True):
     print(cola)
     if avisar:
         nombre = Path(comando[0]).name
+        franjas.registrar_evento("fallo", f"{nombre}: {cola.strip().splitlines()[-1] if cola.strip() else ''}")
         try:
             # el traceback trae "<module>": sin escapar, Telegram rechaza el
             # mensaje y el aviso de error se perdia en silencio
@@ -95,6 +126,7 @@ def subir_a_youtube(video, guion_path):
         cwd=RAIZ, capture_output=True, text=True, errors="replace")
     print(hecho.stdout[-1500:])
     if hecho.returncode != 0:
+        franjas.registrar_evento("youtube", (hecho.stderr or hecho.stdout)[-200:])
         bot.mandar(f"<b>No se pudo subir a YouTube</b>\n<pre>"
                    f"{html.escape((hecho.stderr or hecho.stdout)[-500:])}</pre>")
         return None
@@ -184,41 +216,283 @@ def guardar_offset():
 
 
 def atender_telegram(estado):
-    """Lee lo que hayas mandado y actua. Devuelve True si hizo algo."""
-    decision = bot.recoger(texto_libre=True)
-    if decision:
+    """Atiende todo lo que mandaste desde la pasada anterior, en orden.
+
+    Devuelve True si armo (o intento armar) algun video: entonces esa pasada no
+    corre ademas la franja.
+    """
+    decisiones = bot.recoger_todas(texto_libre=True)
+    if decisiones:
         guardar_offset()
-    if not decision:
+    hubo = False
+    for d in decisiones:
+        hubo = atender(estado, d) or hubo
+    return hubo
+
+
+def atender(estado, decision):
+    """Una decision tuya. True si fue un video (publicar, /nota, subir)."""
+    accion = decision["accion"]
+    ahora = config.ahora()
+    if accion in CONTROL:
+        CONTROL[accion](estado, decision.get("argumento", ""), ahora)
+        guardar(estado)
         return False
     pendiente = estado.get("pendiente") or {}
     de_pendiente = bool(pendiente) and decision.get("lote") == pendiente.get("lote")
 
-    if decision["accion"] == "publicar":
+    if accion == "publicar":
         historia = decision.get("historia") or {}
         print(f"  elegiste: {historia.get('titulo', '')[:70]}")
         if de_pendiente:
             return resolver_pendiente(estado, [historia], "elegiste")
         return armar_video([historia.get("link", "")], [historia.get("seguimiento_de", "")],
                            pie="El Ahorita · la nota que elegiste")
-    if decision["accion"] == "ninguna" and de_pendiente:
+    if accion == "ninguna" and de_pendiente:
         print(f"  ninguna: se salta la franja {pendiente['clave']}")
         cerrar_franja(estado, pendiente["clave"], "saltada")
         bot.mandar("Va, esta franja no sale.")
-        return True
-    if decision["accion"] == "nota_manual":
+        return False
+    if accion == "nota_manual":
         texto = decision.get("texto", "")
         if not texto:
             bot.mandar("Escribe el tema o el enlace despues de /nota")
             return False
         print(f"  nota a mano: {texto[:70]}")
         return nota_a_mano(texto, estado)
-    if decision["accion"] == "subir":
+    if accion == "subir":
         print(f"  subir nota corta: {decision['guion']}")
         if franjas.cupo_para_nota(estado) <= 0:
             bot.mandar("Hoy ya no cabe otra subida sin quitarle lugar a una franja.")
             return False
         return correr([str(RAIZ / "nota.py"), "--subir", decision["guion"]])
     print("  ninguna: no se publica")
+    return False
+
+
+# ------------------------------------------------------------------ control por Telegram
+DIAS = ["lun", "mar", "mie", "jue", "vie", "sab", "dom"]
+NOMBRE_FRANJA = {"madrugada": "madrugada", "manana": "mañana", "tarde": "tarde", "noche": "noche"}
+
+
+def _cuando(dt):
+    return f"{DIAS[dt.weekday()]} {dt.day} {dt:%H:%M}"
+
+
+def en_pausa(estado, ahora):
+    """(True, hasta) si las franjas estan en pausa; hasta=None es "hasta /reanudar"."""
+    pausa = estado.get("pausa")
+    if not pausa:
+        return False, None
+    hasta = datetime.fromisoformat(pausa["hasta"]) if pausa.get("hasta") else None
+    if hasta and ahora >= hasta:
+        estado.pop("pausa", None)
+        bot.mandar("Se acabo la pausa: las franjas vuelven a salir solas.")
+        guardar(estado)
+        return False, None
+    return True, hasta
+
+
+def pausar(estado, argumento, ahora):
+    """/pausa, /pausa 3h, /pausa 2d, /pausa hoy, /pausa manana."""
+    arg = argumento.lower().replace("ñ", "n").strip()
+    fin_del_dia = ahora.replace(hour=23, minute=59, second=0, microsecond=0)
+    m = re.fullmatch(r"(\d{1,3})\s*(h|hr|hrs|horas?|d|dias?)", arg)
+    if not arg:
+        hasta = None
+    elif arg == "hoy":
+        hasta = fin_del_dia
+    elif arg == "manana":
+        hasta = fin_del_dia + timedelta(days=1)
+    elif m:
+        n = int(m.group(1))
+        hasta = ahora + (timedelta(hours=n) if m.group(2).startswith("h") else timedelta(days=n))
+    else:
+        bot.mandar("No entendi la pausa. Usa: /pausa · /pausa 3h · /pausa 2d · /pausa hoy · /pausa manana")
+        return
+    estado["pausa"] = {"desde": ahora.isoformat(timespec="seconds"),
+                       "hasta": hasta.isoformat(timespec="seconds") if hasta else None}
+    franjas.registrar_evento("pausa", f"hasta {_cuando(hasta)}" if hasta else "hasta /reanudar")
+    bot.mandar("⏸ <b>Franjas en pausa</b> "
+               + (f"hasta el {_cuando(hasta)}" if hasta else "hasta que mandes /reanudar")
+               + ".\n/nota sigue funcionando.")
+
+
+def reanudar(estado, argumento, ahora):
+    if not estado.pop("pausa", None):
+        bot.mandar("No habia pausa: las franjas ya salen solas.")
+        return
+    franjas.registrar_evento("pausa", "reanudada")
+    dia, franja = proxima_franja(estado, ahora)
+    bot.mandar("▶️ Listo, las franjas vuelven a salir solas."
+               + (f" Sigue la de la {NOMBRE_FRANJA[franja[1]]} ({DIAS[dia.weekday()]} "
+                  f"{franja[0]:02d}:00)." if franja else ""))
+
+
+def proxima_franja(estado, ahora, nombre=""):
+    """(dia, franja) de la proxima franja que no ha salido (hoy o manana)."""
+    hechas = estado.get("franjas", {})
+    esperando = (estado.get("pendiente") or {}).get("clave")
+    for delta in (0, 1):
+        dia = ahora + timedelta(days=delta)
+        for f in franjas.FRANJAS:
+            if nombre and f[1] != nombre:
+                continue
+            if not nombre and f"{dia:%Y-%m-%d}-{f[1]}" == esperando:
+                continue                          # esa ya te pregunto: no es "la proxima"
+            if delta == 0 and ahora.hour >= f[0] + franjas.MARGEN_FRANJA:
+                continue                          # su ventana ya paso
+            if not hechas.get(f"{dia:%Y-%m-%d}-{f[1]}"):
+                return dia, f
+    return None, None
+
+
+def saltar(estado, argumento, ahora):
+    """/saltar (la proxima) o /saltar noche."""
+    nombre = argumento.lower().replace("ñ", "n").strip()
+    if nombre and nombre not in NOMBRE_FRANJA:
+        bot.mandar("¿Cual? /saltar madrugada · manana · tarde · noche (o solo /saltar)")
+        return
+    dia, franja = proxima_franja(estado, ahora, nombre)
+    if not franja:
+        bot.mandar("No hay franja pendiente que saltar.")
+        return
+    clave = f"{dia:%Y-%m-%d}-{franja[1]}"
+    if (estado.get("pendiente") or {}).get("clave") == clave:
+        estado.pop("pendiente", None)
+    estado.setdefault("franjas", {})[clave] = f"saltada (/saltar) {ahora:%H:%M}"
+    franjas.registrar_evento("saltada", NOMBRE_FRANJA[franja[1]])
+    bot.mandar(f"⏭ Va, la franja de la {NOMBRE_FRANJA[franja[1]]} del "
+               f"{DIAS[dia.weekday()]} {dia.day} no sale.")
+
+
+ICONOS = [("candidatas", "📋"), ("automatica", "✅"), ("elegiste", "✅"), ("sin respuesta (solo", "⏭"),
+          ("sin respuesta", "✅"), ("saltada", "⏭"), ("pausada", "⏸"), ("fallida", "❌"),
+          ("sin noticias", "➖")]
+
+
+def _estado_franja(texto):
+    for prefijo, icono in ICONOS:
+        if texto.startswith(prefijo):
+            return f"{icono} {texto}"
+    return texto
+
+
+def _linea_franjas(estado, dia, ahora):
+    hechas = estado.get("franjas", {})
+    pendiente = estado.get("pendiente") or {}
+    partes = []
+    for hora, nombre, _ in franjas.FRANJAS:
+        clave = f"{dia:%Y-%m-%d}-{nombre}"
+        if hechas.get(clave):
+            como = _estado_franja(hechas[clave])
+        elif pendiente.get("clave") == clave:
+            como = "⏳ esperando tu eleccion"
+        elif ahora.hour < hora:
+            como = f"a las {hora:02d}:00"
+        elif ahora.hour < hora + franjas.MARGEN_FRANJA:
+            como = "en curso"
+        else:
+            como = "no corrio"
+        partes.append(f"  {NOMBRE_FRANJA[nombre]}: {como}")
+    return "\n".join(partes)
+
+
+def voicebox_responde():
+    if not (config.VOICEBOX_URL and config.VOICEBOX_PROFILE):
+        return "sin configurar (voz de respaldo)"
+    import urllib.request
+    try:
+        with urllib.request.urlopen(f"{config.VOICEBOX_URL}/health", timeout=5):
+            return "responde ✅"
+    except Exception:  # noqa: BLE001
+        return "no responde ❌ (sale la voz de respaldo)"
+
+
+def mostrar_estado(estado, argumento, ahora):
+    """/estado"""
+    pausa, hasta = en_pausa(estado, ahora)
+    dia, franja = proxima_franja(estado, ahora)
+    pendiente = estado.get("pendiente")
+    lineas = [f"<b>El Ahorita · estado</b> ({_cuando(ahora)})"]
+    if pausa:
+        lineas.append("⏸ <b>En pausa</b> " + (f"hasta el {_cuando(hasta)}" if hasta else "hasta /reanudar"))
+    lineas.append("Hoy:\n" + _linea_franjas(estado, ahora, ahora))
+    if pendiente:
+        limite = datetime.fromisoformat(pendiente["publica_a"])
+        lineas.append(f"⏳ Esperando tu eleccion para la {NOMBRE_FRANJA.get(pendiente['nombre'], '')} "
+                      f"hasta las {limite:%H:%M}.")
+    if franja:
+        lineas.append(f"Proxima: {NOMBRE_FRANJA[franja[1]]}, {DIAS[dia.weekday()]} {dia.day} "
+                      f"a las {franja[0]:02d}:00" + (" (en pausa)" if pausa else ""))
+    lineas.append(f"Subidas hoy: {franjas.subidas_hoy(ahora)} de {franjas.LIMITE_SUBIDAS} · "
+                  f"caben {max(franjas.cupo_para_nota(estado, ahora), 0)} /nota")
+    lineas.append(f"Voicebox: {voicebox_responde()}")
+    bot.mandar("\n".join(lineas))
+
+
+def mostrar_ayuda(estado, argumento, ahora):
+    bot.mandar(bot.AYUDA)
+
+
+CONTROL = {"estado": mostrar_estado, "pausa": pausar, "reanudar": reanudar,
+           "saltar": saltar, "ayuda": mostrar_ayuda}
+
+
+# ------------------------------------------------------------------ resumen diario
+EVENTOS_TEXTO = {
+    "voz_respaldo": "Voicebox no respondio: salio con la voz de respaldo",
+    "subtitulos": "subtitulos incompletos",
+    "fallo": "fallo",
+    "youtube": "no se pudo subir a YouTube",
+    "franja_fallida": "no salio la franja",
+    "nota_corta": "nota corta sin subir",
+    "saltada": "saltaste la franja",
+    "pausa": "pausa",
+}
+HORA_RESUMEN = 21
+
+
+def resumen_diario(estado, ahora, forzar=False):
+    """A partir de las 21:00, cuando la franja de la noche ya cerro (o a las 22:00)."""
+    hoy = f"{ahora:%Y-%m-%d}"
+    if not forzar:
+        if estado.get("resumen") == hoy or ahora.hour < HORA_RESUMEN:
+            return False
+        noche_cerrada = bool(estado.get("franjas", {}).get(f"{hoy}-noche"))
+        if not noche_cerrada and ahora.hour < HORA_RESUMEN + 1:
+            return False
+    publicadas = franjas.publicadas_de(ahora)
+    eventos = franjas.eventos_de(ahora)
+    lineas = [f"<b>El Ahorita · resumen del {_cuando(ahora)[:-6]}</b>"]
+    if publicadas:
+        lineas.append(f"\nPublicado ({len(publicadas)}):")
+        for p in publicadas:
+            hora = str(p.get("cuando", ""))[11:16]
+            origen = p.get("origen", "").replace("franja-", "")
+            origen = NOMBRE_FRANJA.get(origen, origen)
+            lineas.append(f"• {hora} {html.escape(origen)} · {html.escape(p.get('titulo', '')[:90])}"
+                          + (f"\n  {html.escape(p['video'])}" if p.get("video") else ""))
+    else:
+        lineas.append("\nHoy no se publico nada.")
+    lineas.append("\nFranjas:\n" + _linea_franjas(estado, ahora, ahora))
+    if eventos:
+        lineas.append(f"\nAvisos ({len(eventos)}):")
+        for e in eventos[-8:]:
+            lineas.append(f"• {e['hora']} {html.escape(EVENTOS_TEXTO.get(e['tipo'], e['tipo']))}"
+                          + (f": {html.escape(e['texto'][:90])}" if e.get("texto") else ""))
+    lineas.append(f"\nSubidas: {franjas.subidas_hoy(ahora)} de {franjas.LIMITE_SUBIDAS}")
+    pausa, hasta = en_pausa(estado, ahora)
+    if pausa:
+        lineas.append("⏸ En pausa " + (f"hasta el {_cuando(hasta)}" if hasta else "hasta /reanudar"))
+    else:
+        dia, franja = proxima_franja(estado, ahora)
+        if franja:
+            lineas.append(f"Sigue: {NOMBRE_FRANJA[franja[1]]}, {DIAS[dia.weekday()]} {dia.day} "
+                          f"a las {franja[0]:02d}:00")
+    bot.mandar("\n".join(lineas))
+    estado["resumen"] = hoy
+    guardar(estado)
     return True
 
 
@@ -244,6 +518,7 @@ def publicar_franja(estado, clave, nombre, historias, como, reservas=()):
     intentos = estado.setdefault("intentos", {})
     intentos[clave] = intentos.get(clave, 0) + 1
     if intentos[clave] >= 2:
+        franjas.registrar_evento("franja_fallida", nombre)
         bot.mandar(f"<b>La franja {html.escape(nombre)} no salio</b> tras 2 intentos. "
                    "Revisa los avisos de arriba.")
         cerrar_franja(estado, clave, "fallida")
@@ -389,6 +664,8 @@ def main():
                     help="correr esta franja ahora (madrugada, manana, tarde, noche)")
     ap.add_argument("--prueba", action="store_true",
                     help="con --franja: arma el video y lo manda al chat, sin subir ni guardar")
+    ap.add_argument("--mostrar", choices=["estado", "resumen", "ayuda"],
+                    help="manda al chat ese mensaje ahora, sin cambiar nada")
     args = ap.parse_args()
 
     ahora = config.ahora()
@@ -401,6 +678,13 @@ def main():
         print(json.dumps(estado, ensure_ascii=False, indent=1))
         return 0
 
+    if args.mostrar:
+        if args.mostrar == "resumen":
+            resumen_diario(dict(estado), ahora, forzar=True)   # copia: no marca el dia
+        else:
+            CONTROL[args.mostrar](estado, "", ahora)
+        return 0
+
     if args.franja:
         forzada = franjas.franja_por_nombre(args.franja)
         print(f"forzando franja {forzada[1]}" + (" (prueba)" if args.prueba else ""))
@@ -408,12 +692,32 @@ def main():
                            prueba=args.prueba)
         return 0 if ok else 1
 
+    if estado.get("comandos") != COMANDOS_VERSION:
+        try:
+            bot.registrar_comandos()          # el menu "/" del chat
+            estado["comandos"] = COMANDOS_VERSION
+            guardar(estado)
+        except BaseException as e:  # noqa: BLE001
+            print(f"  aviso: no se registraron los comandos ({e})")
+
     hubo = atender_telegram(estado)
-    if not hubo:
-        hubo = revisar_pendiente(estado, ahora)
+    pausa, _ = en_pausa(estado, ahora)
+    if not hubo and estado.get("pendiente"):
+        if pausa:
+            p = estado["pendiente"]
+            print(f"  en pausa: la franja {p['nombre']} que esperaba respuesta no sale")
+            cerrar_franja(estado, p["clave"], "pausada")
+        else:
+            hubo = revisar_pendiente(estado, ahora)
+    clave, franja = franja_pendiente(estado, ahora)
     if not hubo and franja:
-        print(f"corriendo la franja {franja[1]}")
-        hubo = correr_franja(estado, clave, franja, ahora)
+        if pausa:
+            print(f"  en pausa: la franja {franja[1]} no sale")
+            cerrar_franja(estado, clave, "pausada")
+        else:
+            print(f"corriendo la franja {franja[1]}")
+            hubo = correr_franja(estado, clave, franja, ahora)
+    resumen_diario(estado, config.ahora())
     if not hubo:
         print("sin novedades")
     return 0

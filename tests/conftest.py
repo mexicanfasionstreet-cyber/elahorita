@@ -47,13 +47,18 @@ def aislado(tmp_path, monkeypatch):
     monkeypatch.setattr(orquestador, "ESTADO", tmp_path / "orquestador.json")
     monkeypatch.setattr(franjas, "PUBLICADAS", tmp_path / "publicadas.json")
     monkeypatch.setattr(franjas, "SUBIDAS", tmp_path / "subidas.json")
+    monkeypatch.setattr(franjas, "EVENTOS", tmp_path / "eventos.json")
     monkeypatch.setattr(secciones, "CACHE_IA", tmp_path / "secciones-ia.json")
     monkeypatch.setattr(orquestador, "guardar_offset", lambda: None)
 
     def sin_red(metodo, **params):
         raise AssertionError(f"la prueba intento llamar a Telegram de verdad: {metodo}")
     monkeypatch.setattr(telegram, "_llamar", sin_red)
-    return tmp_path
+    antes = {p.name: p.stat().st_mtime for p in (RAIZ / "datos").glob("*.json")}
+    yield tmp_path
+    despues = {p.name: p.stat().st_mtime for p in (RAIZ / "datos").glob("*.json")}
+    tocados = sorted(n for n in despues if antes.get(n) != despues[n])
+    assert not tocados, f"la prueba escribio en datos/ del repo: {tocados}"
 
 
 @pytest.fixture

@@ -72,7 +72,21 @@ tú), pero aplica las mismas reglas.
 
 ### La mesa de edición
 
-Telegram es el control remoto. Solo atiende tu chat.
+Telegram es el control remoto. Solo atiende tu chat. Los comandos aparecen en el menú
+"/" del chat:
+
+| Comando | Qué hace |
+|---|---|
+| `/nota <tema o enlace>` | Nota urgente (si cabe en el límite diario) |
+| `/estado` | Cómo van las franjas de hoy, la próxima, subidas, cupo de `/nota` y si Voicebox responde |
+| `/pausa` · `/pausa 3h` · `/pausa 2d` · `/pausa hoy` · `/pausa mañana` | Las franjas no salen (`/nota` sí) |
+| `/reanudar` | Quita la pausa |
+| `/saltar` · `/saltar noche` | Brinca la próxima franja (o una en concreto) |
+| `/ayuda` | La lista |
+
+**Resumen diario**: a partir de las 21:00, cuando cierra la franja de la noche (o a las
+22:00), llega lo publicado con sus enlaces, cómo salió cada franja, los avisos del día
+(voz de respaldo, fallos, notas cortas), las subidas y cuál sigue.
 
 - **`/nota <tema>`**: busca el tema, elige la historia que **coincide** con lo que
   pediste (no la que más medios tiene), lee hasta 3 artículos y la monta. Si
@@ -90,6 +104,7 @@ Ninguno sube a YouTube ni guarda estado; el resultado llega a tu chat.
 - **Solo probar Voicebox**: conexión, perfil, una frase y un video corto con subtítulos.
 - **Probar /nota**: escribe un tema.
 - **Probar una franja**: elige madrugada, mañana, tarde o noche.
+- **Probar mensajes**: te manda un `/estado` y un resumen del día de ejemplo.
 
 ---
 

@@ -27,10 +27,14 @@ on:
         description: "Medir el clasificador de secciones (palabras y DeepSeek) contra 250 noticias clasificadas a mano"
         type: boolean
         default: false
+      probar_mensajes:
+        description: "Mandar al chat un /estado y un resumen del dia de ejemplo (no cambia nada)"
+        type: boolean
+        default: false
 
 # la prueba de voz va en su propia cola: si se atora, no bloquea al robot
 concurrency:
-  group: ${{ (inputs.probar_voz || inputs.probar_nota || inputs.probar_secciones || (inputs.probar_franja && inputs.probar_franja != 'no')) && 'el-ahorita-prueba' || 'el-ahorita' }}
+  group: ${{ (inputs.probar_voz || inputs.probar_nota || inputs.probar_secciones || inputs.probar_mensajes || (inputs.probar_franja && inputs.probar_franja != 'no')) && 'el-ahorita-prueba' || 'el-ahorita' }}
   cancel-in-progress: false
 
 jobs:
@@ -129,6 +133,12 @@ jobs:
           TEMA: ${{ inputs.probar_nota }}
         run: python nota.py "$TEMA" --prueba
 
+      - name: Probar mensajes
+        if: ${{ inputs.probar_mensajes }}
+        run: |
+          python orquestador.py --mostrar estado
+          python orquestador.py --mostrar resumen
+
       - name: Medir secciones
         if: ${{ inputs.probar_secciones }}
         run: python herramientas/evaluar-secciones.py --ia --errores
@@ -140,7 +150,7 @@ jobs:
         run: python orquestador.py --franja "$FRANJA" --prueba
 
       - name: Pasada
-        if: ${{ !inputs.probar_voz && !inputs.probar_nota && !inputs.probar_secciones && (!inputs.probar_franja || inputs.probar_franja == 'no') }}
+        if: ${{ !inputs.probar_voz && !inputs.probar_nota && !inputs.probar_secciones && !inputs.probar_mensajes && (!inputs.probar_franja || inputs.probar_franja == 'no') }}
         run: |
           set -o pipefail
           python orquestador.py 2>&1 | tee datos/ultimo-log.txt
@@ -149,7 +159,7 @@ jobs:
           mv datos/ultimo-log.txt.tmp datos/ultimo-log.txt
 
       - name: Guardar estado
-        if: ${{ always() && !inputs.probar_voz && !inputs.probar_nota && !inputs.probar_secciones && (!inputs.probar_franja || inputs.probar_franja == 'no') }}
+        if: ${{ always() && !inputs.probar_voz && !inputs.probar_nota && !inputs.probar_secciones && !inputs.probar_mensajes && (!inputs.probar_franja || inputs.probar_franja == 'no') }}
         run: |
           git config user.name "el-ahorita"
           git config user.email "bot@elahorita.local"

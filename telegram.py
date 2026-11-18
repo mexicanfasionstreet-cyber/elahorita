@@ -215,11 +215,43 @@ def mandar_candidatas(n=3):
     print("mandadas", len(historias), f"candidatas (lote {lote})")
 
 
+COMANDOS = [
+    ("nota", "Nota urgente: /nota <tema o enlace>"),
+    ("estado", "Que sigue, que salio hoy y el cupo de subidas"),
+    ("pausa", "Pausa las franjas: /pausa, /pausa 3h, /pausa hoy, /pausa 2d"),
+    ("reanudar", "Quita la pausa"),
+    ("saltar", "Brinca la proxima franja (o una: /saltar noche)"),
+    ("ayuda", "Lista de comandos"),
+]
+AYUDA = ("<b>El Ahorita · comandos</b>\n"
+         + "\n".join(f"/{c} — {esc(d)}" for c, d in COMANDOS))
+
+
+def registrar_comandos():
+    """El menu de comandos de Telegram (el boton "/" del chat)."""
+    return _llamar("setMyCommands", commands=json.dumps(
+        [{"command": c, "description": d} for c, d in COMANDOS], ensure_ascii=False))
+
+
+def _comando(texto):
+    """'/pausa@ElAhoritaBot 3h' -> ('pausa', '3h'). Texto que no es comando -> (None, '')."""
+    if not texto.startswith("/"):
+        return None, ""
+    cabeza, _, resto = texto[1:].partition(" ")
+    return cabeza.split("@")[0].lower(), resto.strip()
+
+
 def recoger(texto_libre=False):
-    """Lee las respuestas nuevas y devuelve la decision."""
+    """Lee las respuestas nuevas y devuelve la ultima decision (compatibilidad)."""
+    decisiones = recoger_todas(texto_libre)
+    return decisiones[-1] if decisiones else None
+
+
+def recoger_todas(texto_libre=True):
+    """Lee los mensajes y botones nuevos de tu chat y devuelve las decisiones en orden."""
     estado = _estado()
     recibidos = _llamar("getUpdates", offset=estado.get("offset", 0), timeout=0)
-    decision = None
+    decisiones = []
     lotes = estado.get("lotes") or {}
     for r in recibidos:
         estado["offset"] = r["update_id"] + 1
@@ -234,7 +266,7 @@ def recoger(texto_libre=False):
             # "Subir asi" de una nota que salio corta: se rearma desde su guion
             if partes[0] == "subir" and len(partes) == 2 and re.fullmatch(r"[\w-]+", partes[1]):
                 _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Va")
-                decision = {"accion": "subir", "guion": partes[1]}
+                decisiones.append({"accion": "subir", "guion": partes[1]})
                 mandar("Va, la subo asi.")
                 continue
             if partes[0] != "pub":
@@ -256,29 +288,34 @@ def recoger(texto_libre=False):
             _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Anotado")
             lote_de = partes[1]
             if historia == "nada":
-                decision = {"accion": "ninguna", "lote": lote_de}
+                decisiones.append({"accion": "ninguna", "lote": lote_de})
             elif historia.get("tipo") == "nota":
                 # opcion de una busqueda de /nota: se arma directo desde su enlace
-                decision = {"accion": "nota_manual", "texto": historia.get("link", "")}
+                decisiones.append({"accion": "nota_manual", "texto": historia.get("link", "")})
                 mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
             else:
-                decision = {"accion": "publicar", "historia": historia, "lote": lote_de}
+                decisiones.append({"accion": "publicar", "historia": historia, "lote": lote_de})
                 mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
         msg = r.get("message") or {}
         m = (msg.get("text") or "").strip()
-        if texto_libre and m.startswith("/nota"):
-            chat = (msg.get("chat") or {}).get("id")
-            if not es_mi_chat(chat):
-                print(f"  /nota ignorada: chat {chat} no autorizado")
-                continue
-            decision = {"accion": "nota_manual", "texto": m[5:].strip()}
-            mandar("Recibido. Voy por esa nota.")
+        comando, argumento = _comando(m)
+        if not texto_libre or not comando:
+            continue
+        chat = (msg.get("chat") or {}).get("id")
+        if not es_mi_chat(chat):
+            print(f"  /{comando} ignorado: chat {chat} no autorizado")
+            continue
+        if comando == "nota":
+            decisiones.append({"accion": "nota_manual", "texto": argumento})
+            if argumento:
+                mandar("Recibido. Voy por esa nota.")
+        elif comando in ("estado", "pausa", "reanudar", "saltar"):
+            decisiones.append({"accion": comando, "argumento": argumento})
+        else:                                   # /ayuda, /start o algo que no existe
+            mandar(AYUDA)
     _guardar(estado)
-    if decision:
-        print(json.dumps(decision, ensure_ascii=False, indent=1))
-    else:
-        print("sin novedades")
-    return decision
+    print(json.dumps(decisiones, ensure_ascii=False, indent=1) if decisiones else "sin novedades")
+    return decisiones
 
 
 def main():

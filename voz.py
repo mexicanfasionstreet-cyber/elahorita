@@ -139,6 +139,14 @@ def con_voicebox(texto, salida):
     return salida
 
 
+def _evento(tipo, texto):
+    try:
+        import franjas
+        franjas.registrar_evento(tipo, texto)
+    except Exception:  # noqa: BLE001
+        pass
+
+
 def _avisar(texto):
     """Manda un aviso al chat sin romper la tuberia si Telegram falla."""
     try:
@@ -173,6 +181,7 @@ def generar_voz(guion, proveedor="edge"):
                 s["voz"], s["palabras"] = "voicebox", []
         except Exception as e:  # noqa: BLE001
             print(f"  Voicebox no responde ({e}); se usa la voz de respaldo")
+            _evento("voz_respaldo", e)
             _avisar("<b>Voicebox no respondio</b>; este video va con la voz de respaldo.\n"
                     f"<pre>{html.escape(str(e)[:400])}</pre>")
             usar_voicebox = False
@@ -191,6 +200,7 @@ def generar_voz(guion, proveedor="edge"):
                 fallo = fallo or e
                 print(f"  sin tiempos por palabra en {s['id']} ({type(e).__name__}: {e})")
         if fallo:
+            _evento("subtitulos", fallo)
             _avisar("<b>Subtitulos incompletos</b>: no se pudieron sacar los tiempos "
                     f"de la voz de Carla.\n<pre>{html.escape(str(fallo)[:300])}</pre>")
 

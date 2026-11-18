@@ -244,6 +244,24 @@ python herramientas/probar-fuentes.py
 
 ---
 
+## Pruebas
+
+`tests/` tiene las pruebas del robot (pytest). Corren solas en GitHub en cada PR y en
+cada push que toque código (workflow **Pruebas**); los commits de estado del robot no
+las disparan.
+
+```powershell
+pip install -r requirements-dev.txt     # pytest, pillow, numpy (y ffmpeg en el PATH)
+python -m pytest                        # todas, ~15 s
+python -m pytest -k franjas -q          # solo las de un tema
+```
+
+- Nada sale a la red ni toca `datos/`: Telegram, DeepSeek, YouTube, Voicebox y
+  Whisper están simulados (`tests/conftest.py`).
+- `test_video.py` arma un video de verdad (voz, subtítulos y marca con ffmpeg).
+- `test_secciones.py` falla si el clasificador baja de 88 % de sección o 96 % de
+  región contra las 250 noticias clasificadas a mano.
+
 ## Configuración
 
 Todo va en `.env` (local) y en los secretos del repo. Nunca al código.

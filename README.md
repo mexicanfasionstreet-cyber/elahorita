@@ -125,6 +125,28 @@ La máquina de Voicebox tiene que estar prendida a las horas de las franjas.
 
 ---
 
+## Secciones y región
+
+Cada noticia lleva una **sección** (de qué trata; pesa 10 % en el ranking) y una
+**región** (dónde pasa; decide la etiqueta del video, *AHORITA EN MÉXICO* o
+*EN EL MUNDO*). Las dos salen del contenido, no del medio.
+
+1. **Palabras clave** (`secciones.py`) para las ~1,200 noticias del radar: cada
+   sección tiene palabras fuertes y débiles, y el titular pesa más que la entradilla.
+2. **Revisión con DeepSeek** de las 25 mejores en cada franja (una sola llamada,
+   con caché en `datos/secciones-ia.json`). Si falla, se queda lo de las palabras.
+
+Medido contra 250 noticias reales clasificadas a mano (`herramientas/secciones-oro.json`):
+
+| | Sección | Región |
+|---|---|---|
+| Clasificador anterior (muestra ciega) | 56 % | 88 % |
+| Palabras clave (muestra ciega, antes de ajustar con ella) | 74 % | 98 % |
+| DeepSeek (las 250) | 96 % | 100 % |
+
+Para volver a medir: `python herramientas/evaluar-secciones.py --ia`, o en Actions
+el modo **Medir secciones**.
+
 ## El ranking de relevancia
 
 Señales, todas calculadas con datos que el motor ya produce:

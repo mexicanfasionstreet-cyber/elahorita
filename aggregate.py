@@ -34,6 +34,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
 import enlaces
+import secciones
 import ui
 
 UA = (
@@ -526,31 +527,8 @@ STRICT_OK_LOCAL = STRICT_OK | {"pasarela", "diseno"}  # calzado no: ahí son gu�
 
 
 def classify(title, body, strict=False, allowed=STRICT_OK):
-    """Devuelve la sección principal, ordenada por puntuación.
-
-    strict=True (revistas de consumo): solo el titular decide, porque el cuerpo
-    de un artículo de lifestyle menciona 'store', 'collection' o 'beauty' y
-    ensucia la clasificación.
-    """
-    nt = " " + norm(title) + " "
-    nb = " " + norm(truncate(body, 450)) + " "
-    scored = []
-    for idx, c in enumerate(CATS):
-        if not c["re"]:
-            continue
-        hits_t = len(c["re"].findall(nt))
-        hits_b = 0 if strict else len(c["re"].findall(nb))
-        if not hits_t and not hits_b:
-            continue
-        score = min(hits_t * 3.0, 6.0) + min(hits_b * 0.4, 1.8) - idx * 0.01
-        scored.append((score, c["slug"]))
-    scored.sort(reverse=True)
-    if not scored:
-        return ["industria"]
-    # revistas de consumo: solo si el titular apunta a un tema de industria
-    if strict and scored[0][1] not in allowed:
-        return ["industria"]
-    return [slug for _, slug in scored[:3]]
+    """Compatibilidad: la clasificacion vive ahora en secciones.py."""
+    return [secciones.clasificar(title, body or "")[0]]
 
 
 # algunas ediciones locales (Vogue México) republican notas de Vogue Italia en italiano
@@ -787,14 +765,12 @@ def build(sources, days, cache_path=None):
             can = canonical(link)
             if not can or can in seen_links:
                 continue
-            # una noticia = una sección (la de mayor puntuación)
-            allowed = STRICT_OK_LOCAL if src.get("local") else STRICT_OK
-            tags = classify(title, it["body"], strict=(kind == "consumer"), allowed=allowed)[:1]
-            # las revistas de consumo solo entran si la noticia es de industria
-            if tags[0] == "industria" and kind == "consumer":
-                continue
-            seen_links.add(can)
+            # una noticia = una sección; la región sale del contenido, no del medio
+            # (una nota de Nvidia en La Jornada no es "en México")
             body = strip_lead(clean_text(it["body"]), [src["name"], src["short"], title])
+            region_nota = secciones.region(title, body[:450], src["region"])
+            tags = [secciones.seccion(title, body[:450], region_nota)]
+            seen_links.add(can)
             excerpt = truncate(body)
             if mirrored and norm(excerpt).startswith(norm(title)[:40]):
                 excerpt = ""  # el espejo solo devuelve "Titular - Medio"
@@ -819,7 +795,8 @@ def build(sources, days, cache_path=None):
                     "mirror": mirrored,
                     "weight": float(src["weight"]),
                     "lang": src["lang"],
-                    "region": src["region"],
+                    "region": region_nota,
+                    "region_fuente": src["region"],
                     "tags": tags,
                     "via": it.get("via", "") if mirrored else "",
                     "aggregator": bool(src.get("aggregator")),

@@ -296,7 +296,15 @@ def correr_franja(estado, clave, franja, ahora, prueba=False):
     if not correr([str(RAIZ / "aggregate.py"), "--days", "2"]):
         print("  fallo el radar; se reintenta en la proxima pasada")
         return False
-    datos = json.loads((RAIZ / "docs" / "data" / "latest.json").read_text(encoding="utf-8"))
+    ruta = RAIZ / "docs" / "data" / "latest.json"
+    datos = json.loads(ruta.read_text(encoding="utf-8"))
+    # las que pueden publicarse se revisan con IA: seccion y region (la etiqueta
+    # del video) mas finas que las del clasificador por palabras
+    import secciones
+    cambios = secciones.refinar(datos["items"])
+    print(f"  secciones revisadas con IA: {cambios} cambio(s)")
+    if cambios:
+        ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=1), encoding="utf-8")
     filas = franjas.candidatas(datos["items"], franja, ahora)
     print(f"  {len(filas)} historias desde {franjas.inicio_ventana(franja, ahora):%d %H:%M}")
     for f in filas[:4]:

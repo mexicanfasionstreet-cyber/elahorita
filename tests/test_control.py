@@ -221,3 +221,36 @@ def test_voz_de_respaldo_queda_en_la_bitacora(tmp_path, monkeypatch, puerto_cerr
     monkeypatch.setattr(config, "VOICEBOX_PROFILE", "carla-1")
     voz.generar_voz({"_nombre": "x", "gancho": "Hola.", "notas": [], "cierre": "Adios."}, "voicebox")
     assert [e["tipo"] for e in franjas.eventos_de(config.ahora())] == ["voz_respaldo"]
+
+
+# ------------------------------------------------------------------ migracion del sistema anterior
+ESTADO_VIEJO = {"franjas": {"2026-11-17-mediodia": "2026-11-17T12:18:23-08:00",
+                            "2026-11-17-tarde": "2026-11-17T15:18:47-08:00",
+                            "2026-11-17-noche": "2026-11-17T20:01:24-08:00"}, "videos": []}
+
+
+def test_migracion_del_estado_viejo(reloj):
+    reloj(2026, 11, 17, 23, 25)
+    orq.ESTADO.write_text(json.dumps(ESTADO_VIEJO))
+    estado = orq.cargar()
+    assert estado["franjas"] == {"2026-11-17-manana": "candidatas (sistema anterior) 12:18",
+                                 "2026-11-17-tarde": "candidatas (sistema anterior) 15:18",
+                                 "2026-11-17-noche": "candidatas (sistema anterior) 20:01"}
+    assert estado["resumen"] == "2026-11-17" and "videos" not in estado
+    assert orq.migrar(estado) is estado and estado["franjas"]["2026-11-17-tarde"].startswith("candidatas")
+
+
+def test_primera_pasada_tras_el_merge(tg, reloj, sin_videos):
+    """23:25 del dia del merge: nada se publica, no llega resumen, /estado se ve bien."""
+    reloj(2026, 11, 17, 23, 25)
+    orq.ESTADO.write_text(json.dumps(ESTADO_VIEJO))
+    tg.escribe("/estado")
+    orq.main()
+    textos = [m["text"] for m in tg.mensajes()]
+    assert not sin_videos["franjas"] and not any("resumen" in t for t in textos)
+    estado_msg = [t for t in textos if "estado</b>" in t][0]
+    assert "📋 candidatas (sistema anterior) 12:18" in estado_msg and "Proxima: madrugada, mie 18" in estado_msg
+    reloj(2026, 11, 18, 21, 10)                    # al dia siguiente si llega
+    estado = orq.cargar()
+    estado["franjas"]["2026-11-18-noche"] = "automatica 20:05"
+    assert orq.resumen_diario(estado, config.ahora()) is True

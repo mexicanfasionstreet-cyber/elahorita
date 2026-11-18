@@ -45,12 +45,37 @@ TZ = config.TZ
 
 
 def cargar():
-    if ESTADO.exists():
-        try:
-            return json.loads(ESTADO.read_text(encoding="utf-8"))
-        except Exception:  # noqa: BLE001
-            pass
-    return {"franjas": {}, "videos": []}
+    try:
+        estado = json.loads(ESTADO.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        estado = {"franjas": {}}
+    return migrar(estado)
+
+
+_ISO = re.compile(r"\d{4}-\d{2}-\d{2}T(\d{2}:\d{2})")
+
+
+def migrar(estado):
+    """Estado del sistema anterior (candidatas por Telegram) -> formato actual.
+
+    Antes la franja de las 12:00 se llamaba "mediodia" y cada franja guardaba la
+    fecha y hora en que mando candidatas. El dia de la migracion no lleva resumen:
+    corrio con el sistema anterior y el resumen diria "no se publico nada".
+    """
+    franjas_viejas = estado.get("franjas", {})
+    if not any(_ISO.match(str(v)) for v in franjas_viejas.values()):
+        return estado
+    nuevas = {}
+    for clave, valor in franjas_viejas.items():
+        m = _ISO.match(str(valor))
+        if clave.endswith("-mediodia"):
+            clave = clave[:-len("mediodia")] + "manana"
+        nuevas[clave] = f"candidatas (sistema anterior) {m.group(1)}" if m else valor
+    estado["franjas"] = nuevas
+    estado.pop("videos", None)
+    estado.setdefault("resumen", f"{config.ahora():%Y-%m-%d}")
+    print("  estado del sistema anterior migrado")
+    return estado
 
 
 def guardar(estado):
@@ -341,7 +366,7 @@ def saltar(estado, argumento, ahora):
                f"{DIAS[dia.weekday()]} {dia.day} no sale.")
 
 
-ICONOS = [("automatica", "✅"), ("elegiste", "✅"), ("sin respuesta (solo", "⏭"),
+ICONOS = [("candidatas", "📋"), ("automatica", "✅"), ("elegiste", "✅"), ("sin respuesta (solo", "⏭"),
           ("sin respuesta", "✅"), ("saltada", "⏭"), ("pausada", "⏸"), ("fallida", "❌"),
           ("sin noticias", "➖")]
 

@@ -56,11 +56,15 @@ jobs:
 
       - name: Pasada
         run: |
+          set -o pipefail
           if [ "${{ inputs.forzar_franja }}" = "true" ]; then
-            python orquestador.py --franja
+            python orquestador.py --franja 2>&1 | tee datos/ultimo-log.txt
           else
-            python orquestador.py
+            python orquestador.py 2>&1 | tee datos/ultimo-log.txt
           fi
+          # el log queda en el repo: asi se puede revisar que paso sin acceso a Actions
+          tail -c 20000 datos/ultimo-log.txt > datos/ultimo-log.txt.tmp
+          mv datos/ultimo-log.txt.tmp datos/ultimo-log.txt
 
       - name: Guardar estado
         if: always()

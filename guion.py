@@ -44,6 +44,8 @@ Reglas que no puedes romper:
 - Nada de sensacionalismo, mayusculas gritadas ni "no vas a creer".
 - NUNCA menciones cuantos medios publican la noticia ni como llego a ti: al espectador
   no le sirve y suena a robot. Esa informacion es solo para que tu sepas que es relevante.
+- NUNCA digas "el material", "el titular", "la nota", "segun la informacion recibida" ni
+  nada que delate de donde sacaste los datos: cuentalo directo, como periodista.
 - Cada nota tiene que responder: que paso, con que contexto, y que sigue o por que importa.
   Desarrolla cada nota en 4 o 5 frases: no la dejes en el titular.
 - No repitas el titular literal: explicitalo como se lo contarias a alguien en la fila.
@@ -146,6 +148,13 @@ def material(notas, con_articulo=True):
             "ya_contado": f.get("seguimiento_de", ""),
         })
     return partes
+
+
+MATERIAL_MIN = 60   # palabras de entradilla + cuerpo para que una nota se sostenga
+
+
+def _palabras_material(m):
+    return len((m.get("entradilla", "") + " " + m.get("cuerpo_del_articulo", "")).split())
 
 
 def prompt_usuario(mat):
@@ -306,6 +315,11 @@ def main():
         notas = elegir_notas(filas, args.notas or None)
     notas = [asegurar_imagen(f) for f in notas]
     mat = material(notas, con_articulo=not args.sin_articulo)
+    # una segunda nota sin material sale como una frase de relleno: mejor solo la primera
+    if len(mat) == 2 and not args.sin_articulo and _palabras_material(mat[1]) < MATERIAL_MIN:
+        print(f"aviso: la nota 2 tiene poco material ({_palabras_material(mat[1])} palabras); "
+              "el video va con una sola")
+        notas, mat = notas[:1], mat[:1]
 
     guion, origen, problemas = None, "ia", []
     if args.sin_ia:

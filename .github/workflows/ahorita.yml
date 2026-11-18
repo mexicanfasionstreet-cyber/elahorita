@@ -53,8 +53,12 @@ jobs:
           } > .env
           grep -c . .env
 
+      # Solo entra al tailnet si hay URL de Voicebox configurada. `secrets` no se
+      # puede usar en un `if` (GitHub invalida el workflow); `vars` si.
+      # continue-on-error: si Tailscale falla, el video sale con la voz de respaldo.
       - name: Tailscale
-        if: ${{ secrets.TS_AUTHKEY != '' }}
+        if: ${{ vars.VOICEBOX_URL != '' }}
+        continue-on-error: true
         uses: tailscale/github-action@v2
         with:
           authkey: ${{ secrets.TS_AUTHKEY }}

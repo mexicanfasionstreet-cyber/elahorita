@@ -2,9 +2,21 @@
 from __future__ import annotations
 
 import os
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 RAIZ = Path(__file__).resolve().parent
+
+# Todo el proyecto vive en hora de Tijuana. El runner de GitHub esta en UTC: si un
+# script fecha sus archivos con datetime.now() y otro con la hora de Tijuana, desde
+# las 16:00 (00:00 UTC) cada uno busca el archivo del otro con un dia distinto.
+TZ = ZoneInfo("America/Tijuana")
+
+
+def ahora():
+    """La hora actual en Tijuana. Usar siempre esta, nunca datetime.now() a secas."""
+    return datetime.now(TZ)
 
 
 def cargar_env(ruta=None):

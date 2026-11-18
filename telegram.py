@@ -12,12 +12,13 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import html
 import json
+import re
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent
@@ -27,6 +28,12 @@ import config  # noqa: E402
 
 ESTADO = RAIZ / "datos" / "telegram.json"
 API = "https://api.telegram.org/bot{token}/{metodo}"
+LOTES_GUARDADOS = 8    # listas de candidatas que siguen valiendo (2 dias de franjas)
+
+
+def esc(texto):
+    """Escapa texto ajeno (titulares, errores) para el modo HTML de Telegram."""
+    return html.escape(str(texto or ""), quote=False)
 
 
 # ------------------------------------------------------------------ base
@@ -53,7 +60,7 @@ def _estado():
             return json.loads(ESTADO.read_text(encoding="utf-8"))
         except Exception:  # noqa: BLE001
             pass
-    return {"pendientes": {}, "offset": 0, "elegidas": []}
+    return {"lotes": {}, "offset": 0, "elegidas": []}
 
 
 def _guardar(datos):
@@ -63,13 +70,29 @@ def _guardar(datos):
 
 # ------------------------------------------------------------------ envio
 def mandar(texto, botones=None):
-    """Manda un mensaje; `botones` es [[(etiqueta, dato), ...], ...]."""
+    """Manda un mensaje; `botones` es [[(etiqueta, dato), ...], ...].
+
+    Si Telegram no puede leer el HTML (un "&" o "<" sin escapar que se colo), se
+    reintenta en texto plano: un aviso feo es mejor que un aviso perdido.
+    """
     params = {"chat_id": config.TELEGRAM_CHAT, "text": texto,
               "parse_mode": "HTML", "disable_web_page_preview": "true"}
     if botones:
         params["reply_markup"] = json.dumps({"inline_keyboard": [
             [{"text": t, "callback_data": d} for t, d in fila] for fila in botones]})
-    return _llamar("sendMessage", **params)
+    try:
+        return _llamar("sendMessage", **params)
+    except SystemExit as e:
+        if "parse entities" not in str(e):
+            raise
+        params.pop("parse_mode")
+        params["text"] = html.unescape(re.sub(r"</?[a-zA-Z][^>]*>", "", texto))
+        return _llamar("sendMessage", **params)
+
+
+def es_mi_chat(chat_id):
+    """Solo se obedece al chat de TELEGRAM_CHAT_ID. Sin chat configurado, a nadie."""
+    return bool(config.TELEGRAM_CHAT) and str(chat_id) == str(config.TELEGRAM_CHAT)
 
 
 def mandar_video(ruta, texto=""):
@@ -134,23 +157,35 @@ def candidatas(n=3):
 
 
 def mandar_candidatas(n=3):
+    """Manda la lista con botones. Cada lista lleva su propio identificador (lote).
+
+    Antes todas usaban "pub:n1/n2/n3": al llegar una lista nueva, los botones de
+    la anterior apuntaban a las historias nuevas y se publicaba otra nota.
+    """
     estado = _estado()
-    estado["pendientes"] = {}
-    filas, texto = [], [f"<b>El Ahorita</b> · {datetime.now():%H:%M}\n"]
+    estado.pop("pendientes", None)          # formato viejo, sin lote
+    lotes = estado.setdefault("lotes", {})
+    ahora = config.ahora()
+    lote = f"{ahora:%m%d%H%M}"
+    historias = {}
+    filas, texto = [], [f"<b>El Ahorita</b> · {ahora:%H:%M}\n"]
     for i, f in enumerate(candidatas(n), 1):
         clave = f"n{i}"
-        estado["pendientes"][clave] = {
+        historias[clave] = {
             "titulo": f["title"], "link": f["link"], "seccion": f["seccion"],
             "score": f["score"], "medios": f["medios"], "imagen": f["imagen"],
         }
-        texto.append(f"<b>{i}. [{f['seccion'].upper()}]</b> {f['title'][:150]}\n"
+        texto.append(f"<b>{i}. [{esc(f['seccion'].upper())}]</b> {esc(f['title'][:150])}\n"
                      f"   {f['medios']} medios · score {f['score']} · "
                      f"{f['horas']} h" + (" · con foto" if f["imagen"] else " · sin foto"))
-        filas.append([(f"Publicar {i}", f"pub:{clave}")])
-    filas.append([("Ninguna hoy", "pub:nada")])
+        filas.append([(f"Publicar {i}", f"pub:{lote}:{clave}")])
+    filas.append([("Ninguna hoy", f"pub:{lote}:nada")])
+    lotes[lote] = historias
+    for viejo in sorted(lotes)[:-LOTES_GUARDADOS]:
+        del lotes[viejo]
     _guardar(estado)
     mandar("\n".join(texto), filas)
-    print("mandadas", len(estado["pendientes"]), "candidatas")
+    print("mandadas", len(historias), f"candidatas (lote {lote})")
 
 
 def recoger(texto_libre=False):
@@ -158,24 +193,46 @@ def recoger(texto_libre=False):
     estado = _estado()
     recibidos = _llamar("getUpdates", offset=estado.get("offset", 0), timeout=0)
     decision = None
+    lotes = estado.get("lotes") or {}
     for r in recibidos:
         estado["offset"] = r["update_id"] + 1
         cb = r.get("callback_query")
         if cb:
+            chat = ((cb.get("message") or {}).get("chat") or {}).get("id")
+            if not es_mi_chat(chat):
+                print(f"  boton ignorado: chat {chat} no autorizado")
+                continue
             dato = cb.get("data", "")
-            _llamar("answerCallbackQuery", callback_query_id=cb["id"],
-                    text="Anotado")
-            if dato.startswith("pub:"):
-                clave = dato.split(":", 1)[1]
-                if clave == "nada":
-                    decision = {"accion": "ninguna"}
+            partes = dato.split(":")
+            if partes[0] != "pub":
+                _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Anotado")
+                continue
+            # pub:<lote>:<clave>. Los botones viejos (pub:n1) no traen lote: caducan.
+            historia = None
+            if len(partes) == 3:
+                lote, clave = partes[1], partes[2]
+                if clave == "nada" and lote in lotes:
+                    historia = "nada"
                 else:
-                    historia = estado["pendientes"].get(clave, {})
-                    decision = {"accion": "publicar", "historia": historia}
-                    mandar(f"Va: <b>{historia.get('titulo', '')[:120]}</b>")
+                    historia = (lotes.get(lote) or {}).get(clave)
+            if historia is None:
+                _llamar("answerCallbackQuery", callback_query_id=cb["id"],
+                        text="Esa lista ya caduco")
+                mandar("Esa lista ya caduco. Usa los botones de la mas reciente.")
+                continue
+            _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Anotado")
+            if historia == "nada":
+                decision = {"accion": "ninguna"}
+            else:
+                decision = {"accion": "publicar", "historia": historia}
+                mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
         msg = r.get("message") or {}
         m = (msg.get("text") or "").strip()
         if texto_libre and m.startswith("/nota"):
+            chat = (msg.get("chat") or {}).get("id")
+            if not es_mi_chat(chat):
+                print(f"  /nota ignorada: chat {chat} no autorizado")
+                continue
             decision = {"accion": "nota_manual", "texto": m[5:].strip()}
             mandar("Recibido. Voy por esa nota.")
     _guardar(estado)
@@ -203,7 +260,7 @@ def main():
     if args.prueba:
         mandar("<b>El Ahorita</b> · mesa de edicion conectada.\n"
                "Aqui van a llegar las historias candidatas con botones.",
-               [[("Funciona", "pub:prueba")]])
+               [[("Funciona", "prueba")]])
         print("mensaje de prueba enviado")
         return 0
     if args.candidatas:

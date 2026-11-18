@@ -51,10 +51,26 @@ def tokens_del_guion(texto):
     return salida
 
 
+def _muestras(audio):
+    """Audio a 16 kHz mono float32, decodificado con ffmpeg.
+
+    faster-whisper abre los archivos con PyAV, y PyAV 15+ ya no acepta el
+    argumento que le pasa (metadata_errors): se decodifica aqui y Whisper recibe
+    las muestras directamente.
+    """
+    import subprocess
+
+    import numpy as np
+    crudo = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(audio), "-f", "f32le", "-ac", "1",
+         "-ar", "16000", "-"], capture_output=True, check=True).stdout
+    return np.frombuffer(crudo, dtype=np.float32)
+
+
 def transcribir(audio, texto=""):
     """[(palabra, inicio, fin)] segun Whisper. El texto del guion va como pista."""
     segmentos, _ = _cargar().transcribe(
-        str(audio), language="es", word_timestamps=True, beam_size=5,
+        _muestras(audio), language="es", word_timestamps=True, beam_size=5,
         initial_prompt=texto[:800] or None, vad_filter=False,
         condition_on_previous_text=False)
     return [(w.word.strip(), float(w.start), float(w.end))

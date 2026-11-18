@@ -52,7 +52,7 @@ def test_ia_valida_inventada_y_politica_de_fuera():
                                  {"i": 2, "s": "inventada", "g": "mx"}]})
     items = [{"id": "a", "title": "Nvidia cae"}, {"id": "b", "title": "Trump en Asia"}, {"id": "c", "title": "x"}]
     r = secciones.con_ia(items, llm)
-    assert r["a"] == ("economia", "mundo") and r["b"] == ("mundo", "mundo") and "c" not in r
+    assert r["a"] == ("economia", "mundo", "") and r["b"] == ("mundo", "mundo", "") and "c" not in r
 
 
 def test_ia_usa_cache():

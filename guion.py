@@ -52,6 +52,14 @@ Reglas que no puedes romper:
 - La extension total DEBE quedar entre 180 y 200 palabras, PERO nunca rellenes con datos
   que no esten en el material. Si con lo que hay no llegas, escribe menos: una nota corta
   es mejor que una nota con un dato inventado.
+- Temas delicados (violencia, suicidio, violencia sexual, menores):
+  * nada de detalles graficos: ni como quedaron los cuerpos, ni heridas, ni la forma de matar;
+  * suicidio: nunca el metodo, el lugar exacto ni la palabra "exito"; no lo presentes como
+    salida a nada. Si la nota trata de suicidio o autolesiones, el cierre debe ser exactamente:
+    "Si tú o alguien que conoces está pasando por un momento difícil, llama gratis a la Línea
+    de la Vida: 800 911 2000."
+  * menores victimas: nunca su nombre, su escuela ni datos que los identifiquen;
+  * a quien no ha sido sentenciado, llamalo "presunto" o "acusado".
 - Prohibido inventar antecedentes, cargos, fechas, cifras o consecuencias. Ejemplo de
   error grave: decir que "Sheinbaum asume el cargo" cuando lleva años gobernando. Si no
   aparece en el material, no lo escribas. Si falta contexto, di que no se conocen detalles.
@@ -188,6 +196,11 @@ def solo_con_material(notas, mat, reservas=()):
     return notas, mat
 
 
+def _sensible(f):
+    import secciones
+    return secciones.sensible(f.get("title", ""), f.get("excerpt", ""))
+
+
 def prompt_usuario(mat):
     lineas = [
         f"Material del dia ({len(mat)} nota(s)). Redacta el guion.",
@@ -247,6 +260,8 @@ Encuentra toda frase del guion que AFIRME un hecho verificable que no este en el
 cargos, fechas, cifras, antecedentes, causas, consecuencias o atribuciones.
 
 No toques el estilo ni las palabras de relleno narrativo. Solo los datos.
+La frase de la Linea de la Vida (800 911 2000) es una linea de ayuda, no un dato de la nota:
+dejala tal cual.
 
 Devuelves SOLO JSON:
 {"problemas": ["frase :: motivo"], "guion_corregido": {"gancho": "...", "notas": [{"kicker": "...", "texto": "..."}], "cierre": "..."}}
@@ -409,6 +424,7 @@ def main():
         "origen": origen, "palabras": n_pal, "segundos_estimados": round(est, 1),
         "historias": [{"titulo": f["title"], "link": f["link"], "seccion": f["seccion"],
                        "medios": f["medios"], "score": f["score"],
+                       "sensible": f.get("sensible") or _sensible(f),
                        "imagen": bool(f.get("imagen_url")),
                        "imagen_url": f.get("imagen_url", "")} for f in notas],
         "guion": guion,

@@ -266,30 +266,53 @@ def revisar_pendiente(estado, ahora):
     if ahora < limite:
         print(f"  esperando tu eleccion para {p['nombre']} hasta {limite:%H:%M}")
         return False
-    elegidas = franjas.elegir(p["opciones"])
+    elegidas = p.get("sin_respuesta")
+    if elegidas is None:                     # pendientes de antes de este cambio
+        elegidas = franjas.elegir([o for o in p["opciones"] if not o.get("sensible")])
+    if not elegidas:
+        bot.mandar(f"No elegiste en {franjas.ESPERA_MIN} min y todas las opciones eran de tema "
+                   "sensible: esta franja no sale.")
+        cerrar_franja(estado, p["clave"], "sin respuesta (solo sensibles)")
+        return True
     bot.mandar(f"No elegiste en {franjas.ESPERA_MIN} min: publico "
                f"<b>{html.escape(elegidas[0]['titulo'][:100])}</b>"
                + (" y la segunda" if len(elegidas) > 1 else "") + ".")
     return publicar_franja(estado, p["clave"], p["nombre"], elegidas, "sin respuesta")
 
 
-def preguntar(estado, clave, nombre, opciones, ahora):
-    """Caso especial: 2+ notas de alto impacto. Lista con botones y plazo."""
+def preguntar(estado, clave, nombre, opciones, ahora, sin_respuesta, motivo="especial"):
+    """Lista con botones y plazo. `sin_respuesta` es lo que sale si no contestas.
+
+    motivo "especial": 2+ notas de alto impacto. "sensible": la elegida es de un
+    tema que no sale solo (suicidio, violencia sexual o menores, violencia grafica).
+    """
+    import secciones
     lote = bot.guardar_lote(opciones)
     publica_a = ahora + timedelta(minutes=franjas.ESPERA_MIN)
-    lineas = [f"<b>El Ahorita · {html.escape(nombre)}</b>: hay {len(opciones)} notas de "
-              "alto impacto. ¿Cual sale?\n"]
+    if motivo == "sensible":
+        cabeza = "la nota elegida es de <b>tema sensible</b>. ¿La publico?"
+    else:
+        cabeza = f"hay {len(opciones)} notas de alto impacto. ¿Cual sale?"
+    lineas = [f"<b>El Ahorita · {html.escape(nombre)}</b>: {cabeza}\n"]
     for i, o in enumerate(opciones, 1):
         seg = f"\n   seguimiento de: {html.escape(o['seguimiento_de'][:80])}" if o["seguimiento_de"] else ""
+        sens = (f"\n   ⚠️ sensible: {secciones.NOMBRES_SENSIBLES.get(o['sensible'], o['sensible'])}"
+                if o.get("sensible") else "")
         lineas.append(f"<b>{i}.</b> {html.escape(o['titulo'][:140])}\n"
-                      f"   {o['medios']} medios · peso {o['peso']}{seg}")
-    lineas.append(f"\nSi no eliges, a las {publica_a:%H:%M} publico la mejor.")
+                      f"   {o['medios']} medios · peso {o['peso']}{seg}{sens}")
+    if sin_respuesta:
+        lineas.append(f"\nSi no eliges, a las {publica_a:%H:%M} publico "
+                      f"<b>{html.escape(sin_respuesta[0]['titulo'][:90])}</b>"
+                      + (" y la segunda no sensible" if len(sin_respuesta) > 1 else "") + ".")
+    else:
+        lineas.append(f"\nSi no eliges, a las {publica_a:%H:%M} esta franja no sale "
+                      "(no hay opcion sin tema sensible).")
     botones = [[(f"Publicar {i}", f"pub:{lote}:n{i}")] for i in range(1, len(opciones) + 1)]
     botones.append([("Ninguna (saltar franja)", f"pub:{lote}:nada")])
     bot.mandar("\n".join(lineas), botones)
-    estado["pendiente"] = {"clave": clave, "nombre": nombre, "lote": lote,
+    estado["pendiente"] = {"clave": clave, "nombre": nombre, "lote": lote, "motivo": motivo,
                            "publica_a": publica_a.isoformat(timespec="seconds"),
-                           "opciones": opciones}
+                           "opciones": opciones, "sin_respuesta": sin_respuesta}
     guardar(estado)
 
 
@@ -317,18 +340,31 @@ def correr_franja(estado, clave, franja, ahora, prueba=False):
         if not prueba:
             cerrar_franja(estado, clave, "sin noticias")
         return True
-    opciones = [franjas.resumen(f) for f in filas[:3]]
+    resumenes = [franjas.resumen(f) for f in filas]
+    opciones = resumenes[:3]
     elegidas = franjas.elegir(opciones)
-    # de repuesto, por si ninguna elegida se deja leer
-    reservas = [f["link"] for f in filas[len(elegidas):len(elegidas) + 2]]
+    seguras = franjas.no_sensibles(resumenes)          # lo que sale si no contestas
+    # de repuesto, por si ninguna elegida se deja leer (nunca una sensible)
+    usados = {o["link"] for o in elegidas}
+    reservas = [o["link"] for o in resumenes if o["link"] not in usados and not o["sensible"]][:2]
+    especial = franjas.es_especial(filas)
+    sensibles = [o for o in elegidas if o["sensible"]]
     if prueba:
-        aviso = " (en serio seria CASO ESPECIAL: te preguntaria)" if franjas.es_especial(filas) else ""
+        aviso = (" (en serio: CASO ESPECIAL, te preguntaria)" if especial else
+                 " (en serio: TEMA SENSIBLE, te preguntaria; sin respuesta saldria otra)" if sensibles
+                 else "")
         return armar_video([o["link"] for o in elegidas], [o["seguimiento_de"] for o in elegidas],
                            nombre=f"prueba-{nombre}", prueba=True, reservas=reservas,
                            pie=f"El Ahorita · prueba de la franja {nombre}{aviso}")
-    if franjas.es_especial(filas):
+    if especial:
         print("  caso especial: se pregunta")
-        preguntar(estado, clave, nombre, opciones, ahora)
+        preguntar(estado, clave, nombre, opciones, ahora, seguras, "especial")
+        return True
+    if sensibles:
+        print(f"  tema sensible ({sensibles[0]['sensible']}): se pregunta")
+        # la sensible y, como alternativa, lo que saldria si no contestas
+        alternativas = [o for o in seguras if o["link"] not in usados][:2]
+        preguntar(estado, clave, nombre, elegidas + alternativas, ahora, seguras, "sensible")
         return True
     return publicar_franja(estado, clave, nombre, elegidas, "automatica", reservas)
 

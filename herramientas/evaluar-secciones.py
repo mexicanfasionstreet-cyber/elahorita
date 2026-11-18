@@ -68,10 +68,16 @@ def main():
         respuestas = {}
         for i in range(0, len(items), 25):
             respuestas.update(secciones.con_ia(items[i:i + 25]))
-        ia = [respuestas.get(f"oro{i}", palabras[i]) for i in range(len(noticias))]
+        ia = [respuestas.get(f"oro{i}", palabras[i])[:2] for i in range(len(noticias))]
         sin = sum(1 for i in range(len(noticias)) if f"oro{i}" not in respuestas)
         print(f"\nIA respondio {len(noticias) - sin} de {len(noticias)} (el resto cuenta con palabras)")
         reporte("ia", noticias, ia, args.errores)
+        print("\nsensibles (IA | palabras):")
+        for i, n in enumerate(noticias):
+            k_ia = respuestas.get(f"oro{i}", ("", "", ""))[2]
+            k_pal = secciones.sensible(n["title"], n["excerpt"])
+            if k_ia or k_pal:
+                print(f"   {k_ia or '-':<15} {k_pal or '-':<15} {n['title'][:70]}")
     return 0
 
 

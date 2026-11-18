@@ -12,7 +12,10 @@ Reglas:
     anterior (seguimiento); al guion se le dice que cuente solo lo nuevo.
   - Caso especial: si 2 o mas de las mejores tienen cobertura de alto impacto
     (muchos medios a la vez), no se publica solo: se pregunta por Telegram y, si
-    no hay respuesta en ESPERA_MIN minutos, se publica lo mejor.
+    no hay respuesta en ESPERA_MIN minutos, se publica lo mejor no sensible.
+  - Tema sensible (suicidio, violencia sexual o menores victimas, violencia
+    grafica; ver secciones.py): nunca sale solo. Se pregunta y, si no hay
+    respuesta, sale la siguiente no sensible.
   - YouTube permite LIMITE_SUBIDAS al dia: las 4 franjas van primero y lo que
     sobra queda para /nota.
 
@@ -171,6 +174,10 @@ def candidatas(items, franja, ahora, publicadas=None):
             if ultima <= _dt(previa["cuando"]):
                 continue                 # ya se conto y no hay nada nuevo
             f["seguimiento_de"] = previa["titulo"]
+        # IA o palabras: basta con que una la marque
+        if not f.get("sensible"):
+            import secciones
+            f["sensible"] = secciones.sensible(f["title"], f.get("excerpt", ""))
         filas.append(f)
     return diversificar(filas)
 
@@ -190,7 +197,13 @@ def elegir(filas):
 def resumen(f):
     return {"titulo": f["title"], "link": f["link"], "score": f["score"],
             "medios": f["medios"], "peso": f["peso_cobertura"],
-            "seguimiento_de": f.get("seguimiento_de", ""), "tipo": "franja"}
+            "seguimiento_de": f.get("seguimiento_de", ""), "tipo": "franja",
+            "sensible": f.get("sensible", "")}
+
+
+def no_sensibles(filas):
+    """Lo que puede salir sin preguntar: 1 o 2 notas sin tema sensible."""
+    return elegir([f for f in filas if not f.get("sensible")])
 
 
 def main():

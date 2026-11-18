@@ -167,17 +167,35 @@ def candidatas(n=3):
     return diversificar(puntuar(items))[:n]
 
 
+def guardar_lote(historias):
+    """Guarda una lista de opciones con su propio identificador y lo devuelve.
+
+    Las claves son n1, n2, ... en el orden recibido. Una historia con
+    "tipo": "nota" se arma con nota.py (busqueda de /nota); sin tipo, con el
+    ranking del dia.
+    """
+    estado = _estado()
+    estado.pop("pendientes", None)          # formato viejo, sin lote
+    lotes = estado.setdefault("lotes", {})
+    base = f"{config.ahora():%m%d%H%M}"
+    lote, extra = base, 0
+    while lote in lotes:                    # dos listas en el mismo minuto
+        extra += 1
+        lote = f"{base}{chr(96 + extra)}"
+    lotes[lote] = {f"n{i}": h for i, h in enumerate(historias, 1)}
+    for viejo in sorted(lotes)[:-LOTES_GUARDADOS]:
+        del lotes[viejo]
+    _guardar(estado)
+    return lote
+
+
 def mandar_candidatas(n=3):
     """Manda la lista con botones. Cada lista lleva su propio identificador (lote).
 
     Antes todas usaban "pub:n1/n2/n3": al llegar una lista nueva, los botones de
     la anterior apuntaban a las historias nuevas y se publicaba otra nota.
     """
-    estado = _estado()
-    estado.pop("pendientes", None)          # formato viejo, sin lote
-    lotes = estado.setdefault("lotes", {})
     ahora = config.ahora()
-    lote = f"{ahora:%m%d%H%M}"
     historias = {}
     filas, texto = [], [f"<b>El Ahorita</b> · {ahora:%H:%M}\n"]
     for i, f in enumerate(candidatas(n), 1):
@@ -189,12 +207,10 @@ def mandar_candidatas(n=3):
         texto.append(f"<b>{i}. [{esc(f['seccion'].upper())}]</b> {esc(f['title'][:150])}\n"
                      f"   {f['medios']} medios · score {f['score']} · "
                      f"{f['horas']} h" + (" · con foto" if f["imagen"] else " · sin foto"))
-        filas.append([(f"Publicar {i}", f"pub:{lote}:{clave}")])
+    lote = guardar_lote(list(historias.values()))
+    for i in range(1, len(historias) + 1):
+        filas.append([(f"Publicar {i}", f"pub:{lote}:n{i}")])
     filas.append([("Ninguna hoy", f"pub:{lote}:nada")])
-    lotes[lote] = historias
-    for viejo in sorted(lotes)[:-LOTES_GUARDADOS]:
-        del lotes[viejo]
-    _guardar(estado)
     mandar("\n".join(texto), filas)
     print("mandadas", len(historias), f"candidatas (lote {lote})")
 
@@ -215,6 +231,12 @@ def recoger(texto_libre=False):
                 continue
             dato = cb.get("data", "")
             partes = dato.split(":")
+            # "Subir asi" de una nota que salio corta: se rearma desde su guion
+            if partes[0] == "subir" and len(partes) == 2 and re.fullmatch(r"[\w-]+", partes[1]):
+                _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Va")
+                decision = {"accion": "subir", "guion": partes[1]}
+                mandar("Va, la subo asi.")
+                continue
             if partes[0] != "pub":
                 _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Anotado")
                 continue
@@ -234,6 +256,10 @@ def recoger(texto_libre=False):
             _llamar("answerCallbackQuery", callback_query_id=cb["id"], text="Anotado")
             if historia == "nada":
                 decision = {"accion": "ninguna"}
+            elif historia.get("tipo") == "nota":
+                # opcion de una busqueda de /nota: se arma directo desde su enlace
+                decision = {"accion": "nota_manual", "texto": historia.get("link", "")}
+                mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")
             else:
                 decision = {"accion": "publicar", "historia": historia}
                 mandar(f"Va: <b>{esc(historia.get('titulo', '')[:120])}</b>")

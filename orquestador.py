@@ -180,6 +180,9 @@ def atender_telegram():
             return False
         print(f"  nota a mano: {texto[:70]}")
         return armar_video(tema=texto)
+    if decision["accion"] == "subir":
+        print(f"  subir nota corta: {decision['guion']}")
+        return correr([str(RAIZ / "nota.py"), "--subir", decision["guion"]])
     print("  ninguna: no se publica")
     return True
 

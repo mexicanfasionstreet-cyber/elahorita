@@ -1,30 +1,3 @@
-2026-11-18 13:38 Tijuana · franja pendiente: ninguna
-[
- {
-  "accion": "nota_video",
-  "texto": "hackeo nvidia y banco japonés"
- }
-]
-  nota solo en video: hackeo nvidia y banco japonés
-  $ hackeo nvidia y banco japonés --solo-video
-  (197.7 s)
-idia, banco, japones
-   50% · 1 medio(s) · Hackeo a Nvidia: esto se sabe del supuesto ataque con ransomware que genera páni
-  historia: Hackeo a Nvidia: esto se sabe del supuesto ataque con ransomware que genera páni (50%, 1 medios)
-  intento 1: 392 palabras · https://www.minuto60.com/vida-moderna/nvidia-ha-sido-hackeada-hoy-esto
-  material: 1 articulo(s), 392 palabras
-  foto nota 1: Nvidia -> Coolcaesar (CC BY-SA 4.0), Wikimedia Commons
-
---- GUION · 173 palabras ~ 64 s · CIENCIA · mundo ---
-TITULO YOUTUBE: Nvidia sufre supuesto hackeo: grupo The Gentlemen amenaza con divulgar datos
-GANCHO: Un grupo de ciberdelincuentes dice tener información de Nvidia y ya puso fecha para publicarla, pero la empresa no ha confirmado nada.
-
-[CIENCIA] Un grupo de ciberdelincuentes metió a Nvidia en su portal de víctimas de ransomware y asegura que tiene información confidencial de la compañía. Se identifican como The Gentlemen, una organización que opera con el modelo de ransomware como servicio: atacan empresas y luego las presionan con publicar lo que supuestamente obtuvieron. Los atacantes ya pusieron un plazo para divulgar esos archivos. Pero hay un punto clave: Nvidia no ha confirmado ninguna intrusión y tampoco existen pruebas públicas suficientes para asegurar que sus sistemas fueron vulnerados. Tampoco se sabe con precisión qué tipo de información estaría comprometida, porque el grupo no ha presentado un inventario verificable de documentos ni muestras de que realmente haya entrado a los sistemas internos. Nvidia es una de las compañías más importantes del mercado tecnológico mundial, con una posición destacada en la fabricación de procesadores gráficos y chips.
-
-CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
-
-guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-1339-nota.json
-
-video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-1339-nota.mp4
-  solo video: Nvidia sufre supuesto hackeo: grupo The Gentlemen amenaza con divulgar datos
-
+2026-11-18 13:47 Tijuana · franja pendiente: ninguna
+sin novedades
+sin novedades

@@ -1,11 +1,11 @@
-2026-11-18 13:30 Tijuana · franja pendiente: ninguna
+2026-11-18 13:36 Tijuana · franja pendiente: ninguna
 [
  {
   "accion": "nota_video",
-  "texto": "pterolactilo a avistamiento y memes"
+  "texto": "pterolactilo en ciudad Juárez"
  }
 ]
-  nota solo en video: pterolactilo a avistamiento y memes
-  $ pterolactilo a avistamiento y memes --solo-video
-  (0.8 s)
+  nota solo en video: pterolactilo en ciudad Juárez
+  $ pterolactilo en ciudad Juárez --solo-video
+  (1.1 s)
 

@@ -1,0 +1,31 @@
+{
+ "origen": "nota_manual",
+ "tema": "El presidente del consejo de Nvidia asegura que la junta no tiene intención de restituir a Jensen Huang como CEO",
+ "palabras": 121,
+ "segundos_estimados": 44.8,
+ "historias": [
+  {
+   "titulo": "El presidente del consejo de Nvidia asegura que la junta no tiene intención de restituir a Jensen Huang como CEO - EL PAÍS",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPU1psNjVicnNDbl9paTlkSXJjbE1Ob1dPU0k1dUtXYXY4NlNINDJ0NlEzb1ZBZGY1SENjb0lwSFJOTnIyVGRJZjZnbVA0bWFXXzhLelhHZ19wdjQzMUdqR2xNa1dwUGpDd05DZm9aOHlRTWk5cmtRX3FMZlg5ZU83Mm5VVm9vR3RGc1VFRlU5ZFl1RGNfNThFN0g0QTF1VFdvaF9PaDRaY3BXS1JuWmxOS0pzTWJwNTNwbHNYQmEwdG1mOEhJZ2lj0gHbAUFVX3lxTE9TZnA2YU82Q0tQUEhuVlRmQ1Z0d2RDLTl0QjEwNWJNSTlLejFQYktydnNZS2ZhT3oyNXhTUE9yUUppMTlWd1hvamJ4U21CTldoZUxSNG9fQ3kwdDl5VW1DbVZ0NjZKSFh0N0dtb1IwaG5QdF81NTUtY244UDcxYklPSHBQLWp4RmNhVDVWRXRHa2NTQ3ZEQW5vRENNNHZYenZmRDhGRXc0a0VvQnVYdi1PaGxla3V2WVFHdlZva3hNeThlY2s3SGwxelpWeGd4V0pMOWs1MzZZbGctNA?oc=5",
+   "seccion": "politica",
+   "medios": 1,
+   "score": 0,
+   "imagen": false,
+   "imagen_url": "",
+   "region": "mx",
+   "horas": 1.0
+  }
+ ],
+ "guion": {
+  "gancho": "Nvidia aclara de una vez por todas quién manda en la empresa.",
+  "notas": [
+   {
+    "kicker": "POLITICA",
+    "pantalla": "Consejo de Nvidia no restituirá a Jensen Huang como CEO",
+    "texto": "El presidente del consejo de Nvidia aseguró que la junta no tiene intención de restituir a Jensen Huang como CEO. Lo dijo de forma directa, para cerrar la duda sobre el rumbo de la compañía. Con esto, el consejo deja claro que no hay marcha atrás en su decisión sobre la dirección ejecutiva. El anuncio llega en un momento en el que la empresa es uno de los nombres más mencionados del sector tecnológico. No se conocen más detalles sobre los motivos ni sobre los siguientes pasos del consejo. Tampoco se sabe qué pasará con el resto del equipo directivo."
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "NVIDIA Y SU CEO"
+ }
+}

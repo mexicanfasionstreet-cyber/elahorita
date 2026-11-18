@@ -1,0 +1,37 @@
+{
+ "origen": "ia",
+ "palabras": 189,
+ "segundos_estimados": 70.0,
+ "historias": [
+  {
+   "titulo": "Democrats nominate Hakeem Jeffries to be US Speaker of the House",
+   "link": "https://www.bbc.co.uk/news/articles/cmy49873dn95o?at_medium=RSS&at_campaign=rss",
+   "seccion": "mundo",
+   "medios": 5,
+   "score": 89.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Rep-Hakeem-Jeffries-Official-Portrait.jpg/1280px-Rep-Hakeem-Jeffries-Official-Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "Public domain",
+    "autor": "Office of Representative Hakeem Jeffries",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Rep-Hakeem-Jeffries-Official-Portrait.jpg",
+    "credito": "Office of Representative Hakeem Jeffries (Public domain), Wikimedia Commons",
+    "termino": "Hakeem Jeffries"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Demócratas nominan a Hakeem Jeffries como presidente de la Cámara de EU",
+  "gancho": "Los demócratas ya tienen a su candidato para dirigir la Cámara de Representantes de Estados Unidos, y sería el primero afroamericano en el puesto.",
+  "notas": [
+   {
+    "kicker": "MUNDO",
+    "texto": "Los demócratas de la Cámara de Representantes de Estados Unidos nominaron oficialmente a Hakeem Jeffries como presidente de esa cámara. Con eso queda en camino de ser el primer legislador afroamericano en dirigirla. La Cámara elegirá a su nuevo presidente el 3 de enero, cuando arranque el siguiente periodo y los demócratas tengan la mayoría. Se espera ampliamente que Jeffries gane el puesto. Jeffries representa un distrito de Nueva York y fue reelegido como líder del partido en una votación interna de 251 contra 11. Es líder de la minoría desde 2023. Tras la votación dijo a reporteros que la nominación era un alto honor y un privilegio distinto. Aun así, tuvo algunos detractores entre los nuevos legisladores del ala izquierda, que piden un cambio de rumbo. Los demócratas se preparan para choques con la Casa Blanca, porque el presidente Donald Trump ha dicho que usará su poder de veto contra leyes que no le gusten.",
+    "pantalla": "Demócratas nominan a Jeffries para la Cámara",
+    "foto": "Hakeem Jeffries"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "JEFFRIES Y LA CÁMARA DE EU"
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "origen": "nota_manual",
+ "tema": "hackeo nvidia y banco japonés",
+ "palabras": 173,
+ "segundos_estimados": 64.1,
+ "articulos_leidos": [
+  "https://www.minuto60.com/vida-moderna/nvidia-ha-sido-hackeada-hoy-esto-se-sabe-ataque-las-perdidas/19154"
+ ],
+ "historias": [
+  {
+   "titulo": "Hackeo a Nvidia: esto se sabe del supuesto ataque con ransomware que genera pánico al mercado",
+   "link": "https://www.minuto60.com/vida-moderna/nvidia-ha-sido-hackeada-hoy-esto-se-sabe-ataque-las-perdidas/19154",
+   "seccion": "ciencia",
+   "sensible": "",
+   "medios": 1,
+   "score": 0,
+   "region": "mundo",
+   "horas": 4.6,
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/2788-2888_San_Tomas_Expwy.jpg/1280px-2788-2888_San_Tomas_Expwy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Coolcaesar",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2788-2888_San_Tomas_Expwy.jpg",
+    "credito": "Coolcaesar (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Nvidia"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Nvidia sufre supuesto hackeo: grupo The Gentlemen amenaza con divulgar datos",
+  "gancho": "Un grupo de ciberdelincuentes dice tener información de Nvidia y ya puso fecha para publicarla, pero la empresa no ha confirmado nada.",
+  "notas": [
+   {
+    "kicker": "CIENCIA",
+    "pantalla": "Nvidia no ha confirmado el supuesto hackeo",
+    "texto": "Un grupo de ciberdelincuentes metió a Nvidia en su portal de víctimas de ransomware y asegura que tiene información confidencial de la compañía. Se identifican como The Gentlemen, una organización que opera con el modelo de ransomware como servicio: atacan empresas y luego las presionan con publicar lo que supuestamente obtuvieron. Los atacantes ya pusieron un plazo para divulgar esos archivos. Pero hay un punto clave: Nvidia no ha confirmado ninguna intrusión y tampoco existen pruebas públicas suficientes para asegurar que sus sistemas fueron vulnerados. Tampoco se sabe con precisión qué tipo de información estaría comprometida, porque el grupo no ha presentado un inventario verificable de documentos ni muestras de que realmente haya entrado a los sistemas internos. Nvidia es una de las compañías más importantes del mercado tecnológico mundial, con una posición destacada en la fabricación de procesadores gráficos y chips.",
+    "foto": "Nvidia"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "NVIDIA Y EL HACKEO"
+ }
+}

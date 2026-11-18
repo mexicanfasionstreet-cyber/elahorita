@@ -125,9 +125,16 @@ def agrupar(items, claves):
         else:
             grupos.append([it])
 
+    # la coincidencia se mide con todos los titulares de la historia juntos: cada
+    # medio la cuenta con otras palabras y entre todos cubren mas del pedido
+    for g in grupos:
+        texto = " ".join(x["title"] + " " + (x.get("body") or "") for x in g)
+        for x in g:
+            x["_coincide_grupo"] = coincidencia(claves, texto)
+
     def puntaje(g):
         # la coincidencia manda; la cobertura (cuantos medios) solo desempata
-        return max(x["_coincide"] for x in g) * (1 + 0.1 * math.log2(len(g)))
+        return g[0]["_coincide_grupo"] * (1 + 0.1 * math.log2(len(g)))
     grupos.sort(key=puntaje, reverse=True)
     return grupos
 
@@ -150,7 +157,7 @@ def buscar_tema(tema):
     print(f"  {len(items)} resultados · {len(grupos)} historias · "
           f"claves: {', '.join(terminos(tema))}")
     for g in grupos[:3]:
-        print(f"   {max(x['_coincide'] for x in g):.0%} · {len(g)} medio(s) · {g[0]['title'][:80]}")
+        print(f"   {g[0]['_coincide_grupo']:.0%} · {len(g)} medio(s) · {g[0]['title'][:80]}")
     return grupos
 
 
@@ -221,7 +228,7 @@ def ofrecer_opciones(tema, grupos, prueba=False):
     for g in grupos[:3]:
         mejor = max(g, key=lambda x: x["_coincide"])
         opciones.append({"titulo": mejor["title"], "link": mejor["link"], "tipo": "nota",
-                         "coincide": round(mejor["_coincide"], 2), "medios": len(g)})
+                         "coincide": round(mejor["_coincide_grupo"], 2), "medios": len(g)})
     lineas = [f"<b>/nota {html.escape(tema[:80])}</b>",
               "No encontre una historia que coincida bien. Lo mas cercano:\n"]
     for i, o in enumerate(opciones, 1):
@@ -283,15 +290,15 @@ def construir(args):
             return None
         grupo = grupos[0]
         mejor = max(grupo, key=lambda x: x["_coincide"])
-        if mejor["_coincide"] < COINCIDENCIA_MIN:
-            print(f"  coincidencia baja ({mejor['_coincide']:.0%}): se ofrecen opciones")
+        if mejor["_coincide_grupo"] < COINCIDENCIA_MIN:
+            print(f"  coincidencia baja ({mejor['_coincide_grupo']:.0%}): se ofrecen opciones")
             ofrecer_opciones(tema, grupos, prueba=args.prueba)
             return None
         # primero el que mejor coincide, luego el resto de la misma historia
         orden = [mejor] + [x for x in grupo if x is not mejor]
         enlaces_grupo = [x["link"] for x in orden]
         titulo, medios, publicado = mejor["title"], len(grupo), mejor.get("published")
-        print(f"  historia: {titulo[:80]} ({mejor['_coincide']:.0%}, {medios} medios)")
+        print(f"  historia: {titulo[:80]} ({mejor['_coincide_grupo']:.0%}, {medios} medios)")
 
     leidos, foto = reunir_material(enlaces_grupo, cache)
     if leidos:

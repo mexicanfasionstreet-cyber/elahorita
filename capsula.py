@@ -427,8 +427,8 @@ def construir(args):
               f"format=yuv420p")
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-loop", "1",
                         "-framerate", str(FPS), "-t", str(dur),
-                        "-i", str(png), "-vf", vf, "-c:v", "libx264", "-preset", "medium",
-                        "-crf", "20", "-r", str(FPS), str(trozo)], check=True)
+                        "-i", str(png), "-vf", vf, "-c:v", "libx264", "-preset", "veryfast",
+                        "-crf", "22", "-r", str(FPS), str(trozo)], check=True)
         trozos.append(trozo)
         print(f"  video {trozo.name} ({dur} s)")
 
@@ -480,7 +480,7 @@ def construir(args):
         orden += ["-filter_complex", ";".join(filtros)]
     orden += mapas
     if idx_subs is not None:
-        orden += ["-c:v", "libx264", "-preset", "medium", "-crf", "20"]
+        orden += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "22"]
     else:
         orden += ["-c:v", "copy"]
     orden += ["-c:a", "aac", "-b:a", "192k", "-shortest", str(salida)]

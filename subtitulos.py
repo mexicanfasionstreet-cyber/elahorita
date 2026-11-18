@@ -22,7 +22,7 @@ sys.path.insert(0, str(RAIZ.parent / ".deps"))
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
 ANCHO, ALTO_BANDA = 1080, 260
-FPS = 30
+FPS = 15
 Y_BANDA = 1300          # donde se pega la banda sobre el video
 LINEA_BASE = 150         # linea base del texto dentro de la banda
 

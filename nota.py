@@ -301,7 +301,10 @@ def construir(args):
     import secciones
     slug, region = secciones.clasificar(titulo, (principal["descripcion"] + " " + cuerpo)[:1500])
     ia = secciones.con_ia([{"id": link, "title": titulo, "excerpt": principal["descripcion"]}])
-    slug, region = ia.get(link, (slug, region))
+    slug, region, sens = ia.get(link, (slug, region, ""))
+    # /nota la pediste tu: no se pregunta, pero el guion se redacta con cuidado y la
+    # descripcion lleva la linea de ayuda si es de suicidio
+    sens = sens or secciones.sensible(titulo, principal["descripcion"] + " " + cuerpo[:800])
     mat = [{
         "n": 1, "seccion": SECCIONES.get(slug, "AHORITA"), "titular": titulo,
         "entradilla": principal["descripcion"][:400], "cuerpo_del_articulo": cuerpo,
@@ -318,7 +321,7 @@ def construir(args):
         "origen": "nota_manual", "tema": tema, "palabras": n_pal,
         "segundos_estimados": round(n_pal / config.PALABRAS_POR_SEGUNDO, 1),
         "articulos_leidos": [a["url_real"] for a in leidos],
-        "historias": [{"titulo": titulo, "link": link, "seccion": slug,
+        "historias": [{"titulo": titulo, "link": link, "seccion": slug, "sensible": sens,
                        "medios": medios, "score": 0, "imagen": bool(foto),
                        "imagen_url": foto, "region": region,
                        "horas": horas_desde(publicado) if publicado else 99.0}],

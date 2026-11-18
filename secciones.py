@@ -293,6 +293,52 @@ def clasificar(titulo, entradilla="", region_fuente="mx"):
     return seccion(titulo, entradilla, reg), reg
 
 
+# ------------------------------------------------------------------ temas sensibles
+# Lo que el robot no publica solo: te pregunta antes (ver orquestador.py).
+# Basta con que lo marque la IA o estas palabras: aqui es mejor preguntar de mas.
+SENSIBLES = {
+    "suicidio": _rx("""suicidio|suicidios|suicida|suicidas|se suicida|se suicido|suicidarse|
+        se quito la vida|se quita la vida|quitarse la vida|autolesion|autolesiones|
+        suicide|suicidal|self harm|took his own life|took her own life"""),
+    "sexual_menores": _rx("""violacion|violaciones|violada|violado|violador|violadores|abuso sexual|
+        abusos sexuales|agresion sexual|agredir sexualmente|agredio sexualmente|pederasta|pederastia|
+        pedofilia|pedofilo|pornografia infantil|explotacion sexual|trata de personas|abuso infantil|
+        maltrato infantil|infanticidio|rape|raped|sexual assault|sexually assaulted|child abuse|
+        molested|molestation|grooming"""),
+    "grafica": _rx("""cabeza humana|cabezas humanas|restos humanos|desmembrado|desmembrados|desmembrada|
+        descuartizado|descuartizados|descuartizada|decapitado|decapitados|decapitada|decapitan|
+        mutilado|mutilados|calcinados|cuerpos colgados|colgados de un puente|bolsas con restos|
+        cuerpos embolsados|fosa clandestina|fosas clandestinas|masacre|masacres|tortura|torturado|
+        torturados|video de la ejecucion|graban ejecucion|dismembered|beheaded|mutilated|massacre"""),
+}
+_MENOR = _rx("""menor|menores|menor de edad|nina|nino|ninas|ninos|bebe|bebes|adolescente|adolescentes|
+    infante|infantes|estudiante de primaria|estudiante de secundaria|child|children|girl|boy|toddler""")
+_DANO = _rx("""asesinado|asesinada|asesinan|asesinato|matan|mataron|muere|murio|muerto|muerta|golpeado|
+    golpeada|golpean|abusado|abusada|maltratado|maltratada|secuestrado|secuestrada|desaparecido|
+    desaparecida|baleado|baleada|apunalado|killed|murdered|beaten|abused""")
+NOMBRES_SENSIBLES = {"suicidio": "suicidio o autolesiones", "sexual_menores": "violencia sexual o menores",
+                     "grafica": "violencia grafica"}
+
+
+# "violacion" tambien es de leyes y derechos: esos usos no cuentan
+_VIOLACION_LEGAL = re.compile(r" violacion(es)? (a|de|al|del) (los |las |la |el )?"
+                              r"(derechos|derecho|ley|leyes|constitucion|debido proceso|amparo|"
+                              r"suspension|reglamento|contrato|norma|normas|veda|tratado|privacidad)")
+
+
+def sensible(titulo, entradilla=""):
+    """La categoria sensible de una noticia ("suicidio", "sexual_menores", "grafica") o ""."""
+    texto = _VIOLACION_LEGAL.sub(" ", _norm(titulo) + _norm(entradilla))
+    for nombre, rx in SENSIBLES.items():
+        if rx.search(texto):
+            return nombre
+    # menores victimas de violencia, aunque no sea sexual
+    t = _norm(titulo)
+    if _MENOR.search(t) and _DANO.search(t):
+        return "sexual_menores"
+    return ""
+
+
 # ------------------------------------------------------------------ revision con IA
 SISTEMA_IA = """Eres editor de El Ahorita, un noticiero mexicano. Para cada noticia das su
 seccion y su region. Secciones (usa exactamente estas palabras):
@@ -311,9 +357,15 @@ seccion y su region. Secciones (usa exactamente estas palabras):
 Region: "mx" si ocurre en Mexico o involucra directamente a Mexico o a mexicanos;
 "mundo" si no. Una noticia de deportes o economia de otro pais es deportes/economia
 con region "mundo".
-Devuelve SOLO JSON: {"r": [{"i": 0, "s": "seccion", "g": "mx"}, ...]}"""
+Sensible ("k"): marca la noticia si trata de alguno de estos temas, aunque sea de pasada:
+- "suicidio": suicidio, intentos de suicidio o autolesiones
+- "sexual_menores": violencia sexual (violacion, abuso, trata) o menores de edad victimas de violencia
+- "grafica": violencia grafica (restos humanos, desmembramientos, decapitados, masacres, tortura)
+Si no trata de ninguno, "k" va vacio. Un homicidio sin esos elementos NO es sensible.
+Devuelve SOLO JSON: {"r": [{"i": 0, "s": "seccion", "g": "mx", "k": ""}, ...]}"""
 
 VALIDAS = set(TEMAS) | {"otros"}
+CATEGORIAS_SENSIBLES = set(SENSIBLES)
 
 
 def _clave(item):
@@ -330,12 +382,14 @@ def _leer_cache():
 def con_ia(items, llamar=None):
     """Seccion y region con DeepSeek para una lista corta de noticias.
 
-    Devuelve {clave: (seccion, region)} solo de las que el modelo respondio bien.
+    Devuelve {clave: (seccion, region, sensible)} solo de las que el modelo respondio
+    bien; sensible es "" o una categoria de SENSIBLES.
     Lo ya preguntado se toma de datos/secciones-ia.json. Si la IA falla, devuelve
     lo que haya en cache y el resto se queda con el clasificador por palabras.
     """
     cache = _leer_cache()
-    salida = {k: tuple(cache[k]) for k in map(_clave, items) if k in cache}
+    salida = {k: tuple(cache[k]) for k in map(_clave, items)
+              if k in cache and len(cache[k]) == 3}      # las de antes no traian "sensible"
     faltan = [it for it in items if _clave(it) not in salida]
     if faltan:
         if llamar is None:
@@ -349,12 +403,14 @@ def con_ia(items, llamar=None):
             m = re.search(r"\{.*\}", texto or "", re.S)
             for r in json.loads(m.group(0)).get("r", []) if m else []:
                 i, sec, reg = int(r.get("i", -1)), str(r.get("s", "")).lower(), str(r.get("g", "")).lower()
+                k = str(r.get("k") or "").lower()
+                k = k if k in CATEGORIAS_SENSIBLES else ""
                 if 0 <= i < len(faltan) and sec in VALIDAS and reg in ("mx", "mundo"):
-                    k = _clave(faltan[i])
                     if sec == "politica" and reg == "mundo":
                         sec = "mundo"      # politica de otro pais: la misma regla que por palabras
-                    salida[k] = ("industria" if sec == "otros" else sec, reg)
-                    cache[k] = list(salida[k])
+                    clave = _clave(faltan[i])
+                    salida[clave] = ("industria" if sec == "otros" else sec, reg, k)
+                    cache[clave] = list(salida[clave])
         except Exception as e:  # noqa: BLE001
             print(f"  aviso: revision de secciones con IA fallo ({type(e).__name__}: {e})")
         for viejo in list(cache)[:-3000]:
@@ -370,7 +426,7 @@ def con_ia(items, llamar=None):
 def refinar(items, n=25, llamar=None):
     """Corrige con IA la seccion y la region de las `n` mejores del ranking.
 
-    Modifica los items en su lugar (tags y region) y devuelve cuantos cambiaron.
+    Modifica los items en su lugar (tags, region y sensible) y devuelve cuantos cambiaron.
     Solo se revisan las que pueden publicarse: el resto no lo necesita.
     """
     from relevancia import puntuar
@@ -382,10 +438,11 @@ def refinar(items, n=25, llamar=None):
         r = respuestas.get(_clave(it))
         if not r:
             continue
-        sec, reg = r
+        sec, reg, k = r
         if (it.get("tags") or [""])[0] != sec or it.get("region") != reg:
             cambios += 1
         it["tags"], it["region"], it["seccion_por"] = [sec], reg, "ia"
+        it["sensible"] = k or sensible(it.get("title", ""), it.get("excerpt", ""))
     return cambios
 
 

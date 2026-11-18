@@ -56,6 +56,20 @@ Promesa: lo más importante de México y el mundo, en menos de un minuto.
 - **Límite de YouTube**: 6 subidas al día. Las 4 franjas van primero; las otras 2
   quedan para `/nota`.
 
+### Temas sensibles
+
+Suicidio y autolesiones, violencia sexual o menores víctimas, y violencia gráfica
+**nunca salen solos**. Si la nota elegida es de uno de esos temas, te pregunta (con una
+alternativa) y, si no contestas en 30 min, sale la siguiente no sensible. Lo detectan la
+revisión con DeepSeek y una lista de palabras (basta con que una lo marque). En el caso
+especial, si no contestas, sale la mejor **no sensible**; las reservas nunca son sensibles.
+
+Todo guion sigue reglas de redacción cuidadosa: sin detalles gráficos; de un suicidio,
+nunca el método; de menores víctimas, nada que los identifique; "presunto" para quien no
+ha sido sentenciado. Las notas de suicidio cierran con la **Línea de la Vida (800 911
+2000)**, que también va en la descripción de YouTube. `/nota` no pregunta (la pediste
+tú), pero aplica las mismas reglas.
+
 ### La mesa de edición
 
 Telegram es el control remoto. Solo atiende tu chat.

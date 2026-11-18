@@ -30,6 +30,8 @@ import config  # noqa: E402
 API_SUBIR = "https://www.googleapis.com/upload/youtube/v3/videos"
 API_TOKEN = "https://oauth2.googleapis.com/token"
 HASHTAGS = "#ElAhorita #Noticias #Mexico #Shorts"
+LINEA_DE_LA_VIDA = ("Si tú o alguien que conoces está pasando por un momento difícil, llama gratis "
+                    "a la Línea de la Vida: 800 911 2000 (24 horas, confidencial).")
 
 
 def _post_form(url, datos):
@@ -87,6 +89,8 @@ def textos(video, guion_path=None):
                 enlaces.append(h["link"])
         if enlaces:
             partes.append("Fuentes: " + " · ".join(enlaces[:3]))
+        if any(h.get("sensible") == "suicidio" for h in datos.get("historias", [])):
+            partes.append(LINEA_DE_LA_VIDA)
         partes.append(HASHTAGS)
         descripcion = "\n\n".join(p for p in partes if p)
     else:

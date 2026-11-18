@@ -107,6 +107,8 @@ def puntuar(items, ahora=None):
             "peso_cobertura": round(peso_cob, 1),
             "horas": round(horas, 1),
             "updated": it.get("updated") or it.get("published"),
+            "excerpt": it.get("excerpt", ""),
+            "sensible": it.get("sensible", ""),
             "pico_entidad": pico_ent,
             "pico": round(pico, 2),
             "imagen": bool(imagen),

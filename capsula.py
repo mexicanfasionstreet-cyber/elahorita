@@ -100,17 +100,35 @@ cargar_marca()
 
 
 # ------------------------------------------------------------------ imagenes
-def descargar(url, destino: Path):
+def descargar(url, destino: Path, intentos=3):
+    """Baja la imagen. Muchos CDN bloquean peticiones sin Referer ni Accept,
+    y desde un servidor de GitHub es mas facil que las bloqueen."""
     if not url or not url.startswith("http"):
         return None
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=25) as r:
-            datos = r.read(6_000_000)
-        destino.write_bytes(datos)
-        return destino
-    except Exception:  # noqa: BLE001
-        return None
+    partes = urllib.parse.urlsplit(url)
+    cabeceras = {
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                       "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"),
+        "Accept": "image/avif,image/webp,image/png,image/jpeg,image/*,*/*;q=0.8",
+        "Accept-Language": "es-MX,es;q=0.9,en;q=0.8",
+        "Referer": f"{partes.scheme}://{partes.netloc}/",
+    }
+    for intento in range(intentos):
+        try:
+            req = urllib.request.Request(url, headers=cabeceras)
+            with urllib.request.urlopen(req, timeout=25) as r:
+                datos = r.read(8_000_000)
+            if len(datos) < 2000:      # un pixel o una pagina de error
+                raise ValueError("imagen demasiado pequena")
+            destino.write_bytes(datos)
+            return destino
+        except Exception as e:  # noqa: BLE001
+            if intento == intentos - 1:
+                print(f"  aviso: no se pudo bajar la foto ({type(e).__name__})")
+            else:
+                import time as _t
+                _t.sleep(1.5)
+    return None
 
 
 def foto(url, destino: Path):

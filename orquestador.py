@@ -53,8 +53,11 @@ def guardar(estado):
 def correr(comando, avisar=True):
     """Ejecuta un script del proyecto; si falla, manda el motivo al chat."""
     print(f"  $ {' '.join(str(c) for c in comando[1:])}")
+    import time as _t
+    inicio = _t.time()
     hecho = subprocess.run([sys.executable, *comando], cwd=RAIZ,
                            capture_output=True, text=True, errors="replace")
+    print(f"  ({_t.time() - inicio:.1f} s)")
     print(hecho.stdout[-2000:])
     if hecho.returncode == 0:
         return True
@@ -117,9 +120,36 @@ def armar_video(link="", tema=""):
     return True
 
 
+def guardar_offset():
+    """Sube el estado de Telegram al repositorio de inmediato.
+
+    Si se deja para el final del run, otro run puede arrancar antes de que se
+    guarde y volver a leer el mismo mensaje: de ahi salian los videos repetidos.
+    """
+    try:
+        subprocess.run(["git", "add", "datos/telegram.json"], cwd=RAIZ,
+                       capture_output=True, timeout=60)
+        hecho = subprocess.run(["git", "commit", "-m", "telegram: mensajes leidos"],
+                               cwd=RAIZ, capture_output=True, text=True, timeout=60)
+        if hecho.returncode != 0:
+            return
+        for _ in range(3):
+            empuje = subprocess.run(["git", "push"], cwd=RAIZ,
+                                    capture_output=True, timeout=120)
+            if empuje.returncode == 0:
+                print("  offset guardado en el repo")
+                return
+            subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=RAIZ,
+                           capture_output=True, timeout=120)
+    except Exception as e:  # noqa: BLE001
+        print(f"  aviso: no se pudo guardar el offset ({type(e).__name__})")
+
+
 def atender_telegram():
     """Lee lo que hayas mandado y actua. Devuelve True si hizo algo."""
     decision = bot.recoger(texto_libre=True)
+    if decision:
+        guardar_offset()
     if not decision:
         return False
     if decision["accion"] == "publicar":

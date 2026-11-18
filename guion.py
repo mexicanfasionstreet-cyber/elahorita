@@ -99,6 +99,35 @@ def elegir_notas(filas, forzadas=None):
     return filas[:2]
 
 
+def asegurar_imagen(f):
+    """Si el enlace es de Google News o no hay foto, la consigue.
+
+    El motor resuelve 40 enlaces por corrida; la historia elegida puede haber
+    quedado fuera, y entonces la diapositiva salia sin foto.
+    """
+    import enlaces
+    import material as mat
+
+    cache_path = RAIZ / "datos" / "enlaces-cache.json"
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    link = f.get("link", "")
+
+    if enlaces.es_google(link):
+        cache = enlaces.load_cache(cache_path)
+        info = enlaces.resolve([link], cache, limit=1).get(link) or {}
+        enlaces.save_cache(cache_path, cache)
+        if info.get("url"):
+            f["link"] = info["url"]
+            f["imagen_url"] = info.get("image", "") or f.get("imagen_url", "")
+
+    if not f.get("imagen_url") and f.get("link"):
+        art = mat.articulo(f["link"])
+        f["imagen_url"] = art.get("imagen", "")
+        if not art.get("imagen"):
+            print(f"  aviso: sin foto para {f['link'][:60]}")
+    return f
+
+
 def material(notas, con_articulo=True):
     """Material para el modelo: el articulo completo, no solo el titular."""
     partes = []
@@ -265,6 +294,7 @@ def main():
         if not filas:
             raise SystemExit("no hay historias en el dia")
         notas = elegir_notas(filas, args.notas or None)
+    notas = [asegurar_imagen(f) for f in notas]
     mat = material(notas, con_articulo=not args.sin_articulo)
 
     guion, origen, problemas = None, "ia", []
@@ -320,7 +350,8 @@ def main():
         "origen": origen, "palabras": n_pal, "segundos_estimados": round(est, 1),
         "historias": [{"titulo": f["title"], "link": f["link"], "seccion": f["seccion"],
                        "medios": f["medios"], "score": f["score"],
-                       "imagen": f.get("imagen", False)} for f in notas],
+                       "imagen": bool(f.get("imagen_url")),
+                       "imagen_url": f.get("imagen_url", "")} for f in notas],
         "guion": guion,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\nguion -> {salida}")

@@ -109,6 +109,7 @@ def puntuar(items, ahora=None):
             "pico_entidad": pico_ent,
             "pico": round(pico, 2),
             "imagen": bool(imagen),
+            "imagen_url": it.get("image", ""),
             "_ents": ent,
             "desglose": {
                 "cobertura": round(cobertura, 3), "recencia": round(recencia, 3),

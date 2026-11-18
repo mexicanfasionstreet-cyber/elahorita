@@ -18,10 +18,14 @@ on:
         description: "Solo probar Voicebox: genera una frase y te la manda al chat"
         type: boolean
         default: false
+      probar_nota:
+        description: "Probar /nota con este tema: el video llega al chat y NO se sube a YouTube"
+        type: string
+        default: ""
 
 # la prueba de voz va en su propia cola: si se atora, no bloquea al robot
 concurrency:
-  group: ${{ inputs.probar_voz && 'el-ahorita-prueba' || 'el-ahorita' }}
+  group: ${{ (inputs.probar_voz || inputs.probar_nota) && 'el-ahorita-prueba' || 'el-ahorita' }}
   cancel-in-progress: false
 
 jobs:
@@ -112,8 +116,16 @@ jobs:
         if: ${{ inputs.probar_voz }}
         run: python herramientas/probar-voicebox.py
 
+      # el tema va por env, no pegado en el comando: asi un tema con comillas o
+      # $(...) no puede ejecutar nada en el runner
+      - name: Probar /nota
+        if: ${{ inputs.probar_nota }}
+        env:
+          TEMA: ${{ inputs.probar_nota }}
+        run: python nota.py "$TEMA" --prueba
+
       - name: Pasada
-        if: ${{ !inputs.probar_voz }}
+        if: ${{ !inputs.probar_voz && !inputs.probar_nota }}
         run: |
           set -o pipefail
           if [ "${{ inputs.forzar_franja }}" = "true" ]; then
@@ -126,7 +138,7 @@ jobs:
           mv datos/ultimo-log.txt.tmp datos/ultimo-log.txt
 
       - name: Guardar estado
-        if: ${{ always() && !inputs.probar_voz }}
+        if: ${{ always() && !inputs.probar_voz && !inputs.probar_nota }}
         run: |
           git config user.name "el-ahorita"
           git config user.email "bot@elahorita.local"

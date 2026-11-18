@@ -1,0 +1,4 @@
+# lo que necesitan las pruebas (tests/); el robot instala lo suyo en ahorita.yml
+pytest>=8
+pillow
+numpy

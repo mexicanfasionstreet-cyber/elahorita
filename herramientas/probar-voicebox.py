@@ -14,8 +14,12 @@ Uso: python herramientas/probar-voicebox.py ["frase a decir"]
 from __future__ import annotations
 
 import html
+import shutil
+import socket
+import subprocess
 import sys
 import time
+import urllib.parse
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -39,6 +43,28 @@ def fallar(paso, motivo):
     return 1
 
 
+def diagnostico():
+    """Distingue 'tu PC no esta en el tailnet' de 'esta, pero el puerto no responde'."""
+    u = urllib.parse.urlparse(config.VOICEBOX_URL)
+    host, puerto = u.hostname, u.port or 80
+    lineas = []
+    if shutil.which("tailscale"):
+        r = subprocess.run(["tailscale", "ping", "-c", "3", "--timeout", "5s", host],
+                           capture_output=True, text=True)
+        salida = (r.stdout + r.stderr).strip().splitlines()
+        pong = any("pong" in x for x in salida)
+        lineas.append("tailscale ping: " + ("RESPONDE (tu PC esta en linea)" if pong
+                                            else "NO responde (PC apagada, dormida o sin Tailscale)"))
+    try:
+        socket.create_connection((host, puerto), timeout=8).close()
+        lineas.append(f"puerto {puerto}: ABIERTO")
+    except ConnectionRefusedError:
+        lineas.append(f"puerto {puerto}: RECHAZADO (Voicebox escucha solo en localhost: activa el modo remoto)")
+    except OSError as e:
+        lineas.append(f"puerto {puerto}: sin respuesta ({type(e).__name__}: firewall de Windows o PC fuera de linea)")
+    return "\n".join(lineas)
+
+
 def main():
     frase = " ".join(sys.argv[1:]).strip() or FRASE
 
@@ -55,8 +81,7 @@ def main():
         salud = voz._vb_json("/health", timeout=15)
         print(f"   ok: {str(salud)[:160]}")
     except Exception as e:  # noqa: BLE001
-        return fallar("conexion", f"{type(e).__name__}: {e}\n\n¿PC prendida, Voicebox "
-                      "abierto en modo remoto (0.0.0.0) y el runner dentro de tu tailnet?")
+        return fallar("conexion", f"{type(e).__name__}: {e}\n\n{diagnostico()}")
 
     print("3. el perfil existe")
     try:

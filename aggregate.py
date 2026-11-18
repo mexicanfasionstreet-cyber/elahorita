@@ -1,29 +1,29 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""moda-radar — radar diario de noticias de la industria de la moda.
+"""Radar de noticias de El Ahorita.
 
-Qué hace:
+Que hace:
   1. Descarga los RSS/Atom de las fuentes de sources.json (en paralelo).
-  2. Limpia, normaliza y descarta noticias fuera de la ventana de días.
-  3. Elimina duplicados entre medios (misma noticia en BoF y WWD = una sola).
-  4. Clasifica cada noticia en secciones (negocio, retail, pasarela, sostenibilidad...).
-  5. Genera el panel HTML (docs/index.html), los datos JSON (docs/data/) y el digest Markdown (digests/).
+  2. Limpia, normaliza y descarta noticias fuera de la ventana de dias.
+  3. Junta la misma historia publicada por varios medios (cobertura).
+  4. Les pone seccion y region (secciones.py).
+  5. Escribe docs/data/latest.json (lo que usa el robot) y suma las nuevas al
+     archivo datos/noticias.jsonl (ultimos ARCHIVO_DIAS dias).
 
-Solo usa la biblioteca estándar de Python 3.9+. Sin claves API. Sin coste.
+Solo usa la biblioteca estandar de Python. Viene del proyecto moda-radar: el
+panel HTML, los digests y las copias diarias se quitaron porque nadie los usaba.
 """
 
 from __future__ import annotations
 
 import argparse
 import concurrent.futures as cf
-import csv
 import gzip
 import hashlib
 import html
 import json
 import os
 import re
-import socket
 import sys
 import time
 import unicodedata
@@ -35,7 +35,6 @@ from datetime import datetime, timedelta, timezone
 
 import enlaces
 import secciones
-import ui
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -44,158 +43,6 @@ UA = (
 MAX_PER_FEED = 40
 TIMEOUT = 30
 
-CATS = [
-    {
-        "slug": "politica",
-        "label": "Politica",
-        "kw": [
-            "presidente", "presidenta", "sheinbaum", "congreso", "senado", "diputados",
-            "senadores", "legislativo", "gobernador", "gobernadora", "gabinete", "secretario",
-            "secretaria", "decreto", "reforma", "iniciativa", "ley", "scjn", "suprema corte",
-            "tribunal electoral", "ine", "eleccion", "elecciones", "candidato", "candidata",
-            "morena", "pan", "pri", "mc", "oposicion", "opositor", "partido", "campana",
-            "mitin", "protesta", "marcha", "paro", "renuncia", "destitucion", "juicio politico",
-            "presupuesto", "hacienda", "shcp", "banxico", "fiscalia general", "fgr",
-            "election", "president", "congress", "senate", "parliament", "minister", "vote",
-        ],
-    },
-    {
-        "slug": "seguridad",
-        "label": "Seguridad",
-        "kw": [
-            "homicidio", "asesinato", "asesinado", "balacera", "ataque armado", "ejecutado",
-            "cadaver", "cuerpo", "masacre", "narco", "narcotrafico", "cartel", "cjng", "sinaloa",
-            "fentanilo", "droga", "droga", "extorsion", "secuestro", "desaparecido",
-            "desaparecidos", "desaparicion", "levanton", "detenido", "detenidos", "captura",
-            "capturado", "vinculado a proceso", "prision", "penal", "reclusorio", "motin",
-            "guardia nacional", "policia", "policias", "militar", "ejercito", "marina",
-            "operativo", "enfrentamiento", "tiroteo", "explosion", "atentado", "robo",
-            "violencia", "inseguridad", "fiscalia", "ministerio publico", "sentencia",
-            "murder", "killed", "shooting", "cartel", "kidnapping", "gang", "assault",
-        ],
-    },
-    {
-        "slug": "clima",
-        "label": "Clima y alertas",
-        "kw": [
-            "sismo", "terremoto", "temblor", "replica", "epicentro", "magnitud", "ssn",
-            "sismologico", "volcan", "popocatepetl", "cenapred", "alerta amarilla", "alerta naranja", "alerta roja",
-            "alerta sismica", "bajas temperaturas", "evacuacion",
-            "huracan", "tormenta", "cicion", "ciclón", "lluvia", "lluvias", "inundacion",
-            "inundaciones", "deslave", "deslizamiento", "granizo", "sequia", "ola de calor",
-            "frente frio", "helada", "proteccion civil", "damnificados", "emergencia climatica",
-            "contingencia ambiental",
-            "earthquake", "hurricane", "flood", "storm", "wildfire", "volcano", "tsunami",
-        ],
-    },
-    {
-        "slug": "economia",
-        "label": "Economia",
-        "kw": [
-            "inflacion", "pib", "dolar", "tipo de cambio", "peso mexicano", "banxico", "tasa",
-            "desempleo", "empleo", "empleos", "salario", "salario minimo", "presupuesto",
-            "deuda", "deficit", "exportacion", "exportaciones", "importacion", "arancel",
-            "aranceles", "remesas", "bolsa", "bmv", "inversion", "inversionistas", "nearshoring",
-            "pemex", "cfe", "petroleo", "gasolina", "precio", "precios", "inflacion",
-            "recesion", "crecimiento", "pobreza", "economia", "mercado", "empresa",
-            "inflation", "economy", "tariff", "recession", "stock market", "oil", "trade",
-        ],
-    },
-    {
-        "slug": "mundo",
-        "label": "Mundo",
-        "kw": [
-            "estados unidos", "trump", "casa blanca", "congreso de eeuu", "pentagono",
-            "china", "xi jinping", "rusia", "putin", "ucrania", "zelenski", "israel", "gaza",
-            "hamas", "hezbollah", "iran", "medio oriente", "otan", "union europea",
-            "onu", "apec", "g20", "cumbre", "venezuela", "maduro", "cuba", "colombia",
-            "petro", "brasil", "lula", "argentina", "milei", "chile", "peru", "guatemala",
-            "honduras", "el salvador", "bukele", "nicaragua", "corea del norte", "japon",
-            "india", "reino unido", "francia", "alemania", "espana", "guerra", "conflicto",
-            "trump", "white house", "china", "russia", "ukraine", "israel", "gaza", "war",
-            "nato", "european union", "united nations", "summit",
-        ],
-    },
-    {
-        "slug": "migracion",
-        "label": "Migracion",
-        "kw": [
-            "migrante", "migrantes", "caravana", "deportacion", "deportados", "ice",
-            "cbp", "patrulla fronteriza", "border patrol", "frontera", "fronteriza", "aduana",
-            "cruce", "cruces", "visa", "asilo", "refugiado", "refugiados", "tijuana",
-            "mexicali", "juarez", "matamoros", "reynosa", "nogales", "sonora", "baja california",
-            "migrant", "migrants", "deportation", "border", "asylum", "refugee",
-        ],
-    },
-    {
-        "slug": "justicia",
-        "label": "Justicia",
-        "kw": [
-            "sentencia", "condena", "condenado", "absuelto", "juez", "jueza", "amparo",
-            "corrupcion", "corrupto", "soborno", "cohecho", "peculado", "desvio",
-            "uif", "lavado de dinero", "auditoria", "asf", "ine", "fiscal", "denuncia",
-            "denuncias", "investigacion", "imputado", "proceso penal", "tribunal",
-            "impunidad", "transparencia", "contrato", "licitacion", "fraude",
-            "corruption", "trial", "verdict", "court", "indicted", "fraud",
-        ],
-    },
-    {
-        "slug": "salud",
-        "label": "Salud",
-        "kw": [
-            "salud", "imss", "issste", "hospital", "hospitales", "medicamento",
-            "medicamentos", "desabasto", "vacuna", "vacunacion", "virus", "brote",
-            "epidemia", "pandemia", "covid", "influenza", "dengue", "sarampion", "obesidad",
-            "diabetes", "cancer", "embarazo", "aborto", "salud publica", "oms", "opa",
-            "secretaria de salud", "doctor", "pacientes", "cirugia",
-            "health", "vaccine", "outbreak", "disease", "hospital", "cancer",
-        ],
-    },
-    {
-        "slug": "ciencia",
-        "label": "Ciencia y tecnologia",
-        "kw": [
-            "nasa", "spacex", "satelite", "cohete", "mision espacial", "luna", "marte",
-            "inteligencia artificial", "ia", "robot", "robots", "chip", "semiconductores",
-            "estudio", "investigacion cientifica", "cientificos", "descubrimiento",
-            "universidad", "unam", "ipn", "tecnologia", "internet", "ciberseguridad",
-            "hackeo", "hackeos", "hacker", "hackers", "ciberataque", "ciberataques", "datos personales", "starlink", "energia", "nuclear", "panel solar",
-            "nasa", "artificial intelligence", "ai", "chip", "research", "study", "cyber",
-        ],
-    },
-    {
-        "slug": "deportes",
-        "label": "Deportes",
-        "kw": [
-            "seleccion mexicana", "tri", "mundial", "copa del mundo", "liga mx", "clausura",
-            "apertura", "final", "campeon", "campeones", "titulo", "cruz azul", "america",
-            "chivas", "pumas", "tigres", "rayados", "toluca", "boxeo", "canelo", "pelea",
-            "olimpiadas", "olimpicos", "medalla", "f1", "formula 1", "checo perez", "nfl",
-            "super bowl", "mlb", "nba", "champions", "real madrid", "barcelona", "messi",
-            "fichaje", "transferencia", "arbitro", "estadio", "entrenador", "lesion",
-            "world cup", "olympics", "championship", "coach",
-        ],
-    },
-    {
-        "slug": "cultura",
-        "label": "Cultura",
-        "kw": [
-            "fallecio", "fallece", "murio", "muere", "muerte de", "deceso", "obituario",
-            "cantante", "actor", "actriz", "artista", "musico", "banda", "concierto",
-            "pelicula", "serie", "netflix", "libro", "escritor", "premio", "nobel",
-            "festival", "museo", "exposicion", "teatro", "novela", "documental",
-            "gastronomia", "restaurante", "chef", "turismo", "viajeros", "tradicion",
-            "dia de muertos", "virgen de guadalupe", "peregrinacion", "feria",
-            "died", "dies", "death", "singer", "actor", "movie", "award", "festival",
-        ],
-    },
-    {
-        # el motor usa este slug como cajon de sastre cuando nada puntua
-        "slug": "industria",
-        "label": "Portada",
-        "kw": [],
-    },
-]
 
 # peso editorial de cada seccion al elegir la portada
 CAT_BOOST = {
@@ -502,32 +349,15 @@ def atom_item(el):
 
 # --------------------------------------------------------------------------- clasificación
 
-def _prep_kw():
-    for c in CATS:
-        if not c["kw"]:
-            c["re"] = None
-            continue
-        alts = []
-        for k in sorted(c["kw"], key=len, reverse=True):
-            k = norm(k)
-            if not k:
-                continue
-            alts.append(re.escape(k).replace(r"\ ", r"\s+"))
-        c["re"] = re.compile(r"(?<![a-z0-9])(?:" + "|".join(alts) + r")(?![a-z0-9])", re.I)
-
-
-_prep_kw()
 
 
 # secciones que una revista de consumo puede aportar. Las locales (México y LatAm)
 # también cuentan pasarela, diseño y calzado: ahí es donde cubren a los diseñadores
 # y las semanas de la moda de la región, que no aparecen en la prensa internacional.
-STRICT_OK = {"negocio", "retail", "sostenibilidad", "personas"}
-STRICT_OK_LOCAL = STRICT_OK | {"pasarela", "diseno"}  # calzado no: ahí son guías de compra
 
 
-def classify(title, body, strict=False, allowed=STRICT_OK):
-    """Compatibilidad: la clasificacion vive ahora en secciones.py."""
+def classify(title, body="", **_):
+    """Compatibilidad: la clasificacion vive en secciones.py."""
     return [secciones.clasificar(title, body or "")[0]]
 
 
@@ -947,69 +777,12 @@ def _recency_bonus(iso):
 TZ_MX = "America/Mexico_City"
 
 
-def fecha_mx(iso_utc):
-    """Fecha de la edición en Ciudad de México (la cápsula de la noche no salta de día)."""
-    try:
-        from zoneinfo import ZoneInfo
 
-        return datetime.fromisoformat(iso_utc.replace("Z", "+00:00")).astimezone(
-            ZoneInfo(TZ_MX)).strftime("%Y-%m-%d")
-    except Exception:  # noqa: BLE001
-        return (iso_utc or "")[:10]
-
-
-def video_for(out_dir, date_str, sufijo=""):
-    """Cápsula más reciente del día ("" general, "-latam"): noche, mediodía, mañana o día."""
-    base = out_dir / "videos"
-    for franja in ("-noche", "-mediodia", "-manana", ""):
-        nombre = f"{date_str}{franja}{sufijo}.mp4"
-        if (base / nombre).exists():
-            return f"videos/{nombre}"
-    return None
-
-
-def textos_for(out_dir, date_str, sufijo=""):
-    """El archivo de textos de esa misma cápsula."""
-    base = out_dir / "videos"
-    for franja in ("-noche", "-mediodia", "-manana", ""):
-        nombre = f"{date_str}{franja}{sufijo}-textos.txt"
-        if (base / nombre).exists():
-            return f"videos/{nombre}"
-    return None
-
-
-def pick_hero(items):
-    ranked = sorted(items, key=lambda x: x["score"], reverse=True)
-    if not ranked:
-        return []
-    # la noticia principal debe tener imagen: la tarjeta grande se apoya en ella
-    lead = next((it for it in ranked if it["image"]), ranked[0])
-    hero, used = [lead], {lead["tags"][0]}
-    for it in ranked:
-        if len(hero) == 3:
-            break
-        if it in hero or it["tags"][0] in used:
-            continue
-        hero.append(it)
-        used.add(it["tags"][0])
-    for it in ranked:
-        if len(hero) == 3:
-            break
-        if it not in hero:
-            hero.append(it)
-    return hero[:3]
-
-
-# --------------------------------------------------------------------------- salidas
-
-ARCHIVE_COLS = [
-    "id", "published", "title", "source", "section", "lang",
-    "link", "excerpt", "image", "also", "mirror", "weight",
-]
+ARCHIVO_DIAS = 30           # dias que se conservan en datos/noticias.jsonl
 
 
 def update_archive(items, root):
-    """Acumula el corpus histórico: un JSON por línea y un CSV para Excel/pandas."""
+    """Acumula el corpus historico (un JSON por linea) de los ultimos ARCHIVO_DIAS dias."""
     d = root / "datos"
     d.mkdir(exist_ok=True)
     jl = d / "noticias.jsonl"
@@ -1059,78 +832,23 @@ def update_archive(items, root):
             seen_same.add(clave(row))
             nuevos += 1
 
-    rows = [json.loads(l) for l in jl.read_text(encoding="utf-8").splitlines() if l.strip()]
-    rows.sort(key=lambda r: r.get("published", ""), reverse=True)
-    with (d / "noticias.csv").open("w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=ARCHIVE_COLS, extrasaction="ignore")
-        w.writeheader()
-        w.writerows(rows)
-    return nuevos, len(rows)
+    # solo los ultimos ARCHIVO_DIAS dias: el archivo no crece sin limite
+    lineas = [l for l in jl.read_text(encoding="utf-8").splitlines() if l.strip()]
+    corte = (datetime.now(timezone.utc) - timedelta(days=ARCHIVO_DIAS)).strftime("%Y-%m-%d")
+    vigentes = [l for l in lineas if str(json.loads(l).get("published", ""))[:10] >= corte]
+    if len(vigentes) < len(lineas):
+        jl.write_text("\n".join(vigentes) + "\n", encoding="utf-8")
+    return nuevos, len(vigentes)
 
-
-def write_digest(items, meta, path):
-    lines = []
-    d = datetime.fromisoformat(meta["generated"].replace("Z", "+00:00"))
-    fecha = d.strftime("%d/%m/%Y")
-    lines.append(f"# Moda Radar · {fecha}")
-    lines.append("")
-    lines.append(
-        f"**{len(items)} noticias · {meta['sources_ok']} fuentes · ventana de {meta['days']} días**"
-    )
-    if meta["sources_failed"]:
-        lines.append("")
-        lines.append(f"_Fuentes que fallaron esta edición: {', '.join(meta['sources_failed'])}_")
-    lines.append("")
-
-    if meta["hero"]:
-        lines.append("## Lo esencial")
-        lines.append("")
-        for it in meta["hero"]:
-            lines.append(f"### [{it['title']}]({it['link']})")
-            lines.append(f"_{it['source']}{' · también en ' + ', '.join(it['also']) if it['also'] else ''}_")
-            if it["excerpt"]:
-                lines.append("")
-                lines.append(it["excerpt"])
-            lines.append("")
-
-    for cat in CATS:
-        group = [it for it in items if cat["slug"] in it["tags"]]
-        if not group:
-            continue
-        lines.append(f"## {cat['label']} ({len(group)})")
-        lines.append("")
-        for it in group[:20]:
-            hora = datetime.fromisoformat(it["published"].replace("Z", "+00:00")).strftime("%H:%M")
-            extra = f" · también en {', '.join(it['also'])}" if it["also"] else ""
-            lines.append(f"- **[{it['title']}]({it['link']})** — {it['source']}{extra} · {hora} UTC")
-        if len(group) > 20:
-            lines.append(f"- _…y {len(group) - 20} más en el panel_")
-        lines.append("")
-
-    lines.append("---")
-    lines.append("")
-    lines.append("## Fuentes")
-    lines.append("")
-    per = {}
-    for it in items:
-        per[it["source"]] = per.get(it["source"], 0) + 1
-    for name, n in sorted(per.items(), key=lambda kv: -kv[1]):
-        lines.append(f"- {name}: {n}")
-    lines.append("")
-
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines), encoding="utf-8")
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Radar diario de noticias de moda.")
-    ap.add_argument("--days", type=int, default=4, help="ventana de días (defecto 4)")
-    ap.add_argument("--out", default="docs", help="carpeta de salida del panel (defecto docs)")
-    ap.add_argument("--digests", default="digests", help="carpeta de digests Markdown")
-    ap.add_argument("--sources", default="sources.json", help="catálogo de fuentes")
+    ap = argparse.ArgumentParser(description="Radar de noticias de El Ahorita.")
+    ap.add_argument("--days", type=int, default=4, help="ventana de dias (defecto 4)")
+    ap.add_argument("--out", default="docs", help="carpeta de salida (defecto docs)")
+    ap.add_argument("--sources", default="sources.json", help="catalogo de fuentes")
     ap.add_argument("--check", action="store_true", help="solo validar las fuentes y salir")
-    ap.add_argument("--render-only", action="store_true", help="regenerar el panel desde latest.json")
-    ap.add_argument("--limit", type=int, default=0, help="limitar nº de fuentes (pruebas)")
+    ap.add_argument("--limit", type=int, default=0, help="limitar n de fuentes (pruebas)")
     ap.add_argument("--muestra", type=int, default=0, help="con --check: titulares de ejemplo por fuente")
     args = ap.parse_args(argv)
 
@@ -1177,72 +895,30 @@ def main(argv=None):
         print(f"\n{ok} fuentes OK · {bad} con error")
         return 0 if ok else 1
 
-    if args.render_only:
-        payload = json.loads((root / args.out / "data" / "latest.json").read_text(encoding="utf-8"))
-        items = payload["items"]
-        gen = payload.get("generated", "")
-        meta = {
-            "generated": gen,
-            "generated_date": gen[:10],
-            "generated_human": datetime.fromisoformat(gen.replace("Z", "+00:00")).strftime("%d/%m/%Y %H:%M UTC"),
-            "days": payload.get("days", args.days),
-            "sources_ok": payload.get("sources_ok", 0),
-            "sources_failed": payload.get("sources_failed", []),
-            "hero": pick_hero(items),
-            "category_order": CATS,
-            "video": video_for(root / args.out, fecha_mx(gen)),
-            "video_latam": video_for(root / args.out, fecha_mx(gen), "-latam"),
-            "textos": textos_for(root / args.out, fecha_mx(gen)),
-        }
-        (root / args.out / "index.html").write_text(ui.render(items, meta), encoding="utf-8")
-        print(f"panel regenerado ({'con' if meta['video'] else 'sin'} capsula)")
-        return 0
-
-    print(f"moda-radar · {len(sources)} fuentes · ventana {args.days} días")
+    print(f"radar · {len(sources)} fuentes · ventana {args.days} dias")
     items, failures = build(sources, args.days, cache_path=root / "datos" / "enlaces-cache.json")
     for name, err in failures:
         print(f"  ! {name}: {err}")
 
     now = datetime.now(timezone.utc)
     out = root / args.out
-    hero = pick_hero(items)
-    meta = {
-        "generated": now.isoformat().replace("+00:00", "Z"),
-        "generated_date": now.strftime("%Y-%m-%d"),
-        "generated_human": now.strftime("%d/%m/%Y %H:%M UTC"),
-        "days": args.days,
-        "sources_ok": len(sources) - len(failures),
-        "sources_failed": [n for n, _ in failures],
-        "hero": hero,
-        "category_order": CATS,
-        "video": video_for(out, fecha_mx(now.isoformat())),
-        "video_latam": video_for(out, fecha_mx(now.isoformat()), "-latam"),
-        "textos": textos_for(out, fecha_mx(now.isoformat())),
-    }
-
     (out / "data").mkdir(parents=True, exist_ok=True)
-    (out / "index.html").write_text(ui.render(items, meta), encoding="utf-8")
-
     payload = {
-        "generated": meta["generated"],
+        "generated": now.isoformat().replace("+00:00", "Z"),
         "days": args.days,
         "count": len(items),
-        "sources_ok": meta["sources_ok"],
-        "sources_failed": meta["sources_failed"],
+        "sources_ok": len(sources) - len(failures),
+        "sources_failed": [n for n, _ in failures],
         "items": items,
     }
     blob = json.dumps(payload, ensure_ascii=False, indent=1)
     (out / "data" / "latest.json").write_text(blob, encoding="utf-8")
-    (out / "data" / f"news-{now.strftime('%Y-%m-%d')}.json").write_text(blob, encoding="utf-8")
-
-    write_digest(items, meta, root / args.digests / f"{now.strftime('%Y-%m-%d')}.md")
 
     nuevos, acumuladas = update_archive(items, root)
 
-    print(f"\n{len(items)} noticias · {meta['sources_ok']}/{len(sources)} fuentes · {len(failures)} errores")
-    print(f"panel   -> {out / 'index.html'}")
-    print(f"digest  -> {root / args.digests / (now.strftime('%Y-%m-%d') + '.md')}")
-    print(f"archivo -> {root / 'datos' / 'noticias.jsonl'} (+{nuevos} nuevas, {acumuladas} en total)")
+    print(f"\n{len(items)} noticias · {payload['sources_ok']}/{len(sources)} fuentes · {len(failures)} errores")
+    print(f"datos   -> {out / 'data' / 'latest.json'}")
+    print(f"archivo -> {root / 'datos' / 'noticias.jsonl'} (+{nuevos} nuevas, {acumuladas} en {ARCHIVO_DIAS} dias)")
     return 0
 
 

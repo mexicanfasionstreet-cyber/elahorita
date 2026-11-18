@@ -78,6 +78,7 @@ Telegram es el control remoto. Solo atiende tu chat. Los comandos aparecen en el
 | Comando | Qué hace |
 |---|---|
 | `/nota <tema o enlace>` | Nota urgente (si cabe en el límite diario) |
+| `/notavideo <tema o enlace>` | Igual que `/nota`, pero **no la sube**: te manda el video, el título y la descripción para subirla tú. No gasta cupo |
 | `/estado` | Cómo van las franjas de hoy, la próxima, subidas, cupo de `/nota` y si Voicebox responde |
 | `/pausa` · `/pausa 3h` · `/pausa 2d` · `/pausa hoy` · `/pausa mañana` | Las franjas no salen (`/nota` sí) |
 | `/reanudar` | Quita la pausa |
@@ -92,6 +93,14 @@ Telegram es el control remoto. Solo atiende tu chat. Los comandos aparecen en el
   pediste (no la que más medios tiene), lee hasta 3 artículos y la monta. Si
   nada coincide bien, te ofrece 3 opciones con botones.
 - **`/nota <enlace>`**: va directo al artículo, sin búsqueda.
+- **`/notavideo`**: misma búsqueda y mismo video, pero no toca YouTube ni el límite
+  de 6 subidas. Te llegan el video, el título y la descripción (cada uno en su mensaje,
+  para copiarlo) y un botón *Mejor súbelo tú* por si cambias de opinión (ese sí gasta
+  cupo). Al subirlo a mano marca en Studio *Contenido alterado o sintético: Sí*.
+- **Títulos de YouTube**: el guionista escribe un `titulo` aparte del rótulo de pantalla:
+  45–75 caracteres, escritura normal (nombres propios con mayúscula), arranca con lo que
+  la gente buscaría y dice qué pasó, sin promesas que el video no cumpla. El verificador
+  también lo revisa contra el material.
 - **Notas cortas**: si un guion queda en menos de ~45 s, el video te llega pero
   no se sube; tienes el botón *Subir así*.
 - **Avisos**: si Voicebox no responde (sale con la voz de respaldo), si faltan

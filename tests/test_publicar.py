@@ -9,7 +9,7 @@ def test_titulo_y_fuentes_salen_del_guion(tmp_path):
     g.write_text(json.dumps({"guion": {"gancho": "Nvidia no lo quiere de vuelta.", "gancho_pantalla": "JUNTA DE NVIDIA"},
                              "historias": [{"link": "https://elpais.com/x"}]}))
     titulo, desc = publicar.textos(tmp_path / "2026-11-17-elegida.mp4", g)
-    assert "Elegida" not in titulo and titulo.startswith("Junta de nvidia")
+    assert "Elegida" not in titulo and titulo.startswith("Junta de nvidia")  # solo el rotulo: ultimo recurso
     assert "Fuentes: https://elpais.com/x" in desc
 
 

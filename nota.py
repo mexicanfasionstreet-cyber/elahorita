@@ -208,14 +208,15 @@ def _avisar(texto, botones=None):
         print(f"  aviso no enviado ({type(e).__name__})")
 
 
-def ofrecer_opciones(tema, grupos, prueba=False):
+def ofrecer_opciones(tema, grupos, prueba=False, solo_video=False):
     """Ninguna historia coincide bien: se ofrecen las 3 mas cercanas, sin gastar nada."""
+    comando = "notavideo" if solo_video else "nota"
     opciones = []
     for g in grupos[:3]:
         mejor = max(g, key=lambda x: x["_coincide"])
-        opciones.append({"titulo": mejor["title"], "link": mejor["link"], "tipo": "nota",
+        opciones.append({"titulo": mejor["title"], "link": mejor["link"], "tipo": comando,
                          "coincide": round(mejor["_coincide_grupo"], 2), "medios": len(g)})
-    lineas = [f"<b>/nota {html.escape(tema[:80])}</b>",
+    lineas = [f"<b>/{comando} {html.escape(tema[:80])}</b>",
               "No encontre una historia que coincida bien. Lo mas cercano:\n"]
     for i, o in enumerate(opciones, 1):
         lineas.append(f"<b>{i}.</b> {html.escape(o['titulo'][:140])}\n"
@@ -227,7 +228,7 @@ def ofrecer_opciones(tema, grupos, prueba=False):
     lote = telegram_mod.guardar_lote(opciones)
     botones = [[(f"Hacer la {i}", f"pub:{lote}:n{i}")] for i in range(1, len(opciones) + 1)]
     botones.append([("Ninguna", f"pub:{lote}:nada")])
-    lineas.append("\nO manda /nota con otras palabras o con el enlace.")
+    lineas.append(f"\nO manda /{comando} con otras palabras o con el enlace.")
     _avisar("\n".join(lineas), botones)
 
 
@@ -244,17 +245,10 @@ def escribir_guion(mat, sin_verificar=False, titulo="", texto=""):
             antes = json.loads(json.dumps(g, ensure_ascii=False))
             _, corregido = guion.verificar(g, mat)
             if corregido:
-                for i, n in enumerate(corregido.get("notas", [])):
-                    if not n.get("pantalla") and i < len(antes.get("notas", [])):
-                        n["pantalla"] = antes["notas"][i].get("pantalla", "")
-                if not corregido.get("gancho_pantalla"):
-                    corregido["gancho_pantalla"] = antes.get("gancho_pantalla", "")
-                g = corregido
+                g = guion.conservar_rotulos(antes, corregido)
         except Exception as e:  # noqa: BLE001
             print(f"  aviso: sin verificacion ({type(e).__name__})")
-    if not (g.get("gancho_pantalla") or "").strip():
-        notas = g.get("notas") or []
-        g["gancho_pantalla"] = notas[0].get("pantalla", "") if notas else ""
+    g = guion.completar_rotulos(g, [{"title": titulo}])
     g, _ = guion.ajustar_longitud(g)
     return g
 
@@ -278,7 +272,8 @@ def construir(args):
         mejor = max(grupo, key=lambda x: x["_coincide"])
         if mejor["_coincide_grupo"] < COINCIDENCIA_MIN:
             print(f"  coincidencia baja ({mejor['_coincide_grupo']:.0%}): se ofrecen opciones")
-            ofrecer_opciones(tema, grupos, prueba=args.prueba)
+            ofrecer_opciones(tema, grupos, prueba=args.prueba,
+                             solo_video=getattr(args, "solo_video", False))
             return None
         # primero el que mejor coincide, luego el resto de la misma historia
         orden = [mejor] + [x for x in grupo if x is not mejor]
@@ -330,6 +325,7 @@ def construir(args):
 
     print(f"\n--- GUION · {n_pal} palabras ~ {n_pal / config.PALABRAS_POR_SEGUNDO:.0f} s · "
           f"{SECCIONES.get(slug)} · {region} ---")
+    print(f"TITULO YOUTUBE: {guion_txt.get('titulo', '')}")
     print(f"GANCHO: {guion_txt['gancho']}\n")
     for n in guion_txt["notas"]:
         print(f"[{n.get('kicker', '')}] {n['texto']}\n")
@@ -398,6 +394,31 @@ def publicar_y_avisar(destino, video, tema, forzar=False, prueba=False):
     print("enviado al chat" + (f" · {enlace}" if enlace else " · SIN subir"))
 
 
+def entregar_a_mano(destino, video, tema):
+    """/notavideo: el video, el titulo y la descripcion al chat, listos para subir a mano.
+
+    No toca YouTube ni el cupo del dia. Se anota como publicada para que las
+    franjas no saquen la misma historia (salvo que traiga datos nuevos).
+    """
+    import franjas
+    import publicar
+
+    datos = json.loads(destino.read_text(encoding="utf-8"))
+    titulo, descripcion = publicar.textos(video, destino)
+    n_pal = datos.get("palabras", 0)
+    seg = round(n_pal / config.PALABRAS_POR_SEGUNDO)
+    telegram_mod.mandar_video(
+        video, f"El Ahorita · {tema[:120]}\nPara subir a mano (~{seg} s). No lo subi a YouTube.")
+    _avisar(f"<b>Titulo</b> (copialo):\n<code>{html.escape(titulo)}</code>")
+    _avisar(f"<b>Descripcion</b> (copiala):\n<code>{html.escape(descripcion)}</code>\n\n"
+            "Al subirlo, en Studio marca <b>Contenido alterado o sintetico: Si</b> "
+            "(la voz es clonada).",
+            [[("Mejor subelo tu", f"subir:{destino.stem}")]])
+    franjas.registrar_publicada(datos.get("historias", []), "a mano")
+    franjas.registrar_evento("nota_video", tema[:80])
+    print(f"  solo video: {titulo}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("tema", nargs="?", default="")
@@ -406,6 +427,8 @@ def main():
     ap.add_argument("--sin-verificar", action="store_true")
     ap.add_argument("--prueba", action="store_true",
                     help="video al chat sin subirlo a YouTube y sin botones")
+    ap.add_argument("--solo-video", action="store_true",
+                    help="/notavideo: manda el video al chat para subirlo a mano")
     ap.add_argument("--subir", default="",
                     help="rearma y sube una nota corta ya escrita (nombre del guion)")
     args = ap.parse_args()
@@ -426,7 +449,10 @@ def main():
         return 0
     video = montar(destino)
     if not args.sin_enviar and video.exists():
-        publicar_y_avisar(destino, video, args.tema, prueba=args.prueba)
+        if args.solo_video and not args.prueba:
+            entregar_a_mano(destino, video, args.tema)
+        else:
+            publicar_y_avisar(destino, video, args.tema, prueba=args.prueba)
     return 0
 
 

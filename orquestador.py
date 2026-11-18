@@ -40,7 +40,7 @@ import franjas  # noqa: E402
 import telegram as bot  # noqa: E402
 
 ESTADO = RAIZ / "datos" / "orquestador.json"
-COMANDOS_VERSION = 1      # subir este numero si cambia la lista de comandos de Telegram
+COMANDOS_VERSION = 2      # subir este numero si cambia la lista de comandos de Telegram
 TZ = config.TZ
 
 
@@ -185,9 +185,15 @@ def nota_a_mano(texto, estado):
     if cupo <= 0:
         bot.mandar(f"Hoy ya no cabe otra subida: {franjas.subidas_hoy()} hechas y "
                    f"{franjas.franjas_restantes(estado, config.ahora())} franja(s) por salir "
-                   f"(limite {franjas.LIMITE_SUBIDAS} al dia).")
+                   f"(limite {franjas.LIMITE_SUBIDAS} al dia).\n"
+                   "Si la quieres igual, /notavideo te manda el video para subirlo tu.")
         return False
     return correr([str(RAIZ / "nota.py"), texto])
+
+
+def nota_en_video(texto):
+    """/notavideo: arma la nota y manda el video al chat. No sube ni gasta cupo."""
+    return correr([str(RAIZ / "nota.py"), texto, "--solo-video"])
 
 
 def guardar_offset():
@@ -231,7 +237,7 @@ def atender_telegram(estado):
 
 
 def atender(estado, decision):
-    """Una decision tuya. True si fue un video (publicar, /nota, subir)."""
+    """Una decision tuya. True si fue un video (publicar, /nota, /notavideo, subir)."""
     accion = decision["accion"]
     ahora = config.ahora()
     if accion in CONTROL:
@@ -260,6 +266,13 @@ def atender(estado, decision):
             return False
         print(f"  nota a mano: {texto[:70]}")
         return nota_a_mano(texto, estado)
+    if accion == "nota_video":
+        texto = decision.get("texto", "")
+        if not texto:
+            bot.mandar("Escribe el tema o el enlace despues de /notavideo")
+            return False
+        print(f"  nota solo en video: {texto[:70]}")
+        return nota_en_video(texto)
     if accion == "subir":
         print(f"  subir nota corta: {decision['guion']}")
         if franjas.cupo_para_nota(estado) <= 0:
@@ -447,6 +460,7 @@ EVENTOS_TEXTO = {
     "youtube": "no se pudo subir a YouTube",
     "franja_fallida": "no salio la franja",
     "nota_corta": "nota corta sin subir",
+    "nota_video": "video para subir a mano",
     "saltada": "saltaste la franja",
     "pausa": "pausa",
 }

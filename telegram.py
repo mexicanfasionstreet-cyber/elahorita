@@ -95,8 +95,8 @@ def es_mi_chat(chat_id):
     return bool(config.TELEGRAM_CHAT) and str(chat_id) == str(config.TELEGRAM_CHAT)
 
 
-def mandar_video(ruta, texto=""):
-    """Sube el mp4 al chat (limite de Telegram para bots: 50 MB)."""
+def _subir(metodo, campo, ruta, mime, texto=""):
+    """Sube un archivo al chat (limite de Telegram para bots: 50 MB)."""
     import uuid
     ruta = Path(ruta)
     if not ruta.exists():
@@ -104,20 +104,21 @@ def mandar_video(ruta, texto=""):
     frontera = "----elahorita" + uuid.uuid4().hex
     trozos = []
 
-    def campo(nombre, valor):
+    def parte(nombre, valor):
         trozos.append((f"--{frontera}\r\nContent-Disposition: form-data; "
                        f"name=\"{nombre}\"\r\n\r\n{valor}\r\n").encode("utf-8"))
 
-    campo("chat_id", config.TELEGRAM_CHAT)
+    parte("chat_id", config.TELEGRAM_CHAT)
     if texto:
-        campo("caption", texto[:900])
-    campo("supports_streaming", "true")
-    trozos.append((f"--{frontera}\r\nContent-Disposition: form-data; name=\"video\"; "
-                   f"filename=\"{ruta.name}\"\r\nContent-Type: video/mp4\r\n\r\n").encode("utf-8"))
+        parte("caption", texto[:900])
+    if campo == "video":
+        parte("supports_streaming", "true")
+    trozos.append((f"--{frontera}\r\nContent-Disposition: form-data; name=\"{campo}\"; "
+                   f"filename=\"{ruta.name}\"\r\nContent-Type: {mime}\r\n\r\n").encode("utf-8"))
     trozos.append(ruta.read_bytes())
     trozos.append(f"\r\n--{frontera}--\r\n".encode("utf-8"))
     req = urllib.request.Request(
-        API.format(token=config.TELEGRAM_TOKEN, metodo="sendVideo"), data=b"".join(trozos),
+        API.format(token=config.TELEGRAM_TOKEN, metodo=metodo), data=b"".join(trozos),
         method="POST",
         headers={"Content-Type": f"multipart/form-data; boundary={frontera}"})
     with urllib.request.urlopen(req, timeout=300) as r:
@@ -125,6 +126,16 @@ def mandar_video(ruta, texto=""):
     if not respuesta.get("ok"):
         raise SystemExit(f"Telegram: {respuesta}")
     return respuesta["result"]
+
+
+def mandar_video(ruta, texto=""):
+    """Sube el mp4 al chat."""
+    return _subir("sendVideo", "video", ruta, "video/mp4", texto)
+
+
+def mandar_audio(ruta, texto=""):
+    """Sube un mp3 al chat (para escuchar la voz sin armar el video)."""
+    return _subir("sendAudio", "audio", ruta, "audio/mpeg", texto)
 
 
 def quien(datos=None):

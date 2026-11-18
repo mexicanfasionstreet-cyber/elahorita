@@ -14,6 +14,10 @@ on:
         description: "Mandar candidatas ahora mismo"
         type: boolean
         default: false
+      probar_voz:
+        description: "Solo probar Voicebox: genera una frase y te la manda al chat"
+        type: boolean
+        default: false
 
 concurrency:
   group: el-ahorita
@@ -48,16 +52,28 @@ jobs:
             echo "YT_CLIENT_SECRET=${{ secrets.YT_CLIENT_SECRET }}"
             echo "YT_REFRESH_TOKEN=${{ secrets.YT_REFRESH_TOKEN }}"
             echo "YT_PRIVACIDAD=${{ vars.YT_PRIVACIDAD || 'private' }}"
-            echo "VOICEBOX_URL=${{ vars.VOICEBOX_URL }}"
-            echo "VOICEBOX_PROFILE_ID=${{ vars.VOICEBOX_PROFILE }}"
+            # Voicebox se acepta como Variable o como Secret, con cualquiera de
+            # los dos nombres del perfil
+            echo "VOICEBOX_URL=${{ vars.VOICEBOX_URL || secrets.VOICEBOX_URL }}"
+            echo "VOICEBOX_PROFILE_ID=${{ vars.VOICEBOX_PROFILE || vars.VOICEBOX_PROFILE_ID || secrets.VOICEBOX_PROFILE || secrets.VOICEBOX_PROFILE_ID }}"
+            echo "VOICEBOX_ENGINE=${{ vars.VOICEBOX_ENGINE }}"
           } > .env
           grep -c . .env
 
-      # Solo entra al tailnet si hay URL de Voicebox configurada. `secrets` no se
-      # puede usar en un `if` (GitHub invalida el workflow); `vars` si.
+      # `secrets` no se puede usar en un `if`, pero si en `env`: este paso dice si
+      # hay Voicebox y llave de Tailscale, y el siguiente decide con eso.
+      - name: Hay Voicebox
+        id: vb
+        env:
+          URL: ${{ vars.VOICEBOX_URL || secrets.VOICEBOX_URL }}
+          LLAVE: ${{ secrets.TS_AUTHKEY }}
+        run: |
+          if [ -n "$URL" ] && [ -n "$LLAVE" ]; then echo "si=true" >> "$GITHUB_OUTPUT"
+          else echo "si=false" >> "$GITHUB_OUTPUT"; echo "sin VOICEBOX_URL o sin TS_AUTHKEY: va la voz de respaldo"; fi
+
       # continue-on-error: si Tailscale falla, el video sale con la voz de respaldo.
       - name: Tailscale
-        if: ${{ vars.VOICEBOX_URL != '' }}
+        if: ${{ steps.vb.outputs.si == 'true' }}
         continue-on-error: true
         uses: tailscale/github-action@v2
         with:
@@ -67,7 +83,13 @@ jobs:
       - name: Revisar claves
         run: python herramientas/estado-claves.py || true
 
+      # modo prueba: no toca Telegram ni el estado, solo la voz
+      - name: Probar Voicebox
+        if: ${{ inputs.probar_voz }}
+        run: python herramientas/probar-voicebox.py
+
       - name: Pasada
+        if: ${{ !inputs.probar_voz }}
         run: |
           set -o pipefail
           if [ "${{ inputs.forzar_franja }}" = "true" ]; then
@@ -80,7 +102,7 @@ jobs:
           mv datos/ultimo-log.txt.tmp datos/ultimo-log.txt
 
       - name: Guardar estado
-        if: always()
+        if: ${{ always() && !inputs.probar_voz }}
         run: |
           git config user.name "el-ahorita"
           git config user.email "bot@elahorita.local"

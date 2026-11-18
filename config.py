@@ -48,7 +48,9 @@ TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 
 VOICEBOX_URL = os.environ.get("VOICEBOX_URL", "").rstrip("/")
-VOICEBOX_PROFILE = os.environ.get("VOICEBOX_PROFILE_ID", "")
+VOICEBOX_PROFILE = (os.environ.get("VOICEBOX_PROFILE_ID", "")
+                    or os.environ.get("VOICEBOX_PROFILE", "")).strip()
+VOICEBOX_ENGINE = os.environ.get("VOICEBOX_ENGINE", "").strip()   # vacio = el del perfil
 VOICEBOX_TIMEOUT = int(os.environ.get("VOICEBOX_TIMEOUT", "90") or 90)
 
 # palabras por segundo de la voz en español, para estimar duración antes de grabar

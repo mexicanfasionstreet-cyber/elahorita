@@ -25,7 +25,7 @@ LLAVE = os.environ.get("DEEPSEEK_API_KEY", "").strip()
 BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.deepseek.com/v1").rstrip("/")
 MODELO = os.environ.get("LLM_MODEL", "deepseek-chat")
 
-VOZ = os.environ.get("CAPSULA_VOZ", "es-MX-JorgeNeural")
+VOZ = os.environ.get("CAPSULA_VOZ", "es-MX-DaliaNeural")
 VOZ_RITMO = os.environ.get("CAPSULA_VOZ_RITMO", "+10%")
 
 YT_CLIENT_ID = os.environ.get("YT_CLIENT_ID", "").strip()

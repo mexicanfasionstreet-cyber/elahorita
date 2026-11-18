@@ -1,0 +1,29 @@
+{
+ "origen": "ia",
+ "palabras": 183,
+ "segundos_estimados": 67.8,
+ "historias": [
+  {
+   "titulo": "La junta directiva de Nvidia confirma que no pretende restituir a Huang y busca sustituto",
+   "link": "https://lopezdoriga.com/internacional/la-junta-directiva-de-nvidia-confirma-que-no-pretende-restituir-a-huang-y-busca-sustituto/",
+   "seccion": "economia",
+   "medios": 5,
+   "score": 79.3,
+   "sensible": "",
+   "imagen": true,
+   "imagen_url": "https://lopezdoriga.com/wp-content/uploads/2026/11/fa32d1f5abeb8ba66d90db73a8e189ed4979ce39w-1024x683.jpg"
+  }
+ ],
+ "guion": {
+  "gancho": "Nvidia ya busca nuevo CEO y la junta le cerró la puerta a Jensen Huang.",
+  "gancho_pantalla": "NVIDIA SIN HUANG",
+  "notas": [
+   {
+    "kicker": "ECONOMÍA",
+    "pantalla": "Nvidia descarta el regreso de Jensen Huang",
+    "texto": "La junta directiva de Nvidia confirmó que no pretende restituir a Jensen Huang como director ejecutivo. Harvey Jones, presidente de la junta, dijo en la conferencia de resultados trimestrales que Huang renunció voluntariamente a sus puestos de presidente, CEO y miembro de la junta la semana pasada, y que la junta aceptó la renuncia por unanimidad. La decisión llega después de que Huang emitió un comunicado esta mañana diciendo que estaba abierto a volver a dirigir la empresa si la junta así lo decidía, y agradeciendo las llamadas de empleados, inversores, socios y clientes para que regresara. Pese a esa campaña, Jones fue claro: no lo van a restituir. La junta ya contrató a una firma para dirigir la búsqueda de un líder permanente, y mientras tanto Colette Kress, la jefa financiera, queda como directora ejecutiva interina. Jones la describió como una profesional muy respetada y destacó su papel central en el crecimiento de Nvidia en los últimos años."
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

@@ -65,12 +65,21 @@ Reglas que no puedes romper:
   aparece en el material, no lo escribas. Si falta contexto, di que no se conocen detalles.
 
 Devuelves SOLO un JSON valido, sin texto alrededor, con esta forma:
-{"titulo": "...", "gancho": "...", "gancho_pantalla": "...", "notas": [{"kicker": "SECCION", "pantalla": "...", "texto": "...", "foto": "..."}], "cierre": "..."}
+{"titulo": "...", "gancho": "...", "gancho_pantalla": "...", "notas": [{"kicker": "SECCION", "pantalla": "...", "texto": "...", "foto": "...", "foto2": "...", "datos": ["..."]}], "cierre": "..."}
 "foto" es a quien o que se muestra de fondo en esa nota: el nombre exacto de la
 persona, lugar o institucion como se llama su articulo en Wikipedia ("Jensen Huang",
 "Palacio Nacional", "Tijuana", "Congreso de la Union"). Prefiere al protagonista; si es
 una empresa, a su director o su sede. Nunca a una victima, a un menor ni a un particular
 sin articulo en Wikipedia: en ese caso el lugar donde paso, o vacio "".
+"foto2" es una segunda imagen con las mismas reglas: el lugar, la institucion o la otra
+persona de la nota (no repitas "foto"); vacio "" si no hay.
+En "foto" y "foto2" nunca un pais, un partido o una empresa a secas: en Wikipedia su
+imagen es una bandera o un logo y no sirve. Mejor su capital o un edificio ("Caracas",
+"Palacio de Miraflores"), su sede o su lider.
+"datos" son 2 o 3 tarjetas que salen en pantalla mientras se narra: el numero, la cifra
+o el hecho clave en 2 a 7 palabras ("38 años en el Congreso", "Primer afroamericano en
+el cargo"). Cada dato tiene que decirse en "texto" con esas mismas palabras o cifras:
+si no se narra, no sale. Sin datos que no esten en el material.
 "titulo" es el titulo del video en YouTube: lo que la gente ve antes de darle clic y lo
 que escribe en el buscador.
   * entre 45 y 75 caracteres, en español, escrito normal: mayuscula al inicio y en los
@@ -312,7 +321,7 @@ def parsear_verificacion(texto):
 def conservar_rotulos(antes, corregido):
     """El verificador reescribe el texto; los rotulos que no devuelva se conservan."""
     for i, n in enumerate(corregido.get("notas", [])):
-        for campo in ("pantalla", "foto"):
+        for campo in ("pantalla", "foto", "foto2", "datos"):
             if not n.get(campo) and i < len(antes.get("notas", [])):
                 n[campo] = antes["notas"][i].get(campo, "")
     for campo in ("gancho_pantalla", "titulo"):

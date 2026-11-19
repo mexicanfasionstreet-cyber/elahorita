@@ -119,15 +119,20 @@ def para_historias(historias, guion, llamar=None):
     """Le pone a cada historia su foto libre (o {} = fondo de diseño)."""
     notas = guion.get("notas") or []
     for i, h in enumerate(historias):
-        termino = (notas[i].get("foto") if i < len(notas) else "") or ""
+        nota = notas[i] if i < len(notas) else {}
         if h.get("sensible"):
-            h["foto"] = {}
+            h["foto"] = h["foto2"] = {}
             print(f"  foto nota {i + 1}: tema sensible, fondo de diseño")
             continue
-        info = buscar(termino, llamar)
-        h["foto"] = info or {}
-        print(f"  foto nota {i + 1}: " + (f"{termino} -> {info['credito']}" if info
-                                          else f"sin foto libre para '{termino}', fondo de diseño"))
+        for campo in ("foto", "foto2"):
+            termino = (nota.get(campo) or "").strip()
+            info = buscar(termino, llamar) if termino else None
+            if info and campo == "foto2" and info["url"] == (h.get("foto") or {}).get("url"):
+                info = None                     # la misma foto dos veces no suma
+            h[campo] = info or {}
+            if termino:
+                print(f"  {campo} nota {i + 1}: " + (f"{termino} -> {info['credito']}" if info
+                      else f"sin foto libre para '{termino}'"))
     return historias
 
 

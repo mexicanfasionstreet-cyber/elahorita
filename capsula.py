@@ -141,11 +141,33 @@ def foto(url, destino: Path, kicker=""):
     """Fondo: la foto libre de la nota (fotos.py), o el fondo de diseño si no hay."""
     if descargar(url, destino):
         try:
-            im = Image.open(destino).convert("RGB")
-            return imresize_cover(im, (ANCHO, ALTO))
+            return encuadrar(Image.open(destino).convert("RGB"))
         except Exception:  # noqa: BLE001
             pass
     return fondo_diseno(kicker)
+
+
+ANCHO_NITIDO = 1000         # menos que esto, a pantalla completa se veria borrosa
+Y_FOTO_ANGOSTA = 520        # donde empieza una foto angosta: debajo de la caja del titular
+
+
+def encuadrar(im):
+    """Foto grande: a sangre. Foto angosta (retrato recortado de Wikipedia): nitida
+    a todo lo ancho, sobre la misma foto desenfocada y oscura que llena el resto."""
+    if im.width >= ANCHO_NITIDO:
+        return imresize_cover(im, (ANCHO, ALTO))
+    from PIL import ImageEnhance
+    fondo = imresize_cover(im, (ANCHO, ALTO)).filter(ImageFilter.GaussianBlur(34))
+    fondo = ImageEnhance.Brightness(fondo).enhance(0.45)
+    esc = ANCHO / im.width
+    frente = im.resize((ANCHO, max(1, int(im.height * esc + 0.5))), Image.LANCZOS)
+    if frente.height > ALTO:
+        y = (frente.height - ALTO) // 3            # recorta mas abajo: la cara suele ir arriba
+        frente = frente.crop((0, y, ANCHO, y + ALTO))
+    # la cara suele ir en el tercio de arriba de un retrato: se baja la foto para que
+    # quede libre debajo de la caja del titular; lo que sobra abajo (el cuerpo) se corta
+    fondo.paste(frente, (0, Y_FOTO_ANGOSTA))
+    return fondo
 
 
 def fondo_diseno(kicker=""):
@@ -507,7 +529,7 @@ def construir(args):
             ruta2 = slides_dir / f"{i:02d}-fuente2.img"
             if descargar(url2, ruta2):
                 try:
-                    base2 = imresize_cover(Image.open(ruta2).convert("RGB"), (ANCHO, ALTO))
+                    base2 = encuadrar(Image.open(ruta2).convert("RGB"))
                 except Exception:  # noqa: BLE001
                     base2 = None
         plan = tomas_mod.planear(dur, datos_nota, s.get("palabras") or [],

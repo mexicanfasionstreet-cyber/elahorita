@@ -1,4 +1,244 @@
 {
+"https://news.google.com/rss/articles/CBMijgFBVV95cUxNVmM5MmxnRENWamhWRG81RV8tRXhEREJRVjRBSnlZalhTQ0ROVktyaVBlLWU1TC0zNmxYdkk5aTZBTUU1Ykc4X1NzbDFheUtsVTF2Y1hHUERHRXBFWFMxTTRhYzBNRmIyeXhuWEoyN0twRE9WQzYtZ0pLNm5wOURUYkJYUzE4blVwdkc3TU930gGOAUFVX3lxTE8ya05aOG1FbjdiWDc0RTN3cjJYa0ttbndxN2htb0ZXTG5mOE5CUjB1SnBCenIxcEZsYjBjbWVmU2o2ZEVEejAtWTJpa3RDMHk4WW1Qc2JicDR4b3ROcmdvYWk0ZVdaZmNJSXVjTjZZM2pUMjEtOG5SY3dUVzhpc1FZQ1hNQXkwSFEwdHhKOGc?oc=5": {
+"url": "https://www.milenio.com/videos/comunidad/actividad-economica-mexico-crece-2-3-octubre",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/actividad-economica-de-mexico-crece.jpeg",
+"desc": "El sector industrial mexicano enfrenta menor dinamismo: INEGI prevé un crecimiento de 1.2 % anual en actividades secundarias. Descubre por qué aquí.",
+"t": 1795129416
+},
+"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZmlVUk9EN21mRnNWc3RyUXZmRFRIaFVvSEhfU2x3MzNKcWhHWlNlVHZ1M29Oek8tZVJlOFZTTWlyel8xRURza2E4bDdMMzNZa0VLZ25hU3lBOUVpbUFZWnFSNTlYX05CM3lnR3EyVEV6bFJnRlhrNnlYem9jaGNYNmppYWJRc3RmanhZ0gGLAUFVX3lxTE9zTjJodE1uMXZGU0UzclN1TWFPTjFLQ0lOcnFFdTBVRVNDVE1PYUZ0QUtUSzh3bVltNVlBRjB3MWF0ZW1VUFA2Q0tTN21pSjFUODdEb3BhWU9rMXJyeUEtR1V2NDg4dE5IYldfUnlmMTFaTC1relhWUW5laXlMWlBCeWduaU1fYUtDcVU?oc=5": {
+"url": "https://www.milenio.com/estados/desmantela-campamento-de-los-chapitos-en-el-rosario",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/los-detenidos-quedaron-a-disposicion.jpg",
+"desc": "Ejército y Guardia Nacional inhabilitan campamento del Cártel del Pacífico en El Rosario.",
+"t": 1795129416
+},
+"https://news.google.com/rss/articles/CBMisAFBVV95cUxQd2RTSElEMzdFcUEwdTlWNGJYWFkzdTdOQzRJMUZkaDZUVjZfZU53cFB0RlNiNnR3LURfdF90bXp1U2NYM1B2NU1uX1lyS2syaVpYWTFnMzg2QlZMVm81eW9YZHhfejNsNzk3dm55SzdnR0RaWVlsOWN2ZG8zbFhjblhjVXA0aUtIc2pRcl9Wa1QzR3VSemJHalh6czJmX1BLdUgxM0M5R2IzOG5WZHhxRw?oc=5": {
+"url": "https://www.bcs.gob.mx/participa-sipinna-de-bcs-en-1-a-cumbre-latinoamericana-de-inversion-en-primera-infancia/",
+"image": "",
+"desc": "",
+"t": 1795129415
+},
+"https://news.google.com/rss/articles/CBMiggFBVV95cUxPZ2VBY1pKUGZOaXV1Qjc2T1hFUkZJV2ZqaUdXOFlYazBmbFF2cEM2bXJWbkhsTmIzN19TNkFvLXd2bWowM1oxRUN2YU5pS1hFMzNGYUcteDJLY0s2T2hPRzFwbWloUEFIaWFfd0JndUtsemZfTzB5T1padEFaNWw4WU1B0gGCAUFVX3lxTFBEYllBcW95NWJ5TTBlbTZzRTVTaWtSaU9TM0dfQnNaVERmb2w1Ql9WN0RZOWlZb1hCTEp3LVBpejZfWTdDbklqVkJTTlRibm85QTBnTmNEWWVac1VqNVpFVS1hRGNtVlB0UVdjM25BVy1nM1pod25oOVV1bjZDOEI3bEE?oc=5": {
+"url": "https://www.milenio.com/negocios/exopenai-valer-2-1-billones-golpe-anthropic",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/anthropic-empresa-asistente-ia-claude.jpg",
+"desc": "Fundada en 2021 por los hermanos Dario y Daniela Amodei, la firma creadora de Claude conquista Nasdaq con su modelo de IA para empresas.",
+"t": 1795129415
+},
+"https://news.google.com/rss/articles/CBMimgFBVV95cUxPUUFrRWNIX3FUbnZvWWdGYjZPMDBHbEhPWm9KOTBTdXhQUFRtMi1wdzFWeTZjOTl6eW1EaVRGeTZDNkJNblgzaUdFLVRVQThpd3dSUUtLZEZBS2Y4RGRjX3VYT2Y1OW9oMVBMQWV0bWYyOGNoa0JVNDEwYkhHbk9KYU9IMFhwMk9kUWRCeHJBTjNVemVIVEExVWxn0gGaAUFVX3lxTFBTVlcyX0I1cTA3QmIyTkxhUzFvazByXzVxb3p3bnFFSWVzODRVTXVYN1RQTE1pTlZKRzZaX0M2alBCd0czNkNzbFpJQUx4c25DcnJfYkpIZ2hETDZTNzVWekZQTHB1NVhHN1hLNUlxT1lzRjdXVlBRSmkwNDd4bVNMaVVpdVk4dkhSN2JZMEZlNzUzNmlLcTE0NHc?oc=5": {
+"url": "https://www.milenio.com/videos/comunidad/unam-identifica-13-compuestos-diabetes-exige-estudios",
+"image": "https://www.milenio.com/bundles/appcamusassets/dist/images/milenio_monograma.jpg",
+"desc": "Noticias de última hora de México y el mundo. Entérate aquí de la información más importante sobre política, economía, policía, espectáculos y más.",
+"t": 1795129415
+},
+"https://news.google.com/rss/articles/CBMiigFBVV95cUxPN19MRjNHWUhxMlo0dHdvWGxtck5NT0x2ZTZyMlpVUnNjTWFtSk54aDZWRGZmNUJ3bGpqaFFfYmtJNmZCRzZiWkhvbW1oRDRRQ2hRYnRybXU5VklNM1doWG5DdVY4WWRyUFIzT1Y5MlZrZ213TXI4QUFUNHdQNFhrYmVqR1dfbFl1LVHSAYoBQVVfeXFMTmhsbTRicFJqd2oyZm9McFVhaDdOUkRybEpFYXdoQXczMk1tcXZOMmVzMFJwNVIyN1JOLWI5ek54YklMQm9LVXJOSUl1cVhkYVUySVNxRDUyUHFZaHc5Q1AyX1YxWl9BNzFWU0RDc0xSazVJMTNmZF8yRWc0NVg4ZTVCTlFrcGlpempB?oc=5": {
+"url": "https://www.milenio.com/negocios/copa-airlines-prioriza-consolidar-destinos-mexico",
+"image": "https://cdn.milenio.com/uploads/media/2025/11/06/companias-aereas-presionando-detalle-repartiran.jpg",
+"desc": "La aerolínea Copa Airlines se enfoca en fortalecer sus operaciones en México, descartando nuevos destinos en el corto plazo. Conoce los detalles.",
+"t": 1795129415
+},
+"https://news.google.com/rss/articles/CBMimgFBVV95cUxQRExUX3NVTHZqYjdSM0t3QnFnN3QyNGtLN0NYcU1CRDY5S0QtTU9pcEd1R2hNSENyNi12Z2JOOGNkLUU2VDVQTGVLTkpReVJTWWlIWDBDV04xV0h6WlBTU0FVZlQ4OHpQVS1XeWNnbzBhR2l5ME4tTjgwYXZPODZUSmNRTzZSS0ZfQTRkLVpjTTJ3RGxyZVNrQlRn0gGaAUFVX3lxTFBXWFlCaVl2TkxPRmVlS1U5Y0MtcERaYU9Id1J0eWdqQUticVFyZmItS2NsNEo5TS0zVWhuNmdrLXNFbE1heUFzM1c1bGc3UXhvd25IMGpLc1lLVkVxekp1d2E0SDItdW1tT1JoTXNtb0RPVG5nT2tLcHhVdXBtY1g0QmJRbXc1TldmcU9VOGw4dUZPV1hJdllHbFE?oc=5": {
+"url": "https://www.milenio.com/estados/muere-adulto-mayor-al-intentar-rescatar-a-personas-de-incendio",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/el-fuego-fue-atendido-por.jpg",
+"desc": "Un hombre de 71 años murió al intentar rescatar a dos personas durante el incendio de una vivienda en Villa de Álvarez, Colima.",
+"t": 1795129415
+},
+"https://news.google.com/rss/articles/CBMijgFBVV95cUxOZGFFVkhScDAyR2dpX242OEhHT3VVakpTZmxVMWR2REVwd1pSV1BFdEtxNkg5cWNOMWNfVmZVMHdSN1RlNzZ6RWxWRmsyUWVxbFZCSElVOC1ielREOXdyRldpZ2xZRjdNVjFnZVFKRVFlU2FsU01ra1BlOGxKZ1NpZUZyUmJLZS1BcTc1eDlB0gGOAUFVX3lxTE1sNTNiR3JQaC04cUY1SVo0ZUFqeGN6OXAxaDRxQmQzdlE0Q29ReS1DeTlCRmFmZ1B2aFBiVUgzQTFFdnJoRndCejNxNVlZMXYxdDRNUlRneTI1NjZvSlRUZV93emRVY29DVFd0bW9IZS1jTjRrNHc2d1BsT0JsaGFzMzZIbWs2dzNGdzEzM1E?oc=5": {
+"url": "https://www.milenio.com/comunidad/cdmx-entrega-escrituras-testamentos-frenar-despojos",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/brugada-destaco-programa-escrituracion-herramienta.jpg",
+"desc": "Como parte de las acciones contra el delito de despojo en la Ciudad de México, autoridades entregaron 12 mil 883 testamentos y escrituras.",
+"t": 1795129414
+},
+"https://news.google.com/rss/articles/CBMilAFBVV95cUxPc3RGYmpCWlR6WGNaS3A1ci1STDF0c2piQ2JhV3RJYlBEQ21IdWlZcjZJNVpHUFZyWHhWZ1k1S00wQ0JnSFJ3T3JfNzZmZXVMMEt2TEhKckVOYWNJanBDQUF2NC00c0VxbWFSckpwUG4xNzJLOFRIdG9EdHNlOTVmb082YnpkWTJzaURVODA3ZGljc0Y20gGUAUFVX3lxTFBYWVN1WmotMElielFEbkR1THhmQW43eVJ6dENhNDlQVnJQQ09tWGYwbmppOHZJc2NDNlF2emJhME81dUhWb1NGQW9QV3VzXy1kQklUdWNKU3pERmlpa3NDU0JRY1kxZVR6dEpaN2FNTzc4OFlKOWdUNElaRWk3UlhwZGJITmVuYU5DMm5adEx1TXcyZlc?oc=5": {
+"url": "https://www.milenio.com/consejos/como-hacer-bota-navidena-guerreras-kpop-en-casa-paso-paso",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/bota-navidena-guerreras-k-pop-1.jpg",
+"desc": "Aprende a hacer una bota navideña de ‘Las Guerreras K-Pop’ desde casa. Te decimos qué materiales necesitas y el paso a paso para decorarla al estilo HUNTR/X.",
+"t": 1795129414
+},
+"https://news.google.com/rss/articles/CBMikgFBVV95cUxQaV85OXhpTXAyMzRUbXlfTHFUTWNfd004UXc5MUhZVWhYM0pjWTlVb0JLcjRONjBWMVBUV1VmWmpPdTJBUnBNaEZtUnlhUmZfR0pqTmdaQW1NZ24yalF2cU9kOXZTWkVXS25yRTlkUzVJQUhiRjY0Y0ctNmdTa3dzcVRSTjZ2c01XLWREdzJTOU1Qd9IBkgFBVV95cUxPWE9TVWxFYWhrN2d5NXJGX2NnanZ3ZHNab0kyZU1HY190MXZsWUtrTHdLNnVDNTNiQXRHZWNwOXFxRVhpdWU5eHFYZDZFbTE4Z2xKcFU5dk9LYzlRTFY2R1EwS0F2WDkwMzJ4N2sxNEdtVHlGRXV3RkQ5RC1LWTRsMkFENTdjeVJRcktzMlVHSzdkZw?oc=5": {
+"url": "https://www.milenio.com/cultura/festival-de-titeres-la-coyota-tendra-funcion-en-el-murel",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/festival-titeres-coyota-funcion-murel.jpeg",
+"desc": "El Festival Internacional de Títeres La Coyota Laguna ofrecerá una función especial de “El sueño de Angelino” en el MUREL.",
+"t": 1795129414
+},
+"https://news.google.com/rss/articles/CBMilgFBVV95cUxOZXZtbVRjalR0NzFkaDllQjdXSmRUMHE0VWlHMmNwc1FBalgxRFpraC1jLWlBRXBvZVZKVlJ3YmVidGdla2FrZ3QyMTRfTzE1bFNLNmMzc0o3QnZlQ0lzU3BvdzQ4Ty05OFJJcXB2Q2hVWEduXzh4Zi1DMnVMdDJEZXk4TndvMms0LU1MWS1UbU1Ta3NlMEHSAZYBQVVfeXFMUEZxMXRSQlNUYnpWTEp4SjR6eWVOOUJzMjN4M1lIeEJfdXF5bWxBTmx3ZnZyLUxvYks2OTdwUnkzS3YtM1pVNHJBRWR1a2U3QW9YbGJZeHJYUF9QclhCOG04UGJQX2theVBaaVZ4R3lRZzcwZUt5dXZ6Q2VBbDl4ZktDVkFfcDQ5ckxia1ZnY3hHbTFwQk1R?oc=5": {
+"url": "https://www.milenio.com/internacional/putin-tras-ataques-de-ucrania-contra-puente-de-crimea",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/putin-insistio-puente-atacado-instalacion.jpg",
+"desc": "El presidente ruso, Vladímir Putin, señaló que la respuesta será más dolorosa ante el ataque de Ucrania contra puente de Crimea.",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMiZkFVX3lxTE16TTdGbFVaWTFfMEd0NlFqS214NkdWQXVlWXRKX01jLXpwWXZkMUlMWFdQaENXQnJWWUQ5UDkwTHpkdWJGTnBPbEcxaVh5VDBZRnBaMTRfSGQ3WXdBb3g1WHNEcjlFUQ?oc=5": {
+"url": "https://www.fgjcdmx.gob.mx/comunicacion/nota/CS2026-401",
+"image": "https://www.fgjcdmx.gob.mx/https://www.fgjcdmx.gob.mx/storage/app/uploads/public/6af/f6f/5b0/6aff6f5b0d828082061093.jpeg",
+"desc": "",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTXpIcmpNR195b0xNOGhPQ09XcG15SE5kMVZpWGpvTnZFQ2FGcXdmVXpfbF9nVHVyamFkSk1jMGpVd2xKRG9WNlViekw0Ml8wTE9hSW9sYUdOSTVDcEY2Z0tqelRKc1UydElJYXBJZkNjbERKZU96a2w4TTF2bzFGY3F6RVNYdFFW0gGIAUFVX3lxTFBTWXhpV1lMYVFaTEdmYnFUUThBbjhkdl9BS3o0RkY2ZFRZT0ZBYlExYTQ2WGQ3UjFrcGw2XzIydnZYejkzN3pTUWNVNEZqM2szUmpxU0c5RzZvRlpHdmVMd2gyNGlDb0J0ckZEN19QdmEzU0ZJejB2Q010OFdWa3UwU0RTRzdtM2g?oc=5": {
+"url": "https://www.milenio.com/negocios/canacintra-y-prodecon-firman-convenio-en-torreon",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/canacintra-prodecon-firman-convenio-torreon.jpeg",
+"desc": "Canacintra Torreón y Prodecon firmaron un convenio para ofrecer asesoría fiscal gratuita y capacitación a empresas laguneras.",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMipAFBVV95cUxPV25Uc3REbnVmSi1lZkhQOUJ2b21YME9YbUw5eEpVdE1zM3hhZjU3amE4SWQ1MWlFSTJYbC1iR1JoalktTEdIWlJoZXlUWUdJQ1daRXhGOUZGbzNVX2RYYTdPd2JWbFRZLXp5cW9KTjZlNC1PNkFJeFdjTGY5Q2wzN21GNjVnaVBBVmhTdkJhdzFwajNrLXphcUg3VnBwZ1VzLXRyatIBpAFBVV95cUxOUmV3MlBDLWFaandQbU05eVdYZkppbko3aHFIa0ZvY2NFOFJGcWJWVm9kZk9lSG9Sd2tDbkJyMG45Q0FFREFLYTVlUkQ4c1V6aGxHYm9TdlZQSFVRNmRJRHBJODhkUXdQejRXRHJHVjh3aHh5MjBCVGlwRTV4TEZHLWJqLVR1bUl2NEZvMmVsSncxYWZsZ1hVbFBuN0VENHBCSGxibw?oc=5": {
+"url": "https://www.milenio.com/videos/comunidad/arcos-detectores-queretaro-retiran-objetos-peligrosos-alumnos",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/arcos-detectores-queretaro-retiran-objetos.png",
+"desc": "Querétaro instala 20 de 100 arcos detectores de metal en secundarias tras incidentes que dejaron 4 lesionados; autoridades prevén concluir antes de 2026.",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMilwFBVV95cUxNcHl5dzU5M3RxNTdiQ3U3MjVOVkZZVm9KNUM0bW91NWs0eVN1ajBmTGVOZ3NLVGdaNS1peTNOUnBmeDVRUFFXLW9DOTVBU2ZINHJmckFXZ2w2SU5UX2EzMlZCcW5rWWlUdTZOdi1Cb3hvTzk5dzg1UXE4QlpjYWQ1R1BSd0xYaFI0eWxtUVZNUFJvVE1xaHVv0gGXAUFVX3lxTE9wWFJqeUlmN3VUTHItM3pUdGdEaC1selpIbzJod3Y3OTV1NndLeG5PeFZxZW9CaHVOanEyVkZMOXlmdnRJdHdOVEM0b0U0T3RkaUpBNUxIN0ZSaEJGZUgyRHdkRnNiYy1lb1Y4cmpuVG9VWlpiZXNibVhVWWx2VkJSVDJOUXNNdU1xZklHbTZBOTJaQnlGS0E?oc=5": {
+"url": "https://www.milenio.com/policia/segob-reporta-localizacion-de-18-mil-desaparecidos-en-mexico",
+"image": "https://cdn.milenio.com/uploads/media/2026/10/18/colectivo-buscando-tolano-realiza-jornada.jpg",
+"desc": "Segob suma cuatro cachorros de búsqueda. Informa que se han encontrado más de 18 mil desaparecidos.",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMiigFBVV95cUxPdl9lbno0NXdYVkVnZEo0ZUVVc1VzbXhIazA0dVBza25ScnZ6eHp3bHlyV0gzTnR4UFZZREMxUkNyS21rNTl4LXV3bWpESUdnRkRVNXlTN29rM3pqRG91UVVldUV3aUVDaTB6M2Y2RzNGZldxekFTeDRXd3JaeWxkMkRpRERSbjF6ZkHSAYoBQVVfeXFMTWZaNWpGdkhvLWI3eUNzcHhkVnNtUTlsNEJVR2ZrSDJ0XzY5X1hDSTNwV1Y2eHR4ZGZfUVg0cngtcGtEQjJfU01oM1RMNDNfWXpERFBjWXJUcW9YYWUzOWtvTklMc0dUVTRYMUs4YW0ta1cyVW4zTFE3RHNnZlhUMVg4R3B0YnFJRW9n?oc=5": {
+"url": "https://www.milenio.com/negocios/recortes-banxico-encarecer-inversion-mexico-heath",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/04/fachada-banco-de-mexico-banxico.jpg",
+"desc": "Jonathan Heath advierte que recortar más la tasa de Banxico, ante la volatilidad del peso y la brecha con EU, podría encarecer las tasas de inversión.",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQlRFLVpVV0l1RXpPXzhUdXlUT1ZHQ0NNeUplSXhERGJybFNNRDBVU1RDRktVeTBFYlhOV1dUbE1ldV92NS1zZDJCYkM1U24tMVI0clN1eFplWHdXQlZmX19zS2V2ZWE1Y0RGT3lLQ1dzUzJVS210N19zZXVZSHlVRUt6c3JhLVJ1bzk3cl9LZ0FPeVhmV3ZSYmdRSHpoc0p6VXB6cHhwX2FfQQ?oc=5": {
+"url": "https://www.reuters.com/legal/transactional/view-anthropic-set-soar-debut-will-ai-peers-follow-2026-11-19/",
+"image": "",
+"desc": "",
+"t": 1795129413
+},
+"https://news.google.com/rss/articles/CBMidkFVX3lxTFBiRHhfbGJvSkZ1MTdoZWd3RTc0VEQ1LURRV0xwN0pNam1lZnFxMEhtSk4yYjZBdFMycS1yT1loQWxXREtWbEE4TzZIeFV5UUstOGlqanktTXFwejhXbU5BWkZsRlZyeFZXN0JxN1g0YVh0MDFtOUHSAXZBVV95cUxPTFl2eWM5QzRQeUhWWGRuWG9zMzVCVEdFUF9saHcyYXA5QXFGNDRuOUM5SmFJZXhrUXladFlvUG53bUlpaWJvOEdJRXVGTDBuRmVSd05seXM4VDZkdFI0RDVXVkRLSHlWdE5zZE42ZE50WkFZVWZR?oc=5": {
+"url": "https://www.milenio.com/videojuegos/quien-es-mandy-gta-vi-personaje",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/mandy-gta-vi-personaje-secundario.jpg",
+"desc": "Mandy se volvió el fenómeno inesperado del estreno de GTA VI. Conoce quién es en la historia, si tiene romance con Jason, las teorías y quién es su actriz.",
+"t": 1795129412
+},
+"https://news.google.com/rss/articles/CBMivgFBVV95cUxQVnB0WnNKdXV5b0F3V0djaHNNT1JkMGoyVGlmZ2M0anZxRDFRNUEwNDFsS0EtY0VDTmRWSUlCeVNhNWpTZk80SFVGVzR0d1dRbHFRMjlmV2VCSUl0cENEYUx2MGJFckt1TV82S0ljVkdLREllQ2RMZ0RENjluQk43aE9FWHR0eHlTNmxZa2RweU4wY2F0ZXhKU25ENHpoTi15WkdZU2hhZXdUZVJFOUlTQlFhdTFJeTNuTWlxdzZR?oc=5": {
+"url": "https://www.reuters.com/world/americas/trump-official-floated-ceding-guyanese-territory-venezuela-sources-say-2026-11-19/",
+"image": "",
+"desc": "",
+"t": 1795129412
+},
+"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY194RDNHTjM4WlFIN3hBYjloby1TaGRYbVVqbG1BdXV0Y0V3cEpfeVdVQ0Nudi0wdC1HYjZKSDRsMUl5Yk5VZmxYR1RnYUdLT0xMNHZ2VFhoZzY3elpNMmZqOGZPcXRvQ2k3YTNXel9TaHlyTmoxRHFMTFQzUlJxazVYQUhUeENW?oc=5": {
+"url": "https://www.gob.mx/cms/uploads/attachment/file/1117095/CARTUCHOS_19_NOV._2026.pdf",
+"image": "",
+"desc": "",
+"t": 1795129412
+},
+"https://news.google.com/rss/articles/CBMisgFBVV95cUxONUF6bm1SdVF6MDNJX3VvZXF3d0pzLVVoQXJxUTJEZ1ZqaGszRTNTOWNPaXRrOXhFcEhJeGJfT2V6dkVocUxyQVZaXzlQOXFtOVJZMER1WmxMbTN5VXFqMXJfbkhabFNtd1VTbnJ6dGVVSlJua2EwSGRYUHk5QmhtaXhaWV9NQWFSalhRZU5takkwWkNzeGV1TWpFRVBtWmJvbEFMLUhpZEJDRXl2Y3FveFZn?oc=5": {
+"url": "https://www.reuters.com/lifestyle/take-two-set-shatter-sales-records-gta-vi-launches-massive-fanfare-2026-11-19/",
+"image": "",
+"desc": "",
+"t": 1795129412
+},
+"https://news.google.com/rss/articles/CBMihgFBVV95cUxPdEZfdWdVOVNqNjZETHJ4ZE5Td2JoNm9INU1JMFluYWF1RGlCczRDR09CdWozQWZySmxLYlpFNEJJdGdkYzRoaXdMSGsybnY4amZnaUNYbGNNMzNlVk5TenU5aW9oWTZxSnNnRjhON1RYMXlvc3hreHhtX0hwcXNod0IzYTN3Z9IBhgFBVV95cUxQcDVMRl9vY09ZNF9Zc25MWlJPZ3FGWEh0Uk1zemhlTnI1dzhTVmk4ckc4R1ZhTTlweGdTRElSZ1pfbkpJeFlPTWpob1huUlZqdWM3SjZOcmhkS01oVjV4a3FEVFBndEVIM09NYXRfanltbVZJcTlxNHRyVHZHQWNPcmJxeGREZw?oc=5": {
+"url": "https://www.milenio.com/comunidad/asignan-fecha-audiencia-caso-rancho-izaguirre",
+"image": "https://cdn.milenio.com/uploads/media/2026/04/10/investigaciones-avanzan-ano-hallazgo-rancho.jpg",
+"desc": "Poder Judicial de Jalisco fijará una nueva fecha para intentar realizar la audiencia inicial relacionada con el caso del Rancho Izaguirre",
+"t": 1795129412
+},
+"https://news.google.com/rss/articles/CBMipwFBVV95cUxPSEQ4aFF0TFRXWll0Y2hSaHJFbWNmQ3Q2Y1RIZkZsRENVeU9sNzUyU3JsNVJoOXZMWVFQVnVTUzN6Ri1XdlBvbkRsbmtibnRBaXFKS3JVazBCenA4QmJkS2xpdVBzSVpjeGI0dkZyZjV5bWprd0tVd1g0bTVDSkp1c3JmSTRhc0J6bmlaZlNvd05VaHlvMGVJcTFXSDBGdEhkQ2hMbDlQZw?oc=5": {
+"url": "https://www.reuters.com/legal/transactional/intuit-sell-mailchimp-bending-spoons-368-billion-2026-11-19/",
+"image": "",
+"desc": "",
+"t": 1795129411
+},
+"https://news.google.com/rss/articles/CBMinAFBVV95cUxNMDJmRWlrcjZHZHl5Q2Z6ekpqcHJzNEhSUzhrcnB4TFlDX1lNXzhhYkg2UmItTFl0ZWRuMWI3eFFqWU9xY2dyTDdGS0Q5UmRZQWJyQkFCYlV6MzJ5S3dkc2NkTnJ6MTk0T2dlT2drd3hpczJrZmo1ZzlERHdKODc3cjhDdXR3QnBsX01ibEhnb2lYdHk5Rk0zMzFIQi3SAZwBQVVfeXFMTzRXMzN1dHh0WV9JVU4tRGQ4d0syZFRNUXFqU2ZWUHBONEQwdGlTTFZqVEh6YVVTTzF1MHcwZnBpbVZIS1lfY1NsR2dreFhJWDNpY1VkUGhCcVMxamg4dFpJclY0cTZteEpOblB0bEpGenJEX2VuS2lqTDFDUjJ4akYzMkhLZ0ZaWnc2SWdTSnRZcnppcVNXZlB4ZkFu?oc=5": {
+"url": "https://www.milenio.com/futbol/liga-mx/rodrigo-aguirre-no-se-presenta-a-entrenamiento-con-tigres",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/problemas-vuelo-rodrigo-aguirre-entreno.jpeg",
+"desc": "Rodrigo Aguirre no se presentó al entrenamiento con Club Tigres previo al partido de Jornada 17 de la Liga MX ante el Club América.",
+"t": 1795129411
+},
+"https://news.google.com/rss/articles/CBMi2AFBVV95cUxOQXduQmJFd0J6UHhqM2FIMFRrNWZfUTZsdHpfWVJGaVZYYk5XREJBNkh1U0dPc1Z0anVXVmRZNkFNSWY4N05iQmEyVHFtSm4tSDZpaDg4bmhBMzhmN0NzWUhVUmxtVWFIdU1CX2Zzd0Z5Ujh2em1vZE1KcU96R3cwVUlES2JmY184NjYzb00zWTB3Q2RuaFF1RGdrNEVSaGNPSmh0d0VsNERiWUZkYVQ1UU5yX3R5UlRscHlId1o2WU5ROXBQWVRtamZwZklicmZ2TU9BT2lRUmY?oc=5": {
+"url": "https://www.eluniversal.com.mx/espectaculos/bruno-mars-anuncia-que-su-papa-peter-hernandez-murio-en-mis-ojos-el-fue-el-mejor-padre-del-mundo/",
+"image": "https://www.eluniversal.com.mx/resizer/v2/YUXLQW5AKVDI7L57ZL7AI7A5VU.png?auth=465d2aa386f57bcc41cbbf96e84341d5a6d153565c387961a2437ac63867b292",
+"desc": "El cantante tenía una muy buena relación con su progenitor, de quien heredó su gusto por la música",
+"t": 1795129411
+},
+"https://news.google.com/rss/articles/CBMikAFBVV95cUxNMzBPaUxpOGRKemt1U2NrdzNHYXREV280VVFpeXpUTldHZmV6Q3FzaTJLQTdPRlVYWmZMVUxGM0hId1J0N3NzLW94ZktLMm1rSXFDd3FnSE9LeUZyeUx1eG5vZ2cwQThyVVRKSWVKTTRfa2RmbW00YjdHM0VVdHlCdWVNMDlZUWpfck12SGpFc2fSAZABQVVfeXFMUG1WYmZiMWNOOVZvY25sV2xLRzRWTUZTVE9jNkpFdnFFcnFuRzlQcm5rWWRpVWNJYVhtemstUjc0dllZd040RWZvMTNnM3kycXV5ekx0OHhHLXA3bGVvLTZpd0EwNGRCZ0JpRWxvTElhMlpwbFV1al9RU1BJUmhkbl9wclVFX0pHRjEzU18zc2xR?oc=5": {
+"url": "https://www.milenio.com/videos/estados/badillo-busca-coordinacion-de-morena-en-acapulco",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/badillo-busca-coordinacion-de-morena.jpeg",
+"desc": "En Acapulco, Badillo intensifica ya asambleas y recorridos para definir la coordinación municipal de defensa de la transformación de Morena.",
+"t": 1795129411
+},
+"https://news.google.com/rss/articles/CBMi5gFBVV95cUxPa0FpUXNzZlpzR1dfTllMTkRhQU1Uaml3NDFCQjRmRkl5MmtKWnhOTHRWb2Rkb0NUTzhzQjZzNGxHdWFXTDVXQ2N6Y0w2V2NTVjV0XzhyaWl3d2Z2Umg1bjRvY0oyZWNrQlBNN1FWekNfQzh1c19RYXNuSVk3dnpZNUlDRERja1dYOFlLQkpCUFVTTnowdU9tcGRvWExwb0dsazl2RUE2QWxVaW5lU0NqMzhTOGxMdGg2bFp5NnFPR21JUWlrVnF2S216S3psa2hWOUVOamhpX2pfWnJvN0tjRzZvQjIyQdIB-gFBVV95cUxOYUJNb1c2Njc3bU4yNXVxVzRzVHJCOXdqVGhGNHJBQ3ZXNVpJTDZZdUlQWHdEQmJZM3k1YkE4ZERKNlpsUG8yOGZwaVZQVjFnX1RVWkc1ZFFIdHBUUmFlbE5MVjBEWF9TTmJ2czA1bmxoN3NGOWg2bEU5X19sNDRuaFJfMkNBTFpNblFvM05rWl9ZUWY1U1dHeXIyM0I3R2xQVGNhNmpFZ0VlcTR2TVJYdW1HZlVvaUFIMm4tVTMzWDdpN2RrOWZBUjBISHRIblNMMC1nVmhNLTh5WTJGOTNTS0tCUS00bE1nU0V4N3FBT08yU1l5N0NKQVpR?oc=5": {
+"url": "https://www.eluniversal.com.mx/estados/fiscalia-de-tamaulipas-imparte-mil-575-platicas-de-prevencion-del-delito-en-la-entidad-llega-a-114-mil-personas/",
+"image": "https://www.eluniversal.com.mx/resizer/v2/QLQ33TOVMVF3JDY4IUSPY3SQZI.jpg?auth=f95977b8767bb625875bef02d6c036bfbb357b6567850b494b30d74400d53799",
+"desc": "La Fiscalía de Justicia informó que para el desarrollo de estas actividades se mantiene una coordinación interinstitucional con la Secretaría de Educación de Tamaulipas",
+"t": 1795129410
+},
+"https://news.google.com/rss/articles/CBMikwFBVV95cUxNV3BINjY0N00xejJneUppaFF6OVBXUzhRTWVlc1I1ZmFYczVsY1VQeW85Vi14WGtDaTdfbHIxQVk5SGVGV29GOVBQenptc1g5eXRNc3hPcmhwZFRUZVVVTVlVREo5NVlnQmZQZHdIbVE2eDBzOXIxZTlQdHFOUE5CQlhGdUo2VEVJNTltYzdOQkhKV03SAZMBQVVfeXFMT2RGN2hiSVR2cks3dVdITmNXRVFXMXI0WmlyRWRnTlNOWDR2TzBKNkpXMU5WY1d5M3FkaWNGTDFzclk4WTZHa2xWUXE5QUhWb0lMQUVrSXRWU2RYeVpZTVBjbExBaWhlWE5PSnJQVHJaQmQ0UmY5VnVJWnRlZXA0VXo0RW01TTJ2LWY5d0xldnhBNV9r?oc=5": {
+"url": "https://www.milenio.com/videos/policia/familiares-buscan-3-desaparecidos-huasteca-hidalgo",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/familiares-buscan-a-desaparecidos-en.jpeg",
+"desc": "Wendy Salazar informa que 3 personas, entre ellas Ana Rosa Fernández, desaparecida desde 2022, siguen sin ser localizadas en Hidalgo; pide ayuda urgente.",
+"t": 1795129410
+},
+"https://news.google.com/rss/articles/CBMilgFBVV95cUxQRmpCeWphQWtVN3VIYkJnZXc1Uk9lSWQwb08xSUM5aUEtc3F3RUxpeUNEZGRxeEl2MkhicHJGRHFtLU1FRWxDUmdJY1F4ckRsWUVVTmZWd1ZLajdQSmw1VzVpVE4xMGN4eVQwX0dUbFBySnVSVmtDNWNGVFBoZWJ2VDFSYVRtWUM0VzMteE9uU29VSUJZTXfSAZYBQVVfeXFMTnZTcUoxZTRLUWJkSGlxZnc1VWRvZ1hFS0s3cjlpanFFNmZINnljekEzYmtiVjVqQzh0VEF3UTlzZHlpTDgtdzE2ZDdsUDFGOFIwVndMQnFZbjI0bDZxcTZEd0UtTk5UbHhXbXA0SjJkWnJoM1pzTXlHNFhDODJwQXVWWEpqVVJ2bWdXSXdxRllISXJVcWVB?oc=5": {
+"url": "https://www.milenio.com/liga-mx/club-santos/realizaran-carrera-soriana-santosk-2026-torreon",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/realizaran-carrera-soriana-santosk-torreon.jpeg",
+"desc": "La Carrera Soriana Santos K 2026 se realizará el 29 de noviembre en Torreón, con recorridos de 5 y 10 kilómetros y carreras infantiles.",
+"t": 1795129410
+},
+"https://news.google.com/rss/articles/CBMimgFBVV95cUxPZEY1SDBFUlNRT3ZpOXlJcEZJcHZjVi04dngtXzlfLXBVUW5nd0k2Q3BPSnE5WlhWN3RtTFNNcnhtQ0J0XzJhMHVBSUNyd2VmeDE1WjVhVVhGX3BjZTZJNjBtQ1dFMkNqeVgwdlV0clFSZHVSYTdoTFV5ZFRpMDZ5VjhKSjRNcDFGNzQwWDBncWMtSnBvRUplR0V30gGaAUFVX3lxTE5yRjNwbmFHNVJNRHFUTDJiUVlfZlR0WmpGUGFsRlQ3dEpvaHNTalV6Z0IyRHRXVEZlLTRtaXplbWptOEhsSkNzTFFPLWZvZ3ljcThJU1hja1doNk0tWXl6LXgwT25ZR0oxajR2ZFVaS2dGR2REeVpZa0MzV2FyUlB2ZXU3RTlYY2Zvb2hlZmR5SFZqTEpQZDVoS2c?oc=5": {
+"url": "https://www.milenio.com/comunidad/comparece-ante-el-congreso-el-secretario-de-salud-en-jalisco",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/hector-raul-perez-gomez-glosa.jpg",
+"desc": "Acción de autoridades sanitarias por agua sucia y sarampión, loscuestionamientos que enfrentó el secretario de Salud de Jalisco",
+"t": 1795129410
+},
+"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQWI3Zy1rQ1RPOXd0YVJXTXlxNUFoY1N5VlRtcWNBRnFNdXgybGIxdV96SmRSVnpPbFU1RzJnQTRtMC1BUGpfbXAwNGlwMTBITGJTNUdBZGlXVXc3MW1GRU1rVGxueFg1RG9PSzl4UW92TjdDRGpWT2Z6MTBwb05mZi1kY3haRkxzZkE3X09XYmFtWG9uNFZFWHlEQTd3UTRYZXZxYTdtOHZucHVRdXVQdm44TUJRaDB4WWpobWQ5dlVpVThlRFo3NzJ5SmxmQkxKcXlkaHJsMTBmdw?oc=5": {
+"url": "https://www.reuters.com/business/autos-transportation/us-should-not-certify-chinese-aircraft-restrict-investments-chinas-aerospace-2026-11-19/",
+"image": "",
+"desc": "",
+"t": 1795129410
+},
+"https://news.google.com/rss/articles/CBMimAFBVV95cUxQM054R1h3VGg0NzA5RGNhNldkcWgzNGJMdktLNXpIU2U3U2RINkV1N1l0RC1MUzViWXBSNl9rR3hyMkNGRlVIU2NxUXRoVGJHSXB2NHNsck5WNFJIZ0FGZjA3TURfVjlsb3J1d00zVGZ4YlQyYU5nT1I0ejMtVXlYN3IybXU1bnhDcjZIUzEtSmxqTERWdHMxTtIBmAFBVV95cUxNQjhoS2ZPeUs4Z2h3M1JVNjhHa1I3OTl3U3JESWZVc0R3VjhodTNKRmRoaDlFNUFwSi0tZWJPSjFsaFc5Wnk1REROeWg2dTNEcnJDUUtsWFhnT3Q4Zm93elJDS3MtOXlmYjBiUFFQRmlHVDdkb0RsczVKWFdLWHFjN3lNNTNlV3hNRDU3dFdQcXlyVzRFQlFZOQ?oc=5": {
+"url": "https://www.milenio.com/negocios/impulsan-participacion-ciudadana-fiscalizacion-gasto-publico",
+"image": "https://cdn.milenio.com/uploads/media/2026/07/30/tecnologia-incorpora-pistas-auditoria-registros.jpg",
+"desc": "La organización abrió una encuesta para que la población conozca el destino de los recursos públicos y opine sobre su aplicación.",
+"t": 1795129409
+},
+"https://news.google.com/rss/articles/CBMibEFVX3lxTE9fQ1c0WXJjMjZJUGstMDRyQnhIVEZkbTRzeHFfNXF6NXk1NWk2clBGdC1uZXBING43NFVNSEo0b1FwS3pOeTBCNVZoRFRDQXNUN3NucTU3aW1hQXJDU1lON1ljYUhFMm1MNUVYdQ?oc=5": {
+"url": "https://www.milenio.com/videojuegos/gta-vi-contra-los-furros",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/furro-gta-vi-ulises-rabago.jpg",
+"desc": "La nueva entrega de Rockstar Games no deja de sorprendernos y convierte a los furros en enemigos públicos de Leonida",
+"t": 1795129409
+},
+"https://news.google.com/rss/articles/CBMilAFBVV95cUxQNmV0dFBnVUg2QWF1WHFRSjhYSVNfN0pWZmV3QzNvY181QWE4WW5zbjAyX3NydGxJeXJzbkFMdVVTOHY2QXdCdEFKQ1dlNGthX1BJQUo5a3drcVl1WjhhRVY4Vndzc2dfUGZDM2drNl9xVzY0YjZXd0tiLTZ6R3RxUWpOMEx3UFVseUx5cklkbXhBSXFw0gGUAUFVX3lxTE9vbmh0aW1tRFhMR1NaNFZfMEVpZTdUUHYxQnc0WmE5YXZEYUx4ZmY4eDIwZVFUUElsbmF5al9CbUZGMjRUbjhrVWpFVE1INzlWX19feWNYMDVIdDNhTkNUMVM1VkNwdVotWHZHbnVPSVpDWnNLWHItLUNOWlNlLTdqSndSSWtqY2MtMGxHZTEzMUYyaks?oc=5": {
+"url": "https://www.milenio.com/estados/crearan-comision-para-regular-comercio-informal-en-torreon",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/clip-plazas-mercados-torreon-lograron-1.jpeg",
+"desc": "La intención es que cuenten con su respectivo permiso, mercancía legal y con las medidas que marca Protección Civil.",
+"t": 1795129409
+},
+"https://news.google.com/rss/articles/CBMinAFBVV95cUxPV0NEQ0VjMkpnQjNDem11V2E4SkFab3c4T1lxbTN0YnF4SF82ZFdxYmJhOW52ejdfMExBS1piX3YzRjRUNEdDcEw1RUpiZnhaTFE0aUhqRHV1X2RrWDRUYnhLRm5mX05TbTJaOGJlc0ZTZE5yRkNGdDE3ZHJpTUdoZWdYY0hLWDM4RW00UDVDX215bTR1aGtDV3p4TEHSAZwBQVVfeXFMTlFHOE9sMlhpaWxuMnE0cUR3UTRoS05MVGpXMVk1MTJWNnpPQ3V3U3pDUDZqeVVfZk5Sak9DQTIzeFBSMGN1Y3FYS1YtZ0FWNGRFSDhrTG9XbDdQcFVGamtJMW1FSVVMaFFJSmhRWERsWWlOaThxVVZsMTY5cnNDbnliU1dudkdBVm5wOGFlS1dwMTZidlFtTzFwYzEw?oc=5": {
+"url": "https://www.milenio.com/estados/familia-estudiante-ayotzinapa-acusa-sentencia-incompleta-agresor",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/familiares-normalistas-ayotzinapa-acusan-sentencias.jpeg",
+"desc": "La familia de Julio César Mondragón explicó que la sentencia por homicidio no consideró la tortura que sufrió su hijo.",
+"t": 1795129409
+},
+"https://news.google.com/rss/articles/CBMijgFBVV95cUxNQ0RKSlBJMHRiYVVYeXFGZmFoaUkxMEswbUhDZDJ2N3lUSDd1U3ExMW51cVducGJVMG91ZWtTSnROVUI1TTZGTVlkWU9CMVI1eHZFLU95Njk0UEJ4T1FEZDlZc0ZaaV9ReHZvMWpsRWRsNTlOQ1hCR1dFcFBMQVNaRXdzRzQ1OExmUmoyTVpn0gGOAUFVX3lxTE9mSnpNTlRtM1FjYzFzbEdkZzlYa2VhTTlKT0NqRV8tbzZ6eE1qYzVrc292S3RsZVRsTlcyU0YzcF8zazhtaWxkZGIwQlFvNVVndm45Y2RJdGJVUjN5LWhKRmw0SkNuSmVjNHA2UDNQaElDZHVhZ2lnbkpnRzh0QnIxbkJzNTdGUWhKdnhOSXc?oc=5": {
+"url": "https://www.milenio.com/comunidad/conmemoran-gomez-palacio-inicio-revolucion-mexicana",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/rescatan-memoria-historica-levantamiento-revolucionario.jpeg",
+"desc": "Estudiantes y docentes participaron en la ceremonia del 19 de noviembre, donde recordaron el levantamiento de 1910 y sus protagonistas en La Laguna.",
+"t": 1795129409
+},
+"https://news.google.com/rss/articles/CBMingFBVV95cUxQdWNWZGpTNkdFNWNhd3ZGX2FkeE1NNWhDV3loa01hM2xMSXNoek1fWVRIcWx5aHVaU0RXLXlnRHI4SUpyUXFyTzBxMm9qWU1WQlNRdHFDU1Jjc2VmdFZNT2lZak1iaEJGTnZGbDR2em9NRmU0RHctVHdWajlTTlFlZGJjeUpaQVlQdVVrZU5jMkpUanVRRkNUQXNCTGU1Z9IBngFBVV95cUxQLVJROEFrOWZrcHNlaHVPTmxYY3BBcmNDYk1leVg0VVJKWkg1UnQ5ZnhIWXJiUWlxeHYzSG9BUDRDSkw1bUg5Q2lRYzN4UkNuUnVMWjFycVVsangzVllkSGl6S0N0QkNhY2kybVR0QlplZzFUeExrdWtMNER0aXlKRDVGMVMwR3UtOVRvbGxXZElfdmhVYjdJZl9HRnJqQQ?oc=5": {
+"url": "https://www.milenio.com/futbol/liga-mx/amandine-miquel-entrenadora-con-mas-efectividad-en-rayadas",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/amandine-miquel-entrenadora-efectividad-ano.jpg",
+"desc": "Amandine Miquel se convirtió en la entrenadora con mejor efectividad en la historia de Rayadas, superando a Eva Espejo y Amelia Valverde.",
+"t": 1795129408
+},
+"https://news.google.com/rss/articles/CBMirgFBVV95cUxPV08xal96elo5a3FIa2V1V3J5YnNZWXRPUTNlaTh6OUgxTENWQVVwczFMYktVOHo0MUNlc3I2Nl9JSmRrdG9YQnlzMU9hRVdhZzlrZHgxYkdSbDROZ2VaT1lvRmQ1Nm5Nem5EY3dfTDFua1p5b2NVU0d0SEVsVVBobjhVZlZYT2FSanBKc2pwbEV4VUktcllpdVluaXo3ZUp1cHVXTzlpaUM4TURBWVHSAa4BQVVfeXFMTUlQaGJ3VTZKbTY1YnBaVXZRMWI4cEhvUER0bEw3NFlTcEp5REJib1ZGS0FaR3VZaHRzR2NMSGFYYmQ2ejIyMmd1UG5QQkNZM3pHWE9NNVBrVFRpWkFQcGtkbzdtNmdJdnVoNU9OcGlCNDlRSklGUGVad3RTeWkwZVBCMkF4NHEyY3pleHFkNi1BbjhUMnR6QU9jbWF0bjNkTFhGNWtQQW9CcDBJeDln?oc=5": {
+"url": "https://www.milenio.com/futbol/liga-mx/presidenta-de-liga-mx-femenil-destaca-crecimiento-tras-cambiar-formato",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/liga-mx-femenil-apuesta-calidad.jpeg",
+"desc": "La presidenta de la Liga MX Femenil, Mariana Gutiérrez, destaca el crecimiento de la Liga MX Femenil en congreso organizado por la RFEF.",
+"t": 1795129408
+},
+"https://news.google.com/rss/articles/CBMijgFBVV95cUxPUDJBQnFWcktCWHhqMzB1NlF4eEZZcExod3ludjE1ZFM1M0IxaWtfV1o2Z2RyT0lGVVlvRFNGSDlqTzV6ZVRYZ3VlMEctYWh5YS1CSWVWbFR1cVZjcm1zcENsN0w0ZjRrVkZDRlRYTlFtci13UDVRX3hBeDgyeE93aWVlZklCaHFOUXlMSGF30gGOAUFVX3lxTE1PbWlod19fZF81NmNkcTJ6UG5hcFRacVpiTnZKNkhPNWNTS0UxZXN2UzhSNS16YTVHazVmb28zaldySGRaeGZEenlNX0xad2ZXdDV4bWlGYjFPdFgwc2pRZkU2dzVjZ2laWnB6NjJ3NlIzTTJUN0FmeW93bGRrWG9oQTJfNXNwdzdmY2NqdVE?oc=5": {
+"url": "https://www.milenio.com/internacional/principe-harry-regresaria-ejercito-luchar-rusia",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/harry-veteranos-guerra-centro-superhumanos.jpg",
+"desc": "El príncipe Harry afirmó que se enlistaría en el Ejército de Reino Unido si es necesario combatir a Rusia.",
+"t": 1795129408
+},
+"https://news.google.com/rss/articles/CBMikAFBVV95cUxOengweFVBNkd5R1l3aE81dDBrei14QTE3SnFHTUNiNkdRakViVTVaLW90blJVLVlGY0RUVXlDaS1IVDRoc3Q0ejFXQUllRENpbmxhdTl5ekQxZ1RMN0o4cHB1Wkg4VmhVa1A1dTJJMkpUVU1yWXkwQjZmMGFXYy1YYUNHcklzTEFEdEpmMm45OE_SAZABQVVfeXFMTTNrNXBUZjlIVnZCdm85bHgydHpzbFdzN3dJQVhGWmtFTGRrdlFpcnA2a0FZZkg3QU1Rb0htTFphS2lHVTRGcWxueVUtamc3Y1ZSY0RxdTJpSlVmTXh5Z0hzazUzRFByMHRrTWdWVGRwTlF5eGFZcnZJd0pVM2pPdmsxT2VnRjRpeHVTSFRIQ2RW?oc=5": {
+"url": "https://www.milenio.com/videos/policia/fiscalia-puebla-indaga-muerte-guadalupe-tehuacan",
+"image": "https://cdn.milenio.com/uploads/media/2026/11/19/fiscalia-puebla-indaga-muerte-guadalupe.jpeg",
+"desc": "Guadalupe Martínez, de 23 años, es hallada sin vida en un baldío de Tehuacán con heridas de arma blanca; antorchistas exigen justicia y mayor seguridad.",
+"t": 1795129408
+},
 "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWm5sZi1iQVluMXloQm5mVHVKMWVvcmg2LXVKVUlVNGpSRXNOVkVPQzl3aGtqSWQ3aWc5LS1RTmRFZG11cGFxTnFKOVc3SGlJUXVTRWlyY245T2FSazFEV0YxcjRySkROVVVMVFVZSXpMRTlXNUpOampGb204VnRmd1NLQmItNkR1OGhPNUc3SE1Md1FRNnR30gGXAUFVX3lxTE1SbmNzTElsTzZlYllUdlRKYURHWEZScmo2T0RlTmdIWWctSGpyU25KV2c5X1NIS1IzQXlJa05TcDJKc2hYdkpCb2wtNkg3WV9YN1Q1c1hVd2owNmFNZFZ4Z2dEY0Jfd0VkMTM1NlFHVXpQNmNkNTREVjVsZDRZNElTbnNweFp1TTA2UDdmc2kzbW1vSzJFN1E?oc=5": {
 "url": null,
 "t": 1795118478

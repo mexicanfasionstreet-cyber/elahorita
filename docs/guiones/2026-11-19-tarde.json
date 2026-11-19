@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 182,
+ "segundos_estimados": 67.4,
+ "historias": [
+  {
+   "titulo": "A 12 años de Ayotzinapa y ataque a Los Avispones, sentencian a José Luis Abarca; ¿cuántos años le dieron?",
+   "link": "https://lopezdoriga.com/nacional/a-12-anos-de-ayotzinapa-y-ataque-a-los-avispones-sentencian-a-jose-luis-abarca-cuantos-anos-le-dieron/",
+   "seccion": "justicia",
+   "medios": 5,
+   "score": 82.2,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/IgualaMontage.jpg/1280px-IgualaMontage.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Microstar",
+    "pagina": "https://commons.wikimedia.org/wiki/File:IgualaMontage.jpg",
+    "credito": "Microstar (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Iguala"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Ayotzinapa_-_panoramio.jpg/1280px-Ayotzinapa_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 3.0",
+    "autor": "L-BBE",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ayotzinapa_-_panoramio.jpg",
+    "credito": "L-BBE (CC BY 3.0), Wikimedia Commons",
+    "termino": "Ayotzinapa"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "José Luis Abarca es sentenciado a 60 años por el ataque a Los Avispones",
+  "gancho": "Doce años después del ataque al autobús de Los Avispones, el exalcalde de Iguala recibe su sentencia, pero la defensa ya la impugnó.",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "texto": "El exalcalde de Iguala, José Luis Abarca Velázquez, fue condenado a 60 años de prisión por homicidio simple en grado de tentativa en agravio de 61 personas. La sentencia viene del ataque contra el autobús del equipo Los Avispones, el 26 de septiembre de 2014, cuando los futbolistas regresaban a Chilpancingo tras un partido. En ese ataque murieron David Josué García Evangelista, jugador de 15 años, y Víctor Manuel Lugo Ortiz, el conductor. El fallo lo emitió el juez Irving Joan González Balleza el 10 de noviembre, en Matamoros, Tamaulipas. Otras 25 personas también fueron sentenciadas, entre ellas Felipe Flores Velázquez, entonces director de la Policía Municipal de Iguala. La defensa de Abarca ya apeló, así que la resolución no está firme: un Tribunal Colegiado de Apelación deberá resolver. Su abogado, Alejandro Rojas, sostiene que el Ayuntamiento había transferido el mando policial al Gobierno de Guerrero desde mayo de 2014.",
+    "foto": "Iguala",
+    "foto2": "Ayotzinapa",
+    "datos": [
+     "60 años de prisión",
+     "61 personas agraviadas",
+     "Ataque del 26 de septiembre de 2014"
+    ],
+    "pantalla": "Sentencian a José Luis Abarca a 60 años"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "SENTENCIA A ABARCA"
+ }
+}

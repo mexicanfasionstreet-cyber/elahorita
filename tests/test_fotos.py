@@ -85,3 +85,17 @@ def test_sin_foto_libre_va_el_fondo_de_diseno(tmp_path):
 def test_el_montaje_ya_no_usa_la_foto_del_medio():
     fuente = (capsula.RAIZ / "capsula.py").read_text(encoding="utf-8")
     assert 'get("imagen_url")' not in fuente and '.get("image", "")\n        return' not in fuente
+
+
+def test_retrato_angosto_va_nitido_y_debajo_del_titular():
+    from PIL import Image
+    retrato = Image.new("RGB", (666, 917), (200, 30, 30))       # rojo puro: se nota si se desenfoca
+    im = capsula.encuadrar(retrato)
+    assert im.size == (capsula.ANCHO, capsula.ALTO)
+    assert im.getpixel((540, capsula.Y_FOTO_ANGOSTA + 300)) == (200, 30, 30)   # nitido
+    assert im.getpixel((540, 200))[0] < 120                                    # arriba: fondo oscuro
+
+
+def test_foto_de_666_px_ya_cuenta():
+    pag = [{"title": "Vladímir Putin", "pageimage": "Vladimir_Putin_(2026_02_23)_(cropped).jpg"}]
+    assert fotos.buscar("Vladimir Putin", wiki(pag, ii(licencia="CC BY 4.0", ancho=666))) is not None

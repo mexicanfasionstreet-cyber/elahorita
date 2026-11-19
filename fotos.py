@@ -27,7 +27,8 @@ import urllib.parse
 import urllib.request
 
 UA = "ElAhoritaBot/1.0 (https://github.com/mexicanfasionstreet-cyber/elahorita)"
-ANCHO_MIN = 700                 # menos que esto se ve borroso a 1080x1920
+ANCHO_MIN = 450                 # retratos recortados de Wikipedia: van nitidos al centro
+                                # sobre su propio fondo desenfocado (capsula.foto)
 ANCHO_BAJADA = 1280
 LICENCIA_LIBRE = re.compile(r"^\s*(cc0|public domain|dominio p[uú]blico|pd\b|"
                             r"cc[ -]by(-sa)?([ -][\d.]+)?\b)", re.I)

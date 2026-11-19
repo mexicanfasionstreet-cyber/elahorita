@@ -164,3 +164,17 @@ def test_opciones_de_notavideo_siguen_sin_subir(tg, monkeypatch):
     assert "/notavideo" in tg.mensajes()[-1]["text"]
     tg.toca(tg.botones()[0])
     assert telegram.recoger(texto_libre=True)["accion"] == "nota_video"
+
+
+# ------------------------------------------------------------------ lo que pediste
+def test_el_guionista_sabe_que_pediste(monkeypatch):
+    prompts = []
+    monkeypatch.setattr(nota.guion, "llamar_llm", lambda sistema, usuario, *a, **k: prompts.append(usuario) or "{}")
+    mat = [{"n": 1, "seccion": "MUNDO", "titular": "Foto oficial de Sheinbaum junto a Trump, Putin y Xi",
+            "entradilla": "", "cuerpo_del_articulo": "x " * 80}]
+    nota.escribir_guion(mat, sin_verificar=True, titulo="t", pedido="Putin en APEC 2026")
+    assert prompts and prompts[0].startswith('LO QUE PIDIO EL EDITOR: "Putin en APEC 2026"')
+
+
+def test_con_enlace_no_hay_pedido():
+    assert nota.pedido_del_editor("https://elpais.com/x") == ""

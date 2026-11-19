@@ -234,9 +234,27 @@ def ofrecer_opciones(tema, grupos, prueba=False, solo_video=False):
 
 
 # ------------------------------------------------------------------ guion
-def escribir_guion(mat, sin_verificar=False, titulo="", texto=""):
+def pedido_del_editor(tema):
+    """Lo que escribiste en /nota: el guionista centra la nota en eso.
+
+    La busqueda empareja palabras, asi que puede traer una historia donde lo
+    pedido es secundario ("Putin en APEC" -> la foto de Sheinbaum con Putin).
+    Sin esto el guionista toma el angulo del articulo, no el tuyo.
+    """
+    tema = (tema or "").strip()
+    if not tema or tema.lower().startswith("http"):
+        return ""
+    return (f"LO QUE PIDIO EL EDITOR: \"{tema[:150]}\"\n"
+            "La nota va de eso: el protagonista del titulo, del gancho, de la foto y del "
+            "primer enunciado es lo que pidio. Lo demas del material es contexto y va "
+            "despues. Si el material casi no habla de lo pedido, cuenta lo que si dice "
+            "de ello sin inventar nada.\n\n")
+
+
+def escribir_guion(mat, sin_verificar=False, titulo="", texto="", pedido=""):
     try:
-        g = guion.parsear(guion.llamar_llm(guion.SISTEMA, guion.prompt_usuario(mat)))
+        g = guion.parsear(guion.llamar_llm(guion.SISTEMA,
+                                           pedido_del_editor(pedido) + guion.prompt_usuario(mat)))
     except Exception as e:  # noqa: BLE001
         print(f"  aviso: sin IA ({type(e).__name__}: {e}); se usa la plantilla")
         g = guion.plantilla([{"title": titulo, "excerpt": texto[:400],
@@ -306,7 +324,7 @@ def construir(args):
         "entradilla": principal["descripcion"][:400], "cuerpo_del_articulo": cuerpo,
         "la_publican": medios,
     }]
-    guion_txt = escribir_guion(mat, args.sin_verificar, titulo, cuerpo)
+    guion_txt = escribir_guion(mat, args.sin_verificar, titulo, cuerpo, pedido=tema)
 
     n_pal = guion.palabras(guion_txt)
     destino_dir = RAIZ / ("build" if args.prueba else "docs/guiones")

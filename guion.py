@@ -73,6 +73,9 @@ una empresa, a su director o su sede. Nunca a una victima, a un menor ni a un pa
 sin articulo en Wikipedia: en ese caso el lugar donde paso, o vacio "".
 "foto2" es una segunda imagen con las mismas reglas: el lugar, la institucion o la otra
 persona de la nota (no repitas "foto"); vacio "" si no hay.
+En "foto" y "foto2" nunca un pais, un partido o una empresa a secas: en Wikipedia su
+imagen es una bandera o un logo y no sirve. Mejor su capital o un edificio ("Caracas",
+"Palacio de Miraflores"), su sede o su lider.
 "datos" son 2 o 3 tarjetas que salen en pantalla mientras se narra: el numero, la cifra
 o el hecho clave en 2 a 7 palabras ("38 años en el Congreso", "Primer afroamericano en
 el cargo"). Cada dato tiene que decirse en "texto" con esas mismas palabras o cifras:

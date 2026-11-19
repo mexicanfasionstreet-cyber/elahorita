@@ -1,3 +1,72 @@
-2026-11-19 11:59 Tijuana · franja pendiente: ninguna
+2026-11-19 12:00 Tijuana · franja pendiente: manana
 sin novedades
-sin novedades
+corriendo la franja manana
+  $ --days 2
+  (18.3 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 45
+
+1247 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+610 nuevas, 5348 en 30 dias)
+
+  secciones revisadas con IA: 2 cambio(s)
+  219 historias desde 19 05:00
+    95.7 peso  28.0 · Myanmar committed genocide against Rohingya minority, top UN court rul
+    79.8 peso  12.5 · Sheinbaum destaca potencial de Tamaulipas con campo Trión y Puerto de 
+    79.7 peso  17.0 · Un juez impone a Luis de Llano un nuevo arresto de 36 horas por incump
+    78.3 peso  16.5 · Por qué Putin es el ganador de la histórica reunión con Trump y Xi
+  $ --franja manana --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-19-manana.json --link https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss --previo  --reserva https://www.milenio.com/estados/sheinbaum-destaca-campo-trion-y-puerto-matamoros-cumbre-apec --reserva https://www.bbc.com/mundo/articles/cwlymkv5n9vvo?at_medium=RSS&at_campaign=rss
+  (5.9 s)
+  material nota 1: 469 palabras de https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=
+--- GUION (ia) · 1 nota(s) · 168 palabras ~ 62 s ---
+
+TITULO YOUTUBE: La Corte de la ONU declara genocidio contra los rohingya en Myanmar
+GANCHO: Por primera vez, un tribunal internacional declara a un Estado culpable de genocidio.
+
+[JUSTICIA] La Corte Internacional de Justicia declaró a Myanmar culpable de genocidio contra la minoría rohingya. Es la primera vez que un tribunal internacional encuentra a un Estado responsable de genocidio. El presidente de la corte, Yuji Iwasawa, dijo que Myanmar tuvo la intención de destruir a una parte sustancial de esa población y que destruyó pruebas de forma extensa. El fallo se aprobó con nueve votos contra seis. Todo se remonta a 2017, cuando una ofensiva militar en el estado de Rakhine dejó alrededor de diez mil rohingya muertos a la fuerza y más de setecientos mil huyeron a Bangladés. Myanmar negó los hechos y alegó que respondía a ataques de grupos armados. La corte concluyó que la intención genocida es la única inferencia razonable ante las pruebas. El caso lo llevó Gambia ante la corte, con base en la Convención contra el Genocidio de 1948.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Myanmar committed genocide against Rohingya minority, top UN court rul (7 medios)
+  foto nota 1: sin foto libre para 'Corte Internacional de Justicia'
+  foto2 nota 1: sin foto libre para 'Birmania'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-19-manana.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-19-manana.json
+  (117.0 s)
+guion 2026-11-19-manana.json · 168 palabras · proveedor voicebox
+
+    whisper: 13 oidas, 100% de 13 empatadas
+    whisper: 146 oidas, 98% de 146 empatadas
+    whisper: 9 oidas, 100% de 9 empatadas
+  gancho     4.64 s  [voicebox]  13 palabras con tiempo  Por primera vez, un tribunal internacional d…
+  nota1     47.55 s  [voicebox]  146 palabras con tiempo  La Corte Internacional de Justicia declaró a…
+  cierre     3.04 s  [voicebox]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 56.07 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-19-manana/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-19-manana.json
+  (65.2 s)
+  diapositiva 00-gancho.png · tomas: principal(4.9)
+  diapositiva 01-nota1.png · tomas: principal(4.2) principal(4.2) principal(4.2) principal(4.2) principal(4.2) dato(3.0) principal(4.7) principal(4.7) principal(4.7) principal(4.7) principal(4.7)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 11 tomas
+  video cierre: 1 tomas
+subtitulos: 160 estados · 841 cuadros · 56.1 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-19-manana/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-19-manana.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-19-manana-portada.jpg
+duracion: 56.1 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-19-manana.mp4
+  titulo: La Corte de la ONU declara genocidio contra los rohingya en Myanmar
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/N0fb3N8kbVs
+

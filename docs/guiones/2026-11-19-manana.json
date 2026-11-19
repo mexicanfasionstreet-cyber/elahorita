@@ -1,0 +1,37 @@
+{
+ "origen": "ia",
+ "palabras": 168,
+ "segundos_estimados": 62.2,
+ "historias": [
+  {
+   "titulo": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+   "link": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
+   "seccion": "justicia",
+   "medios": 7,
+   "score": 95.7,
+   "sensible": "",
+   "foto": {},
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "La Corte de la ONU declara genocidio contra los rohingya en Myanmar",
+  "gancho": "Por primera vez, un tribunal internacional declara a un Estado culpable de genocidio.",
+  "gancho_pantalla": "PRIMER GENOCIDIO CONDENADO",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "pantalla": "Corte de la ONU condena a Myanmar por genocidio rohingya",
+    "texto": "La Corte Internacional de Justicia declaró a Myanmar culpable de genocidio contra la minoría rohingya. Es la primera vez que un tribunal internacional encuentra a un Estado responsable de genocidio. El presidente de la corte, Yuji Iwasawa, dijo que Myanmar tuvo la intención de destruir a una parte sustancial de esa población y que destruyó pruebas de forma extensa. El fallo se aprobó con nueve votos contra seis. Todo se remonta a 2017, cuando una ofensiva militar en el estado de Rakhine dejó alrededor de diez mil rohingya muertos a la fuerza y más de setecientos mil huyeron a Bangladés. Myanmar negó los hechos y alegó que respondía a ataques de grupos armados. La corte concluyó que la intención genocida es la única inferencia razonable ante las pruebas. El caso lo llevó Gambia ante la corte, con base en la Convención contra el Genocidio de 1948.",
+    "foto": "Corte Internacional de Justicia",
+    "foto2": "Birmania",
+    "datos": [
+     "Primer Estado condenado por genocidio",
+     "Nueve votos contra seis",
+     "Más de 700 mil huyeron a Bangladés"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

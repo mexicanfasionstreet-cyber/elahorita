@@ -1,0 +1,45 @@
+{
+ "origen": "nota_manual",
+ "tema": "Putin en APEC 2026",
+ "palabras": 143,
+ "segundos_estimados": 53.0,
+ "articulos_leidos": [
+  "https://unomasuno.com.mx/mundo/foto-oficial-de-sheinbaum-junto-a-trump-putin-y-xi-jinping-en-apec-2026/",
+  "https://www.elimparcial.com/mundo/2026/11/18/claudia-sheinbaum-posa-junto-a-trump-putin-y-xi-jinping-en-la-historica-foto-oficial-de-la-apec-2026-en-china/",
+  "https://www.unotv.com/internacional/trump-y-putin-intercambian-palabras-sheinbaum-aparece-en-primera-fila-de-la-foto-oficial-de-apec-2026/"
+ ],
+ "historias": [
+  {
+   "titulo": "Foto oficial de Sheinbaum junto a Trump, Putin y Xi Jinping en APEC 2026",
+   "link": "https://unomasuno.com.mx/mundo/foto-oficial-de-sheinbaum-junto-a-trump-putin-y-xi-jinping-en-apec-2026/",
+   "seccion": "politica",
+   "sensible": "",
+   "medios": 78,
+   "score": 0,
+   "region": "mx",
+   "horas": 8.0,
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg/1280px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Bryan Berlin",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_(3x4_close_up_cropped).jpg",
+    "credito": "Bryan Berlin (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Claudia Sheinbaum"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Sheinbaum posa con Trump, Putin y Xi en la cumbre APEC 2026",
+  "gancho": "La presidenta de México apareció en la foto oficial junto a las tres potencias, y esto es lo que hay detrás.",
+  "notas": [
+   {
+    "kicker": "POLITICA",
+    "texto": "Claudia Sheinbaum apareció en la foto oficial de la cumbre APEC 2026 en Shenzhen, China, junto a Xi Jinping, Donald Trump y Vladimir Putin. La imagen se tomó antes de la cena que ofreció Xi Jinping a los líderes de las economías de Asia-Pacífico. La presidenta llegó a ese acto después de su reunión bilateral con Xi, celebrada el martes 17 de noviembre. La Presidencia de México señaló que la gira busca fortalecer relaciones comerciales y de cooperación con la región. El propio encuentro fue protocolario: la foto no implica acuerdos entre los cuatro gobiernos. En la primera fila también estuvieron Trump y Putin, que se dieron la mano e intercambiaron palabras antes de posar.",
+    "pantalla": "Sheinbaum en la foto oficial del APEC 2026",
+    "foto": "Claudia Sheinbaum"
+   }
+  ],
+  "cierre": "Esto es El Ahorita, nos vemos mañana.",
+  "gancho_pantalla": "SHEINBAUM EN LA FOTO APEC"
+ }
+}

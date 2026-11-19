@@ -1,3 +1,33 @@
-2026-11-18 17:10 Tijuana · franja pendiente: ninguna
-sin novedades
-sin novedades
+2026-11-18 17:15 Tijuana · franja pendiente: ninguna
+[
+ {
+  "accion": "nota_video",
+  "texto": "Putin en APEC 2026"
+ }
+]
+  nota solo en video: Putin en APEC 2026
+  $ Putin en APEC 2026 --solo-video
+  (152.1 s)
+ a Trump, Putin y Xi Jinping en APEC 2026
+   33% · 2 medio(s) · APEC 2026: Un punto de inflexión crucial para Rusia en su relación con Asia.
+   33% · 1 medio(s) · "Espalda con espalda": Xi y Putin exhiben unidad estratégica ante la cumbre tril
+  historia: Foto oficial de Sheinbaum junto a Trump, Putin y Xi Jinping en APEC 2026 (100%, 78 medios)
+  intento 1: 81 palabras · https://unomasuno.com.mx/mundo/foto-oficial-de-sheinbaum-junto-a-trump
+  intento 2: 471 palabras · https://www.elimparcial.com/mundo/2026/11/18/claudia-sheinbaum-posa-ju
+  intento 3: 475 palabras · https://www.unotv.com/internacional/trump-y-putin-intercambian-palabra
+  material: 3 articulo(s), 1027 palabras
+  foto nota 1: Claudia Sheinbaum -> Bryan Berlin (CC BY-SA 4.0), Wikimedia Commons
+
+--- GUION · 143 palabras ~ 53 s · POLITICA · mx ---
+TITULO YOUTUBE: Sheinbaum posa con Trump, Putin y Xi en la cumbre APEC 2026
+GANCHO: La presidenta de México apareció en la foto oficial junto a las tres potencias, y esto es lo que hay detrás.
+
+[POLITICA] Claudia Sheinbaum apareció en la foto oficial de la cumbre APEC 2026 en Shenzhen, China, junto a Xi Jinping, Donald Trump y Vladimir Putin. La imagen se tomó antes de la cena que ofreció Xi Jinping a los líderes de las economías de Asia-Pacífico. La presidenta llegó a ese acto después de su reunión bilateral con Xi, celebrada el martes 17 de noviembre. La Presidencia de México señaló que la gira busca fortalecer relaciones comerciales y de cooperación con la región. El propio encuentro fue protocolario: la foto no implica acuerdos entre los cuatro gobiernos. En la primera fila también estuvieron Trump y Putin, que se dieron la mano e intercambiaron palabras antes de posar.
+
+CIERRE: Esto es El Ahorita, nos vemos mañana.
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-1716-nota.json
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-1716-nota.mp4
+  solo video: Sheinbaum posa con Trump, Putin y Xi en la cumbre APEC 2026
+

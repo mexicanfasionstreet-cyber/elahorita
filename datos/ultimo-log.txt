@@ -1,3 +1,31 @@
-2026-11-19 08:50 Tijuana · franja pendiente: ninguna
-sin novedades
-sin novedades
+2026-11-19 08:55 Tijuana · franja pendiente: ninguna
+[
+ {
+  "accion": "nota_video",
+  "texto": "Anthropic su salida a bosla"
+ }
+]
+  nota solo en video: Anthropic su salida a bosla
+  $ Anthropic su salida a bosla --solo-video
+  (190.3 s)
+tento 1: 0 palabras · https://elpais.com/economia/2026-11-19/anthropic-se-estrena-con-fuerte
+  intento 2: 511 palabras · https://www.eleconomista.com.mx/mercados/anthropic-logro-mayor-salida-
+  intento 3: 21 palabras · https://forbes.com.mx/salida-a-bolsa-de-anthropic-los-futuros-del-nasd
+  intento 4: 502 palabras · https://www.expansion.com/mercados/2026/11/19/ia-estrena-wall-street-a
+  material: 3 articulo(s), 1034 palabras
+  foto nota 1: Anthropic -> HaeB (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 1: Nasdaq -> giggel (CC BY 3.0), Wikimedia Commons
+
+--- GUION · 185 palabras ~ 69 s · ECONOMIA · mundo ---
+TITULO YOUTUBE: Anthropic debuta en Bolsa con la mayor salida de la historia
+GANCHO: La empresa de Claude ya cotiza en Wall Street y rompió el récord que tenía SpaceX.
+
+[ECONOMÍA] Anthropic, la empresa detrás del modelo Claude, ya cotiza en el Nasdaq bajo el símbolo ANT. Fijó su precio de salida en 83 dólares por acción, por encima del rango de entre 70 y 78 que se anticipaba. Con eso recaudó 81,300 millones de dólares y se quedó con el título de la mayor salida a Bolsa de la historia, superando a SpaceX. La operación valora a la compañía en aproximadamente 1.5 billones de dólares, lo que la metería en el top 10 de las más valiosas del mundo. Además, está recaudando 26,000 millones mediante una colocación privada al mismo precio de la OPI. La dirige Dario Amodei como CEO, con su hermana Daniela como presidenta. Antes del toque de campana, el consejero delegado dijo que la llegada de la inteligencia artificial es uno de los momentos fundamentales en la historia de la humanidad. El mercado ahora espera que OpenAI, su rival más cercano, busque salir a Bolsa en 2027.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-19-0855-nota.json
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-19-0855-nota.mp4
+  solo video: Anthropic debuta en Bolsa con la mayor salida de la historia
+

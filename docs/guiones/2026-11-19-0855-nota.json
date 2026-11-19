@@ -1,0 +1,59 @@
+{
+ "origen": "nota_manual",
+ "tema": "Anthropic su salida a bosla",
+ "palabras": 185,
+ "segundos_estimados": 68.5,
+ "articulos_leidos": [
+  "https://www.eleconomista.com.mx/mercados/anthropic-logro-mayor-salida-bolsa-20261118-844695.html",
+  "https://forbes.com.mx/salida-a-bolsa-de-anthropic-los-futuros-del-nasdaq-suben-un-2-ante-un-debut-bursatil-historico/",
+  "https://www.expansion.com/mercados/2026/11/19/ia-estrena-wall-street-anthropic-protagoniza-mayor-salida-bolsa-historia.html"
+ ],
+ "historias": [
+  {
+   "titulo": "Anthropic se estrena con fuertes subidas en la mayor salida a Bolsa de la historia",
+   "link": "https://www.eleconomista.com.mx/mercados/anthropic-logro-mayor-salida-bolsa-20261118-844695.html",
+   "seccion": "economia",
+   "sensible": "",
+   "medios": 70,
+   "score": 0,
+   "region": "mundo",
+   "horas": 1.7,
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Slack_offices%2C_Howard_Street%2C_San_Francisco_%28viewed_from_the_south-west%2C_January_2020%29.jpg/1280px-Slack_offices%2C_Howard_Street%2C_San_Francisco_%28viewed_from_the_south-west%2C_January_2020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "HaeB",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Slack_offices,_Howard_Street,_San_Francisco_(viewed_from_the_south-west,_January_2020).jpg",
+    "credito": "HaeB (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Anthropic"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg/1280px-NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 3.0",
+    "autor": "giggel",
+    "pagina": "https://commons.wikimedia.org/wiki/File:NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_(2).jpg",
+    "credito": "giggel (CC BY 3.0), Wikimedia Commons",
+    "termino": "Nasdaq"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Anthropic debuta en Bolsa con la mayor salida de la historia",
+  "gancho": "La empresa de Claude ya cotiza en Wall Street y rompió el récord que tenía SpaceX.",
+  "gancho_pantalla": "ANTHROPIC ROMPE RÉCORD",
+  "notas": [
+   {
+    "kicker": "ECONOMÍA",
+    "pantalla": "Anthropic debuta en Bolsa a 83 dólares",
+    "texto": "Anthropic, la empresa detrás del modelo Claude, ya cotiza en el Nasdaq bajo el símbolo ANT. Fijó su precio de salida en 83 dólares por acción, por encima del rango de entre 70 y 78 que se anticipaba. Con eso recaudó 81,300 millones de dólares y se quedó con el título de la mayor salida a Bolsa de la historia, superando a SpaceX. La operación valora a la compañía en aproximadamente 1.5 billones de dólares, lo que la metería en el top 10 de las más valiosas del mundo. Además, está recaudando 26,000 millones mediante una colocación privada al mismo precio de la OPI. La dirige Dario Amodei como CEO, con su hermana Daniela como presidenta. Antes del toque de campana, el consejero delegado dijo que la llegada de la inteligencia artificial es uno de los momentos fundamentales en la historia de la humanidad. El mercado ahora espera que OpenAI, su rival más cercano, busque salir a Bolsa en 2027.",
+    "foto": "Anthropic",
+    "foto2": "Nasdaq",
+    "datos": [
+     "83 dólares por acción",
+     "81,300 millones recaudados",
+     "1.5 billones de valoración"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

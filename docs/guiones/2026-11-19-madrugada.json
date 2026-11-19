@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 192,
+ "segundos_estimados": 71.1,
+ "historias": [
+  {
+   "titulo": "El Parlamento de Dinamarca ratifica por unanimidad el acuerdo con Estados Unidos por Groenlandia",
+   "link": "https://elpais.com/internacional/2026-11-19/el-parlamento-de-dinamarca-ratifica-por-unanimidad-el-acuerdo-con-estados-unidos-por-groenlandia.html",
+   "seccion": "mundo",
+   "medios": 3,
+   "score": 77.0,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Christiansborg_Folketingssalen_20120420_0222F_%288188480571%29.jpg/1280px-Christiansborg_Folketingssalen_20120420_0222F_%288188480571%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 2.0",
+    "autor": "News Oresund",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Christiansborg_Folketingssalen_20120420_0222F_(8188480571).jpg",
+    "credito": "News Oresund (CC BY 2.0), Wikimedia Commons",
+    "termino": "Folketing"
+   },
+   "foto2": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Greenland_42.74746W_71.57394N.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "Public domain",
+    "autor": "NASA / Ames Research Center",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Greenland_42.74746W_71.57394N.jpg",
+    "credito": "NASA / Ames Research Center (Public domain), Wikimedia Commons",
+    "termino": "Groenlandia"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Dinamarca ratifica por unanimidad el acuerdo con EU por Groenlandia",
+  "gancho": "Dinamarca y Estados Unidos cierran el pleito por Groenlandia con un pacto militar que amplía la presencia estadounidense en la isla y reafirma la soberanía danesa.",
+  "gancho_pantalla": "GROENLANDIA Y EU HOY",
+  "notas": [
+   {
+    "kicker": "MUNDO",
+    "pantalla": "Dinamarca aprueba por unanimidad el pacto por Groenlandia",
+    "texto": "El Parlamento de Dinamarca ratificó por unanimidad el acuerdo de seguridad que firmó en septiembre con el presidente de Estados Unidos, Donald Trump, sobre Groenlandia. Lo respaldaron 109 diputados, sin ningún voto en contra. El pacto busca cerrar el enfrentamiento sobre el futuro de la isla ártica que sacudió las relaciones transatlánticas, después de que Trump amenazara repetidamente con hacerse con su control. Groenlandia es un territorio autónomo danés con 57.000 habitantes. El acuerdo ya lo había aprobado hace dos semanas el Parlamento groenlandés, el Inatsisartut. Ahora entrará en vigor cuando la cancillería danesa informe a Washington con una nota diplomática, porque no pasa por el Congreso estadounidense. El documento amplía un acuerdo de 1951 y da a Estados Unidos presencia militar indefinida en la isla, incluido un sistema antimisiles llamado Cúpula Dorada. También impide inversiones de países rivales en sectores estratégicos y reafirma la soberanía danesa y el derecho de los groenlandeses a decidir su futuro.",
+    "foto": "Folketing",
+    "foto2": "Groenlandia",
+    "datos": [
+     "109 diputados a favor",
+     "57.000 habitantes en la isla",
+     "Amplía un acuerdo de 1951"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

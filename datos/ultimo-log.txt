@@ -1,3 +1,75 @@
-2026-11-18 19:55 Tijuana · franja pendiente: ninguna
+2026-11-18 20:01 Tijuana · franja pendiente: noche
 sin novedades
-sin novedades
+corriendo la franja noche
+  $ --days 2
+  (17.1 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 45
+  ! Aristegui: HTTPError: HTTP Error 429: Too Many Requests
+
+1201 noticias · 41/42 fuentes · 1 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+443 nuevas, 4172 en 30 dias)
+
+  secciones revisadas con IA: 7 cambio(s)
+  163 historias desde 18 15:00
+    77.3 peso  14.0 · Bloqueos en Veracruz: queman vehículos y colocan ponchallantas en acce
+    75.9 peso  13.5 · Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero
+    75.6 peso  12.0 · Hegseth unveils new US-Venezuela military deal
+    75.2 peso  12.0 · PAN interpone demanda por falta de convocatoria para renovar presidenc
+  $ --franja noche --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-noche.json --link https://24-horas.mx/estados/bloqueos-quema-autos-poza-rica-suspenden-clases-veracruz/ --previo  --link https://lopezdoriga.com/nacional/asesinan-aspirante-morena-xochistlahuaca-guerrero/ --previo  --reserva https://www.aljazeera.com/video/newsfeed/2026/11/19/hegseth-unveils-new-us-venezuela-military-deal?traffic_source=rss --reserva https://24-horas.mx/mexico/pan-interpone-demanda-por-falta-de-convocatoria-para-renovar-presidencia-del-ine/
+  (7.4 s)
+  material nota 1: 0 palabras de https://24-horas.mx/estados/bloqueos-quema-autos-poza-rica-s
+  material nota 2: 207 palabras de https://lopezdoriga.com/nacional/asesinan-aspirante-morena-x
+aviso: la nota 1 tiene poco material (36 palabras); se quita
+--- GUION (ia) · 1 nota(s) · 119 palabras ~ 44 s ---
+
+TITULO YOUTUBE: Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero
+GANCHO: Un docente que buscaba coordinar Morena en su municipio fue atacado cuando volvía de una asamblea.
+
+[SEGURIDAD] Guerrero Cándido Concepción, aspirante a la Coordinación de Morena en Xochistlahuaca, fue asesinado la noche del 17 de noviembre. Viajaba en una camioneta junto a Tranquilino López Merino, entre Arroyo Grande y Junta de Arroyo Grande, cuando un vehículo los interceptó y les dispararon. Ambos murieron. Guerrero Cándido era docente, abogado comunitario y gestor social de la Costa Chica, y uno de los fundadores de Morena en el municipio. Esa noche regresaba de encabezar una asamblea comunitaria en Arroyo Grande. El Ayuntamiento lamentó el doble homicidio y la Fiscalía de Guerrero abrió la investigación.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero (4 medios)
+  foto nota 1: Xochistlahuaca -> AlejandroLinaresGarcia (CC BY-SA 3.0), Wikimedia Commons
+  foto2 nota 1: Guerrero -> Comisión Mexicana de Filmaciones from México D. F., México (CC BY-SA 2.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-noche.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-noche.json
+  (85.7 s)
+guion 2026-11-18-noche.json · 119 palabras · proveedor voicebox
+
+    whisper: 16 oidas, 100% de 16 empatadas
+    whisper: 94 oidas, 100% de 94 empatadas
+    whisper: 9 oidas, 100% de 9 empatadas
+  gancho     5.20 s  [voicebox]  16 palabras con tiempo  Un docente que buscaba coordinar Morena en s…
+  nota1     34.48 s  [voicebox]  94 palabras con tiempo  Guerrero Cándido Concepción, aspirante a la …
+  cierre     3.36 s  [voicebox]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 43.88 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-18-noche/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-18-noche.json
+  (54.1 s)
+  diapositiva 00-gancho.png · tomas: principal(5.5)
+  diapositiva 01-nota1.png · tomas: principal(3.1) limpia(3.1) dato(3.0) foto2(4.2) principal(4.2) limpia(4.2) foto2(4.2) principal(4.2) limpia(4.2)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 9 tomas
+  video cierre: 1 tomas
+subtitulos: 111 estados · 658 cuadros · 43.9 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-18-noche/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-noche.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-noche-portada.jpg
+duracion: 43.8 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-18-noche.mp4
+  titulo: Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/lnTm_lDxER4
+

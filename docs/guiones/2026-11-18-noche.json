@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 119,
+ "segundos_estimados": 44.1,
+ "historias": [
+  {
+   "titulo": "Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero",
+   "link": "https://lopezdoriga.com/nacional/asesinan-aspirante-morena-xochistlahuaca-guerrero/",
+   "seccion": "seguridad",
+   "medios": 4,
+   "score": 75.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/XochistlahuacaParish01.JPG/1280px-XochistlahuacaParish01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "AlejandroLinaresGarcia",
+    "pagina": "https://commons.wikimedia.org/wiki/File:XochistlahuacaParish01.JPG",
+    "credito": "AlejandroLinaresGarcia (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Xochistlahuaca"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Zona_Arqueol%C3%B3gica_Tehuacalco%2C_Chilpancingo%2C_Guerrero-_Tehuacalco_Arqueologic_Zone%2C_Guerrero_%2824832596181%29.jpg/1280px-Zona_Arqueol%C3%B3gica_Tehuacalco%2C_Chilpancingo%2C_Guerrero-_Tehuacalco_Arqueologic_Zone%2C_Guerrero_%2824832596181%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Comisión Mexicana de Filmaciones from México D. F., México",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Zona_Arqueol%C3%B3gica_Tehuacalco,_Chilpancingo,_Guerrero-_Tehuacalco_Arqueologic_Zone,_Guerrero_(24832596181).jpg",
+    "credito": "Comisión Mexicana de Filmaciones from México D. F., México (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Guerrero"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero",
+  "gancho": "Un docente que buscaba coordinar Morena en su municipio fue atacado cuando volvía de una asamblea.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "Guerrero Cándido Concepción, aspirante a la Coordinación de Morena en Xochistlahuaca, fue asesinado la noche del 17 de noviembre. Viajaba en una camioneta junto a Tranquilino López Merino, entre Arroyo Grande y Junta de Arroyo Grande, cuando un vehículo los interceptó y les dispararon. Ambos murieron. Guerrero Cándido era docente, abogado comunitario y gestor social de la Costa Chica, y uno de los fundadores de Morena en el municipio. Esa noche regresaba de encabezar una asamblea comunitaria en Arroyo Grande. El Ayuntamiento lamentó el doble homicidio y la Fiscalía de Guerrero abrió la investigación.",
+    "pantalla": "Asesinan a aspirante de Morena en Xochistlahuaca",
+    "foto": "Xochistlahuaca",
+    "foto2": "Guerrero",
+    "datos": [
+     "Noche del 17 de noviembre",
+     "Dos muertos en el ataque",
+     "Fundador de Morena local"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "ASPIRANTE DE MORENA ASESINADO"
+ }
+}

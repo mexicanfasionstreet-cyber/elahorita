@@ -46,3 +46,42 @@ def test_video_con_voz_clonada_y_subtitulos(tmp_path, monkeypatch, voicebox, whi
     from PIL import Image
     banda = Image.open(cuadro).convert("L").crop((0, 1300, 1080, 1560))
     assert banda.getextrema()[1] > 200          # hay texto blanco de subtitulos
+
+
+def test_nota_larga_con_tomas_dato_y_barra(tmp_path, monkeypatch, voicebox, whisper_falso, tg):
+    largo = tmp_path / "largo.wav"          # 12 s por segmento
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=frequency=330:duration=12",
+                    "-ar", "24000", str(largo)], check=True)
+    voicebox("ok", audio=largo)
+    for mod, attr, valor in [(voz, "BUILD", tmp_path / "build"), (capsula, "BUILD", tmp_path / "build"),
+                             (capsula, "SALIDA", tmp_path / "videos"), (subtitulos, "RAIZ", tmp_path)]:
+        monkeypatch.setattr(mod, attr, valor)
+    g = tmp_path / "tomas.json"
+    g.write_text(json.dumps({"historias": [{"link": "https://elpais.com/x", "foto": {}}], "guion": {
+        "gancho": "Los democratas ya tienen candidato.", "gancho_pantalla": "JEFFRIES VA",
+        "notas": [{"kicker": "MUNDO", "pantalla": "Democratas nominan a Jeffries",
+                   "texto": ("Hakeem Jeffries fue elegido por los democratas para dirigir la Camara. "
+                             "Lleva 12 años en el Congreso y seria el primer afroamericano en el puesto. "
+                             "La votacion final sera en enero."),
+                   "datos": ["12 años en el Congreso", "999 votos en contra"]}],
+        "cierre": "Esto es El Ahorita."}}, ensure_ascii=False))
+    monkeypatch.setattr(sys, "argv", ["voz.py", "--guion", str(g), "--proveedor", "voicebox"])
+    voz.main()
+    monkeypatch.setattr(sys, "argv", ["capsula.py", "--guion", str(g), "--sin-musica"])
+    capsula.main()
+
+    build = tmp_path / "build" / "tomas"
+    trozos = sorted(build.glob("01-nota1-*.mp4"))
+    assert len(trozos) >= 3                                     # la nota ya no es una sola imagen
+    tarjetas = list((build / "slides").glob("*-dato.png"))
+    assert len(tarjetas) == 1                                   # el dato que no se dice no sale
+
+    video = tmp_path / "videos" / "tomas.mp4"
+    total = voz.duracion(video)
+    cuadro = tmp_path / "mitad.png"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(total / 2), "-i", str(video),
+                    "-frames:v", "1", str(cuadro)], check=True)
+    from PIL import Image
+    fila = Image.open(cuadro).convert("RGB").crop((0, 3, 1080, 4))
+    rojos = sum(1 for r, g_, b in fila.getdata() if r > 170 and g_ < 80 and b < 80)
+    assert 0.35 < rojos / 1080 < 0.65                           # barra de progreso a la mitad

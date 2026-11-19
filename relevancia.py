@@ -23,6 +23,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+import config
 from aggregate import CAT_BOOST, entidades, norm
 
 RAIZ = Path(__file__).resolve().parent
@@ -45,7 +46,7 @@ def _horas(pub):
         return 48.0
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
-    return max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600)
+    return max(0.0, (config.ahora().astimezone(timezone.utc) - dt).total_seconds() / 3600)
 
 
 def _pesos_por_medio(items):

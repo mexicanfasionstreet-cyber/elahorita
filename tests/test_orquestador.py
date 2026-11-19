@@ -161,7 +161,8 @@ def test_caso_especial_sin_respuesta_publica_la_mejor(especial, videos):
 
 def test_caso_especial_eliges_tu(especial, videos, tg):
     estado, _ = especial
-    tg.toca(f"pub:{estado['pendiente']['lote']}:n2")
+    n = 1 + [o["link"] for o in estado["pendiente"]["opciones"]].index("y/2")
+    tg.toca(f"pub:{estado['pendiente']['lote']}:n{n}")
     orq.atender_telegram(estado)
     assert videos[-1][0] == ["y/2"] and "elegiste" in estado["franjas"][CLAVE]
 

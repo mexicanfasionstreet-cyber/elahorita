@@ -122,6 +122,17 @@ Getty, EFE… y una solicitud de retiro es un strike para el canal y la cuenta).
   pide atribución, pon el texto en la variable de Actions `MUSICA_CREDITO` y se agrega
   a la descripción.
 
+### Ritmo del video
+
+Cada nota ya no es una sola imagen: `tomas.py` la parte en tomas de 3 a 5 s.
+
+- **principal**: la diapositiva con el titular (zoom que entra o sale).
+- **limpia**: la misma foto sin caja, con paneo lateral.
+- **foto2**: la segunda foto libre de la nota (`"foto2"` del guion: lugar, institución).
+- **dato**: tarjeta con la cifra o el hecho clave (`"datos"` del guion), en el momento
+  exacto en que la voz lo dice. Si el dato no se narra, no sale.
+- El gancho entra con un golpe de zoom y arriba corre una barra de progreso roja.
+
 ### Alarma (vigilante)
 
 `.github/workflows/vigilante.yml` revisa cada 30 min, con el cron de GitHub (independiente

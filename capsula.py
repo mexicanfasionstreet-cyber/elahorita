@@ -27,6 +27,7 @@ sys.path.insert(0, str(RAIZ))
 sys.path.insert(0, str(RAIZ.parent / ".deps"))
 
 import config  # noqa: E402
+import tomas as tomas_mod  # noqa: E402
 from PIL import Image, ImageDraw, ImageFilter, ImageFont  # noqa: E402
 
 BUILD = RAIZ / "build"
@@ -67,6 +68,7 @@ TAGS = {
 OVERLAY = MARCA_DIR / "Shorts" / "overlay-marca-de-agua.png"
 CIERRE = MARCA_DIR / "Shorts" / "cierre.png"
 ALTO_TAG = 72
+ALTO_BARRA = 10             # barra de progreso roja, arriba
 ALPHA_CAJA = 200           # opacidad de la caja del titular (0-255); 200 = se ve la foto
 LINEA_ROJA = "ultima"      # "ultima" = ultima linea en rojo; "segunda" = la de en medio
 
@@ -278,9 +280,10 @@ def oscurecer(im, desde=0.34):
 
 
 def diapositiva(fondo, kicker, titular, fuente_txt="", es_mexico=True,
-                horas=99.0, medios=1):
+                horas=99.0, medios=1, con_caja=True):
     """Una diapositiva segun el manual: foto a sangre, marca arriba a la izquierda,
-    etiqueta de seccion, caja negra con el titular (una linea en rojo) y la fuente."""
+    etiqueta de seccion, caja negra con el titular (una linea en rojo) y la fuente.
+    Sin caja (con_caja=False) es la toma "limpia": la foto respira entre titulares."""
     im = oscurecer(fondo.copy())
     d = ImageDraw.Draw(im)
 
@@ -301,8 +304,13 @@ def diapositiva(fondo, kicker, titular, fuente_txt="", es_mexico=True,
                     fill=fondo)
         d.text((MARGEN_X + 22, y_etq + 12), txt_etq, font=f_etq, fill=texto)
 
+    if not con_caja:
+        titular = ""
+
     # caja del titular
     ancho_caja = ANCHO - 2 * MARGEN_X
+    if not titular:
+        return _sello(im)
     f_tit, lineas, tam = ajustar_titular(titular.upper(), ancho_caja - 68, 300)
     alto_linea = int(tam * 1.08)
     alto_caja = 44 + len(lineas) * alto_linea + (82 if fuente_txt else 22)
@@ -329,14 +337,47 @@ def diapositiva(fondo, kicker, titular, fuente_txt="", es_mexico=True,
         d.text((MARGEN_X + 34, y + 18), f"Fuente: {fuente_txt}",
                font=fuente(F_SUB, 30, 600), fill=GRIS)
 
-    # marca de agua de la marca, encima de todo
+    return _sello(im)
+
+
+def _sello(im):
+    """Marca de agua de la marca, encima de todo."""
     if OVERLAY.exists():
-        im = pegar_png(im, OVERLAY, (0, 0))
-    else:
-        d2 = ImageDraw.Draw(im)
-        d2.ellipse([MARGEN_X, 138, MARGEN_X + 22, 160], fill=ROJO)
-        d2.text((MARGEN_X + 34, 128), SELLO, font=fuente(F_TITULAR, 46), fill=BLANCO)
+        return pegar_png(im, OVERLAY, (0, 0))
+    d2 = ImageDraw.Draw(im)
+    d2.ellipse([MARGEN_X, 138, MARGEN_X + 22, 160], fill=ROJO)
+    d2.text((MARGEN_X + 34, 128), SELLO, font=fuente(F_TITULAR, 46), fill=BLANCO)
     return im
+
+
+def tarjeta_dato(fondo, dato):
+    """La cifra o el hecho clave en grande, sobre la foto desenfocada y oscura.
+    Va entre la interfaz de arriba y la banda de subtitulos."""
+    from PIL import ImageEnhance
+    im = fondo.copy().filter(ImageFilter.GaussianBlur(26))
+    im = ImageEnhance.Brightness(im).enhance(0.38)
+    d = ImageDraw.Draw(im)
+    texto = re.sub(r"\s+", " ", str(dato or "")).strip().rstrip(".").upper()
+    ancho_max = ANCHO - 2 * MARGEN_X - 20
+    tam = 200
+    while tam > 90:
+        fnt = fuente(F_TITULAR, tam)
+        lineas = envolver(texto, fnt, ancho_max, max_lineas=3)
+        huerfana = len(lineas) > 1 and any(len(x) <= 3 for x in lineas)
+        if lineas and all(fnt.getlength(x) <= ancho_max for x in lineas) \
+                and " ".join(lineas) == texto and not huerfana:
+            break
+        tam -= 10
+    alto_linea = int(tam * 1.05)
+    alto_txt = len(lineas) * alto_linea
+    y = int((TOPE_Y + 120 + Y_BANDA_SUBS - 60) / 2 - alto_txt / 2)
+    d.rectangle([MARGEN_X, y - 54, MARGEN_X + 150, y - 38], fill=ROJO)   # acento
+    roja = next((i for i, x in enumerate(lineas) if re.search(r"\d", x)),
+                len(lineas) - 1 if len(lineas) > 1 else -1)
+    for i, linea in enumerate(lineas):
+        d.text((MARGEN_X, y), linea, font=fnt, fill=ROJO if i == roja else BLANCO)
+        y += alto_linea
+    return _sello(im)
 
 
 # ------------------------------------------------------------------ montaje
@@ -352,7 +393,7 @@ def datos_por_link():
     for i in items:
         try:
             dt = datetime.fromisoformat(str(i.get("published", "")).replace("Z", "+00:00"))
-            horas = max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600)
+            horas = max(0.0, (config.ahora().astimezone(timezone.utc) - dt).total_seconds() / 3600)
         except Exception:  # noqa: BLE001
             horas = 99.0
         salida[i.get("link")] = {
@@ -419,8 +460,11 @@ def construir(args):
         return nombre.title() if nombre else ""
 
     rutas = []
+    guion_notas = guion.get("notas") or []
+    planes = []                      # (segmento, [tomas con su png])
     for i, s in enumerate(segs):
         destino = slides_dir / f"{i:02d}-{s['id']}.png"
+        dur = round(float(s["dur"]) + SILENCIO, 3)
         if s["id"] == "cierre":
             # la tarjeta de cierre va tal cual, sin etiqueta ni caja de titular
             if CIERRE.exists():
@@ -429,20 +473,27 @@ def construir(args):
                 im = diapositiva(fondo_diseno(), s["kicker"], textos.get("cierre", ""))
             im.save(destino, "PNG")
             rutas.append(destino)
+            planes.append((s, [{"tipo": "principal", "t0": 0.0, "t1": dur,
+                                "mov": "acerca", "png": destino}]))
             print(f"  diapositiva {destino.name} (cierre de marca)")
             continue
         kicker_fondo = segs[1]["kicker"] if s["id"] == "gancho" and len(segs) > 1 else s["kicker"]
-        base = foto(foto_de(s["id"]), slides_dir / f"{i:02d}-fuente.img", kicker_fondo)
+        url = foto_de(s["id"])
+        base = foto(url, slides_dir / f"{i:02d}-fuente.img", kicker_fondo)
         fuente_txt, es_mx, horas, medios = "", True, 99.0, 1
         idx = int(s["id"][4:]) - 1 if s["id"].startswith("nota") else 0
+        url2, datos_nota = "", []
         if 0 <= idx < len(historias):
             h = historias[idx]
             info = por_link.get(h.get("link"), {})
             if s["id"].startswith("nota"):
                 fuente_txt = info.get("medio") or h.get("medio") or medio_de(h.get("link"))
+                url2 = (h.get("foto2") or {}).get("url", "")
             es_mx = (h.get("region") or info.get("region", "mx")) == "mx"
             horas = float(h.get("horas", info.get("horas", 99.0)))
             medios = int(h.get("medios", info.get("medios", 1)))
+        if s["id"].startswith("nota") and 0 <= idx < len(guion_notas):
+            datos_nota = [d for d in (guion_notas[idx].get("datos") or []) if str(d).strip()]
         kicker = s["kicker"]
         if s["id"] == "gancho" and len(segs) > 1:
             kicker = segs[1]["kicker"]
@@ -450,28 +501,54 @@ def construir(args):
                          es_mx, horas, medios)
         im.save(destino, "PNG")
         rutas.append(destino)
-        print(f"  diapositiva {destino.name}")
+
+        base2 = None
+        if url2:
+            ruta2 = slides_dir / f"{i:02d}-fuente2.img"
+            if descargar(url2, ruta2):
+                try:
+                    base2 = imresize_cover(Image.open(ruta2).convert("RGB"), (ANCHO, ALTO))
+                except Exception:  # noqa: BLE001
+                    base2 = None
+        plan = tomas_mod.planear(dur, datos_nota, s.get("palabras") or [],
+                                 hay_foto=bool(url), hay_foto2=base2 is not None,
+                                 es_gancho=s["id"] == "gancho")
+        for k, tm in enumerate(plan):
+            if tm["tipo"] == "principal":
+                tm["png"] = destino
+                continue
+            ruta_t = slides_dir / f"{i:02d}-{s['id']}-{k:02d}-{tm['tipo']}.png"
+            if tm["tipo"] == "dato":
+                tarjeta_dato(base2 or base, tm["dato"]).save(ruta_t, "PNG")
+            else:
+                fondo_t = base2 if tm["tipo"] == "foto2" else base
+                diapositiva(fondo_t, kicker, "", "", es_mx, horas, medios,
+                            con_caja=False).save(ruta_t, "PNG")
+            tm["png"] = ruta_t
+        planes.append((s, plan))
+        resumen = " ".join(f"{t['tipo']}({t['t1'] - t['t0']:.1f})" for t in plan)
+        print(f"  diapositiva {destino.name} · tomas: {resumen}")
 
     if args.solo_diapositivas:
         print(f"\ndiapositivas en {slides_dir}")
         return 0
 
-    # video mudo: zoom lento por segmento y concatenado
+    # video mudo: cada toma con su movimiento de camara, y todo concatenado
     trozos = []
-    for i, (s, png) in enumerate(zip(segs, rutas)):
-        dur = round(float(s["dur"]) + SILENCIO, 3)
-        trozo = carpeta / f"{i:02d}-{s['id']}.mp4"
-        vf = (f"scale={ANCHO * 2}:{ALTO * 2}:force_original_aspect_ratio=increase,"
-              f"crop={ANCHO * 2}:{ALTO * 2},"
-              f"zoompan=z='min(1.0+0.00035*on,1.12)':x='iw/2-(iw/zoom/2)'"
-              f":y='ih/2-(ih/zoom/2)':d=1:s={ANCHO}x{ALTO}:fps={FPS},"
-              f"format=yuv420p")
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-loop", "1",
-                        "-framerate", str(FPS), "-t", str(dur),
-                        "-i", str(png), "-vf", vf, "-c:v", "libx264", "-preset", "veryfast",
-                        "-crf", "22", "-r", str(FPS), str(trozo)], check=True)
-        trozos.append(trozo)
-        print(f"  video {trozo.name} ({dur} s)")
+    for i, (s, plan) in enumerate(planes):
+        for k, tm in enumerate(plan):
+            dur = round(tm["t1"] - tm["t0"], 3)
+            trozo = carpeta / f"{i:02d}-{s['id']}-{k:02d}.mp4"
+            frames = max(1, round(dur * FPS))
+            vf = tomas_mod.zoompan(tm["mov"], frames, ANCHO, ALTO, FPS)
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-loop", "1",
+                            "-framerate", str(FPS), "-t", str(dur),
+                            "-i", str(tm["png"]), "-vf", vf, "-c:v", "libx264",
+                            "-preset", "veryfast", "-crf", "22", "-r", str(FPS),
+                            str(trozo)], check=True)
+            trozos.append(trozo)
+        print(f"  video {s['id']}: {len(plan)} tomas")
+    dur_mudo = sum(round(t["t1"] - t["t0"], 3) for _, plan in planes for t in plan)
 
     lista = carpeta / "trozos.txt"
     lista.write_text("".join(f"file '{t.as_posix()}'\n" for t in trozos), encoding="utf-8")
@@ -505,10 +582,17 @@ def construir(args):
         entradas += ["-i", str(subs)]
         siguiente += 1
 
-    filtros, mapas = [], ["-map", "0:v"]
+    filtros = []
+    capa = "0:v"
     if idx_subs is not None:
-        filtros.append(f"[0:v][{idx_subs}:v]overlay=0:{Y_BANDA_SUBS}:format=auto[v]")
-        mapas = ["-map", "[v]"]
+        filtros.append(f"[0:v][{idx_subs}:v]overlay=0:{Y_BANDA_SUBS}:format=auto[vs]")
+        capa = "vs"
+    # barra de progreso roja arriba: avanza con el video
+    filtros.append(f"color=c=0x{ROJO[0]:02X}{ROJO[1]:02X}{ROJO[2]:02X}:s={ANCHO}x{ALTO_BARRA}"
+                   f":r={FPS}:d={dur_mudo:.3f}[barra]")
+    filtros.append(f"[{capa}][barra]overlay=x='-w+w*t/{max(dur_mudo, 0.1):.3f}':y=0"
+                   f":eof_action=pass[v]")
+    mapas = ["-map", "[v]"]
     if idx_musica is not None:
         filtros.append(f"[{idx_musica}:a]volume=0.16,afade=t=in:st=0:d=0.6[m]")
         filtros.append("[1:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]")
@@ -520,10 +604,7 @@ def construir(args):
     if filtros:
         orden += ["-filter_complex", ";".join(filtros)]
     orden += mapas
-    if idx_subs is not None:
-        orden += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "22"]
-    else:
-        orden += ["-c:v", "copy"]
+    orden += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "22"]
     orden += ["-c:a", "aac", "-b:a", "192k", "-shortest", str(salida)]
     subprocess.run(orden, check=True)
 

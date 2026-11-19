@@ -113,9 +113,10 @@ def textos(video, guion_path=None):
             partes.append("Fuentes: " + " · ".join(enlaces[:3]))
         creditos = []
         for h in datos.get("historias", []):
-            c = (h.get("foto") or {}).get("credito")
-            if c and c not in creditos:
-                creditos.append(c)
+            for campo in ("foto", "foto2"):
+                c = (h.get(campo) or {}).get("credito")
+                if c and c not in creditos:
+                    creditos.append(c)
         if creditos:
             partes.append("Fotos: " + " · ".join(creditos))
         if os.environ.get("MUSICA_CREDITO"):

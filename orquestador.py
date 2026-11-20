@@ -137,7 +137,7 @@ def subir_a_youtube(video, guion_path):
 
 
 def armar_video(links=(), previos=(), nombre="elegida", pie="El Ahorita",
-                origen="elegida", prueba=False, reservas=()):
+                origen="elegida", prueba=False, reservas=(), ya_salio=None):
     """Guion -> voz -> video -> YouTube -> chat para 1 o 2 historias del ranking.
 
     Devuelve True si el video quedo hecho (y subido, salvo en prueba).
@@ -168,15 +168,30 @@ def armar_video(links=(), previos=(), nombre="elegida", pie="El Ahorita",
     if not video.exists():
         return False
     if prueba:
-        bot.mandar_video(video, pie + "\n(prueba: no se sube a YouTube)")
+        _mandar_video_o_enlace(video, pie + "\n(prueba: no se sube a YouTube)")
         return True
+    if ya_salio and ya_salio():
+        return "ya"
     enlace = subir_a_youtube(video, destino)
     if enlace:
         pie += f"\n{enlace}"
         datos = json.loads(destino.read_text(encoding="utf-8"))
         franjas.registrar_publicada(datos.get("historias", []), origen, enlace)
-    bot.mandar_video(video, pie)
+    # si Telegram falla aqui, el video YA esta en YouTube: no se puede tumbar la
+    # corrida, o la franja quedaria abierta y se subiria otra vez
+    _mandar_video_o_enlace(video, pie)
     return bool(enlace) or not (config.YT_CLIENT_ID and config.YT_REFRESH)
+
+
+def _mandar_video_o_enlace(video, pie):
+    try:
+        bot.mandar_video(video, pie)
+    except Exception as e:  # noqa: BLE001
+        print(f"  aviso: Telegram no acepto el video ({type(e).__name__}: {e}); va el texto")
+        try:
+            bot.mandar(bot.esc(pie) + "\n(el video no se pudo mandar al chat)")
+        except Exception:  # noqa: BLE001
+            pass
 
 
 def nota_a_mano(texto, estado):
@@ -511,6 +526,25 @@ def resumen_diario(estado, ahora, forzar=False):
 
 
 # ------------------------------------------------------------------ franjas
+def franja_cerrada_afuera(clave):
+    """True si otra corrida ya publico esta franja (estado en el remoto).
+
+    Candado contra duplicados: armar el video tarda varios minutos y otra
+    corrida pudo publicar la misma franja mientras tanto. Sin red o sin git,
+    False (se sigue como siempre).
+    """
+    rama = os.environ.get("GITHUB_REF_NAME") or "main"
+    try:
+        subprocess.run(["git", "fetch", "-q", "origin", rama], cwd=RAIZ, check=True,
+                       capture_output=True, timeout=60)
+        crudo = subprocess.run(["git", "show", f"FETCH_HEAD:datos/{ESTADO.name}"], cwd=RAIZ,
+                               check=True, capture_output=True, timeout=30).stdout
+        return clave in (json.loads(crudo).get("franjas") or {})
+    except Exception as e:  # noqa: BLE001
+        print(f"  aviso: no pude revisar el estado remoto ({type(e).__name__})")
+        return False
+
+
 def cerrar_franja(estado, clave, como):
     estado.setdefault("franjas", {})[clave] = f"{como} {config.ahora():%H:%M}"
     estado.pop("pendiente", None)
@@ -520,12 +554,20 @@ def cerrar_franja(estado, clave, como):
 
 def publicar_franja(estado, clave, nombre, historias, como, reservas=()):
     """Arma y sube el video de la franja; si falla, se reintenta en la proxima pasada."""
+    if franja_cerrada_afuera(clave):
+        print(f"  {clave}: otra corrida ya la publico; no se repite")
+        cerrar_franja(estado, clave, "ya publicada")
+        return True
     previos = [h.get("seguimiento_de", "") for h in historias]
     etiqueta = {"madrugada": "la noche y la madrugada", "manana": "la manana",
                 "tarde": "la tarde", "noche": "el cierre del dia"}.get(nombre, nombre)
     ok = armar_video([h["link"] for h in historias], previos, nombre=nombre,
                      pie=f"El Ahorita · {etiqueta}", origen=f"franja-{nombre}",
-                     reservas=reservas)
+                     reservas=reservas, ya_salio=lambda: franja_cerrada_afuera(clave))
+    if ok == "ya":
+        print(f"  {clave}: otra corrida la publico mientras se armaba; no se sube")
+        cerrar_franja(estado, clave, "ya publicada")
+        return True
     if ok:
         cerrar_franja(estado, clave, como)
         return True

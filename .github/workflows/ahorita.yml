@@ -44,7 +44,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      # la punta de la rama al ARRANCAR, no el commit de cuando se lanzo la corrida:
+      # una corrida que espero en la cola veria el estado viejo y repetiria la franja
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
@@ -171,6 +175,8 @@ jobs:
           for i in 1 2 3; do
             if git push; then break; fi
             echo "push rechazado, reintento $i"
-            git pull --rebase --autostash || true
+            # si el rebase choca, gana lo de esta corrida (es lo mas nuevo) y no se
+            # queda un rebase a medias que tumbe los demas intentos
+            git pull --rebase --autostash -X theirs || git rebase --abort || true
             sleep 3
           done

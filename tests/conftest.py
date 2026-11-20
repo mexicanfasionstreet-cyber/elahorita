@@ -273,3 +273,10 @@ def sin_wikipedia(monkeypatch):
     def _sin_red(*a, **k):
         raise OSError("sin red en pruebas")
     monkeypatch.setattr(fotos, "_get", _sin_red)
+
+
+@pytest.fixture(autouse=True)
+def sin_estado_remoto(monkeypatch):
+    """Las pruebas no preguntan a GitHub si otra corrida ya publico la franja."""
+    import orquestador
+    monkeypatch.setattr(orquestador, "franja_cerrada_afuera", lambda clave: False)

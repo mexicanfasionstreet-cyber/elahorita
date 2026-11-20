@@ -1,3 +1,82 @@
-2026-11-20 04:55 Tijuana · franja pendiente: ninguna
+2026-11-20 05:03 Tijuana · franja pendiente: madrugada
 sin novedades
-sin novedades
+corriendo la franja madrugada
+  $ --days 2
+  (16.7 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 50
+
+1263 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+556 nuevas, 6669 en 30 dias)
+
+  secciones revisadas con IA: 8 cambio(s)
+  245 historias desde 19 20:00
+    80.1 peso  22.5 · Elogios de China a Sheinbaum
+    71.9 peso  19.0 · El director nacional de Ciberseguridad de la Casa Blanca deja el cargo
+    71.3 peso   8.0 · Russian missiles and drone reportedly hit Poland during attacks on Ukr
+    68.6 peso   8.0 · Texas execution took over an hour as staff struggled to find vein; Rei
+  $ --franja madrugada --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-madrugada.json --link https://news.google.com/rss/articles/CBMikAFBVV95cUxOOGF2N2R3N0gzaDE5Q1dIWlR1SEROb1FCLWRzMkk4R0p4RGxabDM1Q2hxT29LTU5ZbTB4Qm82MC0zNmNNdXR2SzF1eGRoUVdfd2JmaGVKMFZxaXcya1ZGSHAxdVRVcFJvN0xuaFhLX1VMNk45Wko3c1hOeTJqNmQ3TGZpZjNDM0tEaVh0anU0b3TSAZABQVVfeXFMTzVnLXlkMDRrSjNRUkhETl8tSWhZV1JBYXg2SUR3elkwaFl6UjZ5OWxyMldYNlJ3XzRWRkIyeXdfekJmWm5PWXpLVXNONXFpSWhNajg4eW5pVlVDSkVNMklMWU5ZQkphclNRZlVpRzBYdlJzTFVPbDdoUURqWU9HaHR1NmhyWThkV3RIT2xjT2No?oc=5 --previo  --link https://elpais.com/us/2026-11-20/el-director-nacional-de-ciberseguridad-de-la-casa-blanca-deja-el-cargo-tras-una-semana-de-fallos-tecnologicos-en-estados-unidos.html --previo  --reserva https://www.theguardian.com/world/2026/nov/20/russian-missiles-drone-poland-attacks-ukraine --reserva https://www.npr.org/2026/11/20/nx-s1-6048461/texas-execution-dennes-moaned-pain
+  (10.5 s)
+ palabras de https://www.milenio.com/opinion/david-perez/pensar-la-vida/e
+  material nota 2: 424 palabras de https://elpais.com/us/2026-11-20/el-director-nacional-de-cib
+aviso: la nota 1 tiene poco material (3 palabras); se quita
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 1 nota(s) · 185 palabras ~ 69 s ---
+
+TITULO YOUTUBE: Sean Cairncross deja la ciberseguridad de la Casa Blanca tras fallos
+GANCHO: Una semana de fallos tecnológicos en Estados Unidos se lleva al director de ciberseguridad de la Casa Blanca.
+
+[CIENCIA] Sean Cairncross dejó su puesto como director nacional de Ciberseguridad de la Casa Blanca. Su salida se confirmó este jueves y llega en medio de una semana con varias interrupciones tecnológicas en Estados Unidos. Una fuente cercana al gobierno dijo que el presidente apoyó plenamente el despido de Cairncross. Él no quiso comentar sobre su salida. Kirsten Davies, responsable de tecnología del Departamento de Defensa, asumirá sus funciones de forma temporal.
+
+[CIENCIA] En la última semana hubo una interrupción que paralizó temporalmente el tráfico aéreo en todo el país. También fallaron los servicios de correo electrónico de Microsoft y se afectó de forma temporal la red de la Agencia de Seguridad Nacional. Las autoridades insisten en que los incidentes no estuvieron relacionados entre sí y que no hubo un ataque coordinado ni patrocinado por otro Estado. Jay Clayton, principal responsable de los servicios de inteligencia, dijo que fueron interrupciones independientes ligadas a mantenimiento y cambios técnicos.
+
+CIERRE: En El Ahorita seguimos pendientes de lo que pasa en el mundo.
+
+  fuente: El director nacional de Ciberseguridad de la Casa Blanca deja el cargo (5 medios)
+  foto nota 1: Casa Blanca -> (top) Cezary p (bottom) MattWade (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 1: sin foto libre para 'Departamento de Defensa de los Estados Unidos'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-madrugada.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-madrugada.json
+  (127.6 s)
+guion 2026-11-20-madrugada.json · 185 palabras · proveedor voicebox
+
+    whisper: 18 oidas, 100% de 18 empatadas
+    whisper: 71 oidas, 100% de 71 empatadas
+    whisper: 87 oidas, 100% de 84 empatadas
+    whisper: 12 oidas, 100% de 12 empatadas
+  gancho     5.62 s  [voicebox]  18 palabras con tiempo  Una semana de fallos tecnológicos en Estados…
+  nota1     25.54 s  [voicebox]  71 palabras con tiempo  Sean Cairncross dejó su puesto como director…
+  nota2     27.70 s  [voicebox]  84 palabras con tiempo  En la última semana hubo una interrupción qu…
+  cierre     3.14 s  [voicebox]  12 palabras con tiempo  En El Ahorita seguimos pendientes de lo que …
+
+total voz: 63.15 s (4 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-20-madrugada/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-madrugada.json
+  (91.4 s)
+  diapositiva 00-gancho.png · tomas: principal(5.9)
+  diapositiva 01-nota1.png · tomas: principal(3.8) limpia(3.8) principal(3.8) limpia(3.8) dato(3.0) principal(3.9) limpia(3.9)
+  diapositiva 02-nota2.png · tomas: principal(3.8) principal(3.8) dato(3.0) principal(3.2) principal(3.2) dato(3.0) principal(4.0) principal(4.0)
+  diapositiva 03-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 7 tomas
+  video nota2: 8 tomas
+  video cierre: 1 tomas
+subtitulos: 174 estados · 947 cuadros · 63.1 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-20-madrugada/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-madrugada.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-madrugada-portada.jpg
+duracion: 63.1 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-madrugada.mp4
+  titulo: Sean Cairncross deja la ciberseguridad de la Casa Blanca tras fallos
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/MNDO9bJCkdM
+

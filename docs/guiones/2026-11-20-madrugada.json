@@ -1,0 +1,56 @@
+{
+ "origen": "ia",
+ "palabras": 185,
+ "segundos_estimados": 68.5,
+ "historias": [
+  {
+   "titulo": "El director nacional de Ciberseguridad de la Casa Blanca deja el cargo tras una semana de fallos tecnológicos en Estados Unidos",
+   "link": "https://elpais.com/us/2026-11-20/el-director-nacional-de-ciberseguridad-de-la-casa-blanca-deja-el-cargo-tras-una-semana-de-fallos-tecnologicos-en-estados-unidos.html",
+   "seccion": "ciencia",
+   "medios": 5,
+   "score": 71.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/White_House_north_and_south_sides.jpg/1280px-White_House_north_and_south_sides.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "(top) Cezary p (bottom) MattWade",
+    "pagina": "https://commons.wikimedia.org/wiki/File:White_House_north_and_south_sides.jpg",
+    "credito": "(top) Cezary p (bottom) MattWade (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Casa Blanca"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Sean Cairncross deja la ciberseguridad de la Casa Blanca tras fallos",
+  "gancho": "Una semana de fallos tecnológicos en Estados Unidos se lleva al director de ciberseguridad de la Casa Blanca.",
+  "notas": [
+   {
+    "kicker": "CIENCIA",
+    "pantalla": "Sale el zar de ciberseguridad de la Casa Blanca",
+    "texto": "Sean Cairncross dejó su puesto como director nacional de Ciberseguridad de la Casa Blanca. Su salida se confirmó este jueves y llega en medio de una semana con varias interrupciones tecnológicas en Estados Unidos. Una fuente cercana al gobierno dijo que el presidente apoyó plenamente el despido de Cairncross. Él no quiso comentar sobre su salida. Kirsten Davies, responsable de tecnología del Departamento de Defensa, asumirá sus funciones de forma temporal.",
+    "foto": "Casa Blanca",
+    "foto2": "Departamento de Defensa de los Estados Unidos",
+    "datos": [
+     "Apoyo al despido",
+     "Davies asume temporalmente",
+     "Senado debe confirmar"
+    ]
+   },
+   {
+    "kicker": "CIENCIA",
+    "pantalla": "Los fallos que pusieron presión al gobierno",
+    "texto": "En la última semana hubo una interrupción que paralizó temporalmente el tráfico aéreo en todo el país. También fallaron los servicios de correo electrónico de Microsoft y se afectó de forma temporal la red de la Agencia de Seguridad Nacional. Las autoridades insisten en que los incidentes no estuvieron relacionados entre sí y que no hubo un ataque coordinado ni patrocinado por otro Estado. Jay Clayton, principal responsable de los servicios de inteligencia, dijo que fueron interrupciones independientes ligadas a mantenimiento y cambios técnicos.",
+    "foto": "Agencia de Seguridad Nacional",
+    "foto2": "Microsoft",
+    "datos": [
+     "Tráfico aéreo paralizado",
+     "Falla en correo de Microsoft",
+     "Sin ataque coordinado"
+    ]
+   }
+  ],
+  "cierre": "En El Ahorita seguimos pendientes de lo que pasa en el mundo.",
+  "gancho_pantalla": "FALLOS Y RENUNCIA EN EU"
+ }
+}

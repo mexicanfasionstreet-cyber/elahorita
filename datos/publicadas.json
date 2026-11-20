@@ -169,5 +169,17 @@
    "playa"
   ],
   "video": "https://youtube.com/shorts/qmPyPzMTAQM"
+ },
+ {
+  "cuando": "2026-11-20T15:04:45-08:00",
+  "origen": "franja-tarde",
+  "titulo": "Trump threatens ban on US firms building AI data centres overseas",
+  "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "ai",
+   "trump",
+   "us"
+  ],
+  "video": "https://youtube.com/shorts/dKUIf_RdN2E"
  }
 ]

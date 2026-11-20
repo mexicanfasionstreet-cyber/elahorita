@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 158,
+ "segundos_estimados": 58.5,
+ "historias": [
+  {
+   "titulo": "Trump threatens ban on US firms building AI data centres overseas",
+   "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+   "seccion": "ciencia",
+   "medios": 4,
+   "score": 81.4,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/1280px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "Public domain",
+    "autor": "Daniel Torok",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025).jpg",
+    "credito": "Daniel Torok (Public domain), Wikimedia Commons",
+    "termino": "Donald Trump"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/White_House_north_and_south_sides.jpg/1280px-White_House_north_and_south_sides.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "(top) Cezary p (bottom) MattWade",
+    "pagina": "https://commons.wikimedia.org/wiki/File:White_House_north_and_south_sides.jpg",
+    "credito": "(top) Cezary p (bottom) MattWade (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Casa Blanca"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Trump amenaza con prohibir a empresas de EU construir centros de datos de IA en el extranjero",
+  "gancho": "Trump quiere que la inteligencia artificial se quede en casa, y amenaza con impuestos a quien la saque.",
+  "notas": [
+   {
+    "kicker": "CIENCIA",
+    "texto": "Donald Trump dijo que va a prohibir que las empresas estadounidenses construyan centros de datos de inteligencia artificial fuera del país. A las tecnológicas que lo hagan les advirtió un impuesto que llamó tremendo. Su argumento es que China se quedaría con esos centros, y que no lo va a permitir. Dio pocos detalles de cómo funcionaría la medida, y dijo que varios de su gabinete la escuchaban por primera vez. El anuncio llega después de que Washington pidió licencia para comprar chips avanzados y vigilar que no terminen en China. Los centros de datos son clave para la inteligencia artificial: ahí viven los chips y servidores que corren programas como ChatGPT. Meta y Google ya tienen acuerdos para construirlos fuera de EU. No se sabe cómo se aplicaría la prohibición.",
+    "pantalla": "Trump amenaza con prohibir centros de datos en el extranjero",
+    "foto": "Donald Trump",
+    "foto2": "Casa Blanca",
+    "datos": [
+     "Impuesto tremendo a tecnológicas",
+     "Licencia para chips avanzados",
+     "Meta y Google ya construyen fuera"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "TRUMP Y LOS CENTROS DE DATOS"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 180,
+ "segundos_estimados": 66.7,
+ "historias": [
+  {
+   "titulo": "Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili Campos",
+   "link": "https://elpais.com/mexico/2026-11-20/detenida-en-ciudad-de-mexico-la-exalcaldesa-de-playa-del-carmen-lili-campos.html",
+   "seccion": "justicia",
+   "medios": 9,
+   "score": 94.6,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Catedral_Metropolitana_de_la_Ciudad_de_M%C3%A9xico_1.jpg/1280px-Catedral_Metropolitana_de_la_Ciudad_de_M%C3%A9xico_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "ProtoplasmaKid",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_la_Ciudad_de_M%C3%A9xico_1.jpg",
+    "credito": "ProtoplasmaKid (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Ciudad de México"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Detienen a Lili Campos, exalcaldesa de Playa del Carmen, en CDMX",
+  "gancho": "La exalcaldesa de Playa del Carmen cayó en la capital, y la acusan de un daño millonario al erario.",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "texto": "Lili Campos, exalcaldesa de Playa del Carmen, fue detenida en Ciudad de México. La Fiscalía de Quintana Roo confirmó el arresto y dijo que la policía capitalina hizo valer una orden de aprehensión emitida desde el estado caribeño. La acusan de uso indebido de atribuciones y facultades durante su mandato, de 2021 a 2024. Según la investigación, habría contratado de manera indebida a una misma empresa para lavar los vehículos oficiales de Servicios Públicos Municipales, y el trabajo aparentemente nunca se realizó. El daño al erario se calcula en 62 millones de pesos. La acusación señala que el área tenía 123 coches, pero la firma habría hecho hasta 865 lavados al mes, unos 29 diarios, incluidos fines de semana y días festivos. La empresa tampoco contaba con comprobantes fiscales de los servicios. Campos gobernó con los colores del PAN y dejó el cargo hace dos años, tras perder la reelección contra Morena.",
+    "foto": "Playa del Carmen",
+    "foto2": "Ciudad de México",
+    "datos": [
+     "62 millones de pesos de daño",
+     "123 coches en Servicios Públicos",
+     "Hasta 865 lavados al mes"
+    ],
+    "pantalla": "Detienen a Lili Campos en Ciudad de México"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "CAE EXALCALDESA DE PLAYA"
+ }
+}

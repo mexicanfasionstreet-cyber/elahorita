@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 113,
+ "segundos_estimados": 41.9,
+ "historias": [
+  {
+   "titulo": "Watch: What did Trump, Xi and Putin get out of their historic meeting?",
+   "link": "https://www.bbc.co.uk/news/videos/c63rgnq05pdwo?at_medium=RSS&at_campaign=rss",
+   "seccion": "politica",
+   "medios": 3,
+   "score": 72.3,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Commercial_area_of_futian_to_east2020.jpg/1280px-Commercial_area_of_futian_to_east2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Charlie fong",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Commercial_area_of_futian_to_east2020.jpg",
+    "credito": "Charlie fong (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Shenzhen"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Prime_Minister_Keir_Starmer_visits_China_%2855066713683%29_%28cropped%2Bangle%29.jpg/1280px-Prime_Minister_Keir_Starmer_visits_China_%2855066713683%29_%28cropped%2Bangle%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 4.0",
+    "autor": "Simon Dawson / No 10 Downing Street",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Keir_Starmer_visits_China_(55066713683)_(cropped%2Bangle).jpg",
+    "credito": "Simon Dawson / No 10 Downing Street (CC BY 4.0), Wikimedia Commons",
+    "termino": "Xi Jinping"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Trump, Putin y Xi firman declaración de paz en su primer encuentro",
+  "gancho": "Tres presidentes, una sola mesa y una declaración de paz que nadie esperaba tan pronto.",
+  "notas": [
+   {
+    "kicker": "POLITICA",
+    "texto": "Donald Trump, Vladimir Putin y Xi Jinping cerraron noventa minutos de pláticas trilaterales con una declaración conjunta de paz. La reunión se hizo en Shenzhen, en el sureste de China, y fue la primera vez que los tres presidentes se sentaron juntos. Ahora la pregunta es qué se llevó cada uno de esa mesa. Por eso los corresponsales de la BBC en Rusia, China y Norteamérica se juntaron a analizar el resultado. No se han dado a conocer los detalles del documento ni los compromisos concretos de cada país.",
+    "foto": "Shenzhen",
+    "foto2": "Xi Jinping",
+    "datos": [
+     "90 minutos de pláticas",
+     "Primera reunión de los tres",
+     "Sede: Shenzhen, China"
+    ],
+    "pantalla": "Trump, Putin y Xi firman declaración de paz"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "TRES POTENCIAS EN SHENZHEN"
+ }
+}

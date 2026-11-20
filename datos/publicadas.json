@@ -127,5 +127,17 @@
    "luis"
   ],
   "video": "https://youtube.com/shorts/TQ8vkwU5IrU"
+ },
+ {
+  "cuando": "2026-11-19T20:05:42-08:00",
+  "origen": "franja-noche",
+  "titulo": "Watch: What did Trump, Xi and Putin get out of their historic meeting?",
+  "link": "https://www.bbc.co.uk/news/videos/c63rgnq05pdwo?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "putin",
+   "trump",
+   "watch"
+  ],
+  "video": "https://youtube.com/shorts/krZmdUJ3xCA"
  }
 ]

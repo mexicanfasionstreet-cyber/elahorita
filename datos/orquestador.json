@@ -9,7 +9,8 @@
   "2026-11-18-noche": "automatica 20:04",
   "2026-11-19-madrugada": "automatica 05:07",
   "2026-11-19-manana": "automatica 12:04",
-  "2026-11-19-tarde": "automatica 15:07"
+  "2026-11-19-tarde": "automatica 15:07",
+  "2026-11-19-noche": "automatica 20:06"
  },
  "resumen": "2026-11-18",
  "comandos": 2

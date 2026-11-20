@@ -191,3 +191,38 @@ def test_franja_sin_noticias_avisa_y_cierra(comandos, videos, sin_ia, latest, re
     estado = {"franjas": {}}
     orq.correr_franja(estado, CLAVE, TARDE, ahora)
     assert not videos and "sin noticias" in estado["franjas"][CLAVE]
+
+
+# ------------------------------------------------------------------ sin duplicados
+def test_franja_ya_publicada_por_otra_corrida_no_se_repite(comandos, videos, sin_ia, latest, reloj, monkeypatch):
+    ahora = reloj(2026, 11, 18, 15, 10)
+    latest(normales())
+    monkeypatch.setattr(orq, "franja_cerrada_afuera", lambda clave: True)
+    estado = {"franjas": {}}
+    orq.correr_franja(estado, CLAVE, TARDE, ahora)
+    assert not videos
+    assert estado["franjas"][CLAVE].startswith("ya publicada")
+
+
+def test_si_otra_corrida_la_publica_mientras_se_arma_no_se_sube(comandos, sin_ia, latest, reloj, monkeypatch):
+    ahora = reloj(2026, 11, 18, 15, 10)
+    latest(normales())
+    monkeypatch.setattr(orq, "armar_video", lambda links, previos=(), ya_salio=None, **k: "ya" if ya_salio() else True)
+    llamadas = []
+    monkeypatch.setattr(orq, "franja_cerrada_afuera", lambda clave: llamadas.append(clave) or len(llamadas) > 1)
+    estado = {"franjas": {}}
+    orq.correr_franja(estado, CLAVE, TARDE, ahora)
+    assert len(llamadas) == 2 and estado["franjas"][CLAVE].startswith("ya publicada")
+
+
+def test_telegram_caido_no_tumba_la_corrida_despues_de_subir(tg, monkeypatch, tmp_path):
+    def falla(*a, **k):
+        raise OSError("413")
+    monkeypatch.setattr(orq.bot, "mandar_video", falla)
+    orq._mandar_video_o_enlace(tmp_path / "v.mp4", "El Ahorita · la tarde\nhttps://youtube.com/shorts/x")
+    assert "youtube.com/shorts/x" in tg.mensajes()[-1]["text"]
+
+
+def test_el_flujo_toma_la_punta_de_la_rama():
+    flujo = (orq.RAIZ / ".github" / "workflows" / "ahorita.yml").read_text(encoding="utf-8")
+    assert "ref: ${{ github.ref_name }}" in flujo

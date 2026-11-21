@@ -29,5 +29,12 @@
    "tipo": "voz_respaldo",
    "texto": "<urlopen error timed out>"
   }
+ ],
+ "2026-11-21": [
+  {
+   "hora": "05:01",
+   "tipo": "voz_respaldo",
+   "texto": "<urlopen error timed out>"
+  }
  ]
 }

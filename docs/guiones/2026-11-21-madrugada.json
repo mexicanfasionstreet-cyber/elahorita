@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 156,
+ "segundos_estimados": 57.8,
+ "historias": [
+  {
+   "titulo": "Estados Unidos se lanza en tromba contra el cartel mexicano La Nueva Familia Michoacana",
+   "link": "https://elpais.com/mexico/2026-11-21/estados-unidos-se-lanza-en-tromba-contra-el-cartel-mexicano-la-nueva-familia-michoacana.html",
+   "seccion": "seguridad",
+   "medios": 6,
+   "score": 90.2,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Vista_Panor%C3%A1mica_de_Morelia.jpg/1280px-Vista_Panor%C3%A1mica_de_Morelia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Adovr",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vista_Panor%C3%A1mica_de_Morelia.jpg",
+    "credito": "Adovr (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Michoacán"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "La Nueva Familia Michoacana: EU acusa a 21 personas con ley RICO",
+  "gancho": "Estados Unidos usa la misma ley que tumbó a la Cosa Nostra contra un cartel mexicano.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "La Fiscalía de Estados Unidos en el distrito oeste de Texas presentó una nueva acusación contra 21 personas de La Nueva Familia Michoacana. Encabezan la lista sus líderes, Johnny y José Alfredo Hurtado Olascoaga, alias El Pez y La Fresa. La acusación usa la ley RICO, la misma que se empleó históricamente contra la Cosa Nostra. El grupo opera en Tierra Caliente, región que comparten Guerrero, Michoacán y el Estado de México. Según los investigadores, además del tráfico de drogas, la organización se dedica a la trata de migrantes, el tráfico de armas y la minería. El documento señala que controla explotaciones enteras, como la mina de Campo Morado, y que intercambia minerales con empresas chinas por precursores químicos. Estados Unidos designó al grupo como organización narcoterrorista en febrero de 2025.",
+    "foto": "Tierra Caliente",
+    "foto2": "Michoacán",
+    "datos": [
+     "21 personas acusadas",
+     "Ley RICO contra el grupo",
+     "Narcoterrorista desde 2025"
+    ],
+    "pantalla": "EU acusa a 21 de La Nueva Familia Michoacana"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "LEY RICO CONTRA CARTEL"
+ }
+}

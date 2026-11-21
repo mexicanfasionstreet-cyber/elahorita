@@ -1,3 +1,70 @@
-2026-11-21 11:55 Tijuana · franja pendiente: ninguna
+2026-11-21 12:00 Tijuana · franja pendiente: manana
 sin novedades
-sin novedades
+corriendo la franja manana
+  $ --days 2
+  (22.0 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 55
+
+1193 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+459 nuevas, 8879 en 30 dias)
+
+  secciones revisadas con IA: 6 cambio(s)
+  177 historias desde 21 05:00
+    85.2 peso  16.5 · Trasladan a ‘Chapo Isidro’ a instalaciones de la FEMDO en CDMX tras ca
+    72.4 peso   7.5 · Detienen a conductor de transporte público por atropellar y causar la 
+    67.5 peso  11.5 · Al menos 15 personas resultaron heridas tras el sismo de magnitud 6.7 
+    67.1 peso   5.0 · Sheinbaum encabeza Becas para el Bienestar en Villanueva, Zacatecas
+  $ --franja manana --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-21-manana.json --link https://lopezdoriga.com/nacional/trasladan-a-chapo-isidro-a-instalaciones-de-la-femdo-en-cdmx-tras-captura-en-sinaloa/ --previo  --reserva https://www.milenio.com/policia/detienen-conductor-atropellamiento-mujer-cuajimalpa-homicidio-doloso --reserva https://lopezdoriga.com/internacional/al-menos-15-personas-resultaron-heridas-tras-el-sismo-de-magnitud-6-7-del-viernes-en-peru/
+  (5.2 s)
+  material nota 1: 183 palabras de https://lopezdoriga.com/nacional/trasladan-a-chapo-isidro-a-
+--- GUION (ia) · 1 nota(s) · 142 palabras ~ 53 s ---
+
+TITULO YOUTUBE: Capturan a 'Chapo Isidro' en Sinaloa y lo trasladan a la CDMX
+GANCHO: El presunto líder del cártel de Guasave ya está en manos de la Fiscalía en la capital.
+
+[SEGURIDAD] Fausto Isidro Meza Flores, alias 'Chapo Isidro', fue detenido por fuerzas especiales del Ejército y de la Guardia Nacional en Guasave, Sinaloa. El presunto líder del cártel de Guasave llegó a la Ciudad de México en un avión de la Fuerza Aérea Mexicana. Durante la madrugada de este sábado fue llevado del AICM a la sede de la FEMDO en un convoy de vehículos militares artillados. Se prevé que personal de la FGR le practique exámenes médicos y las diligencias correspondientes antes de ponerlo a disposición del juez que ordenó su captura por delincuencia organizada y delitos contra la salud. Mientras tanto, Ejército y Guardia Nacional mantienen un dispositivo de seguridad en las inmediaciones de la fiscalía.
+
+CIERRE: Esto es El Ahorita, la noticia al momento.
+
+  fuente: Trasladan a ‘Chapo Isidro’ a instalaciones de la FEMDO en CDMX tras ca (5 medios)
+  foto nota 1: Guasave -> Matt Borden (CC BY-SA 2.0), Wikimedia Commons
+  foto2 nota 1: Aeropuerto Internacional de la Ciudad de México -> Edgor Tovar Vmzp85 (Public domain), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-21-manana.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-21-manana.json
+  (40.0 s)
+guion 2026-11-21-manana.json · 142 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     4.90 s  [edge-tts]  17 palabras con tiempo  El presunto líder del cártel de Guasave ya e…
+  nota1     38.98 s  [edge-tts]  117 palabras con tiempo  Fausto Isidro Meza Flores, alias 'Chapo Isid…
+  cierre     3.22 s  [edge-tts]  8 palabras con tiempo  Esto es El Ahorita, la noticia al momento.…
+
+total voz: 47.93 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-21-manana/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-21-manana.json
+  (73.3 s)
+  diapositiva 00-gancho.png · tomas: principal(5.2)
+  diapositiva 01-nota1.png · tomas: principal(4.9) limpia(4.9) foto2(4.9) principal(4.9) limpia(4.9) foto2(4.9) principal(4.9) limpia(4.9)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 8 tomas
+  video cierre: 1 tomas
+subtitulos: 135 estados · 719 cuadros · 47.9 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-21-manana/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-21-manana.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-21-manana-portada.jpg
+duracion: 47.9 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-21-manana.mp4
+  titulo: Capturan a 'Chapo Isidro' en Sinaloa y lo trasladan a la CDMX
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/1UKsH3pxy_Q
+

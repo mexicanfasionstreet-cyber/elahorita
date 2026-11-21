@@ -1,16 +1,5 @@
 [
  {
-  "cuando": "2026-11-18T05:04:44-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "La junta directiva de Nvidia confirma que no pretende restituir a Huang y busca sustituto",
-  "link": "https://lopezdoriga.com/internacional/la-junta-directiva-de-nvidia-confirma-que-no-pretende-restituir-a-huang-y-busca-sustituto/",
-  "entidades": [
-   "huang",
-   "nvidia"
-  ],
-  "video": "https://youtube.com/shorts/_8nVanXLXyY"
- },
- {
   "cuando": "2026-11-18T12:04:14-08:00",
   "origen": "franja-manana",
   "titulo": "Democrats nominate Hakeem Jeffries to be US Speaker of the House",
@@ -224,5 +213,20 @@
    "unidos"
   ],
   "video": "https://youtube.com/shorts/sQSSxwxNbv8"
+ },
+ {
+  "cuando": "2026-11-21T12:03:25-08:00",
+  "origen": "franja-manana",
+  "titulo": "Trasladan a ‘Chapo Isidro’ a instalaciones de la FEMDO en CDMX tras captura en Sinaloa",
+  "link": "https://lopezdoriga.com/nacional/trasladan-a-chapo-isidro-a-instalaciones-de-la-femdo-en-cdmx-tras-captura-en-sinaloa/",
+  "entidades": [
+   "cdmx",
+   "chapo",
+   "femdo",
+   "isidro",
+   "sinaloa",
+   "trasladan"
+  ],
+  "video": "https://youtube.com/shorts/1UKsH3pxy_Q"
  }
 ]

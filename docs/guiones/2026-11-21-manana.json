@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 142,
+ "segundos_estimados": 52.6,
+ "historias": [
+  {
+   "titulo": "Trasladan a ‘Chapo Isidro’ a instalaciones de la FEMDO en CDMX tras captura en Sinaloa",
+   "link": "https://lopezdoriga.com/nacional/trasladan-a-chapo-isidro-a-instalaciones-de-la-femdo-en-cdmx-tras-captura-en-sinaloa/",
+   "seccion": "seguridad",
+   "medios": 5,
+   "score": 85.2,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Iglesia_en_Guasave.jpg/1280px-Iglesia_en_Guasave.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Matt Borden",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_en_Guasave.jpg",
+    "credito": "Matt Borden (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Guasave"
+   },
+   "foto2": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/AICM_AIR_T2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "Public domain",
+    "autor": "Edgor Tovar Vmzp85",
+    "pagina": "https://commons.wikimedia.org/wiki/File:AICM_AIR_T2.jpg",
+    "credito": "Edgor Tovar Vmzp85 (Public domain), Wikimedia Commons",
+    "termino": "Aeropuerto Internacional de la Ciudad de México"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Capturan a 'Chapo Isidro' en Sinaloa y lo trasladan a la CDMX",
+  "gancho": "El presunto líder del cártel de Guasave ya está en manos de la Fiscalía en la capital.",
+  "gancho_pantalla": "CHAPO ISIDRO EN LA CDMX",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Trasladan a 'Chapo Isidro' a la FEMDO en CDMX",
+    "texto": "Fausto Isidro Meza Flores, alias 'Chapo Isidro', fue detenido por fuerzas especiales del Ejército y de la Guardia Nacional en Guasave, Sinaloa. El presunto líder del cártel de Guasave llegó a la Ciudad de México en un avión de la Fuerza Aérea Mexicana. Durante la madrugada de este sábado fue llevado del AICM a la sede de la FEMDO en un convoy de vehículos militares artillados. Se prevé que personal de la FGR le practique exámenes médicos y las diligencias correspondientes antes de ponerlo a disposición del juez que ordenó su captura por delincuencia organizada y delitos contra la salud. Mientras tanto, Ejército y Guardia Nacional mantienen un dispositivo de seguridad en las inmediaciones de la fiscalía.",
+    "foto": "Guasave",
+    "foto2": "Aeropuerto Internacional de la Ciudad de México",
+    "datos": [
+     "Detenido en Guasave, Sinaloa",
+     "Traslado en avión de la Fuerza Aérea",
+     "Convoy militar artillado"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita, la noticia al momento."
+ }
+}

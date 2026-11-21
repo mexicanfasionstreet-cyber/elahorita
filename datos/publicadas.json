@@ -1,31 +1,5 @@
 [
  {
-  "cuando": "2026-11-18T12:04:14-08:00",
-  "origen": "franja-manana",
-  "titulo": "Democrats nominate Hakeem Jeffries to be US Speaker of the House",
-  "link": "https://www.bbc.co.uk/news/articles/cmy49873dn95o?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "democrats",
-   "hakeem",
-   "house",
-   "jeffries",
-   "speaker",
-   "us"
-  ],
-  "video": "https://youtube.com/shorts/4HnhxgvoXfE"
- },
- {
-  "cuando": "2026-11-18T13:42:13-08:00",
-  "origen": "a mano",
-  "titulo": "Hackeo a Nvidia: esto se sabe del supuesto ataque con ransomware que genera pánico al mercado",
-  "link": "https://www.minuto60.com/vida-moderna/nvidia-ha-sido-hackeada-hoy-esto-se-sabe-ataque-las-perdidas/19154",
-  "entidades": [
-   "hackeo",
-   "nvidia"
-  ],
-  "video": ""
- },
- {
   "cuando": "2026-11-18T15:04:19-08:00",
   "origen": "franja-tarde",
   "titulo": "Nvidia pide calma a sus empleados tras la dimisión de su fundador y CEO, Jensen Huang",
@@ -228,5 +202,20 @@
    "trasladan"
   ],
   "video": "https://youtube.com/shorts/1UKsH3pxy_Q"
+ },
+ {
+  "cuando": "2026-11-21T15:03:27-08:00",
+  "origen": "franja-tarde",
+  "titulo": "Embajador de EU reconoce a fuerzas mexicanas por captura de “Chapo Isidro” en Guasave, Sinaloa",
+  "link": "https://zetatijuana.com/2026/11/embajador-de-eu-reconoce-a-fuerzas-mexicanas-por-captura-de-chapo-isidro-en-guasave-sinaloa/",
+  "entidades": [
+   "chapo",
+   "embajador",
+   "eu",
+   "guasave",
+   "isidro",
+   "sinaloa"
+  ],
+  "video": "https://youtube.com/shorts/zkPCjbo9uog"
  }
 ]

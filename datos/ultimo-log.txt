@@ -1,3 +1,73 @@
-2026-11-20 19:56 Tijuana · franja pendiente: ninguna
+2026-11-20 20:01 Tijuana · franja pendiente: noche
 sin novedades
-sin novedades
+corriendo la franja noche
+  $ --days 2
+  (12.4 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 46
+  ! N+: HTTPError: HTTP Error 429: Too Many Requests
+
+1223 noticias · 41/42 fuentes · 1 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+356 nuevas, 7936 en 30 dias)
+
+  secciones revisadas con IA: 12 cambio(s)
+  145 historias desde 20 15:00
+    88.8 peso  30.5 · Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili C
+    83.2 peso  16.0 · Xi Jinping, Putin y Trump en la cumbre APEC
+    81.3 peso  23.0 · EU imputa a 21 miembros de la Nueva Familia Michoacana
+    75.2 peso  15.5 · GTA VI rompe récords y genera 3 mil 790 millones de dólares en su prim
+  $ --franja noche --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-noche.json --link https://elpais.com/mexico/2026-11-20/detenida-en-ciudad-de-mexico-la-exalcaldesa-de-playa-del-carmen-lili-campos.html --previo Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili Campos --link https://www.milenio.com/videos/milenio-tv/los-desplumados/xi-jinping-putin-trump-cumbre-apec-desplumados-rape --previo  --reserva https://news.google.com/rss/articles/CBMiswFBVV95cUxONjFKVzMxRWNGUXM0TkQ2LXhWLVlvWmN5ZC1RbnBSV014aDlPVXg3V2FtTE4tdEZfTnFqWDRMUXpXYUJOM0hNLUw5eEJ6TlBvV0dSc1dsUWd4LXc3eDVoS0p5NlNiYnhWcmlBMEt5LWpXcGdqUVVpXzFiVXhpNkM3TEh0QVdoejJURDRyMThGYXRlZ3d1bUVjekNEQ0VnMjBtamlHd194WHNDMm1PNkwxQTdkcw?oc=5 --reserva https://lopezdoriga.com/ciencia-tecnologia/gta-vi-rompe-records-y-genera-3-mil-790-millones-de-dolares-en-su-primer-dia-a-la-venta/
+  (7.5 s)
+  material nota 1: 480 palabras de https://elpais.com/mexico/2026-11-20/detenida-en-ciudad-de-m
+  material nota 2: 0 palabras de https://www.milenio.com/videos/milenio-tv/los-desplumados/xi
+aviso: la nota 2 tiene poco material (27 palabras); se quita
+--- GUION (ia) · 1 nota(s) · 176 palabras ~ 65 s ---
+
+TITULO YOUTUBE: Lili Campos, exalcaldesa de Playa del Carmen, detenida en CDMX
+GANCHO: La exalcaldesa de Playa del Carmen ya está ante un juez, y la acusación tiene números que no cuadran.
+
+[JUSTICIA] La exalcaldesa de Playa del Carmen, Lili Campos, fue detenida en Ciudad de México. La Fiscalía de Quintana Roo confirmó el arresto y dijo que la policía capitalina hizo valer una orden de aprehensión emitida desde el estado caribeño. La acusan de uso indebido de atribuciones y facultades durante su mandato, de 2021 a 2024. Según la Fiscalía, habría contratado de manera indebida a una misma empresa para lavar los vehículos oficiales de Servicios Públicos Municipales, y el trabajo aparentemente nunca se realizó. El daño al erario se calcula en 62 millones de pesos. La acusación señala que el área tenía 123 coches, pero la firma habría hecho hasta 865 lavados al mes, es decir, 29 limpiezas diarias, incluidos fines de semana y días festivos. La empresa tampoco contaba con comprobantes fiscales de los servicios. Fuentes judiciales indican que Campos está en Cancún, a disposición de un juez.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili C (8 medios)
+  foto nota 1: sin foto libre para 'Playa del Carmen'
+  foto2 nota 1: Cancún -> dronepicr (CC BY 2.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-noche.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-noche.json
+  (15.3 s)
+guion 2026-11-20-noche.json · 176 palabras · proveedor voicebox
+
+  Voicebox no responde ([Errno 104] Connection reset by peer); se usa la voz de respaldo
+  gancho     5.95 s  [edge-tts]  19 palabras con tiempo  La exalcaldesa de Playa del Carmen ya está a…
+  nota1     55.61 s  [edge-tts]  142 palabras con tiempo  La exalcaldesa de Playa del Carmen, Lili Cam…
+  cierre     4.13 s  [edge-tts]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 66.53 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-20-noche/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-noche.json
+  (64.7 s)
+  diapositiva 00-gancho.png · tomas: principal(6.2)
+  diapositiva 01-nota1.png · tomas: principal(4.5) foto2(4.5) principal(4.5) foto2(4.5) principal(4.5) foto2(4.5) principal(4.5) dato(3.0) foto2(4.2) dato(3.0) principal(4.7) foto2(4.7) principal(4.7)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 13 tomas
+  video cierre: 1 tomas
+subtitulos: 157 estados · 998 cuadros · 66.5 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-20-noche/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-noche.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-noche-portada.jpg
+duracion: 66.5 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-noche.mp4
+  titulo: Lili Campos, exalcaldesa de Playa del Carmen, detenida en CDMX
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/6DeFjy0OTfk
+

@@ -17,5 +17,12 @@
    "tipo": "nota_video",
    "texto": "Anthropic su salida a bosla"
   }
+ ],
+ "2026-11-20": [
+  {
+   "hora": "20:01",
+   "tipo": "voz_respaldo",
+   "texto": "[Errno 104] Connection reset by peer"
+  }
  ]
 }

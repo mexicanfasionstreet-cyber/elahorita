@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 176,
+ "segundos_estimados": 65.2,
+ "historias": [
+  {
+   "titulo": "Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili Campos",
+   "link": "https://elpais.com/mexico/2026-11-20/detenida-en-ciudad-de-mexico-la-exalcaldesa-de-playa-del-carmen-lili-campos.html",
+   "seccion": "justicia",
+   "medios": 8,
+   "score": 88.8,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Cancun_Strand_Luftbild_%2822143397586%29.jpg/1280px-Cancun_Strand_Luftbild_%2822143397586%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 2.0",
+    "autor": "dronepicr",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cancun_Strand_Luftbild_(22143397586).jpg",
+    "credito": "dronepicr (CC BY 2.0), Wikimedia Commons",
+    "termino": "Cancún"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Lili Campos, exalcaldesa de Playa del Carmen, detenida en CDMX",
+  "gancho": "La exalcaldesa de Playa del Carmen ya está ante un juez, y la acusación tiene números que no cuadran.",
+  "gancho_pantalla": "LA CUENTA QUE NO CUADRA",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "pantalla": "Detenida Lili Campos en Ciudad de México",
+    "texto": "La exalcaldesa de Playa del Carmen, Lili Campos, fue detenida en Ciudad de México. La Fiscalía de Quintana Roo confirmó el arresto y dijo que la policía capitalina hizo valer una orden de aprehensión emitida desde el estado caribeño. La acusan de uso indebido de atribuciones y facultades durante su mandato, de 2021 a 2024. Según la Fiscalía, habría contratado de manera indebida a una misma empresa para lavar los vehículos oficiales de Servicios Públicos Municipales, y el trabajo aparentemente nunca se realizó. El daño al erario se calcula en 62 millones de pesos. La acusación señala que el área tenía 123 coches, pero la firma habría hecho hasta 865 lavados al mes, es decir, 29 limpiezas diarias, incluidos fines de semana y días festivos. La empresa tampoco contaba con comprobantes fiscales de los servicios. Fuentes judiciales indican que Campos está en Cancún, a disposición de un juez.",
+    "foto": "Playa del Carmen",
+    "foto2": "Cancún",
+    "datos": [
+     "62 millones de pesos de daño",
+     "123 coches en el parque vehicular",
+     "865 lavados al mes"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

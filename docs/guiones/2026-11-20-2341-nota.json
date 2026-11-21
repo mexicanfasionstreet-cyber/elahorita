@@ -1,0 +1,71 @@
+{
+ "origen": "nota_manual",
+ "tema": "el chapo isidro",
+ "palabras": 204,
+ "segundos_estimados": 75.6,
+ "articulos_leidos": [
+  "https://www.elfinanciero.com.mx/nacional/2026/11/20/quien-es-el-chapo-isidro-el-narco-buscado-por-el-fbi-y-que-vinculan-con-operativo-en-guasave/",
+  "https://revistaespejo.com/2026/11/20/quien-es-el-chapo-isidro/",
+  "https://www.milenio.com/policia/captura-chapo-isidro-sinaloa-hoy-20-noviembre"
+ ],
+ "historias": [
+  {
+   "titulo": "🔴 #ÚLTIMAHORA | Detienen a 'El Chapo Isidro' en Sinaloa; era uno de los diez más buscados por el FBI",
+   "link": "https://www.elfinanciero.com.mx/nacional/2026/11/20/quien-es-el-chapo-isidro-el-narco-buscado-por-el-fbi-y-que-vinculan-con-operativo-en-guasave/",
+   "seccion": "seguridad",
+   "sensible": "",
+   "medios": 91,
+   "score": 0,
+   "region": "mx",
+   "horas": 2.3,
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Iglesia_en_Guasave.jpg/1280px-Iglesia_en_Guasave.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Matt Borden",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_en_Guasave.jpg",
+    "credito": "Matt Borden (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Guasave"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Fbi_headquarters.jpg/1280px-Fbi_headquarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "User:Aude",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Fbi_headquarters.jpg",
+    "credito": "User:Aude (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Federal Bureau of Investigation"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Detienen a El Chapo Isidro en Guasave, buscado por el FBI",
+  "gancho": "El Chapo Isidro pasó de las filas del Cártel de Juárez a encabezar su propia organización en el norte de Sinaloa, y ahora está detenido.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "Fausto Isidro Meza Flores, alias El Chapo Isidro, fue detenido durante un operativo de fuerzas federales este viernes 20 de noviembre en Guasave, Sinaloa. Era uno de los diez fugitivos más buscados por el FBI, que ofrecía una recompensa de hasta cinco millones de dólares por información que permitiera su captura. Las autoridades estadounidenses lo identifican como dirigente de una organización dedicada al tráfico internacional de drogas, y en Estados Unidos enfrenta acusaciones por conspirar para distribuir cocaína, metanfetamina, heroína y marihuana.",
+    "pantalla": "Detienen a El Chapo Isidro en Guasave",
+    "foto": "Guasave",
+    "foto2": "Federal Bureau of Investigation",
+    "datos": [
+     "Cinco millones de dólares de recompensa",
+     "Nacido el 19 de junio de 1982",
+     "Uno de los diez más buscados"
+    ]
+   },
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "En medio de una jornada de violencia en Guasave se registraron balaceras, bloqueos carreteros y vehículos incendiados. La Secretaría de Seguridad Pública de Sinaloa confirmó una agresión contra personal federal y pidió a la población resguardarse y evitar la carretera La Costera, de Culiacán hacia el norte, y la zona de Los Mochis hacia el sur. La Liga Mexicana del Pacífico suspendió el juego entre Venados de Mazatlán y Algodoneros de Guasave, después de que videos mostraran pánico en el Kuroda Park al escucharse detonaciones.",
+    "pantalla": "Balaceras y bloqueos en el norte de Sinaloa",
+    "foto": "Culiacán",
+    "foto2": "Estadio Teodoro Mariscal",
+    "datos": [
+     "Bloqueos en La Costera",
+     "Juego de la LMP suspendido",
+     "Agresión contra personal federal"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita; seguimos pendientes de lo que sigue en Sinaloa.",
+  "gancho_pantalla": "CHAPO ISIDRO DETENIDO"
+ }
+}

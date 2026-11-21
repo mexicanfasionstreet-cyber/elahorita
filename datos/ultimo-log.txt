@@ -1,3 +1,34 @@
-2026-11-20 23:35 Tijuana · franja pendiente: ninguna
-sin novedades
-sin novedades
+2026-11-20 23:40 Tijuana · franja pendiente: ninguna
+[
+ {
+  "accion": "nota_manual",
+  "texto": "el chapo isidro"
+ }
+]
+  nota a mano: el chapo isidro
+  $ el chapo isidro
+  (180.9 s)
+0), Wikimedia Commons
+
+--- GUION · 204 palabras ~ 76 s · SEGURIDAD · mx ---
+TITULO YOUTUBE: Detienen a El Chapo Isidro en Guasave, buscado por el FBI
+GANCHO: El Chapo Isidro pasó de las filas del Cártel de Juárez a encabezar su propia organización en el norte de Sinaloa, y ahora está detenido.
+
+[SEGURIDAD] Fausto Isidro Meza Flores, alias El Chapo Isidro, fue detenido durante un operativo de fuerzas federales este viernes 20 de noviembre en Guasave, Sinaloa. Era uno de los diez fugitivos más buscados por el FBI, que ofrecía una recompensa de hasta cinco millones de dólares por información que permitiera su captura. Las autoridades estadounidenses lo identifican como dirigente de una organización dedicada al tráfico internacional de drogas, y en Estados Unidos enfrenta acusaciones por conspirar para distribuir cocaína, metanfetamina, heroína y marihuana.
+
+[SEGURIDAD] En medio de una jornada de violencia en Guasave se registraron balaceras, bloqueos carreteros y vehículos incendiados. La Secretaría de Seguridad Pública de Sinaloa confirmó una agresión contra personal federal y pidió a la población resguardarse y evitar la carretera La Costera, de Culiacán hacia el norte, y la zona de Los Mochis hacia el sur. La Liga Mexicana del Pacífico suspendió el juego entre Venados de Mazatlán y Algodoneros de Guasave, después de que videos mostraran pánico en el Kuroda Park al escucharse detonaciones.
+
+CIERRE: Esto es El Ahorita; seguimos pendientes de lo que sigue en Sinaloa.
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-20-2341-nota.json
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-2341-nota.mp4
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-20-2341-nota.mp4
+  titulo: Detienen a El Chapo Isidro en Guasave, buscado por el FBI
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/8HQGmZRaHHY
+
+enviado al chat · https://youtube.com/shorts/8HQGmZRaHHY
+

@@ -23,6 +23,11 @@
    "hora": "20:01",
    "tipo": "voz_respaldo",
    "texto": "[Errno 104] Connection reset by peer"
+  },
+  {
+   "hora": "23:41",
+   "tipo": "voz_respaldo",
+   "texto": "<urlopen error timed out>"
   }
  ]
 }

@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 177,
+ "segundos_estimados": 65.6,
+ "historias": [
+  {
+   "titulo": "Asesinan en Puebla a hombre identificado como sobrino de Caro Quintero",
+   "link": "https://www.jornada.com.mx/2026/11/22/estados/025n1est",
+   "seccion": "seguridad",
+   "medios": 4,
+   "score": 80.6,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Catedral_de_Sta_Clara_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Sisdra",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Catedral_de_Sta_Clara_.jpg",
+    "credito": "Sisdra (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Santa Clara Ocoyucan"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Sobrino de Caro Quintero es asesinado a balazos en Puebla",
+  "gancho": "Un ataque a plena tarde en un fraccionamiento de Puebla deja dos muertos y una ametralladora abandonada.",
+  "gancho_pantalla": "DOBLE HOMICIDIO EN PUEBLA",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Matan a sobrino de Caro Quintero en Puebla",
+    "texto": "Dos hombres fueron asesinados a balazos en el fraccionamiento Lomas de Angelópolis III, en Santa Clara Ocoyucan, Puebla. Una de las víctimas fue identificada de manera preliminar como Juan Pablo Quintero Navidad, alias El 25, sobrino de Rafael Caro Quintero, fundador del cártel de Guadalajara. La otra persona ultimada sería Paulino Félix Teodoro, quien presuntamente era su escolta. Testigos reportaron una balacera alrededor de las 17 horas en el parque Michoacán, con cerca de 10 detonaciones de grueso calibre. Los agresores huyeron en un Volkswagen Taos gris y hasta el cierre de la edición no había personas detenidas. En el lugar se localizó una ametralladora ligera. La Fiscalía del estado registró a los dos como Juan Pablo N y Paulino N, ambos originarios de Sinaloa, y ya investiga la mecánica del ataque. La identidad fue reconocida por la esposa de Quintero Navidad, pero faltan los estudios de ADN para confirmarla oficialmente.",
+    "foto": "Rafael Caro Quintero",
+    "foto2": "Santa Clara Ocoyucan",
+    "datos": [
+     "Cerca de 10 detonaciones",
+     "Huyeron en un Volkswagen Taos",
+     "Sin detenidos hasta el cierre"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

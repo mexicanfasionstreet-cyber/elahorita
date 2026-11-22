@@ -1,18 +1,5 @@
 [
  {
-  "cuando": "2026-11-18T20:04:35-08:00",
-  "origen": "franja-noche",
-  "titulo": "Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero",
-  "link": "https://lopezdoriga.com/nacional/asesinan-aspirante-morena-xochistlahuaca-guerrero/",
-  "entidades": [
-   "asesinan",
-   "guerrero",
-   "morena",
-   "xochistlahuaca"
-  ],
-  "video": "https://youtube.com/shorts/lnTm_lDxER4"
- },
- {
   "cuando": "2026-11-19T05:07:36-08:00",
   "origen": "franja-madrugada",
   "titulo": "El Parlamento de Dinamarca ratifica por unanimidad el acuerdo con Estados Unidos por Groenlandia",
@@ -213,5 +200,18 @@
    "trump"
   ],
   "video": "https://youtube.com/shorts/wT0Kl20IvpQ"
+ },
+ {
+  "cuando": "2026-11-22T05:03:10-08:00",
+  "origen": "franja-madrugada",
+  "titulo": "Asesinan en Puebla a hombre identificado como sobrino de Caro Quintero",
+  "link": "https://www.jornada.com.mx/2026/11/22/estados/025n1est",
+  "entidades": [
+   "asesinan",
+   "caro",
+   "puebla",
+   "quintero"
+  ],
+  "video": "https://youtube.com/shorts/-v1u1us_Xhs"
  }
 ]

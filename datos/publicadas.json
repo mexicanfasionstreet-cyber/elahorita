@@ -1,30 +1,5 @@
 [
  {
-  "cuando": "2026-11-19T05:07:36-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "El Parlamento de Dinamarca ratifica por unanimidad el acuerdo con Estados Unidos por Groenlandia",
-  "link": "https://elpais.com/internacional/2026-11-19/el-parlamento-de-dinamarca-ratifica-por-unanimidad-el-acuerdo-con-estados-unidos-por-groenlandia.html",
-  "entidades": [
-   "dinamarca",
-   "estados",
-   "groenlandia",
-   "parlamento",
-   "unidos"
-  ],
-  "video": "https://youtube.com/shorts/rlMNnPOrZrE"
- },
- {
-  "cuando": "2026-11-19T08:58:58-08:00",
-  "origen": "a mano",
-  "titulo": "Anthropic se estrena con fuertes subidas en la mayor salida a Bolsa de la historia",
-  "link": "https://www.eleconomista.com.mx/mercados/anthropic-logro-mayor-salida-bolsa-20261118-844695.html",
-  "entidades": [
-   "anthropic",
-   "bolsa"
-  ],
-  "video": ""
- },
- {
   "cuando": "2026-11-19T12:04:32-08:00",
   "origen": "franja-manana",
   "titulo": "Myanmar committed genocide against Rohingya minority, top UN court rules",
@@ -213,5 +188,18 @@
    "quintero"
   ],
   "video": "https://youtube.com/shorts/-v1u1us_Xhs"
+ },
+ {
+  "cuando": "2026-11-22T12:03:24-08:00",
+  "origen": "franja-manana",
+  "titulo": "Asesinan en Puebla a hombre identificado como sobrino de Caro Quintero",
+  "link": "https://www.jornada.com.mx/2026/11/22/estados/025n1est",
+  "entidades": [
+   "asesinan",
+   "caro",
+   "puebla",
+   "quintero"
+  ],
+  "video": "https://youtube.com/shorts/1VxNgerjhgo"
  }
 ]

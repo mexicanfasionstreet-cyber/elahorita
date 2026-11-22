@@ -1,0 +1,66 @@
+{
+ "origen": "ia",
+ "palabras": 178,
+ "segundos_estimados": 65.9,
+ "historias": [
+  {
+   "titulo": "Arresta ICE a dos mexicanos al abordar vuelo en Seattle",
+   "link": "https://www.reforma.com/arresta-ice-a-dos-mexicanos-al-abordar-vuelo-en-seattle/ar3319480",
+   "seccion": "migracion",
+   "medios": 6,
+   "score": 81.3,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Seattle_Center_as_night_falls.jpg/1280px-Seattle_Center_as_night_falls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "Jeffery Hayes",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Seattle_Center_as_night_falls.jpg",
+    "credito": "Jeffery Hayes (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Seattle"
+   }
+  },
+  {
+   "titulo": "Detienen al futbolista, Héctor Herrera por conducir en estado de ebriedad",
+   "link": "https://zetatijuana.com/2026/11/detienen-al-futbolista-hector-herrera-por-conducir-en-estado-de-ebriedad/",
+   "seccion": "deportes",
+   "medios": 5,
+   "score": 77.6,
+   "sensible": "",
+   "foto": {},
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "ICE arresta a dos mexicanos en el aeropuerto de Seattle",
+  "gancho": "Dos mexicanos fueron detenidos justo cuando abordaban su vuelo en Seattle, y el propio aeropuerto ya calificó lo ocurrido como preocupante.",
+  "gancho_pantalla": "ICE EN SEATTLE",
+  "notas": [
+   {
+    "kicker": "MIGRACION",
+    "pantalla": "ICE detiene a dos mexicanos en Seattle",
+    "texto": "Agentes de ICE arrestaron a dos pasajeros mexicanos en el Aeropuerto Internacional de Seattle-Tacoma. Los detuvieron cuando estaban abordando un vuelo. El arresto fue violento: los agentes los sometieron y los detuvieron. El incidente provocó la indignación de los funcionarios del aeropuerto, que lo calificaron de preocupante. No se conocen más detalles sobre la situación de los dos detenidos.",
+    "foto": "Aeropuerto Internacional de Seattle-Tacoma",
+    "foto2": "Seattle",
+    "datos": [
+     "Dos mexicanos detenidos",
+     "Al abordar un vuelo",
+     "Aeropuerto califica de preocupante"
+    ]
+   },
+   {
+    "kicker": "DEPORTES",
+    "pantalla": "Detienen a Héctor Herrera por conducir ebrio",
+    "texto": "El mediocampista mexicano Héctor Herrera fue arrestado la noche del sábado 21 de noviembre en el condado de Montgomery, Texas. Lo acusan de conducir bajo la influencia del alcohol. El incidente ocurre justo cuando su equipo, el Dynamo de Houston, disputa la postemporada de la MLS. El martes 24 de noviembre enfrentan a los Earthquakes de San Jose en el Juego 1 de la Primera Ronda de la Conferencia Oeste. Herrera, capitán del equipo, podría pasar 72 horas detenido, lo que pone en duda su participación en los playoffs.",
+    "foto": "Héctor Herrera",
+    "foto2": "Houston Dynamo",
+    "datos": [
+     "Arrestado el sábado 21 de noviembre",
+     "Condado de Montgomery, Texas",
+     "Podría pasar 72 horas detenido"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

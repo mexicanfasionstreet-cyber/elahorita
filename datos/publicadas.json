@@ -1,17 +1,5 @@
 [
  {
-  "cuando": "2026-11-19T12:04:32-08:00",
-  "origen": "franja-manana",
-  "titulo": "Myanmar committed genocide against Rohingya minority, top UN court rules",
-  "link": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "myanmar",
-   "rohingya",
-   "un"
-  ],
-  "video": "https://youtube.com/shorts/N0fb3N8kbVs"
- },
- {
   "cuando": "2026-11-19T15:07:19-08:00",
   "origen": "franja-tarde",
   "titulo": "A 12 años de Ayotzinapa y ataque a Los Avispones, sentencian a José Luis Abarca; ¿cuántos años le dieron?",
@@ -201,5 +189,29 @@
    "quintero"
   ],
   "video": "https://youtube.com/shorts/1VxNgerjhgo"
+ },
+ {
+  "cuando": "2026-11-22T15:03:40-08:00",
+  "origen": "franja-tarde",
+  "titulo": "Arresta ICE a dos mexicanos al abordar vuelo en Seattle",
+  "link": "https://www.reforma.com/arresta-ice-a-dos-mexicanos-al-abordar-vuelo-en-seattle/ar3319480",
+  "entidades": [
+   "arresta",
+   "ice",
+   "seattle"
+  ],
+  "video": "https://youtube.com/shorts/-OIqic7BVGE"
+ },
+ {
+  "cuando": "2026-11-22T15:03:40-08:00",
+  "origen": "franja-tarde",
+  "titulo": "Detienen al futbolista, Héctor Herrera por conducir en estado de ebriedad",
+  "link": "https://zetatijuana.com/2026/11/detienen-al-futbolista-hector-herrera-por-conducir-en-estado-de-ebriedad/",
+  "entidades": [
+   "detienen",
+   "hector",
+   "herrera"
+  ],
+  "video": "https://youtube.com/shorts/-OIqic7BVGE"
  }
 ]

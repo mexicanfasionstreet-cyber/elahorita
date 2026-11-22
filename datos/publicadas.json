@@ -1,33 +1,5 @@
 [
  {
-  "cuando": "2026-11-18T15:04:19-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Nvidia pide calma a sus empleados tras la dimisión de su fundador y CEO, Jensen Huang",
-  "link": "https://lopezdoriga.com/internacional/el-mundo/nvidia-pide-calma-a-sus-empleados-tras-la-dimision-de-su-fundador-y-ceo-jensen-huang/",
-  "entidades": [
-   "ceo",
-   "huang",
-   "jensen",
-   "nvidia"
-  ],
-  "video": "https://youtube.com/shorts/tarNqZGRENM"
- },
- {
-  "cuando": "2026-11-18T17:18:21-08:00",
-  "origen": "a mano",
-  "titulo": "Foto oficial de Sheinbaum junto a Trump, Putin y Xi Jinping en APEC 2026",
-  "link": "https://unomasuno.com.mx/mundo/foto-oficial-de-sheinbaum-junto-a-trump-putin-y-xi-jinping-en-apec-2026/",
-  "entidades": [
-   "apec",
-   "foto",
-   "jinping",
-   "putin",
-   "sheinbaum",
-   "trump"
-  ],
-  "video": ""
- },
- {
   "cuando": "2026-11-18T20:04:35-08:00",
   "origen": "franja-noche",
   "titulo": "Asesinan a aspirante de Morena en Xochistlahuaca, Guerrero",
@@ -217,5 +189,29 @@
    "sinaloa"
   ],
   "video": "https://youtube.com/shorts/zkPCjbo9uog"
+ },
+ {
+  "cuando": "2026-11-21T20:03:53-08:00",
+  "origen": "franja-noche",
+  "titulo": "Detenido El Chapo Isidro en un operativo que desata el terror en Sinaloa",
+  "link": "https://elpais.com/mexico/2026-11-21/detenido-el-chapo-isidro-en-un-operativo-que-desata-el-terror-en-sinaloa.html",
+  "entidades": [
+   "chapo",
+   "detenido",
+   "isidro",
+   "sinaloa"
+  ],
+  "video": "https://youtube.com/shorts/wT0Kl20IvpQ"
+ },
+ {
+  "cuando": "2026-11-21T20:03:53-08:00",
+  "origen": "franja-noche",
+  "titulo": "Trump confirma que el FBI sufrió un ciberataque a su base de datos",
+  "link": "https://lopezdoriga.com/internacional/trump-confirma-que-el-fbi-sufrio-un-ciberataque-a-su-base-de-datos/",
+  "entidades": [
+   "fbi",
+   "trump"
+  ],
+  "video": "https://youtube.com/shorts/wT0Kl20IvpQ"
  }
 ]

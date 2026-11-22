@@ -1,0 +1,80 @@
+{
+ "origen": "ia",
+ "palabras": 178,
+ "segundos_estimados": 65.9,
+ "historias": [
+  {
+   "titulo": "Detenido El Chapo Isidro en un operativo que desata el terror en Sinaloa",
+   "link": "https://elpais.com/mexico/2026-11-21/detenido-el-chapo-isidro-en-un-operativo-que-desata-el-terror-en-sinaloa.html",
+   "seccion": "seguridad",
+   "medios": 4,
+   "score": 81.1,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Iglesia_en_Guasave.jpg/1280px-Iglesia_en_Guasave.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Matt Borden",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_en_Guasave.jpg",
+    "credito": "Matt Borden (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Guasave"
+   },
+   "foto2": {}
+  },
+  {
+   "titulo": "Trump confirma que el FBI sufrió un ciberataque a su base de datos",
+   "link": "https://lopezdoriga.com/internacional/trump-confirma-que-el-fbi-sufrio-un-ciberataque-a-su-base-de-datos/",
+   "seccion": "ciencia",
+   "medios": 4,
+   "score": 72.6,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/1280px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "Public domain",
+    "autor": "Daniel Torok",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025).jpg",
+    "credito": "Daniel Torok (Public domain), Wikimedia Commons",
+    "termino": "Donald Trump"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Fbi_headquarters.jpg/1280px-Fbi_headquarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "User:Aude",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Fbi_headquarters.jpg",
+    "credito": "User:Aude (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "FBI"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Detenido El Chapo Isidro en Sinaloa y ciberataque al FBI",
+  "gancho": "Cae El Chapo Isidro en Guasave y la región se prende con balaceras y bloqueos.",
+  "gancho_pantalla": "CAE EL CHAPO ISIDRO",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Detienen a El Chapo Isidro en Guasave",
+    "texto": "Autoridades mexicanas detuvieron en Guasave, Sinaloa, a Fausto Isidro Meza Flores, El Chapo Isidro, líder de una facción del viejo Cartel de Sinaloa y uno de los objetivos más buscados por México y Estados Unidos. El operativo lo llevaron fuerzas de élite del Ejército y la Guardia Nacional en tres fases. También cayeron Germán N, alias Serafín, segundo al mando, y José N, operador financiero. Tras la captura hubo balaceras, bloqueos y sobrevuelos de helicópteros militares durante horas.",
+    "foto": "Guasave",
+    "foto2": "Secretaría de la Defensa Nacional",
+    "datos": [
+     "Detenido en Guasave, Sinaloa",
+     "Cuatro militares muertos",
+     "Ocho detenidos en el operativo"
+    ]
+   },
+   {
+    "kicker": "CIENCIA",
+    "pantalla": "Trump confirma ciberataque al FBI",
+    "texto": "Donald Trump confirmó que el FBI sufrió un ciberataque contra su Centro Nacional de Información Criminal. Dijo que la noticia no es buena, pero que quizá aprendan cosas que nunca habrían sabido de otra manera. No aclaró cómo se produjo el acceso, quiénes estarían detrás ni si lograron extraer información. El incidente ocurre después de que en septiembre el FBI investigara un presunto robo de datos de empleados y aspirantes, tras una denuncia del grupo ShinyHunters.",
+    "foto": "Donald Trump",
+    "foto2": "FBI",
+    "datos": [
+     "Centro Nacional de Información Criminal",
+     "Ataque sin autor aclarado",
+     "Relevo en ciberseguridad"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

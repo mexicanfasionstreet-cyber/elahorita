@@ -1,19 +1,5 @@
 [
  {
-  "cuando": "2026-11-19T15:07:19-08:00",
-  "origen": "franja-tarde",
-  "titulo": "A 12 años de Ayotzinapa y ataque a Los Avispones, sentencian a José Luis Abarca; ¿cuántos años le dieron?",
-  "link": "https://lopezdoriga.com/nacional/a-12-anos-de-ayotzinapa-y-ataque-a-los-avispones-sentencian-a-jose-luis-abarca-cuantos-anos-le-dieron/",
-  "entidades": [
-   "abarca",
-   "avispones",
-   "ayotzinapa",
-   "jose",
-   "luis"
-  ],
-  "video": "https://youtube.com/shorts/TQ8vkwU5IrU"
- },
- {
   "cuando": "2026-11-19T20:05:42-08:00",
   "origen": "franja-noche",
   "titulo": "Watch: What did Trump, Xi and Putin get out of their historic meeting?",
@@ -213,5 +199,30 @@
    "herrera"
   ],
   "video": "https://youtube.com/shorts/-OIqic7BVGE"
+ },
+ {
+  "cuando": "2026-11-22T20:03:07-08:00",
+  "origen": "franja-noche",
+  "titulo": "Liguilla del Apertura 2026: así quedaron los cruces de cuartos de final",
+  "link": "https://lopezdoriga.com/deportes/liguilla-del-apertura-2026-asi-quedaron-los-cruces-de-cuartos-de-final/",
+  "entidades": [
+   "apertura",
+   "liguilla"
+  ],
+  "video": "https://youtube.com/shorts/I7rKOVEqXi0"
+ },
+ {
+  "cuando": "2026-11-22T20:03:07-08:00",
+  "origen": "franja-noche",
+  "titulo": "¿Intento de censura? El Gobierno de Colombia pide a X suspender la cuenta de Gustavo Petro",
+  "link": "https://www.elfinanciero.com.mx/mundo/2026/11/22/intento-de-censura-el-gobierno-de-colombia-pide-a-x-suspender-la-cuenta-de-gustavo-petro/",
+  "entidades": [
+   "colombia",
+   "gobierno",
+   "gustavo",
+   "intento",
+   "petro"
+  ],
+  "video": "https://youtube.com/shorts/I7rKOVEqXi0"
  }
 ]

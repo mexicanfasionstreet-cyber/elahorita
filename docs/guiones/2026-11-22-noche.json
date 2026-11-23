@@ -1,0 +1,80 @@
+{
+ "origen": "ia",
+ "palabras": 181,
+ "segundos_estimados": 67.0,
+ "historias": [
+  {
+   "titulo": "Liguilla del Apertura 2026: así quedaron los cruces de cuartos de final",
+   "link": "https://lopezdoriga.com/deportes/liguilla-del-apertura-2026-asi-quedaron-los-cruces-de-cuartos-de-final/",
+   "seccion": "deportes",
+   "medios": 6,
+   "score": 84.5,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho.jpg/1280px-Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC0",
+    "autor": "Alejan98",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Estadio_Akron_02-07-2022_cabecera_sur_lado_derecho.jpg",
+    "credito": "Alejan98 (CC0), Wikimedia Commons",
+    "termino": "Estadio Akron"
+   },
+   "foto2": {}
+  },
+  {
+   "titulo": "¿Intento de censura? El Gobierno de Colombia pide a X suspender la cuenta de Gustavo Petro",
+   "link": "https://www.elfinanciero.com.mx/mundo/2026/11/22/intento-de-censura-el-gobierno-de-colombia-pide-a-x-suspender-la-cuenta-de-gustavo-petro/",
+   "seccion": "mundo",
+   "medios": 6,
+   "score": 80.8,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Presidente_Gustavo_Petro_U.jpg/1280px-Presidente_Gustavo_Petro_U.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "Public domain",
+    "autor": "Presidencia de Colombia",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Presidente_Gustavo_Petro_U.jpg",
+    "credito": "Presidencia de Colombia (Public domain), Wikimedia Commons",
+    "termino": "Gustavo Petro"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Museo-del-Oro-Fachada_%2827842494739%29.jpg/1280px-Museo-del-Oro-Fachada_%2827842494739%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Actividad Cultural Banco de la República",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Museo-del-Oro-Fachada_(27842494739).jpg",
+    "credito": "Actividad Cultural Banco de la República (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Bogotá"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Chivas lidera la Liguilla del Apertura 2026 y Colombia pide cerrar X de Petro",
+  "gancho": "Chivas se quedó con el liderato y el gobierno colombiano quiere silenciar a Petro en X.",
+  "gancho_pantalla": "LIGUILLA Y PETRO EN X",
+  "notas": [
+   {
+    "kicker": "DEPORTES",
+    "pantalla": "Chivas es líder y ya hay cruces de cuartos",
+    "texto": "Chivas terminó como líder general del Apertura 2026 tras ganarle 1-0 a Cruz Azul, con gol de Efraín Álvarez. El Guadalajara cerró la fase regular con 33 puntos, seguido por Cruz Azul con 32, América con 30 y Atlas con 28. Los cuartos de final quedaron así: Chivas-Pachuca, Cruz Azul-León, América-Monterrey y Atlas-Toluca. Los cuatro primeros cerrarán sus series como locales: Chivas en el Akron, Cruz Azul y América en el Banorte y Atlas en el Jalisco.",
+    "foto": "Estadio Akron",
+    "foto2": "Liga MX",
+    "datos": [
+     "Chivas líder con 33 puntos",
+     "Idas el 25 y 26 de noviembre",
+     "Vueltas el 28 y 29"
+    ]
+   },
+   {
+    "kicker": "MUNDO",
+    "pantalla": "Colombia pide a X suspender a Petro",
+    "texto": "El Gobierno de Colombia pidió a X suspender la cuenta de Gustavo Petro por posible incitación a la violencia. El Ministerio de las Tecnologías de la Información y las Comunicaciones (MinTIC) envió la carta este 22 de noviembre al Equipo de Asuntos Públicos, Seguridad y Cumplimiento de Reglas de la Red Social X. La solicitud se basa en una publicación del 21 de noviembre donde Petro escribió: le solicito al pueblo de Colombia exigir la renuncia de Abelardo ya.",
+    "foto": "Gustavo Petro",
+    "foto2": "Bogotá",
+    "datos": [
+     "Carta enviada el 22 de noviembre",
+     "Publicación del 21 de noviembre",
+     "Discurso en Cali el 19 de noviembre"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

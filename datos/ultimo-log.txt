@@ -1,3 +1,81 @@
-2026-11-23 14:55 Tijuana · franja pendiente: ninguna
+2026-11-23 15:01 Tijuana · franja pendiente: tarde
 sin novedades
-sin novedades
+corriendo la franja tarde
+  $ --days 2
+  (18.7 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 41
+
+1149 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+312 nuevas, 12307 en 30 dias)
+
+  secciones revisadas con IA: 9 cambio(s)
+  150 historias desde 23 12:00
+    98.5 peso  48.0 · Las acciones del gigante tecnológico Nvidia se disparan tras anunciars
+    91.3 peso  31.5 · Mikel Arriola anticipa “decenas de partidos” del Mundial Femenil 2031 
+    91.0 peso  19.0 · Crónica de la captura de “El Chapo Isidro”
+    72.0 peso  16.5 · Irán flagela con 74 latigazos a la cantante Parastoo Ahmadi por cantar
+  $ --franja tarde --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-tarde.json --link https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss --previo Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia --link https://lopezdoriga.com/deportes/mikel-arriola-anticipa-decenas-de-partidos-del-mundial-femenil-2031-en-mexico/ --previo  --reserva https://lopezdoriga.com/lopez-doriga-tv/cronica-de-la-captura-de-el-chapo-isidro/ --reserva https://elpais.com/internacional/2026-11-23/iran-flagela-con-74-latigazos-a-la-cantante-parastoo-ahmadi-por-cantar-sin-velo-en-youtube.html
+  (7.8 s)
+  material nota 1: 478 palabras de https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=R
+  material nota 2: 489 palabras de https://lopezdoriga.com/deportes/mikel-arriola-anticipa-dece
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 2 nota(s) · 170 palabras ~ 63 s ---
+
+TITULO YOUTUBE: Nvidia repone a Jensen Huang y sus acciones se disparan
+GANCHO: Once días después de su renuncia, Nvidia regresó a su fundador al mando y el mercado lo celebró con una cifra histórica.
+
+[ECONOMIA] El Consejo de Administración de Nvidia restituyó a Jensen Huang como director ejecutivo y presidente, con efecto inmediato, once días después de su renuncia. El voto fue unánime y la empresa lo llamó la persona adecuada para liderar Nvidia. Huang había renunciado tras admitir una relación con una mujer señalada como presunta espía china, y también fue señalado por un romance con una ejecutiva de la compañía.
+
+[DEPORTES] Mikel Arriola, comisionado de la Federación Mexicana de Futbol, dijo en entrevista con Radio Fórmula que México buscará albergar la inauguración, la final y el sorteo del Mundial Femenil 2031. Será el primer certamen de la rama con 48 selecciones y el cuarto Mundial de categoría mayor en territorio mexicano. La organización se comparte con Estados Unidos, Costa Rica y Jamaica, y el reparto de encuentros se conocerá en los próximos meses.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Las acciones del gigante tecnológico Nvidia se disparan tras anunciars (13 medios)
+  fuente: Mikel Arriola anticipa “decenas de partidos” del Mundial Femenil 2031  (9 medios)
+  foto nota 1: Jensen Huang -> Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 1: Nasdaq -> giggel (CC BY 3.0), Wikimedia Commons
+  foto nota 2: Mikel Arriola -> Latinupdater (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 2: Estadio Azteca -> ProtoplasmaKid (CC BY 4.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-tarde.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-tarde.json
+  (42.3 s)
+guion 2026-11-23-tarde.json · 170 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     6.60 s  [edge-tts]  22 palabras con tiempo  Once días después de su renuncia, Nvidia reg…
+  nota1     22.30 s  [edge-tts]  67 palabras con tiempo  El Consejo de Administración de Nvidia resti…
+  nota2     25.68 s  [edge-tts]  71 palabras con tiempo  Mikel Arriola, comisionado de la Federación …
+  cierre     4.13 s  [edge-tts]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 59.82 s (4 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-23-tarde/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-tarde.json
+  (92.7 s)
+  diapositiva 00-gancho.png · tomas: principal(6.9)
+  diapositiva 01-nota1.png · tomas: principal(4.5) limpia(4.5) foto2(4.5) principal(4.5) limpia(4.5)
+  diapositiva 02-nota2.png · tomas: principal(4.3) limpia(4.3) foto2(4.3) dato(3.0) principal(3.4) limpia(3.4) foto2(3.4)
+  diapositiva 03-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 5 tomas
+  video nota2: 7 tomas
+  video cierre: 1 tomas
+subtitulos: 161 estados · 897 cuadros · 59.8 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-23-tarde/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-23-tarde.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-23-tarde-portada.jpg
+duracion: 59.8 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-23-tarde.mp4
+  titulo: Nvidia repone a Jensen Huang y sus acciones se disparan
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/7yyoYwv4CJc
+

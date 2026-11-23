@@ -1,21 +1,5 @@
 [
  {
-  "cuando": "2026-11-20T12:05:12-08:00",
-  "origen": "franja-manana",
-  "titulo": "Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili Campos",
-  "link": "https://elpais.com/mexico/2026-11-20/detenida-en-ciudad-de-mexico-la-exalcaldesa-de-playa-del-carmen-lili-campos.html",
-  "entidades": [
-   "campos",
-   "carmen",
-   "ciudad",
-   "detenida",
-   "lili",
-   "mexico",
-   "playa"
-  ],
-  "video": "https://youtube.com/shorts/qmPyPzMTAQM"
- },
- {
   "cuando": "2026-11-20T15:04:45-08:00",
   "origen": "franja-tarde",
   "titulo": "Trump threatens ban on US firms building AI data centres overseas",
@@ -248,5 +232,31 @@
    "unidos"
   ],
   "video": "https://youtube.com/shorts/F3hbM9GopGw"
+ },
+ {
+  "cuando": "2026-11-23T15:03:47-08:00",
+  "origen": "franja-tarde",
+  "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
+  "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "huang",
+   "jensen",
+   "nvidia"
+  ],
+  "video": "https://youtube.com/shorts/7yyoYwv4CJc"
+ },
+ {
+  "cuando": "2026-11-23T15:03:47-08:00",
+  "origen": "franja-tarde",
+  "titulo": "Mikel Arriola anticipa “decenas de partidos” del Mundial Femenil 2031 en México",
+  "link": "https://lopezdoriga.com/deportes/mikel-arriola-anticipa-decenas-de-partidos-del-mundial-femenil-2031-en-mexico/",
+  "entidades": [
+   "arriola",
+   "femenil",
+   "mexico",
+   "mikel",
+   "mundial"
+  ],
+  "video": "https://youtube.com/shorts/7yyoYwv4CJc"
  }
 ]

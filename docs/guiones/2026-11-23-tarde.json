@@ -1,0 +1,87 @@
+{
+ "origen": "ia",
+ "palabras": 170,
+ "segundos_estimados": 63.0,
+ "historias": [
+  {
+   "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
+   "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
+   "seccion": "economia",
+   "medios": 13,
+   "score": 98.5,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Anderseidesvik",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+    "credito": "Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Jensen Huang"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg/1280px-NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 3.0",
+    "autor": "giggel",
+    "pagina": "https://commons.wikimedia.org/wiki/File:NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_(2).jpg",
+    "credito": "giggel (CC BY 3.0), Wikimedia Commons",
+    "termino": "Nasdaq"
+   }
+  },
+  {
+   "titulo": "Mikel Arriola anticipa “decenas de partidos” del Mundial Femenil 2031 en México",
+   "link": "https://lopezdoriga.com/deportes/mikel-arriola-anticipa-decenas-de-partidos-del-mundial-femenil-2031-en-mexico/",
+   "seccion": "deportes",
+   "medios": 9,
+   "score": 91.3,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Mikel_Arriola_Pe%C3%B1alosa.jpg/1280px-Mikel_Arriola_Pe%C3%B1alosa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Latinupdater",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mikel_Arriola_Pe%C3%B1alosa.jpg",
+    "credito": "Latinupdater (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Mikel Arriola"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg/1280px-Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 4.0",
+    "autor": "ProtoplasmaKid",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_del_Estadio_Azteca_-_2026_-_02.jpg",
+    "credito": "ProtoplasmaKid (CC BY 4.0), Wikimedia Commons",
+    "termino": "Estadio Azteca"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Nvidia repone a Jensen Huang y sus acciones se disparan",
+  "gancho": "Once días después de su renuncia, Nvidia regresó a su fundador al mando y el mercado lo celebró con una cifra histórica.",
+  "gancho_pantalla": "NVIDIA Y EL REGRESO DE HUANG",
+  "notas": [
+   {
+    "kicker": "ECONOMIA",
+    "pantalla": "Nvidia repone a Jensen Huang como director ejecutivo",
+    "texto": "El Consejo de Administración de Nvidia restituyó a Jensen Huang como director ejecutivo y presidente, con efecto inmediato, once días después de su renuncia. El voto fue unánime y la empresa lo llamó la persona adecuada para liderar Nvidia. Huang había renunciado tras admitir una relación con una mujer señalada como presunta espía china, y también fue señalado por un romance con una ejecutiva de la compañía.",
+    "foto": "Jensen Huang",
+    "foto2": "Nasdaq",
+    "datos": [
+     "11 días fuera de Nvidia",
+     "Alza de casi 40%",
+     "Un billón de dólares más"
+    ]
+   },
+   {
+    "kicker": "DEPORTES",
+    "pantalla": "México quiere la final del Mundial Femenil 2031",
+    "texto": "Mikel Arriola, comisionado de la Federación Mexicana de Futbol, dijo en entrevista con Radio Fórmula que México buscará albergar la inauguración, la final y el sorteo del Mundial Femenil 2031. Será el primer certamen de la rama con 48 selecciones y el cuarto Mundial de categoría mayor en territorio mexicano. La organización se comparte con Estados Unidos, Costa Rica y Jamaica, y el reparto de encuentros se conocerá en los próximos meses.",
+    "foto": "Mikel Arriola",
+    "foto2": "Estadio Azteca",
+    "datos": [
+     "48 selecciones",
+     "Siete estadios",
+     "Superar los 13 partidos"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

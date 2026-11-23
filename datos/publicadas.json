@@ -1,17 +1,5 @@
 [
  {
-  "cuando": "2026-11-19T20:05:42-08:00",
-  "origen": "franja-noche",
-  "titulo": "Watch: What did Trump, Xi and Putin get out of their historic meeting?",
-  "link": "https://www.bbc.co.uk/news/videos/c63rgnq05pdwo?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "putin",
-   "trump",
-   "watch"
-  ],
-  "video": "https://youtube.com/shorts/krZmdUJ3xCA"
- },
- {
   "cuando": "2026-11-20T05:07:29-08:00",
   "origen": "franja-madrugada",
   "titulo": "El director nacional de Ciberseguridad de la Casa Blanca deja el cargo tras una semana de fallos tecnológicos en Estados Unidos",
@@ -224,5 +212,29 @@
    "petro"
   ],
   "video": "https://youtube.com/shorts/I7rKOVEqXi0"
+ },
+ {
+  "cuando": "2026-11-23T05:03:57-08:00",
+  "origen": "franja-madrugada",
+  "titulo": "La indignación por la detención de dos mexicanos por agentes de ICE en el aeropuerto de Seattle",
+  "link": "https://www.bbc.com/mundo/articles/ckx27qql52g1o?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "ice",
+   "seattle"
+  ],
+  "video": "https://youtube.com/shorts/z4OW6oO0eUQ"
+ },
+ {
+  "cuando": "2026-11-23T05:03:57-08:00",
+  "origen": "franja-madrugada",
+  "titulo": "Detienen a ocho presuntos integrantes de la facción del “Chapo Isidro” en Sinaloa; aseguran arsenal y vehículos",
+  "link": "https://lopezdoriga.com/nacional/detienen-a-ocho-presuntos-integrantes-de-la-faccion-del-chapo-isidro-en-sinaloa-aseguran-arsenal-y-vehiculos/",
+  "entidades": [
+   "chapo",
+   "detienen",
+   "isidro",
+   "sinaloa"
+  ],
+  "video": "https://youtube.com/shorts/z4OW6oO0eUQ"
  }
 ]

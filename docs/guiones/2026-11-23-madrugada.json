@@ -1,0 +1,73 @@
+{
+ "origen": "ia",
+ "palabras": 185,
+ "segundos_estimados": 68.5,
+ "historias": [
+  {
+   "titulo": "La indignación por la detención de dos mexicanos por agentes de ICE en el aeropuerto de Seattle",
+   "link": "https://www.bbc.com/mundo/articles/ckx27qql52g1o?at_medium=RSS&at_campaign=rss",
+   "seccion": "migracion",
+   "medios": 7,
+   "score": 92.7,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Alaska_Airlines_737_MAX_9_%28N913AK%29.jpg/1280px-Alaska_Airlines_737_MAX_9_%28N913AK%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Sam Almo-Milkin",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Alaska_Airlines_737_MAX_9_(N913AK).jpg",
+    "credito": "Sam Almo-Milkin (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Alaska Airlines"
+   }
+  },
+  {
+   "titulo": "Detienen a ocho presuntos integrantes de la facción del “Chapo Isidro” en Sinaloa; aseguran arsenal y vehículos",
+   "link": "https://lopezdoriga.com/nacional/detienen-a-ocho-presuntos-integrantes-de-la-faccion-del-chapo-isidro-en-sinaloa-aseguran-arsenal-y-vehiculos/",
+   "seccion": "seguridad",
+   "medios": 5,
+   "score": 83.7,
+   "sensible": "",
+   "foto": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Vista_desde_el_cerro_de_Nacaveba_Sinaloa_de_Leyva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY 4.0",
+    "autor": "Compitaa6803",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vista_desde_el_cerro_de_Nacaveba_Sinaloa_de_Leyva.jpg",
+    "credito": "Compitaa6803 (CC BY 4.0), Wikimedia Commons",
+    "termino": "Sinaloa de Leyva"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "ICE detiene a dos mexicanos en el aeropuerto de Seattle y desata indignación",
+  "gancho": "Padre e hija mexicanos, detenidos por ICE justo cuando abordaban su vuelo en Seattle.",
+  "gancho_pantalla": "ICE DETIENE EN SEATTLE",
+  "notas": [
+   {
+    "kicker": "MIGRACION",
+    "pantalla": "ICE arresta a padre e hija mexicanos en Seattle",
+    "texto": "Agentes del ICE arrestaron a dos pasajeros mexicanos cuando abordaban un vuelo en el Aeropuerto Internacional de Seattle-Tacoma, el sábado por la mañana. Según el ICE, un hombre y una mujer permanecían en el país más tiempo del permitido por sus visas. Son Ricardo Larrondo Mendoza y Sofía Hernández Mejía, padre e hija. El ICE dice que otros viajeros obstruyeron a sus agentes y que la mujer arrojó café caliente. Su abogada asegura que no tienen ningún antecedente penal.",
+    "foto": "Aeropuerto Internacional de Seattle-Tacoma",
+    "foto2": "Alaska Airlines",
+    "datos": [
+     "Padre e hija detenidos",
+     "Sin antecedentes penales, según abogada",
+     "Aeropuerto se declara indignado"
+    ]
+   },
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Ejército detiene a ocho del Chapo Isidro en Sinaloa",
+    "texto": "En Sinaloa de Leyva, elementos de Fuerzas Especiales del Ejército detuvieron a ocho presuntos integrantes de la facción Chapo Isidro, de los Beltrán Leyva. Fue tras una agresión armada en las inmediaciones del poblado El Platanito. Entre los detenidos hay un menor de edad. Las autoridades los vinculan con los bloqueos del 20 de noviembre, tras la detención de Fausto N. Aseguraron armas de alto poder, droga, equipo táctico y seis vehículos, dos blindados. Todo quedó a disposición de la Fiscalía en Culiacán.",
+    "foto": "Sinaloa de Leyva",
+    "foto2": "Ejército Mexicano",
+    "datos": [
+     "Ocho detenidos en el operativo",
+     "Ametralladora calibre .50 asegurada",
+     "Seis vehículos, dos blindados"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

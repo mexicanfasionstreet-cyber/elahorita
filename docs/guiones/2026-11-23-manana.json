@@ -1,0 +1,80 @@
+{
+ "origen": "ia",
+ "palabras": 193,
+ "segundos_estimados": 71.5,
+ "historias": [
+  {
+   "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
+   "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
+   "seccion": "economia",
+   "medios": 7,
+   "score": 96.2,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Anderseidesvik",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+    "credito": "Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Jensen Huang"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg/1280px-NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 3.0",
+    "autor": "giggel",
+    "pagina": "https://commons.wikimedia.org/wiki/File:NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_(2).jpg",
+    "credito": "giggel (CC BY 3.0), Wikimedia Commons",
+    "termino": "Nasdaq"
+   }
+  },
+  {
+   "titulo": "‘El Chapo Isidro’: así fue el operativo de México y Estados Unidos para capturarlo",
+   "link": "https://elceo.com/actualidad/chapo-isidro-operativo-mexico-estados-unidos-captura/",
+   "seccion": "seguridad",
+   "medios": 6,
+   "score": 91.2,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Iglesia_en_Guasave.jpg/1280px-Iglesia_en_Guasave.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Matt Borden",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_en_Guasave.jpg",
+    "credito": "Matt Borden (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Guasave"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Nvidia dispara sus acciones tras el regreso de Jensen Huang",
+  "gancho": "Once días después de renunciar, Jensen Huang vuelve a Nvidia y la bolsa reacciona al instante.",
+  "gancho_pantalla": "NVIDIA Y EL REGRESO DE HUANG",
+  "notas": [
+   {
+    "kicker": "ECONOMIA",
+    "pantalla": "Nvidia restituye a Huang y sus acciones suben 30%",
+    "texto": "El Consejo de Administración de Nvidia restituyó a Jensen Huang como director ejecutivo y presidente, once días después de su renuncia. El voto fue unánime y la empresa lo llamó la persona adecuada para liderar Nvidia. Las acciones subieron cerca de 30% al inicio de la jornada y su valor bursátil aumentó en un billón de dólares tras la apertura del Nasdaq. Huang había renunciado tras admitir una relación con una mujer señalada como presunta espía china.",
+    "foto": "Jensen Huang",
+    "foto2": "Nasdaq",
+    "datos": [
+     "11 días fuera de Nvidia",
+     "Acciones suben cerca de 30%",
+     "Un billón de dólares más"
+    ]
+   },
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Así fue el operativo que capturó al Chapo Isidro",
+    "texto": "La captura de Fausto Isidro Meza Flores, El Chapo Isidro, en Sinaloa, fue un operativo de la noche del viernes. Participaron dos unidades de fuerzas especiales mexicanas, los Murciélagos del Ejército y los Lobos de la Guardia Nacional, que llegaron por tierra a la casa. Sobre Guasave volaban dos helicópteros Black Hawk y drones, y los militares reportaron que los recibieron a tiros y con explosivos. También detuvieron a Germán N, Serafín, su segundo al mando, y a José N, señalado operador financiero. Autoridades de Estados Unidos aportaron inteligencia para ubicarlo.",
+    "foto": "Guasave",
+    "foto2": "Guardia Nacional (México)",
+    "datos": [
+     "Noche del viernes en Guasave",
+     "Murciélagos y Lobos",
+     "Tres detenidos en el operativo"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

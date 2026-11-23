@@ -1,3 +1,80 @@
-2026-11-23 11:55 Tijuana · franja pendiente: ninguna
+2026-11-23 12:00 Tijuana · franja pendiente: manana
 sin novedades
-sin novedades
+corriendo la franja manana
+  $ --days 2
+  (18.2 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 53
+
+1147 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+595 nuevas, 11995 en 30 dias)
+
+  secciones revisadas con IA: 12 cambio(s)
+  229 historias desde 23 05:00
+    96.2 peso  27.0 · Las acciones del gigante tecnológico Nvidia se disparan tras anunciars
+    91.2 peso  21.0 · ‘El Chapo Isidro’: así fue el operativo de México y Estados Unidos par
+    82.8 peso  16.0 · Sheinbaum descarta salida de García Harfuch de la SSPC y niega cambios
+    79.6 peso  18.0 · Define Liga MX días y horarios para Cuartos del AP 2026
+  $ --franja manana --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-manana.json --link https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss --previo  --link https://elceo.com/actualidad/chapo-isidro-operativo-mexico-estados-unidos-captura/ --previo Detienen a ocho presuntos integrantes de la facción del “Chapo Isidro” en Sinaloa; aseguran arsenal y vehículos --reserva https://zetatijuana.com/2026/11/sheinbaum-descarta-salida-de-garcia-harfuch-de-la-sspc-y-niega-cambios-en-el-gabinete-federal/ --reserva https://www.reforma.com/define-liga-mx-dias-y-horarios-para-cuartos-del-ap-2026/ar3319787
+  (8.8 s)
+tps://elceo.com/actualidad/chapo-isidro-operativo-mexico-e
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 2 nota(s) · 193 palabras ~ 71 s ---
+
+TITULO YOUTUBE: Nvidia dispara sus acciones tras el regreso de Jensen Huang
+GANCHO: Once días después de renunciar, Jensen Huang vuelve a Nvidia y la bolsa reacciona al instante.
+
+[ECONOMIA] El Consejo de Administración de Nvidia restituyó a Jensen Huang como director ejecutivo y presidente, once días después de su renuncia. El voto fue unánime y la empresa lo llamó la persona adecuada para liderar Nvidia. Las acciones subieron cerca de 30% al inicio de la jornada y su valor bursátil aumentó en un billón de dólares tras la apertura del Nasdaq. Huang había renunciado tras admitir una relación con una mujer señalada como presunta espía china.
+
+[SEGURIDAD] La captura de Fausto Isidro Meza Flores, El Chapo Isidro, en Sinaloa, fue un operativo de la noche del viernes. Participaron dos unidades de fuerzas especiales mexicanas, los Murciélagos del Ejército y los Lobos de la Guardia Nacional, que llegaron por tierra a la casa. Sobre Guasave volaban dos helicópteros Black Hawk y drones, y los militares reportaron que los recibieron a tiros y con explosivos. También detuvieron a Germán N, Serafín, su segundo al mando, y a José N, señalado operador financiero. Autoridades de Estados Unidos aportaron inteligencia para ubicarlo.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Las acciones del gigante tecnológico Nvidia se disparan tras anunciars (7 medios)
+  fuente: ‘El Chapo Isidro’: así fue el operativo de México y Estados Unidos par (6 medios)
+  foto nota 1: Jensen Huang -> Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 1: Nasdaq -> giggel (CC BY 3.0), Wikimedia Commons
+  foto nota 2: Guasave -> Matt Borden (CC BY-SA 2.0), Wikimedia Commons
+  foto2 nota 2: sin foto libre para 'Guardia Nacional (México)'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-manana.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-manana.json
+  (38.8 s)
+guion 2026-11-23-manana.json · 193 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     5.66 s  [edge-tts]  16 palabras con tiempo  Once días después de renunciar, Jensen Huang…
+  nota1     25.27 s  [edge-tts]  77 palabras con tiempo  El Consejo de Administración de Nvidia resti…
+  nota2     34.32 s  [edge-tts]  91 palabras con tiempo  La captura de Fausto Isidro Meza Flores, El …
+  cierre     4.13 s  [edge-tts]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 70.50 s (4 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-23-manana/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-23-manana.json
+  (108.3 s)
+  diapositiva 00-gancho.png · tomas: principal(5.9)
+  diapositiva 01-nota1.png · tomas: principal(4.4) limpia(4.4) foto2(4.4) dato(3.0) principal(4.7) limpia(4.7)
+  diapositiva 02-nota2.png · tomas: principal(2.9) limpia(2.9) dato(4.5) dato(3.0) limpia(4.3) principal(4.3) limpia(4.3) principal(4.3) limpia(4.3)
+  diapositiva 03-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 6 tomas
+  video nota2: 9 tomas
+  video cierre: 1 tomas
+subtitulos: 185 estados · 1058 cuadros · 70.5 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-23-manana/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-23-manana.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-23-manana-portada.jpg
+duracion: 70.5 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-23-manana.mp4
+  titulo: Nvidia dispara sus acciones tras el regreso de Jensen Huang
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/F3hbM9GopGw
+

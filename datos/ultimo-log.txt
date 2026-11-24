@@ -1,3 +1,80 @@
-2026-11-24 14:55 Tijuana · franja pendiente: ninguna
+2026-11-24 15:00 Tijuana · franja pendiente: tarde
 sin novedades
-sin novedades
+corriendo la franja tarde
+  $ --days 2
+  (29.3 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 60
+
+1213 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+354 nuevas, 14141 en 30 dias)
+
+  secciones revisadas con IA: 15 cambio(s)
+  144 historias desde 24 12:00
+    94.7 peso  24.5 · Furia y consternación en el Congreso de EE UU por el regreso de Huang 
+    84.3 peso  16.0 · Santander México cambia de presidente: Ángel Alverde Losada sustituirá
+    79.6 peso  12.0 · Colombia: atentado en Villavicencio deja más de una decena de heridos
+    78.8 peso  16.5 · Inés Gómez Mont deja la cárcel migratoria en Florida
+  $ --franja tarde --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-tarde.json --link https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html --previo Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él --link https://elceo.com/negocios/santander-mexico-cambia-de-presidente-angel-alverde-losada-sustituira-a-laura-diez-barroso/ --previo  --reserva https://www.france24.com/es/video/20261124-colombia-atentado-en-villavicencio-deja-m%C3%A1s-de-una-decena-de-heridos --reserva https://lopezdoriga.com/nacional/ines-gomez-mont-deja-la-carcel-migratoria-en-florida/
+  (7.9 s)
+abras de https://elceo.com/negocios/santander-mexico-cambia-de-presid
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 2 nota(s) · 180 palabras ~ 67 s ---
+
+TITULO YOUTUBE: Jensen Huang vuelve a Nvidia y el Congreso de EU lo cita a audiencias
+GANCHO: Huang regresó a Nvidia y el Congreso de Estados Unidos quiere respuestas.
+
+[MUNDO] Jensen Huang volvió a la dirección de Nvidia, once días después de haber dimitido por el escándalo de sus relaciones con una posible espía china y con al menos dos empleadas de la compañía. El regreso lo empujó Donald Trump, que sostiene que su aliado tecnológico no representa un riesgo para la seguridad nacional. En el Congreso la furia no distingue partidos: demócratas y republicanos se dicen consternados y prometen interrogatorios exhaustivos. La próxima semana Huang comparecerá ante cuatro comités en el Capitolio.
+
+[ECONOMIA] Santander México nombró a Ángel Alverde Losada como nuevo presidente de su Consejo de Administración a partir del 5 de febrero de 2027. Sustituye a Laura Diez Barroso Azcárraga, quien en 2020 se convirtió en la primera mujer en ocupar el cargo. El banco presentó la designación como parte de un proceso de transición institucional. Ana Botín, presidenta ejecutiva de Banco Santander, dijo que Alverde ya conoce el negocio porque es miembro del Consejo de Administración.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Furia y consternación en el Congreso de EE UU por el regreso de Huang  (6 medios)
+  fuente: Santander México cambia de presidente: Ángel Alverde Losada sustituirá (4 medios)
+  foto nota 1: Jensen Huang -> Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 1: Capitolio de los Estados Unidos -> Diego Delso (CC BY-SA 3.0), Wikimedia Commons
+  foto nota 2: Ana Botín -> World Travel & Tourism Council (CC BY 2.0), Wikimedia Commons
+  foto2 nota 2: sin foto libre para 'Santander México'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-tarde.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-tarde.json
+  (46.0 s)
+guion 2026-11-24-tarde.json · 180 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     4.54 s  [edge-tts]  12 palabras con tiempo  Huang regresó a Nvidia y el Congreso de Esta…
+  nota1     28.63 s  [edge-tts]  83 palabras con tiempo  Jensen Huang volvió a la dirección de Nvidia…
+  nota2     27.29 s  [edge-tts]  73 palabras con tiempo  Santander México nombró a Ángel Alverde Losa…
+  cierre     4.13 s  [edge-tts]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 65.70 s (4 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-24-tarde/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-tarde.json
+  (99.6 s)
+  diapositiva 00-gancho.png · tomas: principal(4.8)
+  diapositiva 01-nota1.png · tomas: principal(4.5) limpia(4.5) foto2(4.5) principal(4.5) limpia(4.5) foto2(4.5) dato(1.9)
+  diapositiva 02-nota2.png · tomas: principal(3.6) limpia(3.6) principal(3.6) dato(3.0) limpia(4.6) principal(4.6) limpia(4.6)
+  diapositiva 03-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 7 tomas
+  video nota2: 7 tomas
+  video cierre: 1 tomas
+subtitulos: 169 estados · 986 cuadros · 65.7 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-24-tarde/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-tarde.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-tarde-portada.jpg
+duracion: 65.7 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-tarde.mp4
+  titulo: Jensen Huang vuelve a Nvidia y el Congreso de EU lo cita a audiencias
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/TIzFWKCiey4
+

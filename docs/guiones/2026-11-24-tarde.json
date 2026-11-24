@@ -1,0 +1,80 @@
+{
+ "origen": "ia",
+ "palabras": 180,
+ "segundos_estimados": 66.7,
+ "historias": [
+  {
+   "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
+   "link": "https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html",
+   "seccion": "mundo",
+   "medios": 6,
+   "score": 94.7,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Anderseidesvik",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+    "credito": "Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Jensen Huang"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Capitol%2C_Washington%2C_D.C._USA12.jpg/1280px-Capitol%2C_Washington%2C_D.C._USA12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "Diego Delso",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Capitol,_Washington,_D.C._USA12.jpg",
+    "credito": "Diego Delso (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Capitolio de los Estados Unidos"
+   }
+  },
+  {
+   "titulo": "Santander México cambia de presidente: Ángel Alverde Losada sustituirá a Laura Diez Barroso",
+   "link": "https://elceo.com/negocios/santander-mexico-cambia-de-presidente-angel-alverde-losada-sustituira-a-laura-diez-barroso/",
+   "seccion": "economia",
+   "medios": 4,
+   "score": 84.3,
+   "sensible": "",
+   "foto": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Ana_Patricia_Bot%C3%ADn_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY 2.0",
+    "autor": "World Travel & Tourism Council",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ana_Patricia_Bot%C3%ADn_2015_(cropped).jpg",
+    "credito": "World Travel & Tourism Council (CC BY 2.0), Wikimedia Commons",
+    "termino": "Ana Botín"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Jensen Huang vuelve a Nvidia y el Congreso de EU lo cita a audiencias",
+  "gancho": "Huang regresó a Nvidia y el Congreso de Estados Unidos quiere respuestas.",
+  "gancho_pantalla": "HUANG Y EL CONGRESO",
+  "notas": [
+   {
+    "kicker": "MUNDO",
+    "pantalla": "Congreso de EU cita a Huang por su regreso a Nvidia",
+    "texto": "Jensen Huang volvió a la dirección de Nvidia, once días después de haber dimitido por el escándalo de sus relaciones con una posible espía china y con al menos dos empleadas de la compañía. El regreso lo empujó Donald Trump, que sostiene que su aliado tecnológico no representa un riesgo para la seguridad nacional. En el Congreso la furia no distingue partidos: demócratas y republicanos se dicen consternados y prometen interrogatorios exhaustivos. La próxima semana Huang comparecerá ante cuatro comités en el Capitolio.",
+    "foto": "Jensen Huang",
+    "foto2": "Capitolio de los Estados Unidos",
+    "datos": [
+     "Once días fuera del cargo",
+     "Cuatro comités en el Capitolio",
+     "Demócratas y republicanos consternados"
+    ]
+   },
+   {
+    "kicker": "ECONOMIA",
+    "pantalla": "Santander México nombra a Ángel Alverde Losada presidente",
+    "texto": "Santander México nombró a Ángel Alverde Losada como nuevo presidente de su Consejo de Administración a partir del 5 de febrero de 2027. Sustituye a Laura Diez Barroso Azcárraga, quien en 2020 se convirtió en la primera mujer en ocupar el cargo. El banco presentó la designación como parte de un proceso de transición institucional. Ana Botín, presidenta ejecutiva de Banco Santander, dijo que Alverde ya conoce el negocio porque es miembro del Consejo de Administración.",
+    "foto": "Ana Botín",
+    "foto2": "Santander México",
+    "datos": [
+     "Toma el cargo el 5 de febrero de 2027",
+     "Primera mujer en el cargo en 2020",
+     "2.18 billones de pesos en activos"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

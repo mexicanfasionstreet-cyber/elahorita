@@ -1,0 +1,80 @@
+{
+ "origen": "ia",
+ "palabras": 191,
+ "segundos_estimados": 70.7,
+ "historias": [
+  {
+   "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
+   "link": "https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html",
+   "seccion": "mundo",
+   "medios": 6,
+   "score": 94.2,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Anderseidesvik",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+    "credito": "Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Jensen Huang"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Capitol%2C_Washington%2C_D.C._USA12.jpg/1280px-Capitol%2C_Washington%2C_D.C._USA12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "Diego Delso",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Capitol,_Washington,_D.C._USA12.jpg",
+    "credito": "Diego Delso (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Capitolio de los Estados Unidos"
+   }
+  },
+  {
+   "titulo": "Luis Donaldo Colosio va por la gubernatura de Sonora con Movimiento Ciudadano",
+   "link": "https://elpais.com/mexico/2026-11-24/luis-donaldo-colosio-va-por-la-gubernatura-de-sonora-con-movimiento-ciudadano.html",
+   "seccion": "politica",
+   "medios": 4,
+   "score": 82.2,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/PoderJudicialDelEstado.JPG/1280px-PoderJudicialDelEstado.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "Metamario",
+    "pagina": "https://commons.wikimedia.org/wiki/File:PoderJudicialDelEstado.JPG",
+    "credito": "Metamario (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Sonora"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Jensen Huang vuelve a Nvidia y el Congreso de EU lo cita a declarar",
+  "gancho": "El regreso de Jensen Huang a Nvidia tiene furioso al Congreso de Estados Unidos.",
+  "gancho_pantalla": "CONGRESO DE EU CONTRA HUANG",
+  "notas": [
+   {
+    "kicker": "MUNDO",
+    "pantalla": "Huang vuelve a Nvidia y el Congreso de EU lo cita",
+    "texto": "Jensen Huang regresó como consejero delegado de Nvidia once días después de haber dimitido por el escándalo en torno a sus relaciones sentimentales con una posible espía china y al menos dos empleadas de la compañía. El regreso desató el entusiasmo de los mercados y las felicitaciones de Donald Trump, que sostiene que la posición de su aliado tecnológico no representa un riesgo para la seguridad nacional. Pero en el Congreso la furia no distingue partidos: demócratas y republicanos se declaran consternados y prometen interrogatorios exhaustivos.",
+    "foto": "Jensen Huang",
+    "foto2": "Capitolio de los Estados Unidos",
+    "datos": [
+     "Once días fuera del cargo",
+     "Cuatro comités en el Capitolio",
+     "Demócratas y republicanos consternados"
+    ]
+   },
+   {
+    "kicker": "POLITICA",
+    "pantalla": "Colosio Riojas va por Sonora con Movimiento Ciudadano",
+    "texto": "Luis Donaldo Colosio Riojas anunció que buscará la gubernatura de Sonora con Movimiento Ciudadano en las elecciones del próximo año, y este lunes defendió ir en solitario, sin coalición con otros partidos. Dijo que Movimiento Ciudadano es la alternativa que no tiene un pasado encima y que no entró a esto para quedar en segundo lugar. También senador, ya solicitó licencia a la Cámara alta, que tendrá efecto el próximo jueves, y aseguró que su familia lo apoya al cien por ciento.",
+    "foto": "Luis Donaldo Colosio Riojas",
+    "foto2": "Sonora",
+    "datos": [
+     "Licencia al Senado el jueves",
+     "Elecciones de 2027",
+     "Candidatura en solitario"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

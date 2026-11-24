@@ -1,3 +1,81 @@
-2026-11-24 11:55 Tijuana · franja pendiente: ninguna
+2026-11-24 12:03 Tijuana · franja pendiente: manana
 sin novedades
-sin novedades
+corriendo la franja manana
+  $ --days 2
+  (14.6 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 63
+  ! Sismologico: feed vacio
+
+1201 noticias · 41/42 fuentes · 1 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+588 nuevas, 13787 en 30 dias)
+
+  secciones revisadas con IA: 11 cambio(s)
+  247 historias desde 24 05:00
+    94.2 peso  23.5 · Furia y consternación en el Congreso de EE UU por el regreso de Huang 
+    82.2 peso  16.5 · Luis Donaldo Colosio va por la gubernatura de Sonora con Movimiento Ci
+    81.2 peso  14.5 · Israel kills Hamas internal security chief in Gaza
+    78.7 peso  18.5 · Inés Gómez Mont deja la cárcel migratoria en Florida
+  $ --franja manana --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-manana.json --link https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html --previo  --link https://elpais.com/mexico/2026-11-24/luis-donaldo-colosio-va-por-la-gubernatura-de-sonora-con-movimiento-ciudadano.html --previo  --reserva https://www.washingtonpost.com/world/2026/11/24/israel-kills-hamas-internal-security-chief-gaza/ --reserva https://lopezdoriga.com/nacional/ines-gomez-mont-deja-la-carcel-migratoria-en-florida/
+  (24.2 s)
+n 2726 (char 2725)); se reintenta
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 2 nota(s) · 191 palabras ~ 71 s ---
+
+TITULO YOUTUBE: Jensen Huang vuelve a Nvidia y el Congreso de EU lo cita a declarar
+GANCHO: El regreso de Jensen Huang a Nvidia tiene furioso al Congreso de Estados Unidos.
+
+[MUNDO] Jensen Huang regresó como consejero delegado de Nvidia once días después de haber dimitido por el escándalo en torno a sus relaciones sentimentales con una posible espía china y al menos dos empleadas de la compañía. El regreso desató el entusiasmo de los mercados y las felicitaciones de Donald Trump, que sostiene que la posición de su aliado tecnológico no representa un riesgo para la seguridad nacional. Pero en el Congreso la furia no distingue partidos: demócratas y republicanos se declaran consternados y prometen interrogatorios exhaustivos.
+
+[POLITICA] Luis Donaldo Colosio Riojas anunció que buscará la gubernatura de Sonora con Movimiento Ciudadano en las elecciones del próximo año, y este lunes defendió ir en solitario, sin coalición con otros partidos. Dijo que Movimiento Ciudadano es la alternativa que no tiene un pasado encima y que no entró a esto para quedar en segundo lugar. También senador, ya solicitó licencia a la Cámara alta, que tendrá efecto el próximo jueves, y aseguró que su familia lo apoya al cien por ciento.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Furia y consternación en el Congreso de EE UU por el regreso de Huang  (6 medios)
+  fuente: Luis Donaldo Colosio va por la gubernatura de Sonora con Movimiento Ci (4 medios)
+  foto nota 1: Jensen Huang -> Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons
+  foto2 nota 1: Capitolio de los Estados Unidos -> Diego Delso (CC BY-SA 3.0), Wikimedia Commons
+  foto nota 2: sin foto libre para 'Luis Donaldo Colosio Riojas'
+  foto2 nota 2: Sonora -> Metamario (CC BY-SA 3.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-manana.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-manana.json
+  (40.4 s)
+guion 2026-11-24-manana.json · 191 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     4.78 s  [edge-tts]  14 palabras con tiempo  El regreso de Jensen Huang a Nvidia tiene fu…
+  nota1     28.56 s  [edge-tts]  86 palabras con tiempo  Jensen Huang regresó como consejero delegado…
+  nota2     26.02 s  [edge-tts]  82 palabras con tiempo  Luis Donaldo Colosio Riojas anunció que busc…
+  cierre     4.13 s  [edge-tts]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 64.60 s (4 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-24-manana/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-manana.json
+  (75.3 s)
+  diapositiva 00-gancho.png · tomas: principal(5.1)
+  diapositiva 01-nota1.png · tomas: principal(4.7) limpia(4.7) foto2(4.7) principal(4.7) limpia(4.7) dato(3.0) foto2(2.2)
+  diapositiva 02-nota2.png · tomas: principal(4.4) foto2(4.4) principal(4.4) foto2(4.4) principal(4.4) foto2(4.4)
+  diapositiva 03-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 7 tomas
+  video nota2: 6 tomas
+  video cierre: 1 tomas
+subtitulos: 183 estados · 969 cuadros · 64.6 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-24-manana/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-manana.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-manana-portada.jpg
+duracion: 64.6 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-manana.mp4
+  titulo: Jensen Huang vuelve a Nvidia y el Congreso de EU lo cita a declarar
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/z4djuCewwKU
+

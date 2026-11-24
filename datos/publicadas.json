@@ -1,20 +1,5 @@
 [
  {
-  "cuando": "2026-11-21T12:03:25-08:00",
-  "origen": "franja-manana",
-  "titulo": "Trasladan a ‘Chapo Isidro’ a instalaciones de la FEMDO en CDMX tras captura en Sinaloa",
-  "link": "https://lopezdoriga.com/nacional/trasladan-a-chapo-isidro-a-instalaciones-de-la-femdo-en-cdmx-tras-captura-en-sinaloa/",
-  "entidades": [
-   "cdmx",
-   "chapo",
-   "femdo",
-   "isidro",
-   "sinaloa",
-   "trasladan"
-  ],
-  "video": "https://youtube.com/shorts/1UKsH3pxy_Q"
- },
- {
   "cuando": "2026-11-21T15:03:27-08:00",
   "origen": "franja-tarde",
   "titulo": "Embajador de EU reconoce a fuerzas mexicanas por captura de “Chapo Isidro” en Guasave, Sinaloa",
@@ -243,5 +228,34 @@
    "mexico"
   ],
   "video": "https://youtube.com/shorts/AxRcLcOj1ao"
+ },
+ {
+  "cuando": "2026-11-24T12:06:04-08:00",
+  "origen": "franja-manana",
+  "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
+  "link": "https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html",
+  "entidades": [
+   "congreso",
+   "furia",
+   "huang",
+   "nvidia",
+   "trump"
+  ],
+  "video": "https://youtube.com/shorts/z4djuCewwKU"
+ },
+ {
+  "cuando": "2026-11-24T12:06:04-08:00",
+  "origen": "franja-manana",
+  "titulo": "Luis Donaldo Colosio va por la gubernatura de Sonora con Movimiento Ciudadano",
+  "link": "https://elpais.com/mexico/2026-11-24/luis-donaldo-colosio-va-por-la-gubernatura-de-sonora-con-movimiento-ciudadano.html",
+  "entidades": [
+   "ciudadano",
+   "colosio",
+   "donaldo",
+   "luis",
+   "movimiento",
+   "sonora"
+  ],
+  "video": "https://youtube.com/shorts/z4djuCewwKU"
  }
 ]

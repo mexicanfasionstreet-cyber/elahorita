@@ -1,0 +1,87 @@
+{
+ "origen": "ia",
+ "palabras": 180,
+ "segundos_estimados": 66.7,
+ "historias": [
+  {
+   "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
+   "link": "https://zetatijuana.com/2026/11/godoy-descarta-extradicion-inmediata-de-el-chapo-isidro-a-eu-y-confirma-juicio-en-mexico/",
+   "seccion": "seguridad",
+   "medios": 7,
+   "score": 97.0,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Ernestina_Godoy_Ramos.jpg/1280px-Ernestina_Godoy_Ramos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 4.0",
+    "autor": "EneasMx",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ernestina_Godoy_Ramos.jpg",
+    "credito": "EneasMx (CC BY 4.0), Wikimedia Commons",
+    "termino": "Ernestina Godoy"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Palacio_Municipal_n3.jpg/1280px-Palacio_Municipal_n3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Brenda Selena Medina",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Palacio_Municipal_n3.jpg",
+    "credito": "Brenda Selena Medina (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Almoloya de Juárez"
+   }
+  },
+  {
+   "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
+   "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
+   "seccion": "economia",
+   "medios": 7,
+   "score": 93.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Anderseidesvik",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+    "credito": "Anderseidesvik (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Jensen Huang"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg/1280px-NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 3.0",
+    "autor": "giggel",
+    "pagina": "https://commons.wikimedia.org/wiki/File:NYC_-_Midtown_Manhattan_%E2%80%93_Times_Square_%E2%80%93_Broadway_by_night_-_panoramio_(2).jpg",
+    "credito": "giggel (CC BY 3.0), Wikimedia Commons",
+    "termino": "Nasdaq"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Nvidia repone a Jensen Huang y sus acciones se disparan",
+  "gancho": "Once días fuera y Nvidia lo trae de vuelta: sus acciones se disparan.",
+  "gancho_pantalla": "NVIDIA Y EL REGRESO DE HUANG",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Godoy descarta entregar a El Chapo Isidro a EU",
+    "texto": "Ernestina Godoy, titular de la FGR, confirmó que Fausto Isidro Meza Flores, El Chapo Isidro, será procesado en México y no entregado de inmediato a Estados Unidos, pese a la solicitud de extradición. Dijo que por el momento será juzgado en el país y que la defensa acaba de pedir una duplicidad. Una jueza de control calificó de legal su detención y le impuso prisión preventiva, junto con dos presuntos colaboradores.",
+    "foto": "Ernestina Godoy",
+    "foto2": "Almoloya de Juárez",
+    "datos": [
+     "Juicio en México, no extradición",
+     "Prisión preventiva para los tres",
+     "Audiencia el 28 de noviembre de 2026"
+    ]
+   },
+   {
+    "kicker": "ECONOMIA",
+    "pantalla": "Nvidia restituye a Jensen Huang como director ejecutivo",
+    "texto": "El Consejo de Administración de Nvidia restituyó a Jensen Huang como director ejecutivo y presidente, once días después de su renuncia, con un voto unánime. La empresa lo llamó la persona adecuada para liderar Nvidia. Sus acciones subieron cerca de 40% en la jornada y su valor bursátil aumentó en un billón de dólares tras la apertura del Nasdaq. Donald Trump lo calificó como un gran patriota y dijo que el gobierno no tiene motivos para creer que su regreso sea un riesgo para la seguridad nacional.",
+    "foto": "Jensen Huang",
+    "foto2": "Nasdaq",
+    "datos": [
+     "11 días después de su renuncia",
+     "Acciones suben cerca de 40%",
+     "Un billón de dólares más de valor"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

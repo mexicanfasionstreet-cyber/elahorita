@@ -1,33 +1,5 @@
 [
  {
-  "cuando": "2026-11-20T15:04:45-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Trump threatens ban on US firms building AI data centres overseas",
-  "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "ai",
-   "trump",
-   "us"
-  ],
-  "video": "https://youtube.com/shorts/dKUIf_RdN2E"
- },
- {
-  "cuando": "2026-11-20T20:03:07-08:00",
-  "origen": "franja-noche",
-  "titulo": "Detenida en Ciudad de México la exalcaldesa de Playa del Carmen Lili Campos",
-  "link": "https://elpais.com/mexico/2026-11-20/detenida-en-ciudad-de-mexico-la-exalcaldesa-de-playa-del-carmen-lili-campos.html",
-  "entidades": [
-   "campos",
-   "carmen",
-   "ciudad",
-   "detenida",
-   "lili",
-   "mexico",
-   "playa"
-  ],
-  "video": "https://youtube.com/shorts/6DeFjy0OTfk"
- },
- {
   "cuando": "2026-11-20T23:43:50-08:00",
   "origen": "nota",
   "titulo": "🔴 #ÚLTIMAHORA | Detienen a 'El Chapo Isidro' en Sinaloa; era uno de los diez más buscados por el FBI",
@@ -258,5 +230,31 @@
    "mundial"
   ],
   "video": "https://youtube.com/shorts/7yyoYwv4CJc"
+ },
+ {
+  "cuando": "2026-11-23T20:03:08-08:00",
+  "origen": "franja-noche",
+  "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
+  "link": "https://zetatijuana.com/2026/11/godoy-descarta-extradicion-inmediata-de-el-chapo-isidro-a-eu-y-confirma-juicio-en-mexico/",
+  "entidades": [
+   "chapo",
+   "eu",
+   "godoy",
+   "isidro",
+   "mexico"
+  ],
+  "video": "https://youtube.com/shorts/wKglBvyS2y4"
+ },
+ {
+  "cuando": "2026-11-23T20:03:08-08:00",
+  "origen": "franja-noche",
+  "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
+  "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "huang",
+   "jensen",
+   "nvidia"
+  ],
+  "video": "https://youtube.com/shorts/wKglBvyS2y4"
  }
 ]

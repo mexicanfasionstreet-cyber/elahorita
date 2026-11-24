@@ -1,32 +1,5 @@
 [
  {
-  "cuando": "2026-11-20T23:43:50-08:00",
-  "origen": "nota",
-  "titulo": "🔴 #ÚLTIMAHORA | Detienen a 'El Chapo Isidro' en Sinaloa; era uno de los diez más buscados por el FBI",
-  "link": "https://www.elfinanciero.com.mx/nacional/2026/11/20/quien-es-el-chapo-isidro-el-narco-buscado-por-el-fbi-y-que-vinculan-con-operativo-en-guasave/",
-  "entidades": [
-   "chapo",
-   "detienen",
-   "fbi",
-   "isidro",
-   "sinaloa"
-  ],
-  "video": "https://youtube.com/shorts/8HQGmZRaHHY"
- },
- {
-  "cuando": "2026-11-21T05:02:53-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "Estados Unidos se lanza en tromba contra el cartel mexicano La Nueva Familia Michoacana",
-  "link": "https://elpais.com/mexico/2026-11-21/estados-unidos-se-lanza-en-tromba-contra-el-cartel-mexicano-la-nueva-familia-michoacana.html",
-  "entidades": [
-   "estados",
-   "familia",
-   "michoacana",
-   "unidos"
-  ],
-  "video": "https://youtube.com/shorts/sQSSxwxNbv8"
- },
- {
   "cuando": "2026-11-21T12:03:25-08:00",
   "origen": "franja-manana",
   "titulo": "Trasladan a ‘Chapo Isidro’ a instalaciones de la FEMDO en CDMX tras captura en Sinaloa",
@@ -256,5 +229,19 @@
    "nvidia"
   ],
   "video": "https://youtube.com/shorts/wKglBvyS2y4"
+ },
+ {
+  "cuando": "2026-11-24T05:04:11-08:00",
+  "origen": "franja-madrugada",
+  "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
+  "link": "https://zetatijuana.com/2026/11/godoy-descarta-extradicion-inmediata-de-el-chapo-isidro-a-eu-y-confirma-juicio-en-mexico/",
+  "entidades": [
+   "chapo",
+   "eu",
+   "godoy",
+   "isidro",
+   "mexico"
+  ],
+  "video": "https://youtube.com/shorts/AxRcLcOj1ao"
  }
 ]

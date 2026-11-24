@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 187,
+ "segundos_estimados": 69.3,
+ "historias": [
+  {
+   "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
+   "link": "https://zetatijuana.com/2026/11/godoy-descarta-extradicion-inmediata-de-el-chapo-isidro-a-eu-y-confirma-juicio-en-mexico/",
+   "seccion": "seguridad",
+   "medios": 7,
+   "score": 90.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Ernestina_Godoy_Ramos.jpg/1280px-Ernestina_Godoy_Ramos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 4.0",
+    "autor": "EneasMx",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Ernestina_Godoy_Ramos.jpg",
+    "credito": "EneasMx (CC BY 4.0), Wikimedia Commons",
+    "termino": "Ernestina Godoy"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "El Chapo Isidro será juzgado en México, dice Godoy",
+  "gancho": "El Chapo Isidro se queda en México: Godoy confirma que primero va el juicio aquí y la extradición a EU tendrá que esperar.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "pantalla": "Godoy confirma juicio en México para El Chapo Isidro",
+    "texto": "La titular de la FGR, Ernestina Godoy, confirmó en la Ciudad de México que Fausto Isidro Meza Flores, El Chapo Isidro, será procesado en México y no entregado de inmediato a Estados Unidos, que ya pidió su extradición. “Por el momento será juzgado en el país”, dijo Godoy al salir de una reunión privada con la JUCOPO de la Cámara de Diputados. Sobre la extradición, señaló que la defensa acaba de pedir una duplicidad y que la institución respetará el debido proceso en cada etapa. Ese mismo día, la jueza de control federal Alejandra Ramírez de la Vega calificó de legal la detención y le impuso prisión preventiva, junto con Germán N y José N, presuntos colaboradores capturados en el mismo operativo. La audiencia fue por videoconferencia y privada por seguridad, y duró más de cuatro horas. Los tres fueron trasladados al Centro Federal de Readaptación Social número 1, El Altiplano, en Almoloya de Juárez.",
+    "foto": "Ernestina Godoy",
+    "foto2": "Cámara de Diputados",
+    "datos": [
+     "Juicio primero en México",
+     "Prisión preventiva en El Altiplano",
+     "Audiencia el 28 de noviembre de 2026"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita; nos vemos en la siguiente.",
+  "gancho_pantalla": "CHAPO ISIDRO SE QUEDA"
+ }
+}

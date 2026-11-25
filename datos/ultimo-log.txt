@@ -1,3 +1,70 @@
-2026-11-24 19:57 Tijuana · franja pendiente: ninguna
+2026-11-24 20:01 Tijuana · franja pendiente: noche
 sin novedades
+corriendo la franja noche
+  $ --days 2
+  (31.7 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 50
+
+1205 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+410 nuevas, 14551 en 30 dias)
+
+  secciones revisadas con IA: 13 cambio(s)
+  160 historias desde 24 15:00
+    87.8 peso  20.5 · Hombres armados mantienen decenas de rehenes en un supermercado en Col
+    83.0 peso  19.0 · Sale Inés Gómez Mont de EU; se desconoce paradero
+    80.7 peso  13.5 · Ángel Alverde presidirá el Consejo de Administración de Santander Méxi
+    80.6 peso  23.5 · Luis Donaldo Colosio va por la gubernatura de Sonora con Movimiento Ci
+  $ --franja noche --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-noche.json --link https://www.bbc.com/mundo/articles/cmx2rny0dn17o?at_medium=RSS&at_campaign=rss --previo  --link https://www.reforma.com/sale-ines-gomez-mont-de-eu-se-desconoce-paradero/ar3320837 --previo  --reserva https://24-horas.mx/negocios/angel-alverde-presidente-consejo-santander-mexico/ --reserva https://elpais.com/mexico/2026-11-24/luis-donaldo-colosio-va-por-la-gubernatura-de-sonora-con-movimiento-ciudadano.html
+  (7.8 s)
+  material nota 1: 436 palabras de https://www.bbc.com/mundo/articles/cmx2rny0dn17o?at_medium=R
+  material nota 2: 26 palabras de https://www.reforma.com/sale-ines-gomez-mont-de-eu-se-descon
+aviso: la nota 2 tiene poco material (46 palabras); se quita
+--- GUION (ia) · 1 nota(s) · 178 palabras ~ 66 s ---
+
+TITULO YOUTUBE: Colombia: hombres armados retienen rehenes en un supermercado de Cartagena
+GANCHO: Un robo a un camión de valores terminó con clientes y empleados encerrados dentro de un supermercado en Cartagena.
+
+[SEGURIDAD] Un grupo de hombres armados mantiene a 20 personas como rehenes en un supermercado de Cartagena, en la Costa Caribe colombiana, desde las 8:30 de la mañana de este martes. Otras diez personas que estaban retenidas ya fueron liberadas y atendidas por las autoridades, según la Policía de Colombia. El presidente Abelardo de la Espriella dijo en un acto público que los hombres armados querían robar un camión de traslado de valores. Cuando las cámaras de seguridad los detectaron y la policía reaccionó, se refugiaron en el supermercado y tomaron a clientes y empleados. El mandatario llegó a Cartagena la noche del martes, y el ministro de Defensa con toda la cúpula de la Policía dirige la operación de rescate junto con el Ejército y la Armada. El presidente dijo que no se trata de un acto terrorista, sino de delincuentes comunes que, al verse sin escapatoria, optaron por tomar rehenes.
+
+CIERRE: Esto es El Ahorita. Seguimos pendientes de Cartagena.
+
+  fuente: Hombres armados mantienen decenas de rehenes en un supermercado en Col (5 medios)
+  foto nota 1: Cartagena de Indias -> poirpom (CC BY 2.0), Wikimedia Commons
+  foto2 nota 1: sin foto libre para 'Policía Nacional de Colombia'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-noche.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-noche.json
+  (36.9 s)
+guion 2026-11-24-noche.json · 178 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     6.22 s  [edge-tts]  19 palabras con tiempo  Un robo a un camión de valores terminó con c…
+  nota1     47.86 s  [edge-tts]  149 palabras con tiempo  Un grupo de hombres armados mantiene a 20 pe…
+  cierre     4.56 s  [edge-tts]  8 palabras con tiempo  Esto es El Ahorita. Seguimos pendientes de C…
+
+total voz: 59.47 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-24-noche/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-24-noche.json
+  (74.5 s)
+  diapositiva 00-gancho.png · tomas: principal(6.5)
+  diapositiva 01-nota1.png · tomas: principal(2.2) dato(3.0) limpia(4.8) principal(4.8) limpia(4.8) principal(4.8) limpia(4.8) principal(4.8) limpia(4.8) principal(4.8) limpia(4.8)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 11 tomas
+  video cierre: 1 tomas
+subtitulos: 169 estados · 892 cuadros · 59.5 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-24-noche/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-noche.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-noche-portada.jpg
+duracion: 59.4 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-24-noche.mp4
+  titulo: Colombia: hombres armados retienen rehenes en un supermercado de Cartagena
+
 sin novedades

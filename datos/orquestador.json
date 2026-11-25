@@ -32,5 +32,8 @@
   "2026-11-24-tarde": "automatica 15:04"
  },
  "resumen": "2026-11-23",
- "comandos": 2
+ "comandos": 2,
+ "intentos": {
+  "2026-11-24-noche": 1
+ }
 }

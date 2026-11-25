@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 178,
+ "segundos_estimados": 65.9,
+ "historias": [
+  {
+   "titulo": "Hombres armados mantienen decenas de rehenes en un supermercado en Colombia",
+   "link": "https://www.bbc.com/mundo/articles/cmx2rny0dn17o?at_medium=RSS&at_campaign=rss",
+   "seccion": "seguridad",
+   "medios": 5,
+   "score": 87.8,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Cartagena_skyline%2C_Colombia.jpg/1280px-Cartagena_skyline%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 2.0",
+    "autor": "poirpom",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cartagena_skyline,_Colombia.jpg",
+    "credito": "poirpom (CC BY 2.0), Wikimedia Commons",
+    "termino": "Cartagena de Indias"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Colombia: hombres armados retienen rehenes en un supermercado de Cartagena",
+  "gancho": "Un robo a un camión de valores terminó con clientes y empleados encerrados dentro de un supermercado en Cartagena.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "Un grupo de hombres armados mantiene a 20 personas como rehenes en un supermercado de Cartagena, en la Costa Caribe colombiana, desde las 8:30 de la mañana de este martes. Otras diez personas que estaban retenidas ya fueron liberadas y atendidas por las autoridades, según la Policía de Colombia. El presidente Abelardo de la Espriella dijo en un acto público que los hombres armados querían robar un camión de traslado de valores. Cuando las cámaras de seguridad los detectaron y la policía reaccionó, se refugiaron en el supermercado y tomaron a clientes y empleados. El mandatario llegó a Cartagena la noche del martes, y el ministro de Defensa con toda la cúpula de la Policía dirige la operación de rescate junto con el Ejército y la Armada. El presidente dijo que no se trata de un acto terrorista, sino de delincuentes comunes que, al verse sin escapatoria, optaron por tomar rehenes.",
+    "foto": "Cartagena de Indias",
+    "foto2": "Policía Nacional de Colombia",
+    "datos": [
+     "20 personas como rehenes",
+     "Desde las 8:30 am",
+     "10 ya fueron liberadas"
+    ],
+    "pantalla": "Hombres armados retienen a 20 personas en Cartagena"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Seguimos pendientes de Cartagena.",
+  "gancho_pantalla": "REHENES EN CARTAGENA"
+ }
+}

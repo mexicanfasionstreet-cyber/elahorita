@@ -111,6 +111,16 @@
    "hora": "15:02",
    "tipo": "voz_respaldo",
    "texto": "<urlopen error timed out>"
+  },
+  {
+   "hora": "20:02",
+   "tipo": "voz_respaldo",
+   "texto": "<urlopen error timed out>"
+  },
+  {
+   "hora": "20:03",
+   "tipo": "youtube",
+   "texto": "lcache/Python/3.12.16/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 400: Bad Request\n"
   }
  ]
 }

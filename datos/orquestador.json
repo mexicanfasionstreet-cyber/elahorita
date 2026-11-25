@@ -35,5 +35,7 @@
  },
  "resumen": "2026-11-24",
  "comandos": 2,
- "intentos": {}
+ "intentos": {
+  "2026-11-25-manana": 1
+ }
 }

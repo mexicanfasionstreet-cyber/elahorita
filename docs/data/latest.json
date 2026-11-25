@@ -1,12 +1,125 @@
 {
- "generated": "2026-11-25T20:01:22.773503Z",
+ "generated": "2026-11-25T20:06:11.585122Z",
  "days": 2,
- "count": 1220,
- "sources_ok": 41,
- "sources_failed": [
-  "SDP"
- ],
+ "count": 1241,
+ "sources_ok": 42,
+ "sources_failed": [],
  "items": [
+  {
+   "title": "¿Te quedaste sin señal el 20 de noviembre? Telcel te dará internet gratis como compensación",
+   "link": "https://lopezdoriga.com/ciencia-tecnologia/te-quedaste-sin-senal-el-20-de-noviembre-telcel-te-dara-internet-gratis-como-compensacion/",
+   "excerpt": "La empresa Telcel anunció que otorgará una bonificación de datos móviles a los usuarios de prepago y pospago que sufrieron interrupciones en sus servicios de telefonía e internet el viernes 20 de noviembre de 2026 en diversas…",
+   "image": "https://lopezdoriga.com/wp-content/uploads/2026/11/telcel-1024x631.jpg",
+   "published": "2026-11-25T20:04:06Z",
+   "source": "LD",
+   "source_name": "Lopez-Doriga",
+   "kind": "news",
+   "mirror": false,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T20:04:06Z",
+   "id": "83a0d83a8b3e",
+   "score": 6.8
+  },
+  {
+   "title": "Manifestaciones 25-N contra la violencia de género, en directo | Miles de personas recorren las calles de las principales ciudades contra la violencia de género",
+   "link": "https://elpais.com/sociedad/2026-11-25/manifestaciones-25-n-contra-la-violencia-de-genero-en-directo.html",
+   "excerpt": "Desde las seis de la tarde, decenas de manifestaciones, a las que han acudido varios miles de personas, recorren las calles de las principales ciudades de España con motivo del Día Internacional para la Eliminación de la…",
+   "image": "https://imagenes.elpais.com/resizer/v2/7VJKCRB7VJGI3CDP5IAOUQI3PM.jpg?auth=188b0abe96490a3ada17a9e448937d88d5dedc4d97c58d6e981b7780f4b7448d",
+   "published": "2026-11-25T20:00:19Z",
+   "source": "ElPais",
+   "source_name": "El Pais",
+   "kind": "news",
+   "mirror": false,
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "es",
+   "tags": [
+    "seguridad"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T20:00:19Z",
+   "id": "37502c0ca046",
+   "score": 9.15
+  },
+  {
+   "title": "Australian politics live: federal Liberal senator Leah Blyth defects to One Nation",
+   "link": "https://www.theguardian.com/australia-news/live/2026/nov/26/labor-anthony-albanese-pauline-hanson-one-nation-angus-taylor-coalition-ntwnfb",
+   "excerpt": "Get our breaking news email , free app or daily news podcast Nationals leader Matt Canavan has called Leah Blyth’s defection to One Nation “disappointing on a number of levels”. Speaking to Radio National, Canavan said he thought…",
+   "image": "https://i.guim.co.uk/img/media/b8e0686e082ee97c403961ee3228cab6cd5bcf48/222_0_1721_1377/master/1721.jpg?width=140&quality=85&auto=format&fit=max&s=f1a653445273f678049e81be71a393df",
+   "published": "2026-11-25T19:59:21Z",
+   "source": "Guardian",
+   "source_name": "The Guardian World",
+   "kind": "news",
+   "mirror": false,
+   "weight": 3.5,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "uk",
+   "tags": [
+    "mundo"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T19:59:21Z",
+   "id": "c5c4622c9bda",
+   "score": 7.85
+  },
+  {
+   "title": "Operación Otomí suma más de 3 mil detenciones y aseguramientos en dos meses en Edomex",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaWdRQllHeEhldHl6Qnp6WHZPUmIyZmpRcDRaNEhpNTJsR003eU42eFlZb0NyOUpyUVJOaG9mSVJ4MVpmek1QbXlCa0pSZ2xFRUhkNG91U21KZXo2YWpwV3gyX1RZejM2Y015SkpYd2xxTHNmM2JsNzEwN1QtRmNMOEVWSWdlWEdsV19IckRnS1cwYzN5dFR0b2lkaUk0amVTdVlRSG10T25KRHprNmRrZ3lmajNWd3N4Y21qS3BzRmJkSnc?oc=5",
+   "excerpt": "Publicado por La Silla Rota.",
+   "image": "",
+   "published": "2026-11-25T19:58:50Z",
+   "source": "SillaRota",
+   "source_name": "La Silla Rota",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "La Silla Rota",
+   "also": [],
+   "updated": "2026-11-25T19:58:50Z",
+   "id": "cb5f017d8195",
+   "score": 5.85
+  },
+  {
+   "title": "Lululemon founder stuns Canadian women’s leadership conference with sexist comments",
+   "link": "https://www.theguardian.com/world/2026/nov/25/lululemon-founder-comments-canada-womens-leadership-conference",
+   "excerpt": "Chip Wilson said men importing brides from Thailand was due to women waiting too long to have children The controversial founder of Lululemon suggested women in Canada are having too few children and this could lead some men to…",
+   "image": "https://i.guim.co.uk/img/media/791b8933a92292555c629c4bcc1e8056243c898c/0_94_3742_2993/master/3742.jpg?width=140&quality=85&auto=format&fit=max&s=8fd2114a9006f05a834aace6fb28f4ce",
+   "published": "2026-11-25T19:57:49Z",
+   "source": "Guardian",
+   "source_name": "The Guardian World",
+   "kind": "news",
+   "mirror": false,
+   "weight": 3.5,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "uk",
+   "tags": [
+    "mundo"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T19:57:49Z",
+   "id": "f990c346c428",
+   "score": 7.85
+  },
   {
    "title": "Costco habría definido la ubicación de su nueva tienda en México: estaría en Nuevo León",
    "link": "https://elceo.com/negocios/costco-definido-ubicacion-nueva-tienda-mexico-nuevo-leon/",
@@ -31,29 +144,50 @@
    "score": 6.2
   },
   {
-   "title": "Elderly man with Alzheimer’s rescued after 11 days in Amazon jungle",
-   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/25/aje-onl-nf_man-with-alzheimers-rescued-after-11-days-in-amazon-251126?traffic_source=rss",
-   "excerpt": "A 74-year-old man with Alzheimer's has been found alive after missing for 11 days in Brazil's Amazon rainforest.",
-   "image": "",
-   "published": "2026-11-25T19:57:08Z",
-   "source": "AlJazeera",
-   "source_name": "Al Jazeera",
+   "title": "Judges in Israel Suggest Dropping Key Corruption Case Against Netanyahu",
+   "link": "https://www.nytimes.com/2026/11/25/world/middleeast/judges-israel-corruption-case-netanyahu.html",
+   "excerpt": "Prime Minister Benjamin Netanyahu is accused of bribery, fraud and breach of trust in a long-running trial that has divided the country. He denies all wrongdoing.",
+   "image": "https://static01.nyt.com/images/2026/11/25/multimedia/25int-Israel-Courts-vkbc/25int-Israel-Courts-vkbc-mediumSquareAt3X.jpg",
+   "published": "2026-11-25T19:57:40Z",
+   "source": "NYT",
+   "source_name": "NYT World",
    "kind": "news",
    "mirror": false,
    "weight": 4.0,
    "lang": "en",
    "region": "mundo",
-   "region_fuente": "global",
+   "region_fuente": "us",
    "tags": [
-    "mundo"
+    "justicia"
    ],
    "via": "",
-   "also": [
-    "Reuters"
+   "also": [],
+   "updated": "2026-11-25T19:57:40Z",
+   "id": "c33f90708a5e",
+   "score": 8.4
+  },
+  {
+   "title": "Sedema sigue sin públicar dictamen de daño ambiental por derrame en playas de Veracruz",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOSzM4bVJqdFg5OS1WR013RUIwV29VMXB6bzkxQUhsLWt3a3IzWlNwVE0yZmx4R2dUNGNFbG5MXzBlQUNTWTZVdUxCamRmZDdsV01XOEhZazlhSlFSLWlETGxVSC0xQk5GdFlyMERjRktpT2lBa0prUVVPQmtKV3dvN01SbnBhczdJcXZGSzBhaEswY3Z4MnppNi1FQlZHOEpGZ1gzWkM4ZlNaRzRtVnh4SjB0RTNZMUE0eUVjdVdfYS1MR2tzLUpsUnlpUFpEYXlQN1FtTGNyUnItRGlwelR4VkswVQ?oc=5",
+   "excerpt": "Publicado por La Silla Rota.",
+   "image": "",
+   "published": "2026-11-25T19:55:51Z",
+   "source": "SillaRota",
+   "source_name": "La Silla Rota",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "clima"
    ],
-   "updated": "2026-11-25T19:57:08Z",
-   "id": "89eb16b80cec",
-   "score": 8.85
+   "via": "La Silla Rota",
+   "also": [],
+   "updated": "2026-11-25T19:55:51Z",
+   "id": "838a9285a056",
+   "score": 6.55
   },
   {
    "title": "Radio UNAM: Bajo gestión de Benito Taibo, impunidad y acoso sepultan el discurso de género",
@@ -77,29 +211,6 @@
    "updated": "2026-11-25T19:54:21Z",
    "id": "23bacb8bebd3",
    "score": 8.25
-  },
-  {
-   "title": "Manifestaciones 25-N contra la violencia de género, en directo | Miles de personas recorren las calles de las principales ciudades contra la violencia de género",
-   "link": "https://elpais.com/sociedad/2026-11-25/manifestaciones-25-n-contra-la-violencia-de-genero-en-directo.html",
-   "excerpt": "Desde las seis de la tarde, decenas de manifestaciones, a las que han acudido varios miles de personas, recorren las calles de las principales ciudades de España con motivo del Día Internacional para la Eliminación de la…",
-   "image": "https://imagenes.elpais.com/resizer/v2/7VJKCRB7VJGI3CDP5IAOUQI3PM.jpg?auth=188b0abe96490a3ada17a9e448937d88d5dedc4d97c58d6e981b7780f4b7448d",
-   "published": "2026-11-25T19:53:20Z",
-   "source": "ElPais",
-   "source_name": "El Pais",
-   "kind": "news",
-   "mirror": false,
-   "weight": 4.5,
-   "lang": "es",
-   "region": "mundo",
-   "region_fuente": "es",
-   "tags": [
-    "seguridad"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T19:53:20Z",
-   "id": "37502c0ca046",
-   "score": 9.15
   },
   {
    "title": "Telcel dará internet gratis a afectados por falla del 20 de noviembre",
@@ -192,6 +303,33 @@
    "updated": "2026-11-25T19:51:52Z",
    "id": "8a84159abb60",
    "score": 5.85
+  },
+  {
+   "title": "‘I feel free of everything evil’: Kilmar Ábrego García lands in Spain after choosing to leave US - live",
+   "link": "https://www.theguardian.com/us-news/live/2026/nov/25/donald-trump-jensen-huang-nvidia-pardon-senate-hearing-iowa-abdul-el-sayed-latest-news-updates",
+   "excerpt": "Before his departure, Immigration and Customs Enforcement agents met him at the airport and removed his ankle monitor, an advocacy group reported Sign up for the Breaking News US email to get newsletter alerts in your inbox US…",
+   "image": "https://i.guim.co.uk/img/media/fedd12377351e3e84402029d8354b6185d25dc6e/129_0_5040_4032/master/5040.jpg?width=140&quality=85&auto=format&fit=max&s=348024617bf12d96d12177bbf3846bc5",
+   "published": "2026-11-25T19:51:20Z",
+   "source": "Guardian",
+   "source_name": "The Guardian World",
+   "kind": "news",
+   "mirror": false,
+   "weight": 3.5,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "global",
+   "tags": [
+    "ciencia"
+   ],
+   "via": "",
+   "also": [
+    "Reuters"
+   ],
+   "updated": "2026-11-25T19:51:20Z",
+   "id": "ce3d5df3befb",
+   "score": 8.6,
+   "seccion_por": "ia",
+   "sensible": ""
   },
   {
    "title": "Golea Barcelona sin problemas al Sabah en la UCL",
@@ -332,52 +470,6 @@
    "score": 6.9
   },
   {
-   "title": "Sheinbaum respalda a cafeticultores de Chiapas: \"Nestlé tiene que pagar lo justo\"",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcnFZdUtKb2dRWmc4cmRUSmdjdFd5eUpOZFYzZHh4STBXQU5oeC0tUXdMeVBvb1pTTmQ1bjVQcUN6NndLQXVyTXBReF9JLURUZmJ3WDhmRE5sTy1SVXJqMEVNNDlZMWhneU5WX3l3Q3VqYkJZZE94MnBMckZaaVlucExuRHhnRmNjOG1aNGttcFRMVnNyOU5yUm5oaEpLVEY4TUhEOHNxMjNreXk4R29DbXhEMA?oc=5",
-   "excerpt": "Publicado por SinEmbargo MX.",
-   "image": "",
-   "published": "2026-11-25T19:44:39Z",
-   "source": "SinEmbargo",
-   "source_name": "Sin Embargo",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.5,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "politica"
-   ],
-   "via": "SinEmbargo MX",
-   "also": [],
-   "updated": "2026-11-25T19:44:39Z",
-   "id": "19c5e3a25e2f",
-   "score": 7.7
-  },
-  {
-   "title": "Australian politics live: federal Liberal senator Leah Blyth reportedly defects to One Nation",
-   "link": "https://www.theguardian.com/australia-news/live/2026/nov/26/labor-anthony-albanese-pauline-hanson-one-nation-angus-taylor-coalition-ntwnfb",
-   "excerpt": "Get our breaking news email , free app or daily news podcast The energy minister, Chris Bowen , has said the failed COP31 negotiations he presided over were more strained than previous years. Bowen, who served as president of…",
-   "image": "https://i.guim.co.uk/img/media/b8e0686e082ee97c403961ee3228cab6cd5bcf48/222_0_1721_1377/master/1721.jpg?width=140&quality=85&auto=format&fit=max&s=f1a653445273f678049e81be71a393df",
-   "published": "2026-11-25T19:44:20Z",
-   "source": "Guardian",
-   "source_name": "The Guardian World",
-   "kind": "news",
-   "mirror": false,
-   "weight": 3.5,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "uk",
-   "tags": [
-    "mundo"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T19:44:20Z",
-   "id": "c5c4622c9bda",
-   "score": 7.85
-  },
-  {
    "title": "Decomisan más de 18 millones de cigarros ilegales en Michoacán",
    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQa1FNaHBVdkV4eHpjQndpWFJGMkFHczI4VzI2YWxpSnY0Q2ZENHYtY0ZIeGRoUlFabmxiMm1pbEs2MF9lc2J3SEhITU05MTU4bFU3dnRLcUtFaUl3M1pYN3FBUnpySERBd3VxRkxPV1hLQUdMYkt4VFRWM3lqTFdzM2FmNDBPc0Q3WjdwMThn?oc=5",
    "excerpt": "Publicado por Forbes México.",
@@ -436,15 +528,20 @@
    "weight": 4.0,
    "lang": "en",
    "region": "mundo",
-   "region_fuente": "qa",
+   "region_fuente": "global",
    "tags": [
     "mundo"
    ],
    "via": "",
-   "also": [],
-   "updated": "2026-11-25T19:41:49Z",
+   "also": [
+    "AP",
+    "Reuters"
+   ],
+   "updated": "2026-11-25T19:43:19Z",
    "id": "266eaffb494b",
-   "score": 8.1
+   "score": 9.6,
+   "seccion_por": "ia",
+   "sensible": ""
   },
   {
    "title": "Prevén frío, lluvias, viento intenso y heladas en CDMX",
@@ -714,19 +811,15 @@
    "weight": 3.5,
    "lang": "en",
    "region": "mundo",
-   "region_fuente": "global",
+   "region_fuente": "uk",
    "tags": [
     "migracion"
    ],
    "via": "",
-   "also": [
-    "Reuters"
-   ],
+   "also": [],
    "updated": "2026-11-25T19:36:24Z",
    "id": "78d97024b070",
-   "score": 8.5,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 7.75
   },
   {
    "title": "Vance says Jensen Huang doesn’t need pardon after Trump says ‘it’s an option’",
@@ -1371,9 +1464,7 @@
    "also": [],
    "updated": "2026-11-25T19:25:57Z",
    "id": "882812167e62",
-   "score": 7.9,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 7.9
   },
   {
    "title": "La Fiscalía de CdMx detiene a tercera persona por fraude en examen de ingreso a UNAM",
@@ -1594,16 +1685,20 @@
    "mirror": false,
    "weight": 3.0,
    "lang": "es",
-   "region": "mundo",
+   "region": "mx",
    "region_fuente": "mx",
    "tags": [
-    "mundo"
+    "cultura"
    ],
    "via": "",
-   "also": [],
+   "also": [
+    "Milenio"
+   ],
    "updated": "2026-11-25T19:17:39Z",
    "id": "82a2614b3c96",
-   "score": 7.25
+   "score": 8.0,
+   "seccion_por": "ia",
+   "sensible": ""
   },
   {
    "title": "\"Cambio de estrategia\"",
@@ -1790,6 +1885,29 @@
    "score": 6.9
   },
   {
+   "title": "La Shenzhou-24 se acopla a la estación espacial china con el primer astronauta extranjero",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNUktazRKM05iN3Y4WGVMV090c0d5NF9uZEppSUtRNzBBREFTb1lfZ0dHZDhpXzRLby1UdWpfbnBKNWo4MWNESURFaVNXRERULWR6NUFVdEhBLUNodXJIQ3ZzQk0ycEp0SVliazY5WTFCYXJtMEI0ekxUQm5Kek9ocEJib2FreXZCRkZ6cUF3aHIwVm5ZN29KWWs5ZEJGekZEY2p1ajVVYnFnWEFWb3NUNmstdVd6WEHSAbcBQVVfeXFMTVh3WFlmc0VMaFpRdVprdFNYMWRkTi05QUxyTUpsLXdEM3lmS2lSUkZuYlYzY0VxS2tya3FSejVPZnBqdzZPbXdHVjhUSjh6ZDRBR1BCeDNfY3JvblptbjJnVlRLYnhHQVFYV1lNOXptRVB1cjAzN3FrYXJDRHE2cUl1eVNRR25VaFRGbDl0eGNZVUFpWElnT0N5dkN4dGJVRUxQZW4zR2F2Z1BmVnZDWmI0SEtXOGFJ?oc=5",
+   "excerpt": "Publicado por DW.com.",
+   "image": "",
+   "published": "2026-11-25T19:12:30Z",
+   "source": "DW",
+   "source_name": "DW es",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "de",
+   "tags": [
+    "ciencia"
+   ],
+   "via": "DW.com",
+   "also": [],
+   "updated": "2026-11-25T19:12:30Z",
+   "id": "594df9e7243f",
+   "score": 7.75
+  },
+  {
    "title": "México detecta violencia crítica en un tercio de llamadas a línea de atención a mujeres",
    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMmhrY0FMRFZ1aC1hSndDS21tM3NDVC0waV9TM2ZpOW1ZSUZUTElBSlpoaWVBazAzRzlqZVdoU0t1NjNsMkhidGFCWWNNaGo0UmFkdmZ5aDVHWk5FZmh6NDhIWFN1dXRfaWtnS3JMM0JrTEpBS3pRYWNybHJ2QjNCblJUVnZXTThEbWVFMldIaklTYlB1WlFOQWpwT1gzOUVJa3RqMGNHSGdjb3hoeUVZ?oc=5",
    "excerpt": "Publicado por Forbes México.",
@@ -1834,29 +1952,6 @@
    "updated": "2026-11-25T19:11:53Z",
    "id": "35ce48e126bd",
    "score": 6.9
-  },
-  {
-   "title": "‘I feel free of everything evil’: Kilmar Ábrego García lands in Spain after choosing to leave US - live",
-   "link": "https://www.theguardian.com/us-news/live/2026/nov/25/donald-trump-jensen-huang-nvidia-pardon-senate-hearing-iowa-abdul-el-sayed-latest-news-updates",
-   "excerpt": "Before his departure, Immigration and Customs Enforcement agents met him at the airport and removed his ankle monitor, an advocacy group reported Sign up for the Breaking News US email to get newsletter alerts in your inbox US…",
-   "image": "https://i.guim.co.uk/img/media/fedd12377351e3e84402029d8354b6185d25dc6e/129_0_5040_4032/master/5040.jpg?width=140&quality=85&auto=format&fit=max&s=348024617bf12d96d12177bbf3846bc5",
-   "published": "2026-11-25T19:11:35Z",
-   "source": "Guardian",
-   "source_name": "The Guardian World",
-   "kind": "news",
-   "mirror": false,
-   "weight": 3.5,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "uk",
-   "tags": [
-    "mundo"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T19:11:35Z",
-   "id": "ce3d5df3befb",
-   "score": 7.85
   },
   {
    "title": "Lukoil to Sell Foreign Assets, but Not to Kushner and Witkoff Associates",
@@ -2018,6 +2113,29 @@
    "updated": "2026-11-25T19:05:05Z",
    "id": "e26a31826192",
    "score": 5.85
+  },
+  {
+   "title": "Violencia vicaria, altamente destructiva: Isabel Sepúlveda",
+   "link": "https://amp.milenio.com/politica/violencia-vicaria-altamente-destructiva-isabel-sepulveda",
+   "excerpt": "Este tipo de violencia contra la mujer es altamente destructiva y cada vez se visualiza más",
+   "image": "https://cdn.milenio.com/uploads/media/2026/09/01/violencia-vicaria-foto-veronica-rivera.jpeg",
+   "published": "2026-11-25T19:03:38Z",
+   "source": "Milenio",
+   "source_name": "Milenio",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "seguridad"
+   ],
+   "via": "MILENIO",
+   "also": [],
+   "updated": "2026-11-25T19:03:38Z",
+   "id": "af095c5983de",
+   "score": 9.9
   },
   {
    "title": "“Eso es mentira”: algunos cubanos se muestran escépticos ante las continuas amenazas de Trump",
@@ -2697,9 +2815,7 @@
    "also": [],
    "updated": "2026-11-25T18:52:43Z",
    "id": "6d8df2c15782",
-   "score": 7.5,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 7.5
   },
   {
    "title": "Informe desde Madrid: recta final de las campañas, marcada por la migración y el costo de vida",
@@ -2723,29 +2839,6 @@
    "updated": "2026-11-25T18:52:26Z",
    "id": "e1fcea013657",
    "score": 7.75
-  },
-  {
-   "title": "Army calls detonation of bomb chemicals in Iowa a success after earlier fears of a toxic plume",
-   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZi1lalA4QTR1T3RxVkRDblVuYkY3SDBXV3A3bWhpaWJzN29ZT2xEWTR5b1RDMzZWUWRfdldya2R1ZlZiQ2ptLThvVjMxQmpMWUFKeFVEWnhjOGMzVUcyZDVjb3ZYa1o0RjFiYXVQSUFCczNFelNVYjQ2ZzFiOWxUSmlKdFVXWW8?oc=5",
-   "excerpt": "Publicado por AP News.",
-   "image": "",
-   "published": "2026-11-25T18:52:00Z",
-   "source": "AP",
-   "source_name": "AP",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.5,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "global",
-   "tags": [
-    "mundo"
-   ],
-   "via": "AP News",
-   "also": [],
-   "updated": "2026-11-25T18:52:00Z",
-   "id": "b3fce653b865",
-   "score": 8.7
   },
   {
    "title": "80 personas reciben aparatos auditivos gratuitos en Guasave",
@@ -2831,13 +2924,41 @@
    "region": "mx",
    "region_fuente": "mx",
    "tags": [
-    "politica"
+    "economia"
    ],
    "via": "",
-   "also": [],
-   "updated": "2026-11-25T18:50:43Z",
+   "also": [
+    "Sin Embargo",
+    "Milenio"
+   ],
+   "updated": "2026-11-25T19:44:39Z",
    "id": "e69caa85fce0",
-   "score": 6.85
+   "score": 8.35,
+   "seccion_por": "ia",
+   "sensible": ""
+  },
+  {
+   "title": "Monterrey invierte más de 13 mdp en tres espacios públicos del sector poniente",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQX2NTWU9vRXhBWnE0ZTd6TG5QTVNoelFwZWo1VVFOd2RvbldGOE9td01TYUF0RUxZRFlFRDFBclBWd1pIR3p3dVFBZG1DTFRtdFJQVXpmUW11UThXSkZMQ195aVJmYzdBbXl6eVRHbmZ6RklCVURaLUVMWU1uSjdFV0dDQ1ZQV3daLXhEd2FoRWFiTmNadGw4aUE4ai0zaUxvckJVbmxsbXl2R180dUNMcGJFOHczRFp5RnFZNjU3WU05TG9m?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T18:50:41Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T18:50:41Z",
+   "id": "c4d67f301f10",
+   "score": 5.85
   },
   {
    "title": "US economy roars ahead in third quarter, inflation remains high in October",
@@ -3024,6 +3145,29 @@
    "score": 9.3
   },
   {
+   "title": "Este artículo es fruto de la insana imaginación del autor (regresamos), escribe Carlos Loret de Mola",
+   "link": "https://www.eluniversal.com.mx/opinion/carlos-loret-de-mola/este-articulo-es-fruto-de-la-insana-imaginacion-del-autor-regresamos/",
+   "excerpt": "“¡¿Cómo vamos a confiar en el resultado de una elección?!”, exclamó Claudia Sheinbaum",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/BBO7BEN6U5BOHAVAUDUGGRVQVY.jpg?auth=edbf76ed71dd36f14130fbdc09e378a698815319fde41cce256f8df1bbc1041b",
+   "published": "2026-11-25T18:45:00Z",
+   "source": "Universal",
+   "source_name": "El Universal",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Universal",
+   "also": [],
+   "updated": "2026-11-25T18:45:00Z",
+   "id": "85bad1e4201c",
+   "score": 9.2
+  },
+  {
    "title": "El Gobierno pide que Frontex regrese a África, porque la Ruta Canaria «está muy abierta» - EFE",
    "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5ELXM5NHVsMzhZMzNFVWNRLXI2QW9sWmlpcDZQQlpuclpEQXNyb0hncWozQ0xCamJ3bHlFamJCUnVtUjVCOEwyUG5UUmd5ajVpa0VGaFotUzg2MHZXNjJSYVJBcFd4YmJEbGdrUDU3WmVRZWhVUHZwVHRR?oc=5",
    "excerpt": "Publicado por EFE - Agencia de noticias.",
@@ -3208,8 +3352,8 @@
    "score": 6.95
   },
   {
-   "title": "Walmart, La Comer y Soriana quieren carritos más llenos, pero el consumidor va al súper con una lista para gastar menos",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQb1hQdkp3V0xsM0lITUx2VmhpTjRmeEdBZ1R4UVlwMXJnM2JTeHRyQVk5WGg2cDFtbW1qa0h5VEt4Q1JFY2d4VWdaQlV4bGtmMXQtLTNRRlRrTndqdXpnRWlIME9Ua3BZc1ZCXzNZSndHa3lQcUVVOFdzX2lJYklwQndqU29XcU1PY3B0M0FSeW93WWQ4VTgyeDk0RVg4TUFrSHc?oc=5",
+   "title": "Walmart, La Comer y Soriana reducirán sus descuentos: el plan que choca con el presupuesto del consumidor mexicano",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWEQySGlGc2l0ckltWnhNeXRUU1I2dXlUMVVqYTVnajhDQi1QQ0pwa0x0bnptSDhTSTV4SHl3emxEMTJ1Vjc2eHB2Ujc3WVFfWXdtZGUtM282OS1iVG9mWGRyeU50X3h0VjJ6SlpVUHpCbmV6X0c5c2xpOWxLVHcxc1RhVG82Y1RSU3pjZ2QzQzFZYXY3T2RTc0k0a3g4WUVVZFV3ZS1ObFRYRjZSZmFZ0gGvAUFVX3lxTE5YRDJIaUZzaXRySW1aeE15dFRTUjZ1eVQxVWphNWdqOENCLVBDSnBrTHRuem1IOFNJNXhIeXd6bEQxMnVWNzZ4cHZSNzdZUV9Zd21kZS0zbzY5LWJUb2ZYZHJ5TnRfeHRWMnpKWlVQekJuZXpfRzlzbGk5bEtUdzFzVGFUbzZjVFJTemNnZDNDMVlhdjdPZFNzSTRreDhZRVVkVXdlLU5sVFhGNlJmYVk?oc=5",
    "excerpt": "Publicado por Expansión.",
    "image": "",
    "published": "2026-11-25T18:39:00Z",
@@ -3227,14 +3371,14 @@
    "via": "Expansión",
    "also": [],
    "updated": "2026-11-25T18:39:00Z",
-   "id": "48723d4ab4ff",
-   "score": 7.5
+   "id": "2f984c638e2f",
+   "score": 7.65
   },
   {
    "title": "Puebla se posiciona como el quinto mayor receptor de Inversión Extranjera Directa (IED) en México",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOU5UNjlsMDdqb0ZvTThWUWxMVEUwaXdvTjYzV1lueFVBZzhDWGdCQ3ZEM2ZFUUxJQWFINnpKOXkwWmpWV28tYlNPdTlDQWh6VkFZNVJITzRUNnZ6QXFCYlYyX0kwcm9fSTdrYVNCc3JucHdGQVFRdXBteGFTa1ZuU1AxWmswd2NMOEpYOXA3QVR2UdIBkgFBVV95cUxPOU5UNjlsMDdqb0ZvTThWUWxMVEUwaXdvTjYzV1lueFVBZzhDWGdCQ3ZEM2ZFUUxJQWFINnpKOXkwWmpWV28tYlNPdTlDQWh6VkFZNVJITzRUNnZ6QXFCYlYyX0kwcm9fSTdrYVNCc3JucHdGQVFRdXBteGFTa1ZuU1AxWmswd2NMOEpYOXA3QVR2UQ?oc=5",
-   "excerpt": "Publicado por MILENIO.",
-   "image": "",
+   "link": "https://www.milenio.com/negocios/puebla-quinto-estado-con-mas-recepcion-de-ied-en-mexico",
+   "excerpt": "Puebla, Ciudad de México, Nuevo León, Jalisco y Baja California concentraron el 71.6 por ciento de toda la Inversión Extranjera Directa (IED) en el país.",
+   "image": "https://cdn.milenio.com/uploads/media/2026/09/02/puebla-acumula-ied-mdd-sector.jpg",
    "published": "2026-11-25T18:38:51Z",
    "source": "Milenio",
    "source_name": "Milenio",
@@ -3250,8 +3394,10 @@
    "via": "MILENIO",
    "also": [],
    "updated": "2026-11-25T18:38:51Z",
-   "id": "c7c484cc4f68",
-   "score": 9.35
+   "id": "3bb9f1427c23",
+   "score": 9.7,
+   "seccion_por": "ia",
+   "sensible": ""
   },
   {
    "title": "Las razones estratégicas por las que Ucrania se niega a ceder la región del Donbás a Vladimir Putin",
@@ -3301,7 +3447,7 @@
   },
   {
    "title": "¿Por qué rociar agua oxigenada en el colchón? Por ésta razón recomiendan aplicarla y así evitas arruinar la te",
-   "link": "https://www.milenio.com/consejos/rociar-agua-oxigenada-colchon-para-que-sirve-como-hacerlo",
+   "link": "https://amp.milenio.com/consejos/rociar-agua-oxigenada-colchon-para-que-sirve-como-hacerlo",
    "excerpt": "Descubre para qué sirve rociar agua oxigenada en el colchón y cómo aplicarla sin dañarlo.",
    "image": "https://cdn.milenio.com/uploads/media/2026/11/25/agua-oxigenada-aplicar-colchon-sirve.jpg",
    "published": "2026-11-25T18:37:00Z",
@@ -3319,7 +3465,7 @@
    "via": "MILENIO",
    "also": [],
    "updated": "2026-11-25T18:37:00Z",
-   "id": "7ea4d3721977",
+   "id": "aade547a20ab",
    "score": 9.2
   },
   {
@@ -3367,6 +3513,29 @@
    "updated": "2026-11-25T18:35:51Z",
    "id": "5ca5fa029483",
    "score": 9.35
+  },
+  {
+   "title": "Mariana Ochoa y Fátima Bosch, compañeras de asiento en su vuelo de regreso a México; coincidieron en Miss Universe",
+   "link": "https://www.eluniversal.com.mx/espectaculos/mariana-ochoa-y-fatima-bosch-companeras-de-asiento-en-su-vuelo-de-regreso-a-mexico-coincidieron-en-miss-universe/",
+   "excerpt": "La cantante mostró la emoción que le causó conocer a la joven tabasqueña",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/EZGEIIAC4RCR5D7MFIJ2UCB5EY.png?auth=025062c0c5226599c0c58dec996209edaff1b274d1c8c86cf1c9f7b9d0e2bf7b",
+   "published": "2026-11-25T18:35:43Z",
+   "source": "Universal",
+   "source_name": "El Universal",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Universal",
+   "also": [],
+   "updated": "2026-11-25T18:35:43Z",
+   "id": "1546f442aaca",
+   "score": 9.2
   },
   {
    "title": "Anthropic's slide tests Wall Street's lofty bets on future AI profits",
@@ -3553,6 +3722,29 @@
    "score": 8.8
   },
   {
+   "title": "Ganó un millón de dólares en la lotería, pero el ICE lo arrestó por tener una orden de deportación",
+   "link": "https://elpais.com/us/migracion/2026-11-25/gano-un-millon-de-dolares-en-la-loteria-pero-el-ice-lo-arresto-por-tener-una-orden-de-deportacion.html",
+   "excerpt": "La sonrisa de Ariel Antonio Velásquez Morales duró poco. Hace apenas unos días posaba alegre frente a una cámara con un cheque simbólico por el millón de dólares que había ganado en la lotería. Hoy, este inmigrante salvadoreño…",
+   "image": "https://imagenes.elpais.com/resizer/v2/VSEZCMMXERG73MZXVIWWFTEYGU.jpg?auth=a8b7b7d053a3f920407fa056b2f11eacbd649e6a7cc0d34b76d8116de583867e",
+   "published": "2026-11-25T18:29:19Z",
+   "source": "ElPaisMX",
+   "source_name": "El Pais Mexico",
+   "kind": "news",
+   "mirror": false,
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "migracion"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T18:29:19Z",
+   "id": "27d1086f6edc",
+   "score": 8.95
+  },
+  {
    "title": "Primera tormenta invernal llega a México: ¿Cuándo nevará y en qué estados habrá temperaturas bajo cero?",
    "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQnpYeENmV2tqcXZ4XzJzTEhueS0zVXFBTnZOTDd0ZzQwMDloN2h1ZmpvYk5zODgxVlFFQl9rQTVHczNwazdtNW5ZQnlUTTdUcDh6UzdTOFdPblFQN1N5UUJMYWZ1QldNd3VfV2UwUC1uMDcxbEU1bXJ3QkpQT1VZMlV5X2tRbkx3YlFvZmF4S1Bzb1FqR3U1dmcyZWJMb3hqdk5jWmM1YS1FbWlsQkdpcUxtMFJFSjUtV1Z4QlNkQzhFOGtucktTZzlYUGNHRXl1YjMyREc3RlB4Mjcwc0xUNFd6ejUtT1dp?oc=5",
    "excerpt": "Publicado por El Financiero.",
@@ -3597,6 +3789,29 @@
    "updated": "2026-11-25T18:27:53Z",
    "id": "595cd40a0b1a",
    "score": 9.0
+  },
+  {
+   "title": "Poder Judicial de NL advierte afectaciones por recorte de recursos en el Presupuesto 2027",
+   "link": "https://amp.milenio.com/politica/poder-judicial-nuevo-leon-afectaciones-reduccion-presupuesto-2027",
+   "excerpt": "Laura Perla Córdova advirtió que el recorte planteado en Presupuesto 2027 para el Poder Judicial de NL impactaría al Tribunal Virtual y el acceso a la justicia.",
+   "image": "https://cdn.milenio.com/uploads/media/2026/11/25/judicial-solicito-mil-millones-mil.jpg",
+   "published": "2026-11-25T18:27:00Z",
+   "source": "Milenio",
+   "source_name": "Milenio",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "justicia"
+   ],
+   "via": "MILENIO",
+   "also": [],
+   "updated": "2026-11-25T18:27:00Z",
+   "id": "409e486cd892",
+   "score": 9.6
   },
   {
    "title": "“Blade Runner: 2099”, la distopía se extiende con Hunter Schafer y Michelle Yeoh",
@@ -3646,7 +3861,7 @@
   },
   {
    "title": "Marblism llega a México con empleados de inteligencia artificial; apuesta por 20 mil negocios en Latinoamérica",
-   "link": "https://www.milenio.com/tecnologia/marblism-llega-mexico-funcionan-empleados-ia",
+   "link": "https://amp.milenio.com/tecnologia/marblism-llega-mexico-funcionan-empleados-ia",
    "excerpt": "Marblism anuncia su llegada a México con empleados de inteligencia artificial y busca incorporar a 20 mil negocios de Latinoamérica para 2027.",
    "image": "https://cdn.milenio.com/uploads/media/2026/11/25/marblism-llega-a-mexico-especial.jpg",
    "published": "2026-11-25T18:26:12Z",
@@ -3661,10 +3876,10 @@
    "tags": [
     "ciencia"
    ],
-   "via": "Milenio",
+   "via": "MILENIO",
    "also": [],
    "updated": "2026-11-25T18:26:12Z",
-   "id": "7bf75ef9e50b",
+   "id": "88cf47be1724",
    "score": 9.3
   },
   {
@@ -3806,29 +4021,6 @@
    "score": 8.15
   },
   {
-   "title": "NFL Scores, News & Stats | Latest Super Bowl News",
-   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9fRi02OXd4bXBMeDZqWl9nMVZwbF9YY3QyQzluc1o4U2RIR1VWMGR6VjVzTjVuSlFtOVVpeWhRRQ?oc=5",
-   "excerpt": "Publicado por AP News.",
-   "image": "",
-   "published": "2026-11-25T18:20:29Z",
-   "source": "AP",
-   "source_name": "AP",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.5,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "global",
-   "tags": [
-    "deportes"
-   ],
-   "via": "AP News",
-   "also": [],
-   "updated": "2026-11-25T18:20:29Z",
-   "id": "7129039b7151",
-   "score": 8.2
-  },
-  {
    "title": "All hostages rescued after Colombian security forces storm supermarket",
    "link": "https://www.theguardian.com/world/2026/nov/25/hostages-freed-colombia-security-forces-storm-cartagena-supermarket",
    "excerpt": "Operation in which one hostage-taker was killed ends daylong siege in Cartagena shopping centre, where 30 people were initially held Colombian police have stormed a supermarket in one of the country’s most popular tourist cities…",
@@ -3850,29 +4042,6 @@
    "updated": "2026-11-25T18:20:20Z",
    "id": "51474f06b50a",
    "score": 8.1
-  },
-  {
-   "title": "¿Habrá módulos de registro a la Pensión Hombres Bienestar? Así se registrarán de 60 a 64 años para recibir 18",
-   "link": "https://www.milenio.com/comunidad/donde-estan-los-modulos-registro-pension-hombres-bienestar",
-   "excerpt": "Si te quieres unir a los beneficiarios de la Pensión Hombres Bienestar aquí te explicamos cómo es el proceso de registro al programa",
-   "image": "https://cdn.milenio.com/uploads/media/2026/11/25/registro-programa-hombres-bienestar-anos.jpg",
-   "published": "2026-11-25T18:20:00Z",
-   "source": "Milenio",
-   "source_name": "Milenio",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "MILENIO",
-   "also": [],
-   "updated": "2026-11-25T18:20:00Z",
-   "id": "4c78fc45e723",
-   "score": 9.2
   },
   {
    "title": "Personas más ricas del mundo pierden cientos de miles de millones ante venta masiva de acciones",
@@ -3921,6 +4090,29 @@
    "score": 7.9
   },
   {
+   "title": "Guadalajara rehabilita espacios públicos en El Manantial",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOcy03NTJZelVXYlFBSTVNTUJzcm1HOVZJV05NWEMwZ3hBMXU5eEllOWo4SW5rSWxKakd3UlFkSWNTeWdVMEFpa21MdGg0VVN6OEw0R3FfSGJSVE1FekhsUEhEMDBNVTNWYkd0V0o1RVJFbEpyd1c2TXpXLUdwWlpZV0J4Sl82M3k1WGVIRVNCa0VicjN2T3dKdmJkeXBQMEl5eDFOQlJtZl9JRHo4MFBpa19XUXZxMDRWU3ZpZUNnZ2JSenB0ZGJQeFJlX2hLZkQ2N2xMbjlmNHhOS3JxU2fSAeMBQVVfeXFMUGJpN244NjBSTXpEbEVXOHZaZ1FlQzBUY1Q0TjNfRW5SM0lTUkE1NEpHUzIzTzlHVXZzOGFlX1ZfVlpVVU9xZFFDSGUxZjIwZkVPVlFqck85YktscVNKblBzQkhOZlZnZXhXQlNUZm5CaXVYY21Jb3VremNUaTc2Q1ZJRTNyNzkwU0xzSmlGcDUtTGoxOUZubWlEZ0laTExrZ1A2cEpaNWhwSTc2aHFWTFZJckF6VThON1BFaENFRncxM3ZkcTNaYWJ1Q2xhcVE0ZEh0QXdCem1uX1JWYU1zSlZmNWs?oc=5",
+   "excerpt": "Publicado por El Informador.",
+   "image": "",
+   "published": "2026-11-25T18:17:27Z",
+   "source": "Informador",
+   "source_name": "El Informador",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Informador",
+   "also": [],
+   "updated": "2026-11-25T18:17:27Z",
+   "id": "6b8348c99f8f",
+   "score": 6.45
+  },
+  {
    "title": "¿Quién será el nuevo DT del Toluca? El candidato que toma ventaja para relevar al 'Turco' Mohamed",
    "link": "https://24-horas.mx/dxt/quien-sera-el-nuevo-dt-del-toluca-el-candidato-que-toma-ventaja-para-relevar-al-turco-mohamed/",
    "excerpt": "La directiva del Deportivo Toluca continúa en pleno proceso de análisis, entrevistas y evaluación de perfiles para definir al próximo director técnico del equipo tras la salida de Antonio 'Turco' Mohamed , y el nombre del…",
@@ -3965,6 +4157,29 @@
    "updated": "2026-11-25T18:17:00Z",
    "id": "e2dd263c819f",
    "score": 8.35
+  },
+  {
+   "title": "Presentan Guía de Derechos y Seguridad Digital para las Mujeres; Olimpia Coral celebra",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTF9FNWp2UEgxaUFVOWRGbTNtMnlaSE5wdG1XRHVJUS1yRk00eXA5SlhlakhvRFNZeXBQamprajlyVmpHSWxDd0I4TVhNc1VtQ1FsSEtFbHJmNm5WRmY3azdXRmJUUHF6QVFFN0hoQXVrMHdDa3FLRC1YSVNVT05KdllmOThJdW9SUXFNUF81QkRMajY1U01MUlhXOWVQVFU2V2psQTBlNFNHRnU3YVcwdFRMTlV3RDlKcDNyaTZR?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T18:16:55Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T18:16:55Z",
+   "id": "961b6f5990cf",
+   "score": 5.85
   },
   {
    "title": "Sheinbaum reitera rechazo a denominar como terroristas a grupos criminales",
@@ -4105,6 +4320,31 @@
    "score": 6.15
   },
   {
+   "title": "INE tiene todas las atribuciones para hacer lineamientos en licitaciones: Sheinbaum",
+   "link": "https://amp.milenio.com/politica/sheinbaum-ine-tiene-atribuciones-para-poner-criterios-en-licitaciones",
+   "excerpt": "Sheinbaum aseguró que el INE tiene las herramientas para evitar monopolios e irregularidades en contratos de material electoral.",
+   "image": "https://cdn.milenio.com/uploads/media/2026/11/25/sheinbaum-llamo-erradicar-monopolios-contratos.jfif",
+   "published": "2026-11-25T18:13:00Z",
+   "source": "Milenio",
+   "source_name": "Milenio",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "MILENIO",
+   "also": [],
+   "updated": "2026-11-25T18:13:00Z",
+   "id": "2f5ae49154fe",
+   "score": 9.85,
+   "seccion_por": "ia",
+   "sensible": ""
+  },
+  {
    "title": "Opposition Makes Progress Toward Ousting Netanyahu, Party Leader Says",
    "link": "https://www.nytimes.com/2026/11/25/world/middleeast/israel-opposition-netanyahu-new-government.html",
    "excerpt": "Gadi Eisenkot, a former military chief, has set Dec. 6 as the deadline to form a new Israeli government. His ally, Avigdor Liberman, said Mr. Eisenkot was on track.",
@@ -4221,7 +4461,7 @@
   },
   {
    "title": "US proposes surprise new tariffs on Brazil imports, including 10% duty on aircraft",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNTGZ4TFg5REgyY0VnandHQjZIMFN1cnNBOEJVQTBDaU1IWDFLVUxmdHFTXzRLVnVKc3pHd3lTYk9lRHZBOWV1Skd5V0VzVU05ZDRjZXdZekl5cWFneWI2b3ptS09taEhjNzZIcGhuWVdydDk5cnpkcElkMUdTZkJjTjROT09sOG5adVUxNVpNeGp5UmxaaHl2bzh6TklXMlp2eVQyVW9idi1QV25LcnpIeFBjMEF4RzNNbkNIU3JOUlN6WWVqSjRtTlFZMA?oc=5",
+   "link": "https://www.reuters.com/business/aerospace-defense/us-proposes-higher-tariffs-brazil-imports-including-10-duty-aircraft-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T18:07:54Z",
@@ -4239,7 +4479,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T18:07:54Z",
-   "id": "94409caff16f",
+   "id": "6100d2b6c60a",
    "score": 9.35
   },
   {
@@ -4313,9 +4553,9 @@
   },
   {
    "title": "N+ Noticias EN VIVO 🔴 | Sigue Nuestros Noticieros: En Punto, Despierta, Tercer Grado en Directo y Gratis",
-   "link": "https://www.nmas.com.mx/noticieros/",
-   "excerpt": "Sigue la señal en vivo de Las Estrellas y N+ (nmas.com.mx) para mantenerte informado con los programas de noticias más relevantes de TelevisaUnivision. Accede a transmisiones en tiempo real de Despierta, En Punto con Denise…",
-   "image": "https://static.nmas.com.mx/Nmas/cms/1778090573411-snapshot.jpg",
+   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBmVXhvUWZWM0VUckJKbGxWNGJyYzctV0xMdGlhNVpFLUNNQ1lNOURyVXV5SF9CUFIyalJDY0NNWXdvLVN0b2NzclpwRQ?oc=5",
+   "excerpt": "Publicado por N+.",
+   "image": "",
    "published": "2026-11-25T18:04:44Z",
    "source": "Nmas",
    "source_name": "N+",
@@ -4331,35 +4571,12 @@
    "via": "N+",
    "also": [],
    "updated": "2026-11-25T18:04:44Z",
-   "id": "4a34bfd3df94",
-   "score": 8.0
-  },
-  {
-   "title": "¿Cuáles son las casetas de autopistas bloqueadas por gaseros HOY | Lista completa?",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTEkwaTd5U29LWnlYb3RQdWFTa0k4UXVtWTV5Njh5bWFjNHRZYjZ3RF9ubEYyZDR2MGpPQnJYVG1tc2t4QTd4VEJRdHc4ZXZJa1RqZU0taVpEenB5MVJuUFI1YjZWam5xcjROSkQzWWJLR3JsM282eVo3a2FqNVNVX04wYXF2SkNPVk1NZmRfTGJqWkdYQ2x0OHZWVEPSAZwBQVVfeXFMT1JPbGZlb1E2MlFIbXBQSW9xM1Zabjk5UTdUeGdTZ2xnOFE0RThKV2RuX0F2R0h2X0NfTDEzbks2RkdRbXFwcVBiQXpDQWJqZVVxajdCWTZyVUZWSzlWWncxYnRJWkl3c1dnSkg1RzFZb3BqZ010VXNPakkybk4ybUFYS2JGZ0xrd2tTTzR3a2JScnNISGNlekxZTV91?oc=5",
-   "excerpt": "Publicado por MILENIO.",
-   "image": "",
-   "published": "2026-11-25T18:03:00Z",
-   "source": "Milenio",
-   "source_name": "Milenio",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "MILENIO",
-   "also": [],
-   "updated": "2026-11-25T18:03:00Z",
-   "id": "049d0423d554",
-   "score": 8.85
+   "id": "86b68c36a724",
+   "score": 7.65
   },
   {
    "title": "EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM05VWXNudnhTWW1BY2VFUHpZRzdNSjU4TG1Ob3NYZTRKM0tNUWNGQmxyNEp6NW0yTEJWaTZabF9UNW9CUUZTclBhaGpnQmZ6WVRZTVhqS3dpOTBsZEtaOGZnMzFPQlR5MDRpZThJNmU0cXc5Q0trMDNhdWtxVjV4V1lMYzYyR1RHU0lBNDdWZDlzOWxBN1J1Wm0xWlJkNEVMaVNXUXdQcTRuUHlvczlnMTd1VGRWQQ?oc=5",
+   "link": "https://www.reuters.com/business/energy/boehly-signs-us-backed-share-swap-deal-buy-lukoil-global-assets-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T18:02:40Z",
@@ -4377,7 +4594,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T18:02:40Z",
-   "id": "43f826f06d38",
+   "id": "266d21ebd7cc",
    "score": 9.3
   },
   {
@@ -4404,31 +4621,8 @@
    "score": 7.75
   },
   {
-   "title": "Yahaira Ochoa: alcohol está en 42.4% de agresiones a mujeres",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQa0lacDhFdVFxSXBrM0tjanBDUDM1VlIwM0g3ZHdOSWxmZnNvb2thNFFzUUtOQWc5WFdMWGdURDhWZW5vckpKLXo3ZHZJOHlRZTRvNDFjRGdlTG5jR2ZITWhIWkc2SHE0TnBaRWszV3VoNnBTTWJRVTZ5SnJVZkpBUE9UeFFiUUpKU2NnaDJoalZ5TFVoWUc4VmxzaHdjZzQwN1dNclpQcG9RQdIBqgFBVV95cUxNalR2R0c5WVFLUmlUZHJEd0FHWDRUM05pbmRqR01uSXdHUmJ0d0llSUlQbk1ZdXJQb1ZtZzMxUEdaNndGdzYzbnA4b0VhaGRONXc3WmJGRlkxRW9JRXRaRVJ3SUw2OTdzY3lLbmVUeDQxb2hhWjFzblBaczV3cTZ5bF9fWEozZmlpM3U0X1U4ZmhJcFZmMWM3d2hWTTR4OWZ4RkVDNlg3aTFMQQ?oc=5",
-   "excerpt": "Publicado por MILENIO.",
-   "image": "",
-   "published": "2026-11-25T18:01:51Z",
-   "source": "Milenio",
-   "source_name": "Milenio",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "MILENIO",
-   "also": [],
-   "updated": "2026-11-25T18:01:51Z",
-   "id": "92e46552de79",
-   "score": 8.85
-  },
-  {
    "title": "AI stock rout deepens, with Anthropic hitting $74",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMmNMM0doWElDVk9BdjNGZnJHakNCUFg1blQzSlk0eW9zeVduV3ZKcEtJd0hpUkxDMVhnRE9rY1lLUzF1eENZaFh0SUNKbmRjanN3YWtZakZud2RYUnlSRkk5b1RZT2VfbFJPXzhZVEVyYnFnRHBwYVlGdFQzaEt2Z2VjaGVXWUE0Qmd5bjZYandmR2M2QXBSY2tKem80OGNlSzh3?oc=5",
+   "link": "https://www.reuters.com/business/ai-stocks-slide-fears-over-infrastructure-buildout-costs-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T18:01:34Z",
@@ -4446,8 +4640,31 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T18:01:34Z",
-   "id": "a9261864dbe5",
+   "id": "8051d670db40",
    "score": 8.95
+  },
+  {
+   "title": "NFL Scores, News & Stats | Latest Super Bowl News",
+   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9fRi02OXd4bXBMeDZqWl9nMVZwbF9YY3QyQzluc1o4U2RIR1VWMGR6VjVzTjVuSlFtOVVpeWhRRQ?oc=5",
+   "excerpt": "Publicado por AP News.",
+   "image": "",
+   "published": "2026-11-25T18:01:02Z",
+   "source": "AP",
+   "source_name": "AP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.5,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "global",
+   "tags": [
+    "deportes"
+   ],
+   "via": "AP News",
+   "also": [],
+   "updated": "2026-11-25T18:01:02Z",
+   "id": "7129039b7151",
+   "score": 8.2
   },
   {
    "title": "Recreación visual | Así fue la detonación de cinco toneladas de material explosivo en Iowa",
@@ -4566,7 +4783,7 @@
   },
   {
    "title": "US authorizes SpaceX to deploy 1 million satellites for data centers in space",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVk5uRnprd285MEw5V2prcHR6bXljVGN4cUZuOHA4eHJUZkFzOVFnS1QtYnZaal8yYUYxa0t1cW84WjVzQWpub0czSGxUblh3STB6WnZxcThWZUxNRDk2emliZ0tfTmk5U3YxY3FZRXdEYWNyb2VMTmlkZE5RNWZHOS12OWdjSkpNdzhGU0Z4NWo3VmpSZHNXWGNJZUFpZjl2T2xuUkRKRXBpOTFqVFdFLXFvV0xHd1czWDFKbFU3OWFGU21B?oc=5",
+   "link": "https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T17:52:28Z",
@@ -4584,7 +4801,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T17:52:28Z",
-   "id": "d76243a87cf3",
+   "id": "2409284f0399",
    "score": 8.95
   },
   {
@@ -4658,7 +4875,7 @@
   },
   {
    "title": "Nasdaq sinks about 4% as AI rout, fresh Trump tariffs spook Wall St",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5",
+   "link": "https://www.reuters.com/business/nasdaq-futures-slide-over-2-fresh-us-tariff-concerns-inflation-data-focus-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T17:49:51Z",
@@ -4676,7 +4893,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T17:49:51Z",
-   "id": "a04d2bb44a19",
+   "id": "8110ace26d2a",
    "score": 9.35
   },
   {
@@ -4749,6 +4966,29 @@
    "score": 6.45
   },
   {
+   "title": "Libia Dennise presenta Paquete Fiscal 2027 por más de 142 mil mdp; incluye puente del bulevar Aeropuerto",
+   "link": "https://amp.milenio.com/comunidad/paquete-fiscal-guanajuato-2027-libia-dennise-incluye-puente-vehicular",
+   "excerpt": "La gobernadora presentó el Paquete Fiscal formalmente con el Congreso del Estado de Guanajuato, contemplando una aportación para el puente vehicular en León.",
+   "image": "https://cdn.milenio.com/uploads/media/2026/08/04/libia-dennise-garcia-munoz-ledo.jpg",
+   "published": "2026-11-25T17:49:00Z",
+   "source": "Milenio",
+   "source_name": "Milenio",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "MILENIO",
+   "also": [],
+   "updated": "2026-11-25T17:49:00Z",
+   "id": "ea371d94eb47",
+   "score": 9.2
+  },
+  {
    "title": "México queda fuera de nueva oleada de aranceles de 20% anunciada por Trump",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOX055bFVkeE9XWURtcVBNVndOT0JUT2t1U2FSSGhfY1huaEhBdEZ0X3BHamZLVWpBWl9SSU1SM1VYV2ZldlpKaEtIMHJFWC1XTmstdUJmN2dZbWZZckEwdW1WMXN1cUxibG9pQUUyV1I3QTVvUHRnV1lGeUxOVHBBVUpGb3Fpd1RiWVQ0VUNCaWdUNXNFRUh3Sk5KU1lVMTlYLUdXQTJxUmNzU0ZmZmxHZ1VkTmliTk0?oc=5",
    "excerpt": "Publicado por La Silla Rota.",
@@ -4815,9 +5055,7 @@
    "also": [],
    "updated": "2026-11-25T17:48:09Z",
    "id": "8366bafb9dbf",
-   "score": 9.1,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 9.1
   },
   {
    "title": "Flow Fest 2026: horarios de cada escenario y qué artistas se presentarán",
@@ -4837,10 +5075,12 @@
     "cultura"
    ],
    "via": "",
-   "also": [],
+   "also": [
+    "SDP"
+   ],
    "updated": "2026-11-25T17:46:59Z",
    "id": "f155dc535902",
-   "score": 6.0
+   "score": 6.75
   },
   {
    "title": "Inés Gómez Mont y Rubén Rocha Moya: en el centro de la tensión entre México y Estados Unidos",
@@ -4867,7 +5107,7 @@
   },
   {
    "title": "US FinCEN takes some systems offline after cyber incident, official says",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQWM5VEUyRVVFMDgwbkZqY3NGWVE1RXhFWjA1S1NseTlHQzUxMkVLSnpTNU5NbnV6ejRwd0hHSTNadk1CRzdubk9MRjExMWc3RUZ1YVVqRnczOFY3VGRzNm5LcHAyQ295dThkdGNkWUV4b2t0MDFQbDhZbE03XzQ2Um1EWE9QNHBkSjFKc05GZkFPNjZnYi16REtjcmJDZ1kxZ0ZmVTd1LV9lVWM1Z01xal9mRQ?oc=5",
+   "link": "https://www.reuters.com/world/us-fincen-takes-some-systems-offline-after-cyber-incident-official-says-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T17:44:36Z",
@@ -4885,7 +5125,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T17:44:36Z",
-   "id": "d0670594876d",
+   "id": "162d829f6c61",
    "score": 8.95
   },
   {
@@ -4933,6 +5173,29 @@
    "updated": "2026-11-25T17:42:31Z",
    "id": "c7d3f2302a25",
    "score": 7.7
+  },
+  {
+   "title": "Mantendrán despliegue de fuerzas federales en Sinaloa y entregan 200 patrullas para reforzar la seguridad",
+   "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPVHZhdEVZS0p5MlBRdnJxc1k3MTAyMU5SMUFkSGNSZFNRTjNuVkpGWWpsQXZOZVVMRW9NUWlNcDVvb2Z4VmJ1anpQSXlLbDJZc2l3Q3J0OGoxWDZBNF83MnlEUnFWRVVkWm8wNG56YzUzTXhCblo4dHE3ekg4QUxubDNiQlVjUU1sWUFOeWpQMlZOU2Q5VF9jQ3dZX0llR3d4X0taMlZIZFF6QmpSU0lNak9oRHZrOVZiY1pqazNKb0dhQVM2cFg2ZTJfanRPUzNMd3lhUUtLeWpxeU5HT2FuYmdrMS1INHU2eldWYjFlYmxIMDY4X3E0OU12RTdMV09qTmfSAYICQVVfeXFMT1R2YXRFWUtKeTJQUXZycXNZNzEwMjFOUjFBZEhjUmRTUU4zblZKRllqbEF2TmVVTEVvTVFpTXA1b29meFZidWp6UEl5S2wyWXNpd0NydDhqMVg2QTRfNzJ5RFJxVkVVZFpvMDRuemM1M014Qm5aOHRxN3pIOEFMbmwzYkJVY1FNbFlBTnlqUDJWTlNkOVRfY0N3WV9JZUd3eF9LWjJWSGRRekJqUlNJTWpPaER2azlWYmNaamszSm9HYUFTNnBYNmUyX2p0T1MzTHd5YVFLS3lqcXlOR09hbmJnazEtSDR1NnpXVmIxZWJsSDA2OF9xNDlNdkU3TFdPak5n?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-25T17:42:22Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-25T17:42:22Z",
+   "id": "7c67f22d4f71",
+   "score": 6.45
   },
   {
    "title": "Sí habrá Feria de la Virgen del Rosario en Guasave",
@@ -5005,7 +5268,7 @@
   },
   {
    "title": "Volatility-weary investors hammered as tariff mayhem adds to tech pain",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZGd2TDZySmQ2VXE4QUhfUG1OOGU3S3l4eWVDMGFKLWNVRlp1dE1zYnNmOUNYTGpQeGZtS3RrWC11R0x0aEo2YnBsU2Y1NTEwT2V2eF9fQmhfLXc1ekFmajRGUWg0NVZheFBtUy15RWd6NkpsZzFSZTY1M1FIYjI5b2htVWVYemdvRDQyTUFQbw?oc=5",
+   "link": "https://www.reuters.com/business/global-markets-risks-analysis-graphic-pix-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T17:39:56Z",
@@ -5023,7 +5286,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T17:39:56Z",
-   "id": "19df156e29b5",
+   "id": "44839360322d",
    "score": 9.35
   },
   {
@@ -5097,9 +5360,9 @@
   },
   {
    "title": "Gaseros retiran amago de bloqueos carreteros tras acuerdo con el gobierno",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMXlxVk44ZS1Pdjhsb2YzZFF5X3ZOS1l1MkpBLV93WGcybkJVVGo1c1pzcndONXdGelBRb3BVNDV0NUZ6VTMzQV81TzZ3TXB4OGtlX25HSlpTU1J2TUlRd3RCeWRFRkN0cXJwZnFaTW4wdXJRR3l1cHZUelhPekMwT3BIa0FFQVE1Y1BRUnA2Y0lKUEVfOEJWZHFTQjUtbDdRM3ZQLU1vQ0tFc3pEZzBOcWp5ekZsS3RWQ1N0ZGNuZXMxdnpHWjk2LTRDUmZtSzlkSXd3QVN4Yy1TYkF40gHwAUFVX3lxTE81Q2pJby1sckJyU2lWZFF4bVpid2RwTlRzZmdoeUZxRkJnRnZFdDV4cjRlRjMwWkNZXzRFQ3JaemFDVmU2N0VsQ3k4VmNxNnptZ2thYy1oa2h1NzRLeXBYNzFGenRzVUprT3RRME45SlRyREJGUmMzMGszMF9DZFRlbUpGYlY4NzRycERVMWkwcDFES09BeFU1d3VHOUZnYll5RlRKSzBCdTl5WkxlTWN4VlF3ajRUbnRqZ3NRNHFaNUVMQktORUxuR1NxT0N0SkZQb2gzNUgxaTA1STJmWmhBeHhoTjVFVkdsNExpTUppbQ?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/nacion/gaseros-retiran-amago-de-bloqueos-carreteros-tras-acuerdo-con-el-gobierno-segob-da-seguimiento-a-demandas/",
+   "excerpt": "La Secretaría de Gobernación aseguró que habrá diálogo abierto y que se garantizará el libre tránsito",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/H26RXODYDZBQ7N23OY5JAZHIMY.jpg?auth=dac07a31318a2c852a83279df166e229842690449c7d2f067142ee870de82ab8",
    "published": "2026-11-25T17:36:18Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -5115,12 +5378,12 @@
    "via": "El Universal",
    "also": [],
    "updated": "2026-11-25T17:36:18Z",
-   "id": "ae29d131427b",
-   "score": 9.5
+   "id": "e720dfffb1bf",
+   "score": 9.85
   },
   {
    "title": "Nvidia agrees to settle 2018 US investor class action for $290 million",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQ2cwWG1mYkVmSG5oSTgwZmcxcVY5SWg2ak5aTHBtbG1qWHVvcGxjOGQzTFZKZkNSdWgtOHJtbW1BenVtTWc2UmFrOFpHbTV1Mnh5MWgxWk00R0NrVG5PX0hkNWxmczRRLWdnRUtvRFBhMzVzZUlRN0FXRFVJYlNTVUJaT1U3eVY4SUwtNFd2a1MweTlBZW1ReG9mU0pQa2ZUd3RnaEZtMXNyQmhxeDV0SGN1eWRGcDN2UExZ?oc=5",
+   "link": "https://www.reuters.com/legal/government/nvidia-agrees-settle-2018-us-investor-class-action-for-290-million-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T17:36:16Z",
@@ -5138,7 +5401,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T17:36:16Z",
-   "id": "2c3702f611fe",
+   "id": "04eb9b7b2361",
    "score": 9.3
   },
   {
@@ -5329,9 +5592,9 @@
   },
   {
    "title": "PAOT refuerza operativos de vigilancia en Ladrilleras de León",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWTg5bkJjeFl4Qm9yYXZWYmt5cEJTREVEcUxXQ0hwUDlCd29LR0gwQVNWclVsaDVHWTZBNVZCT2JKNXY2eFdjX0pHYmxJNXlaZTN3Yk1IWHRldTNkbm9rcVZqc09aS3B3TWZDZ09jdGN3bDNSQWM2Wm5tRUowZWNzR2pIT1pRQjFxQ0lsWUZTOGkyYmJJRG0ybTZnNDJjWjRaT3UyZXFaTHc4LU5DOGc?oc=5",
-   "excerpt": "Publicado por Boletines Dependencias.",
-   "image": "",
+   "link": "https://boletines.guanajuato.gob.mx/2026/11/25/paot-refuerza-operativos-de-vigilancia-en-ladrilleras-de-leon/",
+   "excerpt": "En coordinación con autoridades municipales, se supervisa el uso de combustibles permitidos para la elaboración de tabique. Las acciones buscan prevenir emisiones contaminantes, proteger la salud …",
+   "image": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2026/11/revisionladrilleras-2.jpeg",
    "published": "2026-11-25T17:25:25Z",
    "source": "GobMX",
    "source_name": "Gob.mx",
@@ -5347,8 +5610,8 @@
    "via": "Boletines Dependencias",
    "also": [],
    "updated": "2026-11-25T17:25:25Z",
-   "id": "2a43dfd763e3",
-   "score": 8.85
+   "id": "2ee11eea2339",
+   "score": 9.2
   },
   {
    "title": "México frenó extradiciones",
@@ -5563,8 +5826,8 @@
   },
   {
    "title": "Profepa frena extracción ilegal de minerales no metálicos en Buenaventura, Chihuahua",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPXzlaLUFGdk9xSGU5Qk9qblY1ZGlQSEVfQzc0U3RrSENaNmRkWUR6Rnk5dUg3am1WeEJVd0VtUE9uc1RGRTFDbFAxZmVwYzlzdFlxalFDY3gxdEhwWFQ4eGFsNVRUU1Y4NWRpc2dhZzVNaGZaM2dxeGw5VkV2YVNvYXFmdnBiM1BKS2NNYlZuWFJHdF9IcHpGYzA1ZmxvUjhuVmxraVBFdllFcXM3WVRDTkUwYWU2Rnli?oc=5",
-   "excerpt": "Publicado por Gob MX.",
+   "link": "https://www.gob.mx/profepa/prensa/profepa-frena-extraccion-ilegal-de-minerales-no-metalicos-en-buenaventura-chihuahua",
+   "excerpt": "La actividad no cuenta con autorización ambiental y afectó una superficie de más de 1.7 hectáreas de ecosistema forestal",
    "image": "",
    "published": "2026-11-25T17:16:26Z",
    "source": "GobMX",
@@ -5581,7 +5844,7 @@
    "via": "Gob MX",
    "also": [],
    "updated": "2026-11-25T17:16:26Z",
-   "id": "369c471071d8",
+   "id": "b3d326a30238",
    "score": 8.85
   },
   {
@@ -5652,29 +5915,6 @@
    "updated": "2026-11-25T17:15:03Z",
    "id": "e744c463481e",
    "score": 8.35
-  },
-  {
-   "title": "US Army conducts controlled detonation of lead-based explosives stockpile in Iowa",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPV3JaTmxlVEkyOG9FXzM3d0dwUEdpV0ZwZk1FUUdZNG45Q0xYMWxaMndSZXNib0NXdDNNN1p3UzI5MnJBRTVhdll0Rm1EamNoMUpYRHg2R2JrcFlqTXFpdE9PeTgtVWktV3YzY012TDMtclByVHpIQnFucGhJbl9CZVlCMXNBb2pLRkxveWhIVEN0eEtUampuVkNRTzhBV1NPVWRnWEswMHlVbjhkeUZSeWVR?oc=5",
-   "excerpt": "Publicado por Reuters.",
-   "image": "",
-   "published": "2026-11-25T17:15:01Z",
-   "source": "Reuters",
-   "source_name": "Reuters",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "global",
-   "tags": [
-    "mundo"
-   ],
-   "via": "Reuters",
-   "also": [],
-   "updated": "2026-11-25T17:15:01Z",
-   "id": "05346bc49c67",
-   "score": 9.3
   },
   {
    "title": "Peso hila sexta jornada de pérdidas y se deprecia 1.82 por ciento a 19.77 por dólar",
@@ -5767,6 +6007,29 @@
    "updated": "2026-11-25T17:08:39Z",
    "id": "6b88dffb109c",
    "score": 5.85
+  },
+  {
+   "title": "Sheinbaum espera que Senado apruebe Ley para sancionar feminicidio en actual periodo de sesiones",
+   "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxORnV3VGNLczREQjExVllJMm5ZODZXWVYtd1VuLURJLXJKdUgxMS15NEZsZGNiXzlCNzZ4d3ZQd0h1emlTSFA3SVpxT29qUEhyaUxSczNUM3RjSUc1S085VzRiY2JKbEpzNE9uSVdxaHpjaldwR0YtUlp0bEt3Z2twR0tEVEFrMU4wWHBYc2lNWENzNmhXVXZkXzFrdlpjLVdTbDB3enBIeF9PcGczT2h5TEhtUS02b01Ia3h3T2FIQ0otWFJhcXZnWXRoaGNSc3ctbWUyeVIwLWpVS0FGNWRIdzlQVDRMVmNQTHV3RUtNMUxLTEZ3REHSAfYBQVVfeXFMTkZ1d1RjS3M0REIxMVZZSTJuWTg2V1lWLXdVbi1ESS1ySnVIMTEteTRGbGRjYl85Qjc2eHd2UHdIdXppU0hQN0lacU9valBIcmlMUnMzVDN0Y0lHNUtPOVc0YmNiSmxKczRPbklXcWh6Y2pXcEdGLVJadGxLd2drcEdLRFRBazFOMFhwWHNpTVhDczZoV1V2ZF8xa3ZaYy1XU2wwd3pwSHhfT3BnM09oeUxIbVEtNm9NSGt4d09hSENKLVhSYXF2Z1l0aGhjUnN3LW1lMnlSMC1qVUtBRjVkSHc5UFQ0TFZjUEx1d0VLTTFMS0xGd0RB?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-25T17:08:27Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-25T17:08:27Z",
+   "id": "e09912ec2964",
+   "score": 7.1
   },
   {
    "title": "La inflación en EU se mantiene alta pese al alivio en el precio de la gasolina",
@@ -5947,10 +6210,12 @@
     "deportes"
    ],
    "via": "",
-   "also": [],
+   "also": [
+    "SDP"
+   ],
    "updated": "2026-11-25T17:01:26Z",
    "id": "66d3e5d11fa0",
-   "score": 7.6
+   "score": 8.35
   },
   {
    "title": "La Administración Trump impone nuevos aranceles a la UE, China, Japón y otra decena de países - EFE",
@@ -6643,29 +6908,6 @@
    "score": 9.1
   },
   {
-   "title": "Esposa de Pepo López sigue delicada tras sufrir quemaduras por explosión en su casa en Guadalupe",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRC1RRWlLR0VlS3VZakJRS1g2UUFwNkhhaEhCVG4ydEdzbk84SEJQZ1diUTVoYmlmTldkQWdrVFNLNVZXRnBCRHlHTWNRQ1dydFU3WElFSzdxUTNPbTVXbDlYWWJFZmhuWGpEUVJGNXBVZm1EN1U2T05oXzNCUnVIbjB3XzNEcDBJS1pCc3JXaDBlWjhYZUVjQ2l2X3dsQXpzUEHSAaIBQVVfeXFMTkxDNFRYa1RXVngwblVnS1J0OHl0R0RpalNSOUlaeGsxWGEyeXUwQ3ZOMmk0RDN0aWJOVXR3T2IxUUFPYUJXbWp5dzd6Sk9WOGcxd0xrbGdxX2pxTk5la2xTX0JwZy1VSll6ai1uMnNhSERDeWJvYktkeUxzWnhFUzF3NTQ3VlhFVDhxdTExT3F2OXRQQ0xMQ3pDSnNnQ3VEam5R?oc=5",
-   "excerpt": "Publicado por MILENIO.",
-   "image": "",
-   "published": "2026-11-25T16:41:00Z",
-   "source": "Milenio",
-   "source_name": "Milenio",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "MILENIO",
-   "also": [],
-   "updated": "2026-11-25T16:41:00Z",
-   "id": "5fdcb8b3f095",
-   "score": 8.85
-  },
-  {
    "title": "Tiendas Bara cumple 28 años: apuesta por marcas propias y suma más de 900 sucursales",
    "link": "https://elceo.com/negocios/tiendas-bara-cumple-28-anos-apuesta-por-marcas-propias-y-suma-mas-de-900-sucursales/",
    "excerpt": "Tiendas Bara celebró su 28 aniversario en León, Guanajuato, ciudad donde nació la cadena, con la reinauguración simbólica de su primera sucursal, Bara Téllez Cruces. La ceremonia reunió a colaboradores, familias y autoridades…",
@@ -6802,29 +7044,6 @@
    "updated": "2026-11-25T16:37:36Z",
    "id": "088dfbd90644",
    "score": 9.3
-  },
-  {
-   "title": "Cóctel Jumbo en Champotón, Campeche: Más de Medio Kilo de Mariscos en un Solo Platillo",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSUpDQ0l0Tzh3QkRzODhUaFVXdXZ5M3B2em5CWjc0SVU3Mlk4UGVsT2p6M0ZhZFkxbUdEMFNEeHNEdndhcGNRdy1aM09vd3VWV0E0aEtKOUw0OWt1MUs0bWZLazZlR3hrX2pOQkhCYmpsZFJRUmhRM2dSUEZuTmlvUDhKS1EyRkRuaTdtQ3RrX1lhTjMwcUxQWllrNWJBWV8xcE0wNU1Tc2RVNlhVR0daUzJTbkZmSngtTDg5ZlluNE9acUV1UERxUmlEZlFTZUs1ZEl3R294aw?oc=5",
-   "excerpt": "Publicado por N+.",
-   "image": "",
-   "published": "2026-11-25T16:37:15Z",
-   "source": "Nmas",
-   "source_name": "N+",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "N+",
-   "also": [],
-   "updated": "2026-11-25T16:37:15Z",
-   "id": "f17e20852a57",
-   "score": 7.65
   },
   {
    "title": "Why are school shootings continuing to shake the Balkans?",
@@ -7288,9 +7507,7 @@
    ],
    "updated": "2026-11-25T16:20:53Z",
    "id": "64a5b65b057f",
-   "score": 8.6,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 8.6
   },
   {
    "title": "Melania Trump announces reunion of 9 children with families amid Ukraine war",
@@ -7501,9 +7718,9 @@
   },
   {
    "title": "Sheinbaum pide a Nestlé pagar precio justo a productores de café de Chiapas",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNbHd2c3BMZ25rOWN3ZGd3U0xrR1hJdkJJMS1nMEdZTWg5dDhFdlltYm5CMkFXRE1walZpV2RqWHZ2SFEtVWt6OEZ5Nndyc0JhZVV2X2lKWEdKUlpJaUhHbkktZk9Sd1RaTE90R0pkenppd1FycVFNdzU4ZTFtX1B2U1QwNUxZNm96Z0JEV1ZWdmU5X2RLNHhVMUdvZ2Zic1R1Z1BkVkxDMVg3aFA5d3ZLN0ROWTlRRERsZE5EVkhzYzMtYkx3cEpVbWRwYXVrUE90bGgyYnVVOGJXTTZWNUpRODJPY3NyMVdTcWU40gH_AUFVX3lxTE5acUg0SWRWc2FmSjdHVFR5Wnd6cWdqenJhREhFMzU2SVkwNmt2WXEzVzdpaWZoQUJ6Z1g1TlFHZk1lbk8wa3BiamZYWDdNek84S0Zka3NzdXpRcWRZN0NjMWZEWVZlX29FWjJLaWpCQkRPQkVER0loRU8tX0hxQzhmNjJUZENFMllwaWFFczQ4a3B1aDE2Rm4zaHNCYUlFTEZIbVBFdzUwX1JoeHF5dW1PdlFNWVNLOTZJNElBQ05GZDVrRVA4RHg0V08wbVdkTmhxZWlOU0g0c0NveDJzOFFpY0w5QWxTaUs2MElNNWQ5V2o5MUsydFVpTzFzRU1Kbw?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/nacion/sheinbaum-pide-a-nestle-pagar-precio-justo-a-productores-de-cafe-de-chiapas-instruye-a-sader-acompanar-negociaciones/",
+   "excerpt": "Los cafeticultores solicitan que el precio de compra se mantenga entre 50 y 60 pesos por kilogramo, indicó la Presidenta",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/BU3SEJEZEFBNTK22WKKNZTQCLE.jpg?auth=1bc53500a6b5e686cb07b84be7deacec07bb20c6310de325ba0f588959b0d74a",
    "published": "2026-11-25T16:08:18Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -7522,8 +7739,8 @@
     "El Informador"
    ],
    "updated": "2026-11-25T18:30:17Z",
-   "id": "0b3b2be6faf9",
-   "score": 11.0,
+   "id": "032769736d5a",
+   "score": 11.35,
    "seccion_por": "ia",
    "sensible": ""
   },
@@ -7877,29 +8094,6 @@
    "score": 6.9
   },
   {
-   "title": "La violencia de género no tiene nacionalidad",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZDI3YlhjTzRqX0F3Y0w3cmNPUlEzZFdXaVJYc0trdkJEVGx3TVN1d1hPbHVRNmVucGlvTW56ak9VcGlneV9iQ18yM3N4T1NmcmUzNjFEZk5FcUtqNy1ERjBVejV5aGpRb1FEVU03bXV1U0ZtSnZLVXAwaUpoeHc2bUhlbWl0X0d3LVBXaUYtdw?oc=5",
-   "excerpt": "Publicado por Deutsche Welle.",
-   "image": "",
-   "published": "2026-11-25T15:55:22Z",
-   "source": "DW",
-   "source_name": "DW es",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mundo",
-   "region_fuente": "de",
-   "tags": [
-    "seguridad"
-   ],
-   "via": "Deutsche Welle",
-   "also": [],
-   "updated": "2026-11-25T15:55:22Z",
-   "id": "2fe7811d22d6",
-   "score": 8.35
-  },
-  {
    "title": "El horror revelado de Ximena Santaolalla: “Fui abusada a diario durante nueve años por mi padrastro Francisco Aguirre”",
    "link": "https://elpais.com/mexico/2026-11-25/el-horror-revelado-de-ximena-santaolalla-fui-abusada-a-diario-durante-nueve-anos-por-mi-padrastro-francisco-aguirre.html",
    "excerpt": "Es una cuenta imposible, pero la ha hecho. Dice que quitando los días que él viajaba o que algo excepcional había sucedido, su padrastro la violó en 2.500 ocasiones. Desde que tuvo 5 años hasta que cumplió 14. “Fui abusada a…",
@@ -8206,29 +8400,6 @@
    "score": 6.3
   },
   {
-   "title": "Gómez Mont está en España. La Presidenta le reclama a EU y a Interpol por liberarla",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcHhfZG0zYVRPYk5sREktT1h4R1VmS0pFSXhaRnpYZ0VqQWxydHluRFNsSld3aGhQYkdDVHFCbE1URFhlQUpyS2ctNk54SmhNamozU0FObWVrTkNHNUYxYkw1WHN2bUtZamJnNF9lZ1pfbENXVXUwa01uNVlUd0JsOFNHdldkWVhEUnhzOEtTSi1EMFpmREdxSUl1aGhMazhRc1hTOXRiaWl6R0lDQ0lrUmowbFpLVTgy?oc=5",
-   "excerpt": "Publicado por SinEmbargo MX.",
-   "image": "",
-   "published": "2026-11-25T15:48:32Z",
-   "source": "SinEmbargo",
-   "source_name": "Sin Embargo",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.5,
-   "lang": "es",
-   "region": "mundo",
-   "region_fuente": "mx",
-   "tags": [
-    "mundo"
-   ],
-   "via": "SinEmbargo MX",
-   "also": [],
-   "updated": "2026-11-25T15:48:32Z",
-   "id": "f6bd59592094",
-   "score": 7.5
-  },
-  {
    "title": "Ariadna Montiel se comprometió a llevar a Sheinbaum la situación de Nicaragua: exministra sandinista",
    "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdnRPaF8zNm9PYTBKNVNULTVRSy1HUTktX01NRHlOUDMydktzN04zQXRHTzluTlA0MUVTa2RCamNhMkhqdVNKTy1WdGcxak95eFJIREljX0pJcVFYMmxSZnVlX0Z5TDl6clNhTlJzZDNFajZSekNfeXRid05rT2JfLWJLa2djNlZZeVRjU0c1UXRoNkZBZXRNN25rSVFHdU02Tm1MZ2l3Y3hUX2oyaHRrN1R0VUxVLURVR1NEbGlCdWEyTzQ1ZW1tZVhWRlZzMHRDb0dHOHh3ZGdxUQ?oc=5",
    "excerpt": "Publicado por Aristegui Noticias.",
@@ -8314,7 +8485,7 @@
    "region": "mundo",
    "region_fuente": "mx",
    "tags": [
-    "economia"
+    "mundo"
    ],
    "via": "",
    "also": [
@@ -8322,9 +8493,7 @@
    ],
    "updated": "2026-11-25T15:45:35Z",
    "id": "d752fd940f92",
-   "score": 8.0,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 8.0
   },
   {
    "title": "Aumenta a 26 la cifra de muertos tras incendio en fábrica de confitería en Indonesia",
@@ -8401,6 +8570,54 @@
    "sensible": ""
   },
   {
+   "title": "Reclama CSP a EU por envío de Gómez Mont a España",
+   "link": "https://www.reforma.com/reclama-csp-a-eu-por-envio-de-gomez-mont-a-espana/ar3321226",
+   "excerpt": "CSP anunció que enviará nota diplomática a EU por deportar a Inés Gómez Mont a España, pese a órdenes de aprehensión pendientes en México.",
+   "image": "",
+   "published": "2026-11-25T15:43:22Z",
+   "source": "Reforma",
+   "source_name": "Reforma",
+   "kind": "news",
+   "mirror": false,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "mundo"
+   ],
+   "via": "",
+   "also": [
+    "Sin Embargo"
+   ],
+   "updated": "2026-11-25T15:48:32Z",
+   "id": "9ba71263bef1",
+   "score": 8.85
+  },
+  {
+   "title": "La violencia de género no tiene nacionalidad",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZDI3YlhjTzRqX0F3Y0w3cmNPUlEzZFdXaVJYc0trdkJEVGx3TVN1d1hPbHVRNmVucGlvTW56ak9VcGlneV9iQ18yM3N4T1NmcmUzNjFEZk5FcUtqNy1ERjBVejV5aGpRb1FEVU03bXV1U0ZtSnZLVXAwaUpoeHc2bUhlbWl0X0d3LVBXaUYtdw?oc=5",
+   "excerpt": "Publicado por DW.com.",
+   "image": "",
+   "published": "2026-11-25T15:42:45Z",
+   "source": "DW",
+   "source_name": "DW es",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "de",
+   "tags": [
+    "seguridad"
+   ],
+   "via": "DW.com",
+   "also": [],
+   "updated": "2026-11-25T15:42:45Z",
+   "id": "2fe7811d22d6",
+   "score": 8.35
+  },
+  {
    "title": "Wife drugged and raped by husband asked police if she was to blame, mass sexual offence trial hears",
    "link": "https://www.bbc.co.uk/news/articles/c38x0vd2yyx5o?at_medium=RSS&at_campaign=rss",
    "excerpt": "The woman told a court suggestions she was 'pretending to be asleep' were 'absolute rubbish'.",
@@ -8424,6 +8641,29 @@
    "score": 9.0
   },
   {
+   "title": "US travelers facing long airport lines, bad weather in the run up to Thanksgiving",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQkk2WEd6VjhQeXF0eGZsQnFSUmNlbnBXQmlicUdtaWJKdWJ0Tm5TNXJmRll2LUdSMmNaekFCenlKb3hnX1Jod0t0TDRONWlueUdrYWRfZ1ZpTkp0WGhXbEEyZ1diSm1PTWluWVNPQUlPWWFFSnFZWTlQdl9BZXl5TGRMdHloN2tLZTJUcG93el9Ya0IzV00tT1JrZVVnUQ?oc=5",
+   "excerpt": "Publicado por AP News.",
+   "image": "",
+   "published": "2026-11-25T15:42:00Z",
+   "source": "AP",
+   "source_name": "AP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.5,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "global",
+   "tags": [
+    "mundo"
+   ],
+   "via": "AP News",
+   "also": [],
+   "updated": "2026-11-25T15:42:00Z",
+   "id": "02bbd8675e02",
+   "score": 8.7
+  },
+  {
    "title": "Claudia Sheinbaum confirma que Inés Gómez Mont fue deportada a España y pide su extradición a México",
    "link": "https://elpais.com/mexico/2026-11-25/claudia-sheinbaum-confirma-que-ines-gomez-mont-fue-deportada-a-espana-y-pide-su-extradicion-a-mexico.html",
    "excerpt": "La actriz y presentadora de televisión Inés Gómez Mont fue deportada por Estados Unidos a España, ha confirmado este miércoles la presidenta de México, Claudia Sheinbaum. La explicación de Washington, ha detallado, fue que Gómez…",
@@ -8443,14 +8683,12 @@
    "via": "",
    "also": [
     "Proceso",
-    "Milenio",
-    "Reforma",
     "Zeta Tijuana",
     "Forbes MX"
    ],
    "updated": "2026-11-25T19:30:41Z",
    "id": "bcb6540079f4",
-   "score": 13.0,
+   "score": 11.5,
    "seccion_por": "ia",
    "sensible": ""
   },
@@ -8665,7 +8903,7 @@
   },
   {
    "title": "Global fragrance makers hit with nearly $517 million EU fine for taking part in cartel",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNXdKc0Fib1ktQzJ1Umx4VE9DTjFjWHhQa3czVlJ6YVlTUVBxNG5IY2p5T3pGbVpkTDRXLV9GTWk5YXB3dHBUWTUyRVpVb1VPLTBfV1p2QUFjNnZqeFBWbE4zckpScDFnY2NtTzNQVVpadTdFcWZWMDNiM2RfVzZCZ3V1YVh3ZmhtbENaVGJvSG9yUFdZU0MySDA3LWZDNEt2U3BSY01RcExfT0lwWjdCMzlLNUZ5Mi1KdkYzaEpn?oc=5",
+   "link": "https://www.reuters.com/world/eu-antitrust-regulators-fine-3-global-fragrance-makers-5165-million-taking-part-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T15:27:44Z",
@@ -8683,7 +8921,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T15:27:44Z",
-   "id": "60fd17a90ce0",
+   "id": "8a7e125013fe",
    "score": 9.55
   },
   {
@@ -8765,9 +9003,9 @@
   },
   {
    "title": "Menor de 12 años recibe disparo accidental de su hermano en Nuevo León",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOYkx5R3Qtb3NWX0Z0QTlTQjlDRUpGcWJyZzlsT1p1SnZ6ZVJlc3psTk00ZUZMZ1EwTGR4d0pYRGp1aVRrcG4wRTQ1eFFBRWtoeURsWndoMkJndXUyV3lZcVhsNkU3LVRHTVpEWnhuTV8xWTFPLWJibDBFZThkckRxS1Y3ZjRoOGgxT3l2WlF3UktVYkdOQXBDVVZGb2RlUTI1RGMzNTdGcEhoVjdqaE1xdkpuMDBncVlnb3BCeGxPT3dDSXV1WEhlNkE3MUw3c2V2Z29IZEZSVEpDMUpvYV92Mi04ME5YQ2xvRUs2bdIBgAJBVV95cUxNeVNFNnVLYnhyM2hVb1pQNWdMZkxfcWVUTlBhcG1Tdm1HUVBjbk8xZ21XQ1lYWTctTzBOaXN1ZE1QZ010V1BWUk5DVXdaN1dyaUFSamo2OVRBS1I1RjROdjl3TDdiZENZa21aeWc2SzUwNU5QamNwc0lOaURyQ1JqRzBLVzNCSUdpcXhTUEVPTk1wUGF4ODFDcDN1elI2aGxuLWNGeHl2RW9HSVc4S1VFdmxRYzhWV01QQ1RXTTgtZk9acFN2QWtCNndoeTFWM2NvakJKSkd2bnY5RWVSRE01NUZJQm1nSXFDLWxQTFNlWDBHMXRvUGpRWkhjUUQ1ai1X?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/estados/menor-de-12-anos-recibe-disparo-accidental-de-su-hermano-en-nuevo-leon-el-joven-quedo-bajo-investigacion-ministerial/",
+   "excerpt": "Habitantes del sector escucharon una detonación y posteriormente los gritos de José Ángel, quien pidió ayuda al percatarse de que había lesionado a su hermana",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/V4JZOOB4FBGWXI762MYU3MBVOQ.jpg?auth=379dbb2ae62972b6ede1b40662bdfdddd9d3dc693d92edaf678a0bbaebdd2dd2",
    "published": "2026-11-25T15:25:00Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -8783,8 +9021,8 @@
    "via": "El Universal",
    "also": [],
    "updated": "2026-11-25T15:25:00Z",
-   "id": "98c416d64b05",
-   "score": 8.85
+   "id": "b261a1efef14",
+   "score": 9.2
   },
   {
    "title": "Dólar acumula un alza de 9.66% frente al peso y se acerca a 19.80",
@@ -8903,7 +9141,7 @@
   },
   {
    "title": "Russian government official warns of Ukrainian drone attacks on utility infrastructure this winter",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWjNMRXE5WTZCS3ZELXItUXNCbjVVTU5NeVFxNHNZdG1kYnRNSGs1dzRYVlY1TWE0UTBYem8yRTBoNEtoS21uQ1NTSjhJejNDYW5PUHQ3RDVaV2tRZTM0Q2FmY3JZZkhpYXRzUXdqUTc0WHZJNGhncUltbGpPcEFoOUdxNk1LeEtOV0xqT0ZvTnJGLUQzVURmekZneEdkcG1DLXlIWEh6ZGF3blpGVmlvNkN1LUI2QzB1X2xQeXdNaw?oc=5",
+   "link": "https://www.reuters.com/world/russian-government-official-warns-ukrainian-drone-attacks-utility-infrastructure-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T15:21:43Z",
@@ -8921,8 +9159,31 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T15:21:43Z",
-   "id": "e5fda1ea9bfc",
+   "id": "acba7a8064b7",
    "score": 9.3
+  },
+  {
+   "title": "Activist confronts ex-Mossad chief over 2024 Lebanon pager attacks",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/25/activist-confronts-ex-mossad-chief-over-2024-lebanon-pager-attacks?traffic_source=rss",
+   "excerpt": "A Jewish activist has confronted former Mossad chief David Barnea in Germany's parliament, calling him a 'war criminal'.",
+   "image": "",
+   "published": "2026-11-25T15:15:53Z",
+   "source": "AlJazeera",
+   "source_name": "Al Jazeera",
+   "kind": "news",
+   "mirror": false,
+   "weight": 4.0,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "qa",
+   "tags": [
+    "mundo"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T15:15:53Z",
+   "id": "81bef0d31c15",
+   "score": 8.1
   },
   {
    "title": "Los peritos de Adamuz apuntan a un fallo en la soldadura y un hundimiento del terreno como causas del siniestro",
@@ -9273,9 +9534,9 @@
   },
   {
    "title": "La visita de Keanu Reeves que hizo \"odiar\" a una librería; fans cuestionan organización del evento",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeS1oWTB6cWFtb0pMV3BKVHZIWHRRb3BtZXNGb1dkWElPQ19vOVItS09LUWZWc0VmUE5LczB5dnZhdXVuYWFGbWNVak1vbVZTZXhWU2xDbmg1WjE2Mjg0RWdYN2t5ZHpGcFN1RDEzdG9rV1RlQXZEME4tM0pjSWg5VFh2SFllaVlvSjdNM0VaOUYwRlBFQTFJOXhiZHE1end2dWc?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/espectaculos/la-visita-de-keanu-reeves-que-hizo-odiar-a-una-libreria/",
+   "excerpt": "La visita del actor a la librería Gandhi provocó reclamos de seguidores que lamentaron no haber sido informados con anticipación",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/QXAZCIX5YNBQZDWTJSZIHZS3K4.jpg?auth=c832398f8f193830c36ec65c6dd0aef04dd79ad52330dffc29b0a888f724a640",
    "published": "2026-11-25T15:02:00Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -9291,14 +9552,14 @@
    "via": "El Universal",
    "also": [],
    "updated": "2026-11-25T15:02:00Z",
-   "id": "517b85bddfd6",
-   "score": 8.85
+   "id": "50ef0a9ba337",
+   "score": 9.2
   },
   {
    "title": "Hacia un ecosistema nacional de emprendimiento: ¿qué hemos aprendido?",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNXRoTnJVXzB4Vy1qRHBtQmlNQ1lpYjlmX3BHcWJCMkxGc2VsWWw1WmdNQ3BXeGpBbnhsZk5PSjFPZzhoSE5KY2VyOWdhSjNIMW1HemEzenNnbXhkQVdQN1N5M1Ata0FQMkNPcndCUG9qNExUYkdfVFI3aDNkTlpKZkkwTzdDdEFRYkFEeWxsWnRNdjl1NC1PUE5mYTN1bXpHTEx2b0tHRi14cXFxWEV1cllHQlZ1RGJ4ZjZfbjVuemZ3bDZ1NngwVGFR0gHKAUFVX3lxTFBodDhFenoxa3VOSkNleXV4eHhCTWltWnNnVFJtTFNOYjRnNVc3RXBFQUxKSzVVNHZCV0JYalhWdUNjQmdXQnlfVktPZjJTQURiZ3lHTHhHRUNrcEZnQUJESXFocDgwb2w0WlF1SHNMNGxtZlVSZmdTcjNxTTViUWZKZlRERlozbjFxUjlfNXUzYjZXWUl1MmpuUjdSN2ZkMF9QNmlKelRzU1lfdzBrSk5nZVlJQkpScHBrWk5xdWtqeTB5UmVfZU1sLVE?oc=5",
-   "excerpt": "Publicado por MILENIO.",
-   "image": "",
+   "link": "https://www.milenio.com/opinion/patricia-armendariz/consciencia/hacia-un-ecosistema-nacional-de-emprendimiento-que-hemos-aprendido",
+   "excerpt": "La verdadera medida del éxito no será cuántos emprendedores entren al programa, sino cuántos consiguen clientes, aumentan sus ventas, elevan su productividad y",
+   "image": "https://cdn.milenio.com/uploads/media/2025/09/24/imagen-firma-patricia-armendariz.jpg",
    "published": "2026-11-25T15:00:26Z",
    "source": "Milenio",
    "source_name": "Milenio",
@@ -9314,8 +9575,8 @@
    "via": "MILENIO",
    "also": [],
    "updated": "2026-11-25T15:00:26Z",
-   "id": "109e651e1d4d",
-   "score": 8.85
+   "id": "27a82320afd0",
+   "score": 9.2
   },
   {
    "title": "¿Qué rutas de transporte público pararán hoy 25 de noviembre por marcha en Guadalajara?",
@@ -9454,29 +9715,6 @@
    "updated": "2026-11-25T14:57:14Z",
    "id": "bd8bca9440f0",
    "score": 6.8
-  },
-  {
-   "title": "Abelardo de la Espriella: un presidente de adorno",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPN05odHltV1BHbGJ5VHk0dkVNUGpFLWRidnBJeEFCbElrVGg2Zkl3RnNsdGJkQm10VWwycFJWSEV3eFZIcFNKaHczU0VRZHRyMmVLcEo0eEJ3LXdQSkhUSlpqRm9Hbjk5VzFJSFNwNC1wZDZOVDlSU1Vra3MwR3NwMDREeEZfSDZRbFNlcDN5WDF6YUNvaFViR2MtNEpMY2RhM2Q5MHRwcjJ5RExYcVVfMml3Qzg1Z0k2anJj0gG7AUFVX3lxTE44aVhSNHlKOHpUMnFIdkhzcThVTGNrQnpxUUZmNUZ5bTNVY09Ba1dyZXFTNEZFZUt5bnd1YU9OZnhBbDBKUHllSDBCd2ZGNWg5dG5GUXdnNGtjTl9jMkpDbFhvRTNiaXRTcUpBRkRFdXV3MVh6QTdQcVRuSE1rbFM0ZXFsR1Y1dVRhWEY4VnhOMFRLY0dOWUk5dVlvS3BPb1BqX0ZXVll4RVVJb1JMSmxiRk1QZUdRcThZeFk?oc=5",
-   "excerpt": "Publicado por MILENIO.",
-   "image": "",
-   "published": "2026-11-25T14:51:01Z",
-   "source": "Milenio",
-   "source_name": "Milenio",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "MILENIO",
-   "also": [],
-   "updated": "2026-11-25T14:51:01Z",
-   "id": "5e224e1da87d",
-   "score": 8.85
   },
   {
    "title": "Peso se hunde a mínimos no vistos desde abril de 2025 por preocupaciones sobre decisión de tasas de la Fed de EU",
@@ -9686,29 +9924,6 @@
    "score": 8.1
   },
   {
-   "title": "El embajador Ronald Johnson ora por militares caídos en captura del “Chapo Isidro”",
-   "link": "https://lopezdoriga.com/internacional/el-embajador-ronald-johnson-ora-por-militares-caidos-en-captura-del-chapo-isidro/",
-   "excerpt": "El embajador de Estados Unidos en México, Ronald Johnson , dedicó una oración a los cuatro militares fallecidos durante el operativo para capturar al “ Chapo Isidro ” en Sinaloa, y recordó también a quienes resultaron heridos .…",
-   "image": "https://lopezdoriga.com/wp-content/uploads/2026/11/embajador-johnson-defiende-integracion-economica-con-mexico-entre-diferencias-con-china-1024x683.jpeg",
-   "published": "2026-11-25T14:45:36Z",
-   "source": "LD",
-   "source_name": "Lopez-Doriga",
-   "kind": "news",
-   "mirror": false,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "politica"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T14:45:36Z",
-   "id": "117f28179be3",
-   "score": 7.45
-  },
-  {
    "title": "6 Craft Retreats Offer Knitting, Pottery and More for All Skill Levels",
    "link": "https://www.nytimes.com/2026/11/24/travel/crafting-retreat-grandma-hobbies.html",
    "excerpt": "Interest in crafting hobbies, like knitting or pottery, isn’t new, but several factors in the wake of the pandemic have also made them appealing. Here are some suggestions for hands-on retreats.",
@@ -9756,7 +9971,7 @@
   },
   {
    "title": "Ukraine says it struck a major Russian air base, damaging five planes",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZm1PXzlrNXY0LXdObV93VWg5QnMzNk1rby1CSHNiMHYtcVpvYUpteDBGWi1GQS1tNjU4VTV6MmVBTXpxY3I2NTdfbzVvVTdBWS1LeVBMeGpCMkdUTDVpWE1nNzRld3NBbUtYRlRoTlhPLWp4ZjdsMmRCRUdycERtcVRDNGk5UjNxR3RRUTN3V2QyU1VDT29acWEtc096cjVkS0xtN0V2dURHTmUyM0ZIbnRvcndIRUZrRnBBWmlDNDRRSng1OHdFWg?oc=5",
+   "link": "https://www.reuters.com/business/aerospace-defense/ukraine-says-it-struck-major-russian-air-base-damaging-five-planes-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T14:43:20Z",
@@ -9774,8 +9989,31 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T14:43:20Z",
-   "id": "5bf80ab47b05",
+   "id": "7930c677197c",
    "score": 9.3
+  },
+  {
+   "title": "La lucha por la autonomía universitaria en México",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNGstYkRFaGEyWkJ1d0h1eUMzSGVNcS1sZUxUdWViMS1jZ1pUV09FNFN5d0ttX29jd3dnY0Zsa25hQ0d2d0hwbUYxQXd0dkpXUzFGOWhKU0JyZ2dEd3V1Tl9pTjhHcU5iLVdGMzJDLXB3WWcwMkFvZjEzdEkxQXNyZnBBdWRGWGJVaU5CbHVGRQ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T14:42:52Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T14:42:52Z",
+   "id": "de2ef1d5d397",
+   "score": 5.85
   },
   {
    "title": "Un relato ficticio sobre moches en el INE y una elección impugnada por Sheinbaum: Carlos Loret de Mola",
@@ -9942,7 +10180,7 @@
   },
   {
    "title": "US third-quarter GDP growth revised sharply higher",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONjZ1Y2k2ZHFiNlFJRV9fUWVWNXk5R0puemhyQTF6X2xiV0NTblNua3dFVTlQWE1keGQ0TDVMdHNSUHZlYURmbUE3cVZpRDlLdDRiSXNRTTYzZEpXcjViSGd2SV83emptZFRrUWtTczl4b3ItMVdBOEpNOHFSOVFWN096T083eV9KaWVCbXgwczlLLVl1VHNRNGZ0clRZS3NFXzRwQnVR?oc=5",
+   "link": "https://www.reuters.com/business/finance/us-third-quarter-gdp-growth-revised-sharply-higher-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T14:28:47Z",
@@ -9960,8 +10198,31 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T14:28:47Z",
-   "id": "167cc81a72b3",
+   "id": "b813cbb4fdfc",
    "score": 9.3
+  },
+  {
+   "title": "Presidenta de Bundestag pide frenar la violencia machista con medidas concretas",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR0V1NDdsNkoxZ3V3N3B6ajVKYU5HaGtHUnhGYjdvVThnaGRPNEZ2YUtqQnNMWDh1RTNhdEtHZ1MxRnZjSG5Gc3VfUjR6TE05eWZ1eEZXX0NCZ2hTMWYxamxoZE5mRjBvZTRrWk1KSFdJX1VDenk4WTVCSFBzUjJ5U0Q0bEhRRTFkZjkxTkpSTFhiX1U0cFllSE8weFprLU1Fc2FVcUhLeGhGUkRZTTJZbVRfVHJEWFpreFBGeVdfem5RQ2pnVC1lU9IByAFBVV95cUxQQ1VSY2xzVTc5UWJfeVhQRl9BY3Jnd0FUS1ZheWVWN2VHcW1iMnN2Vnk3QTUwN3RwTkd6d3BGNlZ3ZVlJY053TU9kWmlmbi0zTmxmM0V4ZzE1YkhmZ3JkR0RQNldBbzBQVDhWSmkyOV9YMDB6cUJFU2JqLVJRc0tGWW5Wb0hvQmZ5SzlyYzZNN1lYN0htdWt3QVpWYjZxUUNFMnkwSFNZdTNDNW16QnBxVnBJLTZmQkZueVpwRm15OWFVdkhtTnFhTQ?oc=5",
+   "excerpt": "Publicado por DW.com.",
+   "image": "",
+   "published": "2026-11-25T14:28:39Z",
+   "source": "DW",
+   "source_name": "DW es",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "de",
+   "tags": [
+    "seguridad"
+   ],
+   "via": "DW.com",
+   "also": [],
+   "updated": "2026-11-25T14:28:39Z",
+   "id": "f28d5a9c512b",
+   "score": 8.35
   },
   {
    "title": "Mazatlán: Presupuesto Histórico Impulsa Seguridad y Desarrollo Urbano",
@@ -10076,6 +10337,29 @@
    "also": [],
    "updated": "2026-11-25T14:23:00Z",
    "id": "70031d84b334",
+   "score": 7.1
+  },
+  {
+   "title": "Sheinbaum protege a narcopolíticos de Morena y evita investigar a los hijos de AMLO: Raymundo Riva Palacio",
+   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQZWRWaGwzaXlyaXozV3N4RzEzRUFnY0RUaHJxbzh4R05Zei1PMEdUcmhib0N5WFQ4WUJtVXlOVHVhXy04Njh6VUlLbWNHX3dJVjVnNjcxZDE5ZnZqakM0NEo2aW81dy1aenM1T0x1dDRNbDA1cUJsSVhzR050Qzh1UlpNYl9HbHdZNHJ4dnlHQkNEdGJyS1dGYUFMeUJ4Vzd6bDQxWGZ6dXNvNm9wR3JoX0RJZEVubTRHWWhFUW84eFNSS2ZGNFUyQlR6WVBrdHlrU3ZFNkZjSkl1cWZ0Y0dIdnNPSF9BQndrNVM3ZEdR0gHzAUFVX3lxTE9td0pDemJOajlZZ29JM0dZT1RhWWR0VVhUNXl1RDRWelBwclQ3LU1KLTJRdFVjOTVTX0pEdThFOFNfMHR5WE1LN21VOEs2U21paVRMdTJzNTVadEkxaFg4dVpRRlFrS1VpaWNaTGRZaDc1R0s0LWVUT013bGxTbWJuU1l1OHM3ay1vTl9HVGxheWtrNXdZei01OC1FWlpjeGpXazFCRnVsUXVteUppMUdJZzF1clhqbk1Tb2o2OVlPMVVWWHkyWFhnUldlMHRvb0hGS292YkxWX0htM29PbXNIUzhsMkhudHBrQ3JRZzdVWFNTWQ?oc=5",
+   "excerpt": "Publicado por El Informador.",
+   "image": "",
+   "published": "2026-11-25T14:22:16Z",
+   "source": "Informador",
+   "source_name": "El Informador",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "El Informador",
+   "also": [],
+   "updated": "2026-11-25T14:22:16Z",
+   "id": "1bda1d12e298",
    "score": 7.1
   },
   {
@@ -10197,7 +10481,7 @@
   },
   {
    "title": "Israeli strike kills Hamas official, his wife and children",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYjNlV0dRZTd0cDZJZVBnNFl6VUpTMDFlQlFIY0tJQzR5ZmNrYm9lNS1kMTRYbEpyM2FNMWp6Qms1NGh4VTU0YkxQN0NaY1FRV1diOENoQmdIQjJ0eU12VGZfamhNWHpsZUQ0MXczanBWZW1uWUZsVXpwcElhR2RXdG80RTBIcjZ1WjVHYW94MUhfUDI5dTA0ODZWRlBiVkFYNlhwR1RSaW1OZ2M?oc=5",
+   "link": "https://www.reuters.com/world/middle-east/israeli-strike-kills-hamas-official-his-wife-children-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T14:19:53Z",
@@ -10215,14 +10499,14 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T14:19:53Z",
-   "id": "ee10d64d9879",
+   "id": "e83a3bf91582",
    "score": 9.3
   },
   {
    "title": "Bloquean nuevamente cuentas de Rocha Moya",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOb2JZR3AzM3hnVWVyYVdHeW80dktVdlBQOHMybE1JcExnbXZvSVpTTnE3VW0tRUs4Vk4zWWRUYkhCNmwtVENfNWVhYk9wOWxpTFBXdmFMOGtKc29TTDQ3dktDZlJVMGZsamZOWmV3Vk93cVJGUmpnQmJfLWZpV2hhVmtYVk1ic0pzZVVrY1pCUWhoMHNtbjMtb0tlc0hHTXdqS0NKbTdyUThTemdkZTZvenVoMXRjdkVqb2fSAc4BQVVfeXFMT2lhZkp2elQ5RmVnV181R0NRanE5ZV92c0t2NS1GNllwOU15cnNhSEx2cl81UlpuOWI1bTRMZHhkNDFZdUhCRldVQ3pkZEhPU1NRRWdubHdPVUJYbFNSLVlhd3VNU1FYWGVaTkRYQ0FDR2Rjdko5THJqZS03eU9fcEhsQW1ZSzdBUzNkQThJQmRQSkRLS0c1dHlXeDRLX3FEVjQtdjBCWkJWWkF0Q3FkZUJ0Rm0xLWNhTjJCSnBiSzhxbHJkZGFmNmVfdERHNEE?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/nacion/bloquean-nuevamente-cuentas-de-rocha-moya-tribunal-acepta-impugnacion-de-la-uif/",
+   "excerpt": "Las cuentas bancarias del exmandatario estatal quedan nuevamente inmovilizadas en tanto no concluyan las investigaciones en su contra",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/5KXPVVZ3RNCRPNFZWCSURSIXDM.jpg?auth=0b8560fa44555792e663b3b27e234b9d75addda4dbf77593cce039d90031855c",
    "published": "2026-11-25T14:19:00Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -10233,15 +10517,18 @@
    "region": "mx",
    "region_fuente": "mx",
    "tags": [
-    "politica"
+    "justicia"
    ],
    "via": "El Universal",
    "also": [
-    "Forbes MX"
+    "Forbes MX",
+    "SDP"
    ],
    "updated": "2026-11-25T14:31:00Z",
-   "id": "5cd863f71d82",
-   "score": 10.25
+   "id": "64975a3e61ec",
+   "score": 11.35,
+   "seccion_por": "ia",
+   "sensible": ""
   },
   {
    "title": "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes for the central bank",
@@ -10382,6 +10669,29 @@
    "score": 7.85
   },
   {
+   "title": "El salario mínimo en Bangladés por fabricar la ropa de las grandes marcas aumenta a 124 euros pero no aplaca las protestas",
+   "link": "https://elpais.com/planeta-futuro/2026-11-25/el-salario-minimo-en-banglades-por-fabricar-la-ropa-de-las-grandes-marcas-aumenta-a-124-euros-pero-no-aplaca-las-protestas.html",
+   "excerpt": "En medio de las protestas para exigir mejores salarios , Bangladés ha elevado a 17.000 takas mensuales (unos 124 euros) el salario mínimo de los trabajadores de las fábricas de ropa. La nueva remuneración supone un incremento de…",
+   "image": "https://imagenes.elpais.com/resizer/v2/FFQGOIF4JNNBNJKPUJIF23I4A4.jpg?auth=b803cf793aaee508b53b78fe9d8596503eee9975456dad318f91b1c28d762d9a",
+   "published": "2026-11-25T14:12:35Z",
+   "source": "ElPaisMX",
+   "source_name": "El Pais Mexico",
+   "kind": "news",
+   "mirror": false,
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "economia"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T14:12:35Z",
+   "id": "043be3f8b8cc",
+   "score": 8.95
+  },
+  {
    "title": "Nigeria desmantela laboratorio de metanfetamina; detiene a cinco mexicanos y a capo nigeriano",
    "link": "https://zetatijuana.com/2026/11/nigeria-desmantela-laboratorio-de-metanfetamina-detiene-a-cinco-mexicanos-y-a-capo-nigeriano/",
    "excerpt": "La Agencia Nacional para el Control de Drogas (NDLEA) de Nigeria informó, el 25 de noviembre de 2026, que desmanteló un laboratorio clandestino de metanfetamina a escala industrial en el estado de Enugu, en el sureste del país…",
@@ -10500,9 +10810,9 @@
   },
   {
    "title": "México presenta en China estrategia contra desvío de precursores químicos",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNOUE0SE81TFNobFdWemEzWjNxNkZCaExJM2NQanJINTRmTEtPYU9lN01zSVBLdGJtYWtONEtSQVhLMVFWVHUtb3NTNEMxT1hZajdqNUc1VllMcTdSTTNTMXdRR2V2NnF5czRSMHZ4X1ZfSGZlUC1GNmE2MWdXbFl1c2VycW9GazZnNVJrVzdKZVB4M3V5ZFctRWlQWFNReHlpeC1Rd3JGN0pGV0tzcUJqNXVWcDJVcWd1WFJMTG5pS1NsS29nYUFtU3dlUWxXaG4wRWFEWU85NlhqWmsyWmRpbdIB9AFBVV95cUxQRkZTMVF6NEpMckdQQy00azVESG91OHlMUHNaZnI3X2tlRVJ4Ml91T0oxYklmMlJzc1Q0bml2V0VSNFZpOEtja3MxOWFQOGZ2QVIwUjNHaGJ5ajVhdDlQMmJHb3FCM0lIeXNsSzdoM0ZmME1BX3hJMXNLX0g0cVAtLWFfdWYtckNDN3ZETEJhbGh6dS1JQkN2VVZvd0lKV2JCMGFmbVMxQWp1LWIweU1id1RoUTRQeVRwaVhPczZGYVJldzZaLUdXRkdkbUVoM3JnVHdKS2J4U3luU1NIRV84ZTZGZnFnS1haZkFHQllocmt1azF4?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/nacion/mexico-presenta-en-china-estrategia-contra-desvio-de-precursores-quimicos-establece-cuatro-ejes-prioritarios/",
+   "excerpt": "El canciller Velasco destacó el control aduanero durante una reunión del Grupo de Trabajo México-China sobre Precursores Químicos",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/LX4ZACYKY5AJNM2YCFS3N5CNJY.jpg?auth=9099554e88a2e48be5fdd0da10299b587fac68da3a6bcfd87084165accdb50dd",
    "published": "2026-11-25T14:08:51Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -10516,10 +10826,12 @@
     "industria"
    ],
    "via": "El Universal",
-   "also": [],
-   "updated": "2026-11-25T14:08:51Z",
-   "id": "ef4f38f606dc",
-   "score": 8.85
+   "also": [
+    "Forbes MX"
+   ],
+   "updated": "2026-11-25T19:58:00Z",
+   "id": "ba9fa10e59e0",
+   "score": 9.95
   },
   {
    "title": "Kilmar Abrego García, víctima de las deportaciones masivas en EE UU, llega a España: “Trump no decide mi futuro”",
@@ -10565,7 +10877,7 @@
    "also": [],
    "updated": "2026-11-25T14:04:12Z",
    "id": "9aa8bfb313a2",
-   "score": 8.55
+   "score": 7.95
   },
   {
    "title": "Swiss tourist killed and British and Americans injured by elephants in Cameroon",
@@ -10588,7 +10900,7 @@
    "also": [],
    "updated": "2026-11-25T14:03:18Z",
    "id": "9d648dc5468e",
-   "score": 8.1
+   "score": 7.5
   },
   {
    "title": "Asaltantes se emborracharon y pusieron música de banda: exrehenes de Colombia",
@@ -10611,11 +10923,11 @@
    "also": [],
    "updated": "2026-11-25T14:03:04Z",
    "id": "455b71e34078",
-   "score": 8.05
+   "score": 7.45
   },
   {
    "title": "Polish defence official calls for regional border no-fly zones",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNUmw1Z0s5cGRwRDQ5NDRBY3JzQ2x2a0dXUlFUNXdkRFNqd0VhMFJvdnVDUExHUVVZNC10Yzd1OFJoZmlXT2I4MVppSFQ1RHA1SjB1Z2ZRUzZuN2FKNG1vejBFdlpGWlJBQmgwYnhDSzVlVGplNVQ1NmhHU0E1Ui1uQlU5UjFvcXZRc0x0Wklwa1B1eGxTbTBFdlNKNUpSS3NwV3hJTEFnQlJNU3FWOHBidTJzMDA0cVZ3aWxrZ0NB?oc=5",
+   "link": "https://www.reuters.com/business/aerospace-defense/polish-defence-official-calls-regional-border-no-fly-zones-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T14:01:43Z",
@@ -10633,8 +10945,8 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T14:01:43Z",
-   "id": "11ca5b78684a",
-   "score": 9.3
+   "id": "bd43e93df4aa",
+   "score": 8.7
   },
   {
    "title": "El tipo de cambio se acerca a los 20 pesos por dólar, su peor nivel desde abril de 2025",
@@ -10657,7 +10969,7 @@
    "also": [],
    "updated": "2026-11-25T14:01:35Z",
    "id": "748c357b359d",
-   "score": 6.7
+   "score": 6.1
   },
   {
    "title": "Abren macromódulo para tramitar licencia permanente en CDMX: ubicación y horarios",
@@ -10838,10 +11150,12 @@
     "industria"
    ],
    "via": "La Silla Rota",
-   "also": [],
+   "also": [
+    "SDP"
+   ],
    "updated": "2026-11-25T13:56:46Z",
    "id": "1b2ca42c714e",
-   "score": 5.25
+   "score": 6.0
   },
   {
    "title": "Large bushfire threatens homes and properties on Flinders Island off Tasmania",
@@ -10914,7 +11228,7 @@
   },
   {
    "title": "US weekly jobless claims fall more than expected",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZHpnUUFPVXFGUWhvOXVLRGk1aVJac0tCQ0hpZHNvT05Uc1c5Mks3eGVEVXRvSE9EaWZpYmhqcWxmR0VLaVlFa1NOQzMxRWdxVVRfYzVMc0NlZFlabXZoVDhfRlRaMTBZaFlIa1BROW5jUHRvb3pYOTF0cE9iX19qejVrdlMtdnp1RERadmI2WTRReHdMOG9Gag?oc=5",
+   "link": "https://www.reuters.com/world/us/us-weekly-jobless-claims-fall-more-than-expected-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T13:47:43Z",
@@ -10932,7 +11246,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T13:47:43Z",
-   "id": "5ea3d00fac77",
+   "id": "b3c65fcc012f",
    "score": 8.7
   },
   {
@@ -11235,6 +11549,29 @@
    "score": 5.65
   },
   {
+   "title": "Miguel Herrera abre la puerta para dirigir al Toluca",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQXzJuZVg1bF9OekFnb0d0M1RvR2FWdGgyVWMwNDczWURGTmxkS2RCclJYcmtlRF9hellmVkZEN3lSNDJJQWR0Y09YOHFRbWJWS0stSU5CNmphcWEwaHlXX0RTV2tJbl9HRHZtbFMtdzFtY0I0M3RkSXlCbFktNThQcF9tU0swdFV5R3lYbm1wM2czZUN3?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T13:34:06Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "deportes"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T13:34:06Z",
+   "id": "4044ec4ef101",
+   "score": 5.2
+  },
+  {
    "title": "A una década del Acuerdo en Colombia: ¿logro histórico o paz incompleta?",
    "link": "https://www.france24.com/es/programas/el-debate/20261125-a-una-d%C3%A9cada-del-acuerdo-en-colombia-logro-hist%C3%B3rico-o-paz-incompleta",
    "excerpt": "Una década después de la firma del Acuerdo de Paz entre el Estado colombiano y las FARC, Colombia sigue enfrentando el asesinato de firmantes, la expansión de grupos armados y el recrudecimiento de la violencia en distintas…",
@@ -11259,9 +11596,9 @@
   },
   {
    "title": "Previo a la marcha del 25N, blindan Palacio Nacional con vallas; conoce los detalles de la movilización",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNb0UxTWxWVkVjZXBLazV5TFRkRzJZY3l0ZzE5SHA1TGlPWU56OTl0Y2g4eU5rX3Jtby1hcTUyOXFteVB2OHZ2NzYyd2trYkp2bUc0ZU9sUG01VjQzV0pEd2lhdC12Y3ItYTZRYXZVQ3ZpQVFucHdFMGxrendad0tLUzdYaWRMb2VNV0NTMGw3TEE1a1VZZjBsYnNacXpabGRwc0hPUktWakxKMVRwN2Z2Q2d5amgzQ24yN1M2UTdUTHpzQmluUTM4b0lxM1lwNEJzWVI5MkdxUQ?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
+   "link": "https://www.eluniversal.com.mx/nacion/previo-a-la-marcha-del-25n-blindan-palacio-nacional-con-vallas-conoce-los-detalles-de-la-movilizacion/",
+   "excerpt": "Elementos de la SSC armaron y colocaron vallas para resguardar los recintos históricos un día antes de la marcha",
+   "image": "https://www.eluniversal.com.mx/resizer/v2/6S6SNWFAK5E5TKJM4UYEMWQ4RY.jpg?auth=af696c7b82a1b89775880c9471ba5316842c5da2dc99d55d276f2ad8826b485c",
    "published": "2026-11-25T13:33:00Z",
    "source": "Universal",
    "source_name": "El Universal",
@@ -11277,8 +11614,8 @@
    "via": "El Universal",
    "also": [],
    "updated": "2026-11-25T13:33:00Z",
-   "id": "0ce5bc3267af",
-   "score": 8.25
+   "id": "39fab4852f58",
+   "score": 8.6
   },
   {
    "title": "Kilmar Abrego García abandona EE.UU. y viaja a España tras una larga batalla legal para evitar ser deportado de nuevo",
@@ -11350,11 +11687,12 @@
    "via": "",
    "also": [
     "Sin Embargo",
-    "Aristegui"
+    "Aristegui",
+    "SDP"
    ],
    "updated": "2026-11-25T16:13:00Z",
    "id": "94208778fc2e",
-   "score": 7.4
+   "score": 8.15
   },
   {
    "title": "La Audiencia Nacional revoca el tercer grado del etarra Henri Parot ante la “extrema gravedad” de sus delitos",
@@ -11749,7 +12087,7 @@
   },
   {
    "title": "India says Hasina's plan to return to Bangladesh is separate from extradition request",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQ3l2N19iQWhBMUdzUWZZbkFhb0VoWEpNS2xSOTE3bVJSLUVYbjF4RXdyYzJGZnlET3pmMnlCaWpROWd5dHZRa3d6b2Q1cndBWkZVUFAzaEVMQ1BDdGh5OGRlYkZ2V2tjSWo3SjMyeHZmTFk2S29oODVhcUkxY3NFTWhnVHVqVmdFSmNWalF6Q05SR242SmlPWGFQNkJVZUhXRUVxUlpnc3B3NVF5YUk1U0RYQ0VTMU1ZcmxJeDVKZkZUZjQ?oc=5",
+   "link": "https://www.reuters.com/world/asia-pacific/india-says-hasinas-plan-return-bangladesh-separate-extradition-request-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T13:12:29Z",
@@ -11767,7 +12105,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T13:12:29Z",
-   "id": "959defe9e792",
+   "id": "d2b3e107f148",
    "score": 8.7
   },
   {
@@ -11886,6 +12224,29 @@
    "score": 7.05
   },
   {
+   "title": "Elderly Alzheimer's patient found after 11 days lost in Amazon",
+   "link": "https://www.reuters.com/business/environment/elderly-alzheimers-patient-found-after-11-days-lost-amazon-2026-11-25/",
+   "excerpt": "Publicado por Reuters.",
+   "image": "",
+   "published": "2026-11-25T13:03:30Z",
+   "source": "Reuters",
+   "source_name": "Reuters",
+   "kind": "news",
+   "mirror": true,
+   "weight": 5.0,
+   "lang": "en",
+   "region": "mundo",
+   "region_fuente": "global",
+   "tags": [
+    "mundo"
+   ],
+   "via": "Reuters",
+   "also": [],
+   "updated": "2026-11-25T13:03:30Z",
+   "id": "f138f39dc17e",
+   "score": 8.7
+  },
+  {
    "title": "Una juez de Madrid investiga a Leire Díez y al expresidente de Correos y les cita el día 9 - EFE",
    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBla0VfZTE1aUFBZjVfeEZhQ2Vmc0NuampoRmk4VUVmTDJqQjY2VDJPRmNGS3hJZnI4SXNIREI5QzZ2Sk1mOUY5M0VNNUF1dUlRakhNOUNxUGlYRkdBbTUwekIwdU81eHNvOEVhYWFUdnh4TjJI?oc=5",
    "excerpt": "Publicado por EFE - Agencia de noticias.",
@@ -11972,10 +12333,12 @@
     "industria"
    ],
    "via": "Milenio",
-   "also": [],
+   "also": [
+    "SDP"
+   ],
    "updated": "2026-11-25T12:59:00Z",
    "id": "005f4c926edb",
-   "score": 8.25
+   "score": 9.0
   },
   {
    "title": "Las bolsas mundiales caen ante la amenaza de nuevos aranceles de Trump",
@@ -12736,10 +13099,12 @@
     "deportes"
    ],
    "via": "El Financiero",
-   "also": [],
+   "also": [
+    "SDP"
+   ],
    "updated": "2026-11-25T12:00:01Z",
    "id": "3e4d9e42325d",
-   "score": 7.6
+   "score": 8.35
   },
   {
    "title": "Invierno demográfico",
@@ -12812,7 +13177,7 @@
   },
   {
    "title": "Bollywood union asks Modi to bar Netflix's Pakistani series in India",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZjd6WlRJdWdFcldKRGYzUFdFNlQ0NnVIcVJWV2drcTZySFFoV1Q4NHFlWE9KV3hpbWVSa2hvU0J3bTN6bmZRZHlubjBxaXVRWUc5aVRkV0haU1RCMk1iRjRWN2NJa2R1YjNpb2dlSW5oelVveUh4OEhqLS1FaWFvN0ZaM2Q2aGtYZHFRbTE0Wmwzd2FXSXo2ZDhGZWQ2UXptUWxuUlpPemxuWk1ib1JuTUlSOWV3S3F6ZWptQQ?oc=5",
+   "link": "https://www.reuters.com/business/media-telecom/bollywood-union-asks-modi-bar-netflixs-pakistani-series-india-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T11:57:38Z",
@@ -12830,7 +13195,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T11:57:38Z",
-   "id": "c8279737e453",
+   "id": "2cc3675fa777",
    "score": 8.05
   },
   {
@@ -13042,7 +13407,7 @@
   },
   {
    "title": "COMMENTARY: Morning Bid: Tariff fear compounds AI recoil",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTzdrbThVSVJPbGJhMzJuU1EzY194YTh4WmZScXNHZTVqcUt6QlBua2k2VTRmN3RmRTFSc3ctVGo4MkhoTjZ0QTB1cWpCa2xad0hzNjgyMV9NTzR0QW01T0hGYzhaV3dIME5fN0FGWUVoUnJhLVFTdkl0R09fc2RTOHF1R2t4Y3pFeG9pZHhwLTB0T0lscmVR?oc=5",
+   "link": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-view-usa-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T11:34:23Z",
@@ -13060,7 +13425,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T11:34:23Z",
-   "id": "23125d762196",
+   "id": "1225f014a43d",
    "score": 8.75
   },
   {
@@ -13758,29 +14123,6 @@
    "score": 8.45
   },
   {
-   "title": "Mudarse en Jalisco: la renta pesa más que la inseguridad",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWnZOcVo4a3JNRjM5a0Rpc0lQQ2VuVEU3ZUNVTmRjSFE4Znc1UWhDY3V1UUVhZVNjazA3ZGQza3BmWXM2eHZlQk5Wa00tNmc0SHFYMFI5eENMVzlGVHZRWW5GWUlsWGJVSUtRYTJlaEVzMy1TMk1vZ3hCUEFBclgzRHRBNEhkdTdGUWE4YjFSVlp1Y24zNjdYcEFJSmRDX1oxcTNmbGdsZ9IBrAFBVV95cUxNTFloNnBULXBDUmVDbmw2YjJGaEZTd0R6WEwzSmtRXzFibGNiVkhJQlc0dldkMFoyZ0RPNTlWbDFHRlcwVS1ESndZTnhqaEF2TFdqOG5FdWpPU1RfbktkaGpXVFlSSlZuTjNjd1VRZW9vVHM0TlltVHRnbVJJWVZhbHpyZzRBQXV4X0d5bkJINFlkNnNQaWVxbUc5aGwydEJ6SjB0YTEteko4MkVx?oc=5",
-   "excerpt": "Publicado por El Informador.",
-   "image": "",
-   "published": "2026-11-25T10:50:00Z",
-   "source": "Informador",
-   "source_name": "El Informador",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "seguridad"
-   ],
-   "via": "El Informador",
-   "also": [],
-   "updated": "2026-11-25T10:50:00Z",
-   "id": "c87949eff04b",
-   "score": 6.55
-  },
-  {
    "title": "Delgado le ‘echa la bolita’ a los padres: ¿Qué se necesita para el regreso de Escuelas de Tiempo Completo?",
    "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQOC0tSXNLck9UVENRMEpLQUVJSUgzVnlhMnFadFF5bjNxejdUdGNrUzBUbDdPTzFqVHBqX2U4ZmRNZlFxbzRBUFA0bDBldkNkYjNoMU40R3lkdmZFSlFPcEx1MzdNbnhwMk1xUHpzTjdIQ0llSVFrbGNieTIwNjVMVk9ranlsVVc4SWZ2SXIxZWpkNnV6MURlcFFxOWZtUV9BNzc5bm1nRjZjVjl4eVNQa1ZvM3Foci1iSFF2S211dFpDQ3ZhUXU5RWdJWmdSQjd4YXF3cGFoTHhmM2ZNZmZidE1pNzNYYmdhcXc?oc=5",
    "excerpt": "Publicado por El Financiero.",
@@ -13899,6 +14241,29 @@
    "score": 6.45
   },
   {
+   "title": "¡China nos vende 13 veces más de lo que nos compra! ¿Qué negocian Sheinbaum y Xi?",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2F1c2xnLVJHOWJfYzJQZ1IyZkxTTnE5dE9wTk91SXIzQUIzblJNMlZMaVFxQzZpQS1sSS1kTnJIUWU1VXpKSzNLaGdWWTI4bTVHZWJCUkdMN2tybVB2XzcyNEdTdDBYdWVDamN6MzV0SEdkY2tJcHpOdDhjNVlGMXRLODNxVm1vN0tFaTM3eWdMbVJHZVRXd2JHSDBUTFVHUmsxTUJ1VVJla0xXMzdNM0diUEg?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T10:44:51Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T10:44:51Z",
+   "id": "35d8ce00b931",
+   "score": 5.9
+  },
+  {
    "title": "¿Y la red política del “Chapo Isidro”?",
    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZHN0Q2Z1TjI4TU1NZTdDbU1SUVFPYkhuakQtS0QwWDhNYm93MWxNN3VPeTdLcEpaclNIMDJhdGtpRlJmRlFXeWJsTEs0YU9JQ3BReU16QzJ4V3EwbmRTMXVybzNzU20zMXhfYVZIZGY5R2NRWWtEQmFLam9fVGZXQlpxUEtFaUJTZUxkdEhkWXVMWk5DVy1QOGtUWU5VV2JpOTlsallB0gGrAUFVX3lxTE4zY3N0OXpEZHAtemhzR2VOdkIyYnd1UVdzZ3d0TEVSdWVtZU1FUG1wTl9naGhkYURfNWozbm1PSUF0SWxhYlNrcU9SbWt1a1RyQk9hNGNFNzRQTXdfbFdhbDJWREg5LUxIanF0S3RfZElOQm9MX0hMYkhHaDFvTEJXYVgycWxwY1VJaVRzZHB0UWUzSnAydXlMVkdRam81RXBCeWZ2YnluUk55RQ?oc=5",
    "excerpt": "Publicado por El Informador.",
@@ -14010,11 +14375,12 @@
    "via": "",
    "also": [
     "CNN es",
-    "Aristegui"
+    "Aristegui",
+    "SDP"
    ],
    "updated": "2026-11-25T10:36:16Z",
    "id": "b1efd94f8432",
-   "score": 9.0
+   "score": 9.75
   },
   {
    "title": "Juan Becerra Acosta: La quinta captura de El Chapo Isidro",
@@ -14955,7 +15321,7 @@
    "region": "mundo",
    "region_fuente": "global",
    "tags": [
-    "ciencia"
+    "mundo"
    ],
    "via": "",
    "also": [
@@ -14963,13 +15329,11 @@
    ],
    "updated": "2026-11-25T17:33:00Z",
    "id": "025c6c3f8466",
-   "score": 9.2,
-   "seccion_por": "ia",
-   "sensible": ""
+   "score": 9.2
   },
   {
    "title": "Buy the stock dip? Options market signals say wait",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQU0dOWTF0OFdPY3R6M1VaWklxVjlwaGkzcDk3d1U4WXp2Q1dNX3FfYW5qYmMzZG1MbDUtRGg5elI1RUEwZzBVaGVZZnV1LUptczdWQU1teXhlVkN5cWVXNjZneXcxMkxPcEJtbVltV3VjWkVrN2pWTmNhTC1zby1sNWdDbGtCOVEyMEdXemdLNXRydHVv?oc=5",
+   "link": "https://www.reuters.com/business/buy-stock-dip-options-market-signals-say-wait-2026-11-25/",
    "excerpt": "Publicado por Reuters.",
    "image": "",
    "published": "2026-11-25T10:25:50Z",
@@ -14987,7 +15351,7 @@
    "via": "Reuters",
    "also": [],
    "updated": "2026-11-25T10:25:50Z",
-   "id": "af01a88487d1",
+   "id": "d7f636206b15",
    "score": 8.7
   },
   {
@@ -15012,29 +15376,6 @@
    "updated": "2026-11-25T10:24:00Z",
    "id": "8228c199ac80",
    "score": 7.7
-  },
-  {
-   "title": "La FIL, en la mejor edad de su vida",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGdVSGkxTGRuUFBsNEZ6RU1pNE9ySUw3UV9qX2VmU1lQaU5xZldQcS1sR0dVWTdqb1RSZGlaMFVERkxNZXNDMXRLVzZIUmhfS1hoV2ppR1d4aEFDNExUc0tBWXFSX1U2RVFuMi1TM1REMjRRczlFdGxUZk95OEV4SmpERlB2QXJrVXA2Q9IBkgFBVV95cUxOdXRNMDItZVVnODVNeUw2ZkYybW80N3F6UFVqSW1Dd1Y2U09SUjlKaE9xVTFTWmUwck9XS3Rac3lQZ1k1a2syTkdzUXlhSFFiOTFWa1dEUjltT3g2YmtQQVp5WWtJbm0wdW90M2VxNHhTa0VpUnJFVkRBMXNrcDFHRF9ndUtQcURZQVkyT2tJNmxoUQ?oc=5",
-   "excerpt": "Publicado por El Informador.",
-   "image": "",
-   "published": "2026-11-25T10:20:00Z",
-   "source": "Informador",
-   "source_name": "El Informador",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Informador",
-   "also": [],
-   "updated": "2026-11-25T10:20:00Z",
-   "id": "fa92bf15a650",
-   "score": 5.85
   },
   {
    "title": "Alemania: razia contra grupo de extrema derecha \"Terror 18\"",
@@ -15635,29 +15976,6 @@
    "score": 7.95
   },
   {
-   "title": "Este artículo es fruto de la insana imaginación del autor (regresamos), escribe Carlos Loret de Mola",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxON2Y5UVRadExWOTdEQldFM0NKbGhFbk9iVGwwenlTSGk2LXRyLWZmci1ZbWE1S2V0R1ZyNWJaM0NtR2VocjB4R1REUDJ3cFVkakFuZ1RLU1FTdUNTMEQ2RWlRUWo2dEw1OUpxWXBVdURVZWFmZTAtMnNReGQxSm5vTjFQdElkLW9kejNYUEpUZXh1VVpHRVRMM1hGdEFxaWJpcTNrTlRFV0w4bF9CZzkwVG5fNGh4UmJxNmdoNzZPWUJpcFEtLWlDZQ?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
-   "published": "2026-11-25T09:31:42Z",
-   "source": "Universal",
-   "source_name": "El Universal",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Universal",
-   "also": [],
-   "updated": "2026-11-25T09:31:42Z",
-   "id": "f37460d76206",
-   "score": 8.25
-  },
-  {
    "title": "Luis Donaldo Colosio parte en tres la contienda por la gubernatura de Sonora",
    "link": "https://elpais.com/mexico/2026-11-25/luis-donaldo-colosio-parte-en-tres-la-contienda-por-la-gubernatura-de-sonora.html",
    "excerpt": "Luis Donaldo Colosio Riojas ha colocado la elección de Sonora a tercios. La confirmación de su candidatura por Movimiento Ciudadano para los comicios locales de 2027 rompe la lógica de una batalla entre el oficialismo y la…",
@@ -15800,6 +16118,29 @@
    "score": 8.45
   },
   {
+   "title": "El Gobierno de De la Espriella le retira la protección a reporteros críticos y opositores",
+   "link": "https://elpais.com/america-colombia/2026-11-25/el-gobierno-de-de-la-espriella-le-retira-la-proteccion-a-reporteros-criticos-y-opositores.html",
+   "excerpt": "Una coincidencia empieza a repetirse en Colombia: en las últimas semanas, periodistas y políticos que han cuestionado al Gobierno de Abelardo de la Espriella han perdido su esquema de protección poco después de enfrentarse…",
+   "image": "https://imagenes.elpais.com/resizer/v2/DZVFD4UROFI45MTWGAEIZSLDNI.jpg?auth=edb66f207c518c479f06e01550e6b85176b50b40c0c22d5221f4d10118eac1c7",
+   "published": "2026-11-25T09:30:00Z",
+   "source": "ElPaisMX",
+   "source_name": "El Pais Mexico",
+   "kind": "news",
+   "mirror": false,
+   "weight": 4.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "mundo"
+   ],
+   "via": "",
+   "also": [],
+   "updated": "2026-11-25T09:30:00Z",
+   "id": "80bb64f6ccc1",
+   "score": 8.45
+  },
+  {
    "title": "Luis Munguía, presidente de la Conasami: “Es posible aumentar más del 10% el salario mínimo porque los costos laborales en México siguen siendo bajos”",
    "link": "https://elpais.com/mexico/economia/2026-11-25/luis-munguia-presidente-de-la-conasami-es-posible-aumentar-mas-del-10-el-salario-minimo-porque-los-costos-laborales-en-mexico-siguen-siendo-bajos.html",
    "excerpt": "Durante décadas, el nivel del salario mínimo fue una asignatura pendiente en México. El panorama dio una vuelta de tuerca con la llegada de Andrés Manuel López Obrador al poder en 2018. A partir de ese año, los incrementos sobre…",
@@ -15843,29 +16184,6 @@
    "also": [],
    "updated": "2026-11-25T09:30:00Z",
    "id": "050cc80b3a15",
-   "score": 8.35
-  },
-  {
-   "title": "Ni por carro ni en avión: las familias que no viajarán en Acción de Gracias por temor al ICE",
-   "link": "https://elpais.com/us/migracion/2026-11-25/ni-por-carro-ni-en-avion-las-familias-que-no-viajaran-en-accion-de-gracias-por-temor-al-ice.html",
-   "excerpt": "El verano de 2024 fue la última vez que la familia de KP disfrutó de su tradicional viaje anual de vacaciones. Manejaron casi ocho horas desde Minnesota, donde viven, hacia el sureste, a la “capital de los parques de agua”, la…",
-   "image": "https://imagenes.elpais.com/resizer/v2/7ZR44RA4SBFQZNIVKZXKYXN6YY.jpg?auth=fa89d84030aa0fc18ad59f295341a6755450b9e5887837fa27389d5d4d79a19f",
-   "published": "2026-11-25T09:30:00Z",
-   "source": "ElPaisMX",
-   "source_name": "El Pais Mexico",
-   "kind": "news",
-   "mirror": false,
-   "weight": 4.5,
-   "lang": "es",
-   "region": "mundo",
-   "region_fuente": "mx",
-   "tags": [
-    "migracion"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T09:30:00Z",
-   "id": "0f911c426cdc",
    "score": 8.35
   },
   {
@@ -16051,29 +16369,6 @@
    "updated": "2026-11-25T09:18:37Z",
    "id": "f46a16acf1c1",
    "score": 6.3
-  },
-  {
-   "title": "La Shenzhou-24 se acopla a la estación espacial china con el primer astronauta extranjero",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNUktazRKM05iN3Y4WGVMV090c0d5NF9uZEppSUtRNzBBREFTb1lfZ0dHZDhpXzRLby1UdWpfbnBKNWo4MWNESURFaVNXRERULWR6NUFVdEhBLUNodXJIQ3ZzQk0ycEp0SVliazY5WTFCYXJtMEI0ekxUQm5Kek9ocEJib2FreXZCRkZ6cUF3aHIwVm5ZN29KWWs5ZEJGekZEY2p1ajVVYnFnWEFWb3NUNmstdVd6WEHSAbcBQVVfeXFMTVh3WFlmc0VMaFpRdVprdFNYMWRkTi05QUxyTUpsLXdEM3lmS2lSUkZuYlYzY0VxS2tya3FSejVPZnBqdzZPbXdHVjhUSjh6ZDRBR1BCeDNfY3JvblptbjJnVlRLYnhHQVFYV1lNOXptRVB1cjAzN3FrYXJDRHE2cUl1eVNRR25VaFRGbDl0eGNZVUFpWElnT0N5dkN4dGJVRUxQZW4zR2F2Z1BmVnZDWmI0SEtXOGFJ?oc=5",
-   "excerpt": "Publicado por DW.com.",
-   "image": "",
-   "published": "2026-11-25T09:12:30Z",
-   "source": "DW",
-   "source_name": "DW es",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mundo",
-   "region_fuente": "de",
-   "tags": [
-    "ciencia"
-   ],
-   "via": "DW.com",
-   "also": [],
-   "updated": "2026-11-25T09:12:30Z",
-   "id": "594df9e7243f",
-   "score": 7.15
   },
   {
    "title": "Gómez Mont, Álvarez Puga y Rocha Moya: lo que México y EU se reclaman, escribe Mario Maldonado",
@@ -16306,29 +16601,6 @@
    "score": 6.55
   },
   {
-   "title": "Marte esconde en sus dunas heladas lo que parece un bosque y la NASA lo ha captado desde el espacio",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSlRIQlRHcGdrVmhqZDgtU1BBY2ZjYzk3azZtUUlHckV3SThQcC0zU0dQQWwwVnBzUEJ5VVNwR19UUmI5MUdqTmpxR1R2b1hPdVpqSXNJUjRQMHJkNENjSTZObXNjM3lsLVdlSUtGWVo3X0dXOHNWeUhzYmRaOHRTdUJYODRFSGNVWEJ5RHNKM2x2REd6WDFHbGlsb0FSS2ptWl9JT1ZYS2hVSHg0ckd4eklxaE95Uko20gG4AUFVX3lxTE5aVzNRd3hnRmVFeGFQWG5PWEJIcjJ0RFB6Y2xUcHpCOEVnNWpCUmxPS2dXX0xvMHpGRnVhLXZzUnkwYmZ1UXBjdjRqdjlENW5SZzVuaklzVWlGSmswU1R6MnJoLW41ODh3eVB2ZG9LTi1rOS1hNW1Sc3FWWURiYjFQeDkzTVU4R2hMdjE2RWhobzUzYjE2R19TZEo1OWhtaElYSThVSW82NnlDUW1mbHlFcG94bHZJVVg?oc=5",
-   "excerpt": "Publicado por DW.com.",
-   "image": "",
-   "published": "2026-11-25T08:23:12Z",
-   "source": "DW",
-   "source_name": "DW es",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mundo",
-   "region_fuente": "de",
-   "tags": [
-    "ciencia"
-   ],
-   "via": "DW.com",
-   "also": [],
-   "updated": "2026-11-25T08:23:12Z",
-   "id": "2b9b9be1c7c4",
-   "score": 7.15
-  },
-  {
    "title": "Así fue el lanzamiento de Shenzhou-24, una nave espacial tripulada de China",
    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVmYtVGszanh6NFVreWQ2QWRZeE1TSmIxc21pa1gzQzkzenhXaEZnSjhDVkJxNnlSNlZHR1ZBWkJZd1VPTDlheC1MVG9HRWI1dmZYdm9nWlNvNl9rdkduRGtsUXM5R1E2NUZhekE2Y2FfSUpHcDdpUENlM3dhQjFERlg0d21IaXFRalM5Mm1fMVI?oc=5",
    "excerpt": "Publicado por CNN en Español.",
@@ -16442,29 +16714,6 @@
    "updated": "2026-11-25T08:14:44Z",
    "id": "0d0d13aefb7f",
    "score": 8.15
-  },
-  {
-   "title": "El espejismo de las alianzas electorales",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5zcXlPYmNCb2ZuQWpUTUtvYXloc3Y0WDBsQzJQN0U5TE5iQ2N5ZmhhTnNYYmNITGRhaVEydk1lUXhnSTc3cUR0MjZLZ1F6LTVZbTRrcEN2VGxDYXZ0QTVhSVdR?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-25T08:10:33Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-25T08:10:33Z",
-   "id": "3d7cde9e430b",
-   "score": 5.85
   },
   {
    "title": "IVF, elective abortion, gender-affirming care and VAD to cease under Catholic ownership of private hospitals",
@@ -16667,7 +16916,7 @@
    "tags": [
     "industria"
    ],
-   "via": "MILENIO",
+   "via": "Milenio",
    "also": [],
    "updated": "2026-11-25T07:30:25Z",
    "id": "548d4665c887",
@@ -17537,7 +17786,7 @@
   },
   {
    "title": "Inflación subyacente sigue a la baja pese a repunte general: Omar Mejía Castelazo",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTmw2Wjc5dmU5N2ljOEFVX0dieDJQanZ3TDRFOTlobTlUUTgwQnJZUndReU5sQThxdXZLUTcydl9qX3RHcnpVR3czSjBaN011UFdHVXRUWU5sVmloYlhPaG9wcUotTTNYejB5RVpZWlNHYTl6aWEyM3ZZcHpZMnJleFh3QkJCdzVzZXRZbVUwYUxXM1hndy1Ja2EwRG9XdU9KcnozbkhIVEVuWTBsQUV2VEdlZk5TcUItSDlmSy1FUDF6bXlnSnVtNUZYdDlhTXda0gHWAUFVX3lxTE9VZE9DQ0k1TXlWeEw2b05PdEx2S1JJRzNJT3NVbGd3eE9yd2ZlUEVwbDlLekFOWkV1R0oxM2pvRklxZnhrazQ1NmEzVjc2UjkwX05TbE5ZMlBpdFpxRDgzMHBNSFlhVmZHczQ3V1FJSF9ZSjhQZDRMREliRE16RU1WS1lBRUpsNW1OclpieEFobE1RVUV2RU5KdG0zTUFwTUNQWjYwQzFidnZBaFp3SlVadllaLW1VcTEzOWJiUGpqc3ltb1dHUlRnMXZBRlZyUVNLUlZQb3c?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVWRPQ0NJNU15VnhMNm9OT3RMdktSSUczSU9zVWxnd3hPcndmZVBFcGw5S3pBTlpFdUdKMTNqb0ZJcWZ4a2s0NTZhM1Y3NlI5MF9OU2xOWTJQaXRacUQ4MzBwTUhZYVZmR3M0N1dRSUhfWUo4UGQ0TERJYkRNekVNVktZQUVKbDVtTnJaYnhBaGxNUVVFdkVOSnRtM01BcE1DUFo2MEMxYnZ2QWhad0pVWnZZWi1tVXExMzliYlBqanN5bW9XR1JUZzF2QUZWclFTS1JWUG930gHWAUFVX3lxTE9VZE9DQ0k1TXlWeEw2b05PdEx2S1JJRzNJT3NVbGd3eE9yd2ZlUEVwbDlLekFOWkV1R0oxM2pvRklxZnhrazQ1NmEzVjc2UjkwX05TbE5ZMlBpdFpxRDgzMHBNSFlhVmZHczQ3V1FJSF9ZSjhQZDRMREliRE16RU1WS1lBRUpsNW1OclpieEFobE1RVUV2RU5KdG0zTUFwTUNQWjYwQzFidnZBaFp3SlVadllaLW1VcTEzOWJiUGpqc3ltb1dHUlRnMXZBRlZyUVNLUlZQb3c?oc=5",
    "excerpt": "Publicado por El Economista.",
    "image": "",
    "published": "2026-11-25T05:29:32Z",
@@ -17555,7 +17804,7 @@
    "via": "El Economista",
    "also": [],
    "updated": "2026-11-25T05:29:32Z",
-   "id": "5cbdd815937c",
+   "id": "2873227471b4",
    "score": 7.55
   },
   {
@@ -18341,52 +18590,6 @@
    "score": 8.0
   },
   {
-   "title": "El ‘GTA VI’ y las ‘totebags’ de Berto Romero",
-   "link": "https://elpais.com/opinion/2026-11-25/el-gta-vi-y-las-totebags-de-berto-romero.html",
-   "excerpt": "De verdad, no quiere ser esta otra columna sobre lo grande que es el fenómeno del último Grand Theft Auto . Es cierto que ha conseguido trascender el público habitual de los videojuegos y convertirse en un fenómeno tecnológico…",
-   "image": "https://imagenes.elpais.com/resizer/v2/JMNTOCBWBRA27JPSQXY3LGQGLM.JPG?auth=a1f8300c2d2625db59d640b3f20a7a3d21bd97ba81f93aff29eeede214ecd775",
-   "published": "2026-11-25T04:30:01Z",
-   "source": "ElPaisMX",
-   "source_name": "El Pais Mexico",
-   "kind": "news",
-   "mirror": false,
-   "weight": 4.5,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T04:30:01Z",
-   "id": "ffb4e8c51ecb",
-   "score": 8.0
-  },
-  {
-   "title": "Un lector: “Tras décadas de lucha sindical, me siento orgulloso de tantas descalificaciones por el trabajo hecho”",
-   "link": "https://elpais.com/opinion/2026-11-25/un-lector-tras-decadas-de-lucha-sindical-me-siento-orgulloso-de-tantas-descalificaciones-por-el-trabajo-hecho.html",
-   "excerpt": "En esta etapa en la que es habitual la deshumanización de los dirigentes políticos llamando incluso de “hijo de puta” al presidente del Gobierno (por cierto, como vamos a decirle a los niños que “eso no se puede decir” cuando lo…",
-   "image": "https://imagenes.elpais.com/resizer/v2/4SC6YYYTVJBFLNAP37KVRRGBDY.jpg?auth=84c62badf02d53f791473a9bed9e165e545b083ce9b23c48aa4d6f99f85610e3",
-   "published": "2026-11-25T04:30:01Z",
-   "source": "ElPaisMX",
-   "source_name": "El Pais Mexico",
-   "kind": "news",
-   "mirror": false,
-   "weight": 4.5,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-25T04:30:01Z",
-   "id": "bcfaf638fd75",
-   "score": 8.0
-  },
-  {
    "title": "El Papa y Satán",
    "link": "https://elpais.com/opinion/2026-11-25/el-papa-y-satan.html",
    "excerpt": "Los diarios del Papa Francisco. Un gigantesco sí. Dice haber visto al demonio tres veces : pocas me parecen. Hay detalles sobre las visiones: sus ojos amenazantes y seductores, su voz ronca, como la de Lorca. No voy a bromear…",
@@ -18686,6 +18889,29 @@
    "score": 7.75
   },
   {
+   "title": "Morena rechaza intervención del INE en la elección de plurinominales",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOeFR1WHNvQnI2ejFrV3psaEhlR3dmTkU1ZTdvWW1yTEtZOW9qMlRqaEplcDh2ZkJOM212SnlGSVFsTWJxOWFkY2FmSWxxZTBpaE83TkF1N295bWI1N1N3VzR5aGFsUzhwUy1RMDgzOHB1cHlrd1dxb3NfclJfUDRldjNNaUpSS2tRMDV4RklMaW51dkRHTHVLck1FdzBzcldJb1U5UHEtVQ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T04:09:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T04:09:00Z",
+   "id": "04995c9baa0e",
+   "score": 5.9
+  },
+  {
    "title": "Economía mexicana crecería 1.9% este año por fortaleza exportadora: Monex",
    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZndtcVNUNnlsRXA4LXIzWUs2ZFVmalF1TVMtY1dzWVdIZmNueldNQ0hmZU44UWZyWHlKaHBOOG92SVZsREhfM3VYd00weDlabmtWT2ZWRWZCejZNMkVrUFM4aXVDaWF5Y1ZIb05hdGl2N3JvQVBCUGJoMkd0dE5GY3UybzRtTHNrbW1RNnh6Rk15WmNLdG9XWFZST2FWa2xfc2NWbW5FM0d0VjZ1YXYxY3FrYlBLUWJfaHk3eTlGMDZORmhyWlhN0gHHAUFVX3lxTE1md21xU1Q2eWxFcDgtcjNZSzZkVWZqUXVNUy1jV3NZV0hmY256V01DSGZlTjhRZnJYeUpocE44b3ZJVmxESF8zdVh3TTB4OVpua1ZPZlZFZkJ6Nk0yRWtQUzhpdUNpYXljVkhvTmF0aXY3cm9BUEJQYmgyR3R0TkZjdTJvNG1Mc2ttbVE2eHpGTXlaY0t0b1dYVlJPYVZrbF9zY1ZtbkUzR3RWNnVhdjFjcWtiUEtRYl9oeTd5OUYwNk5GaHJaWE0?oc=5",
    "excerpt": "Publicado por El Economista.",
@@ -18726,10 +18952,12 @@
     "industria"
    ],
    "via": "El Financiero",
-   "also": [],
+   "also": [
+    "SDP"
+   ],
    "updated": "2026-11-25T04:08:00Z",
    "id": "02e55db07798",
-   "score": 7.65
+   "score": 8.4
   },
   {
    "title": "Jurado de EU acusa al padre de Meghan Markle de posesión de pornografía infantil",
@@ -19054,6 +19282,29 @@
    "score": 8.1
   },
   {
+   "title": "FGR corrige postura sobre El Chapo Isidro y no descarta extraditarlo a Estados Unidos",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUmhfc293SzB4NHFFbkFuRVpHVjU0VFVodG51RG9Ja1BvUHVNYnpJd3FzVDFWSWh5STdOWlFUWGszWE8wazM0VWVyMzAwREpoNHdEUVI4YndyOVA2SFpBQU5xaS1MVUlDWTNzX3hHbl9Mckt4RzB3NlZJTFowcHFKNERNLURweTFzRVRiLTZqbGZ2MXYtWDN0SkpsWGRGWkJzZFllU08xMjB3MTVhaHgzWlNRclR0cjdUaTlOMFl3?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T03:34:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "seguridad"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T03:34:00Z",
+   "id": "5475d53699cd",
+   "score": 5.95
+  },
+  {
    "title": "Justifican Costo de Go-Karts de La Sauceda; Cada Uno Superó los 547 Mil Pesos",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcjFaYVF4Z2I1b1RYMXJBRUlsbjk3WDVNSUtBaS1fWkFZVzBfTlBaRXJsLS12amxab0Z3bTl3TXB1WG00QmJ2cTBiWXg4aWN3RmJqVzNPaGludzQtdGNKc0hrbnFnSy1paWlodW9VZHlpajVLa3V2VFpVUmNoLUctUy00SWwzVmVhSDc5M2k5d01uclRadW5rRlJVM1g5Z1JoTDFydjVMMnFXajVrTkU0MFREOGxmN2Nu?oc=5",
    "excerpt": "Publicado por N+.",
@@ -19121,6 +19372,29 @@
    "updated": "2026-11-25T03:31:33Z",
    "id": "240acaef7271",
    "score": 7.05
+  },
+  {
+   "title": "¿A qué hora Marty Friedman en Foro La Paz? Horario del 24 de noviembre",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbVJSWURrczNKLVdvdjgzd25pTXF4U1paVV9qb0h3bmVZQlRyc09qcW1pVlBaTldYVjdNWENZczZIT0U2Q3BTU290bmJUb3ZJRi1LTE9PVG1fQ1dHUEg4eDdHOHN6OHpTTTcwRnpfeUs5Q1l2VmdKT1dSNUMxbDhGLU9vdDM4WjlHb0M3bUc2NjVaa3pxMU5uYkFwX1A3eVpFd1F5N1RUM0VNaXdScXE3UkdjRGtydDht?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T03:30:24Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T03:30:24Z",
+   "id": "21671889b482",
+   "score": 5.25
   },
   {
    "title": "Tras muerte de adolescente rarámuri, rescatan a 79 personas e investigan explotación laboral",
@@ -19215,29 +19489,6 @@
    "updated": "2026-11-25T03:20:05Z",
    "id": "b631b6709d62",
    "score": 8.25
-  },
-  {
-   "title": "Colectivos de Jalisco Exigen Búsqueda en Vida y no Post Mortem",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOX1A1eGtZNWpWd2t1eEJFMm80RGdUYkdxOFlSb2VPbXF0YmpCbEZCbU9wV0t3ckFqTkJUZG5Vd29GUjhGNDR1M2VSS1FrbzRJZmtGb01XVWpEY25SOEdSY25lRklZNXRvNThXUHJZRnhyanBlT3QycThlTzROT2prQkZVY1RTdXFJRmZJaE9LbzFaTTZ5WnpiRFI1enRUOEQ3VUlMaGtXdHllSFBaclBPSUJsa012SUFCb2Fj?oc=5",
-   "excerpt": "Publicado por N+.",
-   "image": "",
-   "published": "2026-11-25T03:16:01Z",
-   "source": "Nmas",
-   "source_name": "N+",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "N+",
-   "also": [],
-   "updated": "2026-11-25T03:16:01Z",
-   "id": "6a058937bec3",
-   "score": 7.05
   },
   {
    "title": "Microsoft activa \"Código Rojo\" por caída mundial de Outlook, Teams y Copilot: Reuters",
@@ -19746,29 +19997,6 @@
    "score": 6.3
   },
   {
-   "title": "Alan Aguirre se suma al Consejo de la Universidad Kino",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOU2JQSHJEOHZnZGtKc2tzV2hfcUg0Ti1TV2NpeEYwQzBMWExQZTRaRXozOVg0XzhQMnNneTVhV19CV0lyRHlEN25jb2hwVnI1S3F5M1hDcW1QSXFkcG53MW0yZk9rejVZdERxbFhRNWdsaUdBSUpSUS1ETmpjSmxRbzR2OG1JdDZreWZvOUl0V2ZUc0NDY2RpRXFRSTdoNk81dkFwaG9sRmRNTzB6bVHSAcgBQVVfeXFMT0hlb0NXVjRjdlYzNTRmSW12a25HcjhXZGtTNUNQa3NRbjQ4SlVsN2VMUWxQSm9WblNGVzM4YWJ1YjV6ZEZ5WjVFLXROblQzbzlhZHE5UkJSMVF0dy1pM283eU5SQUFCSzVPQy1pZEtHUDRWNFFaQzM3X3BvYmVNZW5sNXBYUWpkcVhoc0FYeDZvc29laVpYbUlNbEJITXlMT25EdnRjbVd1RzVPMF9xQlh5VFVtQVRUR2xsNks1cUZIbXVra0U4T3I?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-25T02:32:19Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-25T02:32:19Z",
-   "id": "6a02e3059b12",
-   "score": 5.85
-  },
-  {
    "title": "México vs Venezuela: Horario y dónde ver el Mundial Sub-17",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSVpFRmhpeTR0bldDZUgzWEIzSFhEVVBKOWZ3QW9fWFMxWndvSXdOckw4U2pYYXRlNWFOcWtZVlF1NHowZUpUVkdBQnlUbE5wVjZOekwyOFI0R2x5cThEZzZGSGhzbDNrS2NjdkNyWU4tVmZ4XzByc2tnRTN3UG05TnNySm51M1FEUlc3ZXhhM2ZFTVJWdmNPU2U0QkdCT2JvY2RqSXQ3ZzAxeVdKemxSV9IBtgFBVV95cUxObEdrNkhrRUpvckQ0MWxtc250b1U3ZmNvTDluMUdRY2lNWU1vRUhFd3F6c0EwU2kwemEzUVZBbktnOXFWcjlzX3BNSEt0bU9MVmJFbjE3OEtJaEJRMXRtWV9sOFlOMG5DelF1VmItNmRtbU1hLV90UVZkQkxvWE1IWWFQaW52MG9Tei04cm9zZHB3U2xMME85TkVnSWZNZHVybi15WldoRjIyQkIzLXhjX0hsRjh2QQ?oc=5",
    "excerpt": "Publicado por El Informador.",
@@ -20026,7 +20254,7 @@
    "also": [],
    "updated": "2026-11-25T02:04:54Z",
    "id": "cc21cfc43b82",
-   "score": 7.35
+   "score": 6.85
   },
   {
    "title": "¿Qué implica jugar la Copa América de 2028 en los Estados Unidos?",
@@ -20049,7 +20277,7 @@
    "also": [],
    "updated": "2026-11-25T02:04:20Z",
    "id": "4d9fd41e4d3b",
-   "score": 8.1
+   "score": 7.6
   },
   {
    "title": "\"El Chapo Isidro\" sigue bajo custodia y será enjuiciado en México, afirma la FGR",
@@ -20072,7 +20300,7 @@
    "also": [],
    "updated": "2026-11-25T02:04:17Z",
    "id": "9209444ca902",
-   "score": 7.15
+   "score": 6.65
   },
   {
    "title": "Monterrey vs América: Dónde Ver el Partido de Ida de los Cuartos de Final de la Liga MX",
@@ -20092,10 +20320,12 @@
     "deportes"
    ],
    "via": "N+",
-   "also": [],
-   "updated": "2026-11-25T02:03:00Z",
+   "also": [
+    "SDP"
+   ],
+   "updated": "2026-11-25T03:10:00Z",
    "id": "6da03cbf5588",
-   "score": 7.0
+   "score": 7.25
   },
   {
    "title": "Embajada de EU presume exportaciones de México y ‘pelusea’ comercio con China",
@@ -20167,29 +20397,6 @@
    "score": 7.55
   },
   {
-   "title": "Colapsa puente en la carretera San Felipe-Puertecitos; habilitan ruta alterna para todo tipo de vehículos",
-   "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPblJyT3VQQ0RBVVpTdzMxN3NYRXdiZl9Wb0JIV2k3elNyWGYtcnFDeUxUaGtRZkRncWhGNGZBM2p0LXdPUGNHSzFoYURhMU5zdmtjNEpuMHRQalVGclItdDBiNl9iWTNIZzBZVFVfSU1YNUZIdG5INWVWU3pDVnNlQXRLQnctN1VodXVYR0k4YWxWdnh5ekc1d1NCa1FFR3N4dUJmeW8wQlhfc1EwR0hlbDZZN2hxUHlqWDF0YlJ2dlRITjJQOXdjcjlxSmxnaE5iMDZVOUVSam51alBPYlUxTzVLNzFPa01MMEppNFZJV2tITVNwZlVUTFpOc0JRZF9LMDE5NldXbWzSAYgCQVVfeXFMT25Sck91UENEQVVaU3czMTdzWEV3YmZfVm9CSFdpN3pTclhmLXJxQ3lMVGhrUWZEZ3FoRjRmQTNqdC13T1BjR0sxaGFEYTFOc3ZrYzRKbjB0UGpVRnJSLXQwYjZfYlkzSGcwWVRVX0lNWDVGSHRuSDVlVlN6Q1ZzZUF0S0J3LTdVaHV1WEdJOGFsVnZ4eXpHNXdTQmtRRUdzeHVCZnlvMEJYX3NRMEdIZWw2WTdocVB5algxdGJSdnZUSE4yUDl3Y3I5cUpsZ2hOYjA2VTlFUmpudWpQT2JVMU81SzcxT2tNTDBKaTRWSVdrSE1TcGZVVExaTnNCUWRfSzAxOTZXV21s?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-25T01:57:00Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-25T01:57:00Z",
-   "id": "68826b190af4",
-   "score": 5.35
-  },
-  {
    "title": "Grupo Salinas revela cuánto ha pagado de impuestos en 2026 y exhibe los comprobantes de Elektra y TV Azteca",
    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYVp1d1F6X3Y3WW13cUthU1lDRDc2ZWZ6WGlaOXNaSE5jUnRXMzZwZlpISkxHMVA4Nk5CUG5Eb3pHSGRQSjVEazFTcXZXOVNtdEgxcVJ4ZVBkWnFwaUNRVFhoSlpsanV0YUo5d1VlNGQyaldzd1ZpN3FMT0pGcjhsaHgzMThpcC1ncUpxUEdKbElsZUlU0gGiAUFVX3lxTE5yWkZ5Z1NrZkd0emV2NzVLY2pyVjB6aml6OGtBSGlQUHhIY1NMdzY4MnFSb19pZjR0Z0JmT0dGT2FKZFZmTFdYWXBPaHpvRk1UTFVTdmtTT0lmV3ZXdUxUVFNFSGZ1TzVTODBKREtKR3JnYXFjZ3FQSG91VlVYaW1UWG81eGgxNDlFWnU3TXRPNEF5TFRITXgzUV9pdU9fWTFoZw?oc=5",
    "excerpt": "Publicado por Expansión.",
@@ -20253,10 +20460,12 @@
     "clima"
    ],
    "via": "El Universal",
-   "also": [],
-   "updated": "2026-11-25T01:47:17Z",
+   "also": [
+    "SDP"
+   ],
+   "updated": "2026-11-25T07:02:00Z",
    "id": "13899d011ffb",
-   "score": 8.45
+   "score": 9.2
   },
   {
    "title": "Como un \"negocio familiar\": así es la junta de Nvidia que destituyó y luego restituyó a Jensen Huang",
@@ -20280,6 +20489,29 @@
    "updated": "2026-11-25T01:47:00Z",
    "id": "8fc3c6e4bacc",
    "score": 7.65
+  },
+  {
+   "title": "La última voluntad de Antonio Gaudí sale a la luz 100 años después de su muerte",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNN0UteHh1ZXphYUtiUXlkQzlIa0lXYnpmdmFkUVptUDAtUEF4UGM1UEQ5SjU2RXdyNGFBcVZzWUdkV1JpczFGQ2U3Wk83MVh1WjM3V0ZIQlpjek1Gb3RZckVINUlpVF9GZ2kzSTNZQk5zY3hjNmF4VUd3YTgzbWNaODEzdzBOWWM4TDZoamFESDJYSVE0MmdqcE54UjRXVk5TTmIwMVA0Njd2UE1ZeUpranZ4N0R0NW9CYllCam1Pbw?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T01:45:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T01:45:00Z",
+   "id": "095f5cdf2ad4",
+   "score": 4.75
   },
   {
    "title": "ISSSTE en Azcapotzalco: pacientes esperan desde la madrugada por consulta y meses por estudios",
@@ -20472,6 +20704,29 @@
    "score": 5.35
   },
   {
+   "title": "Sheinbaum: México busca incorporar la inteligencia artificial al sistema de salud",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNMkpZTzdOYW1IUnZnNmo0MDh5ek1Yei1DSDFENlhPV1VaeHd2NXU1eEsyUHBZTE05WkQ4bjlRTzNrbU16MEtSanpFVU4yeXZObFZELVJoT2NEdFlNTkFfZnJoeXdJYUVsajB3X3p3ZHc2aWhpQWpGNXVfWk5reG9GQW9xOFZvOGZfdGk5MDFFMURNNDBMLTVOYkpTLWQ2ZGcyUGRPZmJnMVFIcGl1dlBpSXBscEJEM2FMeXhpWW5leWFNcjNzTldoV1YwQdIB0AFBVV95cUxNVE5HVnFxM20wRHNnbnV6dDM0UWFNc2ZzckRoNFdUdWQzNTF4RlkyUkhwaWtXMUY3VFFpWTNYVDV0R01mSDB3b3l2VExLMy1CcXFTVm5ENXc0cmZFQXpmeVhZcWdlRk1JbkZFVjdlSjdHa3hRSDUxblB2ZWFfX2RQclFNNjVGMHJ2bENoak91SXF5ZWtDeEhTMzBJTWxsTUZjQW9lMzVZVXRQT1g3V25Pa2xTdmdLYnVXWmYxdmQyTmtvUU9QTkJMU1ZDY1VYQzZ2?oc=5",
+   "excerpt": "Publicado por El Economista.",
+   "image": "",
+   "published": "2026-11-25T01:32:04Z",
+   "source": "Economista",
+   "source_name": "El Economista",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "El Economista",
+   "also": [],
+   "updated": "2026-11-25T01:32:04Z",
+   "id": "4afb183911ce",
+   "score": 7.2
+  },
+  {
    "title": "China investigates politburo star in Xi Jinping’s latest purge",
    "link": "https://www.theguardian.com/world/2026/nov/25/china-investigates-politburo-chen-jining-xi-jinping-purge",
    "excerpt": "Chen Jining, regarded as a contender for higher office, becomes the fourth member of China’s elite politburo to be investigated since 2025 China has launched an investigation into Shanghai’s Communist party chief Chen Jining, a…",
@@ -20627,10 +20882,12 @@
     "deportes"
    ],
    "via": "Aristegui Noticias",
-   "also": [],
-   "updated": "2026-11-25T01:24:00Z",
+   "also": [
+    "SDP"
+   ],
+   "updated": "2026-11-25T03:17:00Z",
    "id": "c400a03cd2ba",
-   "score": 6.5
+   "score": 7.25
   },
   {
    "title": "38 días después de su captura, el PAN de Chihuahua reacciona: pide liberar a Jáuregui",
@@ -20771,29 +21028,6 @@
    "score": 7.65
   },
   {
-   "title": "Piedras en el Zapato",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbzFrb2hMVFIzVGpFc0tsM1NfTy1DTjB2algzZ25WTVlUSnRGZGgyLXhHQXFtTUVERTJwenhkclFxYWt0LVRndnBuRUJqVFg5ZnlCeWExdFo1TnNrNkdNOGlfV2xqekhfc1FXeDJDanY0bWxpaWo2a2JpdEJJaXZZaUp0WkFVSGExTlFJTHpIVHVQeFZsRm8yZ20xbXh2STQ?oc=5",
-   "excerpt": "Publicado por La Silla Rota.",
-   "image": "",
-   "published": "2026-11-25T01:14:53Z",
-   "source": "SillaRota",
-   "source_name": "La Silla Rota",
-   "kind": "news",
-   "mirror": true,
-   "weight": 2.5,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "La Silla Rota",
-   "also": [],
-   "updated": "2026-11-25T01:14:53Z",
-   "id": "a0d47d8f4ddb",
-   "score": 4.6
-  },
-  {
    "title": "Exclusivo: la FAA apunta a la causa de la suspensión nacional de vuelos, pero aún enfrenta preguntas sobre sus operaciones",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbm9NQThidUFiaWRXSGQ3MEt6RTl0S1Fqb2UtcS1OcTQ2Q3gtUkNlTmtKOVpRM2JtNnZpNFNSenNza3NPNVMtN2N2cTRhZ1p6VENQMlBQY0NYOW5XTDU3QkcwRXNtNVY4dDk0RUtZOVNLdHJoN19XTW1jTkdZOEl0UkJFSm4yLTB6MGh3ZnBQYjRHbmk4SmZXa2RaSDBjQQ?oc=5",
    "excerpt": "Publicado por CNN en Español.",
@@ -20882,10 +21116,12 @@
     "cultura"
    ],
    "via": "Aristegui Noticias",
-   "also": [],
-   "updated": "2026-11-25T01:12:00Z",
+   "also": [
+    "SDP"
+   ],
+   "updated": "2026-11-25T03:56:00Z",
    "id": "0657e1aa1c2d",
-   "score": 6.35
+   "score": 7.1
   },
   {
    "title": "Precios Pal Norte 2027: Boletos, Fases y Costo de Abonos Tras Revelación del Cartel",
@@ -20934,29 +21170,6 @@
    "score": 6.55
   },
   {
-   "title": "‘TERRIBLE’ MORALES mantiene frentes abiertos EN EL BOXEO",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQjMxbTdmdVV6VzFJLTA3OHZMQmg0aTVOamUtek9GRzNFa2xycG15QzdVbTcwOUs4WEcxaGx6QzQzRk5mODFzenE1MjRhVDlyeHZuY2RULUlXM0ZJNkdJaDFMY0hZc0VVYTBBNzF1ZUhzb0pKQmFEVmhMbTlkZG1JM3l4aTcwU2Y2eHpYb1FwV3VWTEdQN29Ndk01dmdnRFNoblpz0gG-AUFVX3lxTE1Bb214UXNuN3YtS00wTm9aV0xNWkEza1hIdjdaLS1QWmJpM0NSdklSRlk2N1lPMFpiTTZQOEZPNDJhZlcxVFJOVWhkeVdRZXRmR2VRcUQtZkN2N0o5NldfU1lOMWVsbHdjMXhPV0hVNDFLUEZ6WUI1QWVVbUVsdjlXS1prUHljeFVHWV9adWxLaDhrOGxkZW1oTDJhTDd6N0diWkI0cUNFWHBfNldGWHBTWE9xQm1uUjFNM1Jnc3c?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-25T01:09:38Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "deportes"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-25T01:09:38Z",
-   "id": "03d4717173d1",
-   "score": 5.3
-  },
-  {
    "title": "Diego Gigliani y el St. Louis City SC quieren el título de la MLS",
    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOb0JNZWNLWUJGb2FNdmlZNl9UYUh3S2Z6cWdoRUNCVWhHTXpFYjZfRDEwTmd6QmVtalNKOWJCaE9reWFvSzRzSlA1Q3NRak1sRmhuVlFuel9aVWp0U09oZnR3WUllVG9vUGQ2MGxWSHdHSVJmakhxSzROWlhocWprT1NLN1B6bEtLWG9hRkVwcTRyUQ?oc=5",
    "excerpt": "Publicado por CNN en Español.",
@@ -21001,6 +21214,29 @@
    "updated": "2026-11-25T01:05:00Z",
    "id": "becc536ff031",
    "score": 7.25
+  },
+  {
+   "title": "Legisladores de Morena afirman que grupos de choque trabajan en la Cuauhtémoc",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZzUtYjFIMHZTZlVHUVlQMUpsc0NXQ0hBQWhyWkp3VzZfWm1BSUdKdDFudXJvakpVeEVERVVGbVNLbXdkY0l3UXZYQWxyemZLdkFXTzkxdXh0c29BVXdtVWlsOXhZOGZ4aXlGUV83WVBCRE5iWVJNVGp6Rkg0M1o1bmlkZl9uVDR0YVNkd3hmRnQ4ZWxDWmxueGg0UGVobG50R3d5aXhOV2VWYXZXbHFSYkNpdWc1Y0M0RDRJ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T01:04:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T01:04:00Z",
+   "id": "6fde5092d6d0",
+   "score": 5.4
   },
   {
    "title": "Groups sue Trump administration after changes made to Philadelphia slavery exhibit",
@@ -21137,11 +21373,12 @@
    "via": "",
    "also": [
     "Proceso",
-    "CNN es"
+    "CNN es",
+    "SDP"
    ],
-   "updated": "2026-11-25T12:05:23Z",
+   "updated": "2026-11-25T13:32:48Z",
    "id": "c9aa67e2d30f",
-   "score": 9.1
+   "score": 9.85
   },
   {
    "title": "Programa de Ordenación: concluye una consulta marcada por la inconformidad",
@@ -21211,6 +21448,29 @@
    "updated": "2026-11-25T00:42:52Z",
    "id": "4d5422bea7a9",
    "score": 7.35
+  },
+  {
+   "title": "Betzabé Martínez abre nueva oficina del DIF en Gregorio A. García para atender a 35 comunidades rurales",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdjM4QnNQcm9Gbzk2S3IySEsyYk5xbmhiZVZ3U2tUYnB5SXl3VC1Qck1BUjVhZ216amhIWlo1Xy1MVEhONUE3MzBhamtQYmZrbmFFOWVoTlJVMGNHM3ZCM1lZajB3ZmE2eUk2OFAzSXR3RUVXWTVudjZxV1UyQ2lMbmZDbHc3RXVWQlp4bEljTDdMLVdfUUtFb3lXTW9fRVVRR0FTcWthLXI5bEtya1FwaTJpVDJjNEgyR2dyeGxCZ0Rwd2ExWFp4dldYR19fN1hHUkltVW9B?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T00:39:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T00:39:00Z",
+   "id": "c1b5d9f832c2",
+   "score": 4.75
   },
   {
    "title": "King tides could break decades-old records and flood communities on both coasts on Thanksgiving week",
@@ -21305,6 +21565,29 @@
    "score": 7.95
   },
   {
+   "title": "Mariposa monarca: activistas llevan playeras al Congreso de Nuevo León para exigir su protección",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdlR1dVh0UXZaR2FLTVJENXg2WlhPQS1kWENRZHhsWFQ3MDdULUxVVVpFdFdFY185R3dxQWdwRWY0T1FJcHVKaDVBYXNsWl9TUnVIb3c1WnVoeFlpWWg4cFM2N1hocUo3eTZ1NVpwTG5NbTZzME5XelJZcU5BU3Y5Zjd4Y2tfSVoxaDBUeGNrYUFLSi0yT0hDMlJhSXZsLXRTcWpuSzBaYmhHWTN5UVRJWjN0Ymxwc21uSWZVUk0ySkV4cVBmb3dRcTI5RFoxTUNDTVJlY0hIeWlkU2M?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T00:32:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T00:32:00Z",
+   "id": "a44f8e72c4a5",
+   "score": 4.75
+  },
+  {
    "title": "Tu cerebro está agotado por demasiadas tareas sin terminar: 5 sencillos pasos pueden ayudarte",
    "link": "https://www.bbc.com/mundo/articles/c6jd725nxvy2o?at_medium=RSS&at_campaign=rss",
    "excerpt": "Las tareas inconclusas generan dificultades para la mayoría de las personas.",
@@ -21326,6 +21609,29 @@
    "updated": "2026-11-25T00:29:42Z",
    "id": "99143cb6d822",
    "score": 7.95
+  },
+  {
+   "title": "Netflix busca arrebatarle a Fox los derechos del Mundial 2030; Telemundo quedaría fuera",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQzBRaHF6dTlSNS1GWkFNMzJKa3JCSVZ5ZG9Rb19ObEk2eHMzQTN6bjR3Q0UwOXpVbUh1RTJfRDJuZk9qdjV3elA0OS1rVGg5a0VWeEZrbDdac2gybG5YRWI2Q2ZaTWRkSnY0c1c1d1ZGVFFWMjdxUHlwQ2dFOFJNcW1qMEJJRFNQX1RqUmtpeGxnc1plWTVyYTJBNFJYX0RBZjRrV3YyX2hQbHlqWjdLbDZZa1V1THcxbHNLR2VoTW13QQ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T00:26:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "cultura"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T00:26:00Z",
+   "id": "e6a298aac114",
+   "score": 4.55
   },
   {
    "title": "Coparmex exige transparencia en la elección del próximo titular del INE",
@@ -21441,6 +21747,29 @@
    "updated": "2026-11-25T00:21:00Z",
    "id": "993e045b5d78",
    "score": 7.6
+  },
+  {
+   "title": "¿Quién es Víctor Manuel Fernández? Teólogo de Argentina",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPYjZnWUpmQ1JmWG9ZclIzZWx0VE1POHBGZ3FuLVNXUHBOUUxoT24wMlc0eVFzNVNOdnhBbDhwVWh0bHBUOERxRjY2YzJDbnAtUUJXQzRKenIwSTFsdlFTd25yamx6RktldDNRQ2s2YlZTdXdWTnhoTUFoMml3eUMzelFhYVlmc2taYXh2aTZmdFNFMDR1UUd0RnVDYnQ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-25T00:21:00Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "mundo"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-25T00:21:00Z",
+   "id": "57e9dea53175",
+   "score": 5.2
   },
   {
    "title": "Alumnas denuncian con audios el acoso de su maestro de matemáticas | Oaxaca",
@@ -21627,6 +21956,29 @@
    "score": 8.25
   },
   {
+   "title": "Lo detienen tras forcejear con policías; llevaba 50 kilos de metanfetamina en una camioneta",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNRDVoeXNGYXpUTU1rMjlhTVVGWUFxR09sNVd4TXpReHU2b3pIbU5XYm5ZYnY1MFlIcnNlY2puR1VlUTlJZFRCUkRBbl9RX3ltR3JCZkR4bHUtTzdUVU1sOUVtenpEYU1waDd0VjhQQnd5el95ZGpFcXZuZkUtSXo5OWoyWTdiSWxjdEV2bUYzOTJvU1ExUXVtMVd1Z1Q3YjF0UkZDekVEQWl1d3NLd1dSNm9WVHNWUTY4VUtkb0U4VFJtT1hXV1ltdXJaeEdkS194NVlSNmJGbWtOMkHSAfYBQVVfeXFMTTlka0Y3QnZGMjNkQ3psb2F6S2xpNm5wRGlFUU9LcGVfV2swNHZCZTBtNTVGdVNPcVJQVlREcWV0Rk5mRFJMYk8xNTF0SThnSmk1QnNfNUdld3RvQW1acFRLTm9KY3NNblJRdDZ3T2RjTXZZd3BzSUh4N0thSEFKeDVZVWZodDNZM3FmbHVrY1piS2V3bmdmMFhWLVBXckhZbk9McHFVVEJTbTNJS05KLXpuTWloYl9DMjhjenFQcUZNcnRzMmNpUVpKWEdxVTMtY1p6Zzlsc2dnMGdPcTBsOTVjOUpSUHFWdVBiUEtSZUNwUFdVM1Rn?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-25T00:02:08Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "seguridad"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-25T00:02:08Z",
+   "id": "f12ba443811e",
+   "score": 6.05
+  },
+  {
    "title": "Un nuevo planeta dos veces más grande que la Tierra estaría oculto detrás de Neptuno",
    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQ1kxMFdUcXlnczlmRmxNVHJMWnlJeWZzNmxLNWt1bjU1QTN1QS1uOEpjRFRZa0lDdW1seTBOX0wzTG5hTVBJeFJBdFZoLWtNREZFWDNmSldPbTVnUjFzVnY4OGwxYmpBcjdHMktzRlA1ZEhmcDJJendLeFhiRDhBMEJESkcxLUtBSG1MTmNFVDFmS1U2S0NHM1NHaEF6R1kyVVV1RXlHM1NIZTlxZE5UdmRSRzhwVGZqcEQ4?oc=5",
    "excerpt": "Publicado por SinEmbargo MX.",
@@ -21767,6 +22119,29 @@
    "score": 7.6
   },
   {
+   "title": "Pasará 5 años en prisión por amenazar con una pistola a una comerciante",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORmZBLTVDcDViTDk1VGduaTR6QjdLb3I3N3dxWGZySHJpMzRDdXpjbGlWSzAycmtyMUdCNXJJRXNiT0RoSm15VkJudzVHU2s3Z0ZhRUt4WnFnOXAtZWs3T2JxVFdEZmhnZTBaN1lmdl9PNjRtZjU3TnZUVGJqX2lYUVFzYlhMZEtGN3o0WThTMGdYX0pTZ2JsX1lPQVIwVDBZakp2V0JNazc1TUYwMHlGRko0NkN1LWhxRHpuR1hTSWVaQdIB3AFBVV95cUxPSVFjZ2diTUFzYXgta1pzU1RFajNzRmpjcXJLN2tfemV2cUZQWFhpTjlXZmo0ZWRYNFNWdVBZRzF1NFRVV1lwOUZIbUxQdzRPNEo0RWdmLU1kc2dnNUlIcDd0VDFzMk1MM0ptT3ZXSFNxd1dkTWU0OEpRVElyTWRvRDR5cUtzcWs4ZXBReDNJUWhFZTV1Y2ZmUEtYSjlYX0stbDZLNHF1WW1oVU01NWFhZFdyT1FpaDJJa0ptcVR2emtFTFExaGliVTlGb2dVRUVLeW1UV0tGcHJyN1FQ?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-24T23:41:39Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-24T23:41:39Z",
+   "id": "6308d372c92f",
+   "score": 5.35
+  },
+  {
    "title": "El voto latino impulsa la victoria demócrata",
    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYmlWSWhTOFBVY0xiU2lCRGhWdXJVeTdOUl8yRUlQRm5tODh6MEZBMlVNVFpiMDN3ckpTcFFUV1VXUy1PTU53OFJOMEhldlFrS1FvbW1TZ3dXY3dZTHM1Zm5BMUlLQkxkVFpLTVp1QUt3MXhnM3FSQ3dvN0dDMVBuV2p4SWRjQmhncW5FYTBUTQ?oc=5",
    "excerpt": "Publicado por www.dw.com.",
@@ -21834,6 +22209,29 @@
    "updated": "2026-11-24T23:35:00Z",
    "id": "304644c6afaa",
    "score": 7.05
+  },
+  {
+   "title": "¿Quién es María Alejandra López? Miss Colombia",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRlFwbG1DQm1mWHgwdEpzck9aMklzTjdrUllQVnBIR3ZpQWdIWXpyWGpSRUJMN1ZaVFRTMERCUDJyc0tkLUtIM3Y4MUpmY1dETGl5S1o4NDZ4eG5yWHJubU9Jbmx0VkV5VEtBemdIVHNGN3BvMlRkaDhrTU83TlN3SlNXWkZsZW5lZzFoTWFfT1IyVkNvSHdEeFBIMW51Zw?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T23:34:37Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "mundo"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T23:34:37Z",
+   "id": "d9b1a8afd1dd",
+   "score": 5.2
   },
   {
    "title": "En 48 horas, tres mujeres son asesinadas en distintos puntos de Mazatlán",
@@ -22094,6 +22492,29 @@
    "score": 7.75
   },
   {
+   "title": "Argentina entra en recesión técnica tras dos trimestres consecutivos de caída",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRUF3N1pwMFRETGdVNWNvWXV6WmZ2eHIwbjR5LUY1YldLSjJvVXpxYzVlbWczbTVyMTl0d3o2NnhaNU0tZUxqcTk0R0haMk9CcVdYc1JHZWVNUXdtdlpwR1BmY3E2ZHlWOUJaMzNPMUh5RjcxLUlIV2d0eU0xX2FJWVp4T3RHSTZBLXpudWRicHJfOVB4dkFESl9sSUg1R3JPSEpTODhsdU5YNDh3REE5blNrdHRLandLNTBxMA?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T23:17:56Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "economia"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T23:17:56Z",
+   "id": "1c5d16261361",
+   "score": 5.25
+  },
+  {
    "title": "Por el derecho de las mujeres a vivir libres de violencia, fortalece Guanajuato sus servicios de protección",
    "link": "https://boletines.guanajuato.gob.mx/2026/11/24/por-el-derecho-de-las-mujeres-a-vivir-libres-de-violencia-fortalece-guanajuato-sus-servicios-de-proteccion/",
    "excerpt": "La Gobernadora Libia Dennise sostuvo un encuentro de escucha y acompañamiento con mujeres que han recibido atención en el Refugio Estatal. El Gobierno de la Gente brinda protección gratuita, atenci…",
@@ -22276,6 +22697,29 @@
    "updated": "2026-11-24T23:08:28Z",
    "id": "e54c285910b7",
    "score": 7.6
+  },
+  {
+   "title": "Tras alcanzar mínimos históricos, los contagios de VIH podrían repuntar en 2027: ONU",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSkZJQmFHQ1l4eG82TG02eVdqODVNSXhuVkVsTThYWFVqakUycnFKaWhibmhNTUNiLUNKUnpIZlY5Z3VDb2wzLVdLaTIwMmtPNTBaczFhMl85SEdSNEpTTi1jT1dhX0s0emJNTUdNMlNVVzQ1SDU5M1NLaFBGNDRuaHIwNDhGRVVrMDBqTjFsUWxCOTA0dVYwaFZ1clFSRFJPOEpjQ2xUY1U0QkR0Ty1SaDNqVk1Qa1F1TGZSOEtJOHFYdm8?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T23:07:38Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "mundo"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T23:07:38Z",
+   "id": "1885865c2d89",
+   "score": 5.2
   },
   {
    "title": "Reforma electoral en Argentina: Senadora impulsa suspensión de elecciones primarias en 2027",
@@ -22625,6 +23069,29 @@
    "score": 7.6
   },
   {
+   "title": "Ana Paty Peralta entrega obra de accesibilidad universal en el CAM Albert Einstein de Cancún",
+   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPR2J0dzI2cGdqaVo1RHYyZkZaZnBIS3EwX3pSY3ZVUEIwbE15LXk0dGdXUWV5bDhxdVhFZUxJN3F0Mm05QmNpWkJCaUJkTXdwR3ZxdWt1ZFFFS29zcUZlWE1BNFBaNUwzM1J2SUlnNWR5cXRUZXdobWlnZ3VoWklyb21mckpTN3RfN2VMel9oX0FhWDB3cVF5cVVBQTJtbTF2TnFSS3BwZ2ZWamxxUmY0bUstWDlVVW8zMFNWU3psMWRCUVJudE9QWXN6UmRfcUNpRWtYSDBXOENlUQ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T22:47:26Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T22:47:26Z",
+   "id": "e6a00e98de7d",
+   "score": 4.75
+  },
+  {
    "title": "Lukashenko quiere ir con Zelenski a Moscú para negociar",
    "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOR3l1M1VuY25rQVlHUE56U0NPemZxbFRSM0s5dnVSZGl3dUotNUJiTlNrQnJlajQ0TWdtaC0tYUMzRmZuSWRGN3dURHhVNlE2U1hRQWRYUk5XUmdOSWFBS0ZQejdfY0FmdWFHVXRFSmMyeXhidEtnY2RFYmdCM0VlenNzQlRZbkVjUEx1bjhDX0t5aDFvUjJKNkZaajI3Y0lYam1WQmV4c19uejVhVVNRdU9CX3FFWEM2cHA3dUw5ZGF5eE9GUWl6M2lDdw?oc=5",
    "excerpt": "Publicado por dw.com.",
@@ -22832,6 +23299,29 @@
    "updated": "2026-11-24T22:32:47Z",
    "id": "9c46528109e1",
    "score": 6.45
+  },
+  {
+   "title": "¿Quién es Dominga Lopez Buril? Miss Chile",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQelE4d1hQRU5xZjBSMzAtMzVDR2JjaEFsd3MtclZwa2N4YVh2WVk5QzVmV29SZ2VoM3ZCdWlQUGNteUhqSlBRdnl0YVlPQ1ZYT2s0UDBPYl9MWmxCVVU1dXJHUlliZlJxZXRDVVY0cFp5ckxBZ3kwaUxtdVg5UmRWU2RmMXlpWFRLOXFhNGdSUWVOaDlsd1Jr?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T22:32:16Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mundo",
+   "region_fuente": "mx",
+   "tags": [
+    "mundo"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T22:32:16Z",
+   "id": "7f5523f0140f",
+   "score": 5.2
   },
   {
    "title": "El único transporte de la CDMX que ofrece viajes por 7 pesos durante la madrugada; estas son sus seis rutas",
@@ -23409,6 +23899,29 @@
    "score": 6.95
   },
   {
+   "title": "Porto de Santiago Giménez se lleva la victoria ante Feyenoord en la Jornada 5 de la Champions",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQ2d6WExJWDJEQnMxMklTMUt6NWhRLTJXVVJBSm9ndWFSSzMtNE0ySHlrZmI4dE82Yno3TzBVdTZZTm9ZUWNBT0N0TGR0SjFpd2pDQUFKWXpoU0JPeFppbkxmNG5neUVSbC01bXlXdDYxb2ZUaGtnMWZqUDR0ZF93bWFsOXpzemgwRlFsdkI1a1Z1WlpvUTFNY0FFWFRVY1RRbWlEMEhkR1dxTDY2cV9lTndNYkVid0pkMDNSV1ZnR0VNZGV2UGtJVGZOVQ?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T22:00:12Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "deportes"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T22:00:12Z",
+   "id": "d5e7ddab2772",
+   "score": 4.7
+  },
+  {
    "title": "Copa América 2028 se disputará con 16 selecciones en EE.UU.",
    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOOFRJaXg0eVU0RXVQT3RWZXpHTm9DQ1lqU2Zzb3NicDNaWWtVOThNb1JMQkpxNzRwTHFrTkNzODBfZmRJQlZVT2g5YUN2a1pWdDZ3cHVhU3hVUGRoVDc1MDFaeURpOW9oaWtMRlcwVE5ORVZpNF94dWF3U19wTkRMUHpRN1lDS3p5MFFXY1lZUG9IUlZuUVh6cXVsWkZzNmR1VEhocWxBblY3WkRuYWx4TjB6ZHJIQWN3QVBndGU4Si1QaE5tZ191cFBxWTBxcVBKdXdfdVRB?oc=5",
    "excerpt": "Publicado por DW.com.",
@@ -23825,6 +24338,29 @@
    "score": 7.6
   },
   {
+   "title": "Avanza Deslizamiento en la colonia 3 de Octubre de Tijuana; Suman 43 Casas Afectadas",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM3ZPZEhtTmtUci1ESmRFdVlDN2VTUTNJeG1QV2YwR0lBc1VDLVBBR2NDd0ZMYVFIUURMaHhJTXRtN3pqVEdudEZOQnNiRTNiTTUwa0doMDhoLW9lTVBra2xMb1lLY0gyZ0k4RnE1ejB0eTJsQXZsVlM5WXg5TnI1TURyRURNdTJWOXlPcDFyOXRIbFUtdlRyWXAwaThjQVF5N1BzcXAyRk94X29LRXd2T1RFajBKR2Rj?oc=5",
+   "excerpt": "Publicado por N+.",
+   "image": "",
+   "published": "2026-11-24T21:37:27Z",
+   "source": "Nmas",
+   "source_name": "N+",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "N+",
+   "also": [],
+   "updated": "2026-11-24T21:37:27Z",
+   "id": "d21bffd3fa5b",
+   "score": 6.55
+  },
+  {
    "title": "Acciones de Anthropic caen 6.54% • Mercados",
    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBVOEJRYlVPM2NzQ2E1RmNTMUdoX3REQ0RXU0lPak1XNmFPdXVHbDU5enlwY2J0NlpZci1keVdfZzFMdHN6ZmtuQW1Sb2pod19yZzhicVBsMUJWMDhkYXVUa2dPTEQ?oc=5",
    "excerpt": "Publicado por Forbes México.",
@@ -23915,6 +24451,29 @@
    "updated": "2026-11-24T21:26:00Z",
    "id": "95f819ffbc53",
    "score": 7.6
+  },
+  {
+   "title": "Ricardo Gallardo recibe el Premio al Mérito Ambiental 2025-2026",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaVVHc2R6NEV6endOWm9OUDVmQkxpUzR5b2M0bDA5clFsMl96WmlCQ0xSLUc2a1dzSElUSFRZeElPMWFSZHExUGRLdllWcGhvUWRiZUlLN3RIRDJqalBYYklWUTJvY094WGc4aWhCZXVfZ0dOZXAwQm5tR3p6anI3bEdwbWJtMW1XZmxuR1hLakJPMVVhVUZDTFdQTE1QckFNVnc?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T21:25:43Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "clima"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T21:25:43Z",
+   "id": "ea02f8069a5f",
+   "score": 5.45
   },
   {
    "title": "Somos acusa persecución política por caso de boletas de 2018",
@@ -24285,29 +24844,6 @@
    "score": 8.45
   },
   {
-   "title": "Mexicanos prefieren adquisición de vivienda con recursos propios • Economía",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWW13U3U2T1ZGeG94SjNKUXZOTjYxZkJLX1V6aGZWekQ4Qmk5eUdjMUJvaFFySjQ2aHF1NmZTRzJEcUYzWUZRN3p2WG9xRk9wdXhmQlo0dUkyblBySmc1clFUeExJellNWnpxVkNlMzR0V1JITzlNejdrN2ZWMWhBX2JIcEg1NHRWaFJPNzh2aEM?oc=5",
-   "excerpt": "Publicado por Forbes México.",
-   "image": "",
-   "published": "2026-11-24T21:09:00Z",
-   "source": "ForbesMX",
-   "source_name": "Forbes MX",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "economia"
-   ],
-   "via": "Forbes México",
-   "also": [],
-   "updated": "2026-11-24T21:09:00Z",
-   "id": "c9a1b7e0509d",
-   "score": 5.85
-  },
-  {
    "title": "La economía de Argentina entra en recesión tras volver a caer en septiembre",
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOS3VlWmVNSl9PSnZvaGsyby1TRTNlWThhcUlpZHJvaTRUYzkyM1FYX2piTEJ5cEVTOGJjVXpIWlJQSk84MmlVZGJ5ZEZBTHJfckVWOG82cGE0Q2o4Q09hN3QxWjRCSWpCbUNWQVlvSl90SC0tTHJXMW03MmdXZ1hrbHF3bFotRXBz?oc=5",
    "excerpt": "Publicado por CNN en Español.",
@@ -24400,6 +24936,29 @@
    "score": 7.6
   },
   {
+   "title": "Tabasco alcanza quinto lugar nacional en generación de empleo con crecimiento de 3.8%",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTlRaRUVSUHBqRUxtQzltUVN6RHhrVTJ3R25EVDBCbzZqSnQ4VWNHTzlDWGpxN0lHbHktT0hySkJrNFBvQldqcjVWNnkyWWpuWG1aelAyYlRUcGxuOXQydDNMUjNEaDVLaHF1NjlySmxUYUFJbmgtcjJBVGd6UDU0UzE2WkxacVhXX0xZZjNzc1ZuZkFaUFpiclNad0Q0Qldma195T1Vua2NqMXpVTko1SmNZbzA2Y21WeGh0Wg?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T21:00:50Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "economia"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T21:00:50Z",
+   "id": "822022d2f1db",
+   "score": 5.25
+  },
+  {
    "title": "El efecto Jensen Huang: su regreso a Nvidia disparó un 14% a la industria de chips",
    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOYW5RQWhaYXRzdkJMdWFXTFhKbklwaXBTcUhYcjhxS1dvMGJuRjhYSTdpbXdmMU5uOFJ4OVdNVGpGUVVpTkxObThIMHNYV2JwVWNzTU1KUkxuVEpKRTdjd2VKLWpJLUdXbi1mN3Z3Z3JWeE5lTEktQXdocm1uT1d0TkduVUNfNGVsU0NNcw?oc=5",
    "excerpt": "Publicado por Expansión.",
@@ -24423,27 +24982,27 @@
    "score": 6.65
   },
   {
-   "title": "Houthi rebels close in on the city of Aden as Yemeni forces dig in behind a fortified line",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLVEzelRwd2pzaWFoRmhiVTIwb2JRem9VRFgyTkFlUVRNOHh1bVJLRnNoTm90SnhscmpVcW56STVUaTBZS3ZsSUJZZUpDSTBidHp1Wl9DbEt4WlhuZjV1RFZGUnRkTFAwMVpEcGdJZDZXYkNncGFwZUp6SEpGRjZ1bXN2aHJmNTZaazJRdDhPdHFZUHltbXVySjIxMTlocDVSc1FVNmEyNXZNbnhGLTN5Zlhwc0RRUQ?oc=5",
-   "excerpt": "Publicado por AP News.",
+   "title": "Microsoft declara Código Rojo tras caída global de 24 horas en sus servicios",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdjYxNkZ6Yy1aTjNDaFlHaFFZZDJqVkl1dlNIR0FXMElCNU03THBtM3lLVVFIWWxScjRMSk9sZ0xIeEkzaE5aMzBDWEVrdEhwX0xLLWZuaUdyZU13dXVIV1BuN1Q3SFo1VkNCMlJvVXhpTGoyMi1DeFpqTEh1Mk0xNmFBZG1DRVd5MGFRbEEtOTJzWXJnUzc1U0JUZmlMYUFVa0R1S2w1REJpREJDVFVrY3hFenVnakU?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
    "image": "",
-   "published": "2026-11-24T20:56:00Z",
-   "source": "AP",
-   "source_name": "AP",
+   "published": "2026-11-24T20:59:12Z",
+   "source": "SDP",
+   "source_name": "SDP",
    "kind": "news",
    "mirror": true,
-   "weight": 4.5,
-   "lang": "en",
+   "weight": 2.5,
+   "lang": "es",
    "region": "mundo",
-   "region_fuente": "global",
+   "region_fuente": "mx",
    "tags": [
     "mundo"
    ],
-   "via": "AP News",
+   "via": "sdpnoticias",
    "also": [],
-   "updated": "2026-11-24T20:56:00Z",
-   "id": "3f5f81d4fccb",
-   "score": 7.6
+   "updated": "2026-11-24T20:59:12Z",
+   "id": "2b51b916f1f3",
+   "score": 5.2
   },
   {
    "title": "Un árbol con millones de cristales, una cafetería y hasta regalos, así es la Navidad de Swarovski en CDMX",
@@ -24749,6 +25308,29 @@
    "score": 6.55
   },
   {
+   "title": "Asaltantes de Transporte Público se Escondieron en Centro Comercial de Puebla",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPenFNUUZWaEpiTjNfWTNMZm5rT3RaUXZKN1VSenlxOWk4dTFyTXcxRUxhMWFBSGg3U2hmeDVKSnhhUTEwQVZtMS1jYVRDdjl4aHRiYTVXekp1RGgzcllub0t0eTAySVF4cTkzWTlmVHlrYmlZa2IybmtzTUU0TWtjbEVIaFE0aTNBMVhsN3dZb2dGOURKMzh1WVJwOHRQS2F6TUVkZ3NCMUVjUlJNUElKbk1hWXlRSXZ2TFR1dVhWUGYxcFlLY1MxOU83UmJDVUlhTDFYYw?oc=5",
+   "excerpt": "Publicado por N+.",
+   "image": "",
+   "published": "2026-11-24T20:40:46Z",
+   "source": "Nmas",
+   "source_name": "N+",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "N+",
+   "also": [],
+   "updated": "2026-11-24T20:40:46Z",
+   "id": "fb64b180c743",
+   "score": 6.55
+  },
+  {
    "title": "El impacto político de la restitución de Huang como CEO de Nvidia",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbWNVRFVDOWtjOGF3SnhqcU1JLUNsd3AyMnE0MDYxVjV1Unk4dmxFNzdjUHFsSGg3QS1aRjl6ZlJxSnAtc3ZqQks2QmdzZ0xZeDFiMV9vUzBJRzhDNmFKd1d0X2ZibURQYi00bzNIWUJRWkF6UzR2eXNoUmRhUWJpSHpOdmlGMTBNM1IwQTRQd2tRMjA4ZnRGNzYxR0RYcTV5cDhnY01aSFFUX2p2akJJMklVTQ?oc=5",
    "excerpt": "Publicado por CNN en Español.",
@@ -24929,12 +25511,10 @@
     "industria"
    ],
    "via": "",
-   "also": [
-    "La Silla Rota"
-   ],
-   "updated": "2026-11-24T23:01:04Z",
+   "also": [],
+   "updated": "2026-11-24T20:25:48Z",
    "id": "ec4d48ed06e3",
-   "score": 7.3
+   "score": 6.55
   },
   {
    "title": "¿Potencia energética sin recursos naturales?",
@@ -24983,6 +25563,29 @@
    "score": 7.0
   },
   {
+   "title": "A Netflix cada vez le cuesta más mantener nuestra atención",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQSXZydXVlYUxOdlotQXNCTzdLOEZBZ3RXUXh2Q3Qwc24tUnRNS1l3MG5ZV3IzeDF3VXFyX212aFo0TURqUi1VdGtqbkVwNmtBTGZKTTFialpCR2sxS19lcmY3d080VEtvdGdjOFd6QklrRlgtVnp2eURWODVqakhhSGZBcXREU0o2VnJ1ZWdzQl91Qkl0N0VUOFZ3Z09tQWcza29xZDVBZFBrTXfSAbABQVVfeXFMUGxOQVExSXRoRENiSXh0NzJ2WWtNUUVVMldSdjZzcjc4U1lWc2VyN3c3NklvWTN0SzBNM3h3MHdNUE9ndUZEZlM4RTJUNnpkU05sZ0g1Vks4UG1tcEFMZzBDRTNmOEFxRlltdE44bklMczNOS1EwdDg5cjUwTEkxS0swVnRUdHVyUFBGR0tuX053Yk1IT0pfNGVDdXE1ZEFGZWY2M3VqNy00OS1aS01qLUk?oc=5",
+   "excerpt": "Publicado por El Economista.",
+   "image": "",
+   "published": "2026-11-24T20:24:42Z",
+   "source": "Economista",
+   "source_name": "El Economista",
+   "kind": "news",
+   "mirror": true,
+   "weight": 4.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "cultura"
+   ],
+   "via": "El Economista",
+   "also": [],
+   "updated": "2026-11-24T20:24:42Z",
+   "id": "e64c12afa0a8",
+   "score": 6.35
+  },
+  {
    "title": "Piden rescatar la casa de Rosario Castellanos en Comitán",
    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNR3NkYnRDMnozcGhpejN4R0ZSOEFoSnF5QkhsWUtaa0pLb012M05GV1V5Q2VYMVFZakc2OFpfXzdNUzQ5UGFiWnVoQVNub3k0QXVEanRXaHlmZ3ZsbVFCakVYdndqV2ZJSTUyV0VoejVtTTlzb3AtZjktNmtIV191bVRQLWJpa0Q1Nkc3RXE4VTNLR2VOLUF1UU9XZHpuVU1u?oc=5",
    "excerpt": "Publicado por Aristegui Noticias.",
@@ -25027,29 +25630,6 @@
    "updated": "2026-11-24T20:21:33Z",
    "id": "b3b4150cd4e8",
    "score": 7.75
-  },
-  {
-   "title": "Atrapados bajo la nieve",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOb2NuckRNSVdyZllJQjBRWnNBdFByN3ZZNjhDdEZTdzdET2hqUkVBc3BfRWxxdUZOQVUwR3pRTVBjOG15RlM3cU95bmJHb1NhOUltWEEzODU4cE9yQmNjb0VvZF9ET2liTjJmOVpsMDMyQWdsckI1clZMampaOG5DQ9IBhgFBVV95cUxNaGtZS3RoS25JdklnaFVmVFZ6TWNLQnc5UXZjZUpsbm1ZaGZ4Y3dFVzhNNno0YTJkTF9aOGdZZFFCbWNERDF6RFNlWnlsb2k0VlZDYS1qQ0t0NGRid3hMV2REdEZMRld5MlIyU1p1Ry1mYjZ1MlhRN2dVcGNvbWhsYjVtSVVEQQ?oc=5",
-   "excerpt": "Publicado por El Economista.",
-   "image": "",
-   "published": "2026-11-24T20:19:59Z",
-   "source": "Economista",
-   "source_name": "El Economista",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Economista",
-   "also": [],
-   "updated": "2026-11-24T20:19:59Z",
-   "id": "663a20b364b9",
-   "score": 6.4
   },
   {
    "title": "Podemos acusa al PSOE de haber puesto una \"autopista\" a Vox por cuestionar el feminismo - EFE",
@@ -25305,29 +25885,6 @@
    "score": 7.65
   },
   {
-   "title": "¿Piensas comprar casa en el 2027? Calcula cuánto necesitas y qué debes revisar",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQbVNNV3Y0SUlGNmxSNHpiR2JPVEI3NDFCZEU4aGlJcVpmV2phU2o3dXhaZC1CbVJTcUtSOGJBQlB3czVkVC1rRjZRMGFMUDRsS21QVmhiTXBQQlZJR3BwdjRsdWlNamdCYWpoS2xhRTZpTXlKenN1VEVTbUlHenpSS0JBajRlVkxFRWFNVHQyR05SeHkxUEQzRHllZ1B0OWMxNklMTUpyOTdoS1Q3cjFKcUJPMHFvNzhSX0x1bk5hS2xXZ9IBxwFBVV95cUxPMWMxZUVVS01xRUh3WHFJNFBRSVNhZGxRY3Q0WlRoMzc4YlRGdW1mSVpmSnk5RHc4endLbUljYkNFZnByeHU4b2pHYUNRdlQwZ2Mzd21ybmJVYndQSng5MUlwQkF5RXIyWVhsVTJjNW5nYlpzczY0N0M0ME5UTklYTEhfb3FuQmpNSzVFdjVBSGtMVXhKZ1otVzMzTlM3ZnFFSGpGUG9HZGt3SzJZMXp0Q0VtM0c2dnBCVXhfUF9qZVBjUTJnMTBR?oc=5",
-   "excerpt": "Publicado por El Economista.",
-   "image": "",
-   "published": "2026-11-24T20:11:01Z",
-   "source": "Economista",
-   "source_name": "El Economista",
-   "kind": "news",
-   "mirror": true,
-   "weight": 4.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Economista",
-   "also": [],
-   "updated": "2026-11-24T20:11:01Z",
-   "id": "61341cd6d847",
-   "score": 6.55
-  },
-  {
    "title": "“Ella está muy asustada”, dice Maru Campos a Ariadna Montiel por denuncias",
    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNb2xfUHgtczBlOWxIYzZWczE5SjROQlEtM1hnYXl3TUpRckY3SnY4ajZLelRZNnZkamt3bnVBWi1KSWVNRzduN1dINXpGT2RIWXpXZ2loQTUxd2RybU5RUzQ5V0JkbGpWRmVCZk40UXBjcm1WSHYwcmdic28zSk02QzhRYTRvQ21EY2V4ai1EU3g2anowV09xNVZyeTlUOGppNDZ2MHR6S3lGY1ZqeWdmdEFZNDJJOXZHWjNSMmlUSzVsMmVrMThNc3pCX1UwajNvdWZNSWRTZ9IB6wFBVV95cUxPZWZub2lneGVkTzdxUmZDNHFmcmNfV2NzWHR6TXFMLVNJMEtTeDZHRklYQmx5Y1BzUEJXaU8yRThqdGNWY2N1bVBUNG5zbkNUaVRTNGN2dlFrY0lHYy1EbnhmQ2tVTlN6U3NEeUFwcmQ5OU4tUW1SU3hmODU2VjhSZmFUOTJkMUw2NjBBOEVhRDRxZUxhYXlxMDBrS1VYR1lXR0xBRFZJeXlMX3hmS2IydVlIRjhCeHRxblhtMHpKQmp2S0dLVjVzRnNKSlc0VGtpZUR3U0ZsRk4td3VGelJIWlFZRUFUNDRQSWw0?oc=5",
    "excerpt": "Publicado por El Universal.",
@@ -25349,6 +25906,29 @@
    "updated": "2026-11-24T20:11:00Z",
    "id": "f3e94bb5357b",
    "score": 7.75
+  },
+  {
+   "title": "¿Inés Gómez Mont podría evitar su deportación a México por tener nacionalidad española?",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZjNmZkNvcDd3QTFVSExDVzRaQVFQWUNubEVtQnlNQzQ2SXY5ZmNIWXRoU3Q4N2lLd1ZxMXZKTjNjUWZtbHBSU3lISVIzSkJxcU1jU3J5TnVOT2RkNXBFTWl0UEVxQjkyb0VoQ290ZVhRM2dmUk5iNEg1eElCTmFaRjMtWUtZZTdfVVg0eXNZU2hjbGlDX2Y3Z3JYU1ZTNG1uSFJuaFVOb1hIZFdtWHppYm5uc0pfRTJJYVgwX01PQ2JmMF9hTW80?oc=5",
+   "excerpt": "Publicado por sdpnoticias.",
+   "image": "",
+   "published": "2026-11-24T20:10:36Z",
+   "source": "SDP",
+   "source_name": "SDP",
+   "kind": "news",
+   "mirror": true,
+   "weight": 2.5,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "migracion"
+   ],
+   "via": "sdpnoticias",
+   "also": [],
+   "updated": "2026-11-24T20:10:36Z",
+   "id": "19cd83fe4c6c",
+   "score": 5.1
   },
   {
    "title": "\"Es indignante\": Pearl Jam alza voz contra ICE por detención de mexicanos en Seattle",
@@ -25395,29 +25975,6 @@
    "updated": "2026-11-24T20:04:50Z",
    "id": "9ce30b343a9c",
    "score": 6.25
-  },
-  {
-   "title": "Morena acusa al PAN de retrasar designación de presidencia del INE",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNWi0wUjZvSjAxOTBkVHo1RWF0bk5HYWw5dDU2d2RCbEhodl9ZdXM2UlhhMWw5a0RZbXNpNzZKYTF1Nmp2M2pvYmRqRzA0V3VmWGVCMHpoeVZzTWc4RHRsdWJ6NmpQNER4Y2poM05LaVR5M2U0RUM2cmZIcDJ3Y05uNFR3MUtXMGNjYW51SldJMU5LaW02MFJ1Yk1IU2U4ejM4cEpEQU9MeTQtSGlEcXlaUkI2UkZoZ3NUanpGYnpWVzVDZExzRjJpM2gyZl9rNlMzVTdlXzJoZG1uTHVLaDd4V2Y2c0luT0NsaUNz0gH_AUFVX3lxTE8yeTduMWhyaGJueVNuc3JqNFRXNkFWa3ZwZXVTTlFuY1F6TEN3LVdIUFZObDc5bDdYb1pDV0g2djZYNlBOSG5ObTdMYVYwTUt6b3BiekpzMi1xSkhWSzI5SGhRUXlIaWthOG5WOGJFLTVDZzQxRktTYXZtSkxCcHVObGg5SkwxYjlKTWE4Tm02Yk9tQ0xJeDlkeVVjVTh0M2VqTE5tN3owN3FqNjkyZEhQRS1NcHBTZGRncVhFUXZ2T3p6NmxJYnR1NlAwa05ZOW54WExhVVNuLWIwT3k2Smd4V2twUm1HNEVrVEhjNk1PTm9TalphYW5nNlh1QV9Ubw?oc=5",
-   "excerpt": "Publicado por El Universal.",
-   "image": "",
-   "published": "2026-11-24T20:02:48Z",
-   "source": "Universal",
-   "source_name": "El Universal",
-   "kind": "news",
-   "mirror": true,
-   "weight": 5.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "politica"
-   ],
-   "via": "El Universal",
-   "also": [],
-   "updated": "2026-11-24T20:02:48Z",
-   "id": "749a2efe6147",
-   "score": 8.4
   },
   {
    "title": "Helicóptero militar turco se estrella en vuelo de entrenamiento y mueren 5 tripulantes - AP News",
@@ -25487,29 +26044,6 @@
    "updated": "2026-11-24T19:48:55Z",
    "id": "a316cd3e1001",
    "score": 5.2
-  },
-  {
-   "title": "La ÉLITE que CAPTURÓ al “CHAPO” ISIDRO en SINALOA",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQzJoai1teDgxSTVLeWk1ckRoX0p6bG5ENlM5eTVDMnhHdVdTemY1WmJWNFpiSDlpOTFGQmlTdlRwM2h2Z0lWY2V4TVhQSkJ3SjRzUGQ4V09aQm1JMkZzNWpBZmlkc2Y4OVdPMFNzdS1GY3l0eUhYem1JZ2Jrd2dQd2tJQnpBTC1kaGZGNFY4Q0p0NG5oNEZndGZ30gG0AUFVX3lxTE1uNTFXTU9uUFVQOC1KemZfbGF6bjVPSU1SSnA2dHhnNXB3X1I0dDhycUt1WDNST3NLS1YxU3lHMEktaHZFcUpyRXh4LVNnZkR4X0dUT2NMM2tqS2FNbDJtLUdVRWo2a2k2ajludVd6UXBzc19OaXV6dWFJMWtaTjI5dTVrMm9ONGs1T3RHd2VGZDFUaUFYMGtJU1ZscFctT1dDRWdoQldBZVVMLW9oV1BZTENwQg?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-24T19:42:45Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-24T19:42:45Z",
-   "id": "db7adefc1cce",
-   "score": 5.35
   },
   {
    "title": "Proyecta Gobierno Estatal identidad y orgullo con medalla coleccionable del Maratón 2026",
@@ -25648,29 +26182,6 @@
    "updated": "2026-11-24T19:08:00Z",
    "id": "1bf3c2b33d15",
    "score": 7.75
-  },
-  {
-   "title": "Life expectancy in Cuba falls for first time since 1950 amid economic crisis",
-   "link": "https://www.theguardian.com/world/2026/nov/24/cuba-life-expectancy-decline",
-   "excerpt": "WHO chief says life expectancy has fallen from 78.8 years in 2020 to 74.4 in 2025, figures that predate US fuel blockade Life expectancy has fallen for the first time in Cuba since 1950 as the island reels from a severe economic…",
-   "image": "https://i.guim.co.uk/img/media/3b11d19a0b33be33833eb4b1d5b03400462e0fcb/799_0_4001_3200/master/4001.jpg?width=140&quality=85&auto=format&fit=max&s=b2a835ed36b4131c0a7af3d9f5794987",
-   "published": "2026-11-24T19:07:26Z",
-   "source": "Guardian",
-   "source_name": "The Guardian World",
-   "kind": "news",
-   "mirror": false,
-   "weight": 3.5,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "uk",
-   "tags": [
-    "mundo"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-24T19:07:26Z",
-   "id": "6f6874e5642c",
-   "score": 6.75
   },
   {
    "title": "¡Inés Gómez Mont queda libre en Estados Unidos! Paga fianza tras casi cuatro semanas detenida y evita deportación inmediata a México",
@@ -25926,6 +26437,29 @@
    "score": 4.75
   },
   {
+   "title": "Sheinbaum explicó porqué pidió prestados pandas a China",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRnd3b1pmVHJzYUZUZG53X3dpbXRhOWRtWHdSYjRPZkx3RF9yRWpYVW1RczNZUXVYWFl6V3ZBNzQwel9oVmxEZXBpVnAzaUR2Z001ZUZ1TmFtRU5RZzI2TTI1Z3piT0tFS2dwakhHeWMxS0NsaWJIeGctV0hwQk0wQzFjemZZVVdsVDFRSUZvSEYtc2NKRS0xWGZBdzlHOHdqVDJEaVlB?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-24T17:25:38Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "politica"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-24T17:25:38Z",
+   "id": "e1ba08c7b810",
+   "score": 6.0
+  },
+  {
    "title": "El papa Francisco revela en su diario que vio al diablo 3 veces, así como \"las puertas del infierno\"",
    "link": "https://www.bbc.com/mundo/articles/cm5y1p3e5knvo?at_medium=RSS&at_campaign=rss",
    "excerpt": "Según extractos publicados del diario del difunto pontífice, una de las visiones tuvo lugar \"en el coro\" durante la misa.",
@@ -25947,6 +26481,52 @@
    "updated": "2026-11-24T17:21:17Z",
    "id": "2fb4fdaff4bd",
    "score": 7.95
+  },
+  {
+   "title": "Jennifer Chiang debuta con nocaut técnico a los 36 segundos",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOV3V4YnlpNEJJUkJzMk5GTkwydFVUX1hjRDVCdVhBaEM4TUM1SzlNOGhVVFZLTkd1V3VnMXdSbEEzNm5ZdHRNOHVxekN2SUhZbGFkSzRHYU5XRFVJRW9iaUhuUVJTN0lldGdpZHViN1ZXaV8wMTdFRWxBSzBjWTVhVzh0QjRJS0FOUnhvdlY1LUpxN0I5eTMyTGt4Rm9QbWlLX1lsYU1IYkVncVRJMlVnYktB0gHMAUFVX3lxTE5BRExmYmk3WEQtNTNfYk5WWXR4SjNDdndjbG9KUEZZaFU4enVnVHd5Z2xMcnJEUjdZZzBNMlhfMnctSG9mM2MwaHZoU2szU25WWE5XQXhGNTNNRWc1cXZhaVFrenI1bDJDbDhTTmhrV21rcGNOcDVaUFNTRE5ydHVmV3hUeFVFeTg3Mzc1SjdNRjJ1V2RKeDBCOG5oUlB0RGNIOVlOdXlhOWpqV1AyV1cwLW9aaVREQmRrU1VvN1NOY2ZNYkVMcUJDUmVYUw?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-24T17:15:57Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-24T17:15:57Z",
+   "id": "5ca5cde9828b",
+   "score": 5.35
+  },
+  {
+   "title": "Yeimi Félix domina a Ramsés Álvarez y suma su quinta victoria profesional",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVWRISTYwYTlfdWRIQVNGbVJCRVJuQ1FJMXdMRFB1SVQxYXlzOWlSQ0tSZGFWb1RqUnNfR1Z1eVVCQ0dveW1YemxiZjlvOWJVX1lWWmdidURmSWxLaVhwVFI1NDlTdmJyTzNqOTZqclpuU3lLYUU0SEVhTFlWeU5kejZhaDFTNmF1M2xKSWNJUVRaOG9tVk9GT0ltRVN2RnFRMVFRYllkTHpvdkMyamt2OVlZQ3J6MDgweDZxQ0FhUk9oZFhX0gHfAUFVX3lxTE1VMU5UbV9EeGxVQWJtWHgtN2hzNV9JN3lIcVFJdjBocU1VbVlZQ0xJY1BUek5IbXE1eDJKeFI3bTUzUHdPWUozUm1CTVh4NFVsR19seExRR0ZUSW9FRUgxeEJpWlJoZDIxVENYU0JsaUt6akpnWGp6aFBCM3VVOUV4VGt3dmZnb3NOSHRib2huUjdPYldZbVE5bTAxRUdFYkhLQjduMm1faUo2OFN5bVpEN1l1Sk1IekxOZmN2VG54NzJwanBKdEQ0Wnhua0FVdVFlcF9TQzlSZXVJd28tclk?oc=5",
+   "excerpt": "Publicado por El Imparcial.",
+   "image": "",
+   "published": "2026-11-24T17:10:41Z",
+   "source": "Imparcial",
+   "source_name": "El Imparcial",
+   "kind": "news",
+   "mirror": true,
+   "weight": 3.0,
+   "lang": "es",
+   "region": "mx",
+   "region_fuente": "mx",
+   "tags": [
+    "industria"
+   ],
+   "via": "El Imparcial",
+   "also": [],
+   "updated": "2026-11-24T17:10:41Z",
+   "id": "a0f2e87f8e6c",
+   "score": 5.35
   },
   {
    "title": "Trump indultará a los pavos Freedom y Feathers en la Casa Blanca por el Día de Acción de Gracias - AP News",
@@ -27223,29 +27803,6 @@
    "score": 6.65
   },
   {
-   "title": "The Return of Jensen Huang",
-   "link": "https://www.nytimes.com/2026/11/23/world/jensen-huang-return-nvidia-ukraine.html",
-   "excerpt": "The Nvidia C.E.O. is back, President Trump is celebrating and markets are rallying.",
-   "image": "https://static01.nyt.com/images/2026/11/24/multimedia/24int-theworld-nl-top-fkgc/24int-theworld-nl-top-fkgc-mediumSquareAt3X.jpg",
-   "published": "2026-11-24T05:44:38Z",
-   "source": "NYT",
-   "source_name": "NYT World",
-   "kind": "news",
-   "mirror": false,
-   "weight": 4.0,
-   "lang": "en",
-   "region": "mundo",
-   "region_fuente": "us",
-   "tags": [
-    "mundo"
-   ],
-   "via": "",
-   "also": [],
-   "updated": "2026-11-24T05:44:38Z",
-   "id": "a02a23de0a06",
-   "score": 6.7
-  },
-  {
    "title": "Corea del Sur dice que varios aviones rusos ingresaron en su zona de defensa aérea - AP News",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZ0F1MjZsWXNsT1hSczNYZnN0MHdraFdFME4zMl9pa1lVbnhBQmtUOFp4QTJuQTZhVWJDUEFGTzY3ak1Nb2lwWmNab29LR25YTDdrbWthakRVWVE4b1hnNlhPWm5rUVVYZmN5MlNhd2VfU0pUWTRtU2Z2aFZfUmNQRnI0VWpabk0ydFVJX0xOOVNCT2tRNDBZSFUzNkpRU0w4TW9ERw?oc=5",
    "excerpt": "Corea del Sur dice que varios aviones rusos ingresaron en su zona de defensa aérea AP News",
@@ -27520,29 +28077,6 @@
    "updated": "2026-11-24T01:14:00Z",
    "id": "e93204fd9988",
    "score": 4.25
-  },
-  {
-   "title": "Chargers cumplen once meses sin ganar en casa",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOV215ZnhVQkxud2x6ME5NNUZLeHIybEt1MXF4N28zTjdIUEVwdUJYT2hOSlNnbkFSSkZGVWdmc0dNRkJrNndIOU80MWp3aXdUS2RGQTBWcVRJZmZTOUdCUGxBMFctWHFKa09kU1VGVmJhTFJiVm1CS3Vka3k5c20zZm5iTUVDT0ZJcjY2MVNLWXpKRktkeVU00gGyAUFVX3lxTE1US05tQjQ5a0dobjdfdWNrRGpyWW5FY3dZMlFjbUhneEdDQkRrMk5ONkh2VTJ5cWc5WTIyLWdkd3JlT1hSTFhCTWpCTF9OOGdyV1IwSWdLeVpkRGduNXNtV2o1dm9WQjdtajZUR0R2VEZzT0l4ZktWRDhsOEdYWTk0M0FQY1FDdUJndVdfN1dsOUhPUGFybGFRdUFqYldtbXJsVDBLb194cHV2NDFUVGt6OGc?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-24T00:31:56Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "industria"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-24T00:31:56Z",
-   "id": "f4140c0de754",
-   "score": 4.85
   },
   {
    "title": "Subasta del Batimóvil de “Batman Returns” no alcanza el precio mínimo establecido por el vendedor - AP News",
@@ -28256,29 +28790,6 @@
    "updated": "2026-11-23T20:06:00Z",
    "id": "7999595387b2",
    "score": 4.7
-  },
-  {
-   "title": "INE perfila mantener fórmula de plurinominales que favoreció a Morena en 2024 y podría permitirle conservar su mayoría en la Cámara de Diputados en 2027",
-   "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPbFpwcmZOQkduSUg5Vmdka3pDbnFqX1Z5anRvOEZyV2hKY0hGN1l2S3FkZl9EQ1hZY1RwemlUeEtiV250T3VkSHA5RERzNGVXMklQUzd0c1ByeUI3bVF0R2VtX0ZrTjV3b2wtUGxNLUhpRldzcloxM0szM0p4YUQ0dl9KZU5nRnN0YmR4TVB5ZTBsR05qUWFrN1R5SXdUNE5uSmlUaVl6b0pIeDBsMTRKUUszQnZRU3NzZmk0cnlSUWRCYUtTSEdiOHpzOGpac2hHc1BhUzB2c3RMUER5X0dqMlBYblBseWtfbEZzSjVPTGhqeklnNTNmZWdqSWFJQ3UzMUR0aERTNHZzTDd2NW9mSmlNbDhJOExIRzRVT1RpYTFheHNpMUHSAcACQVVfeXFMUHFIeWdiVXdpNzNucFhsQUNySlJMZUhjUnQ0a25ka2dmaXFjdzRTNW01QUIwYV9uSFZQaXowYjJSNDZIZTNzd3VYV3psQVhoaGpJRm5JSmluQlhYUi0wM3RnNi1LUFZHekktRDBPSUNYMzQwdml4MmZwc0VfeFZUZ0tqbkxmV0xWTjl4emxJRHR6dnZaaElpNkZxaHU5YU1RZHJvemhmcEdTbldDV2JzWXpiSkctQlZ1SFhUYlFNWkNUUWRzRmY1V3E2V19CZHhmbEIwRTFkZ1J1akx6akhuejFFLW5XUUMtbUxVdXFZY2twVG00Z01fcHhrRDhFdTV4akpmT3pBU00zUHMtT0xGWm1xSHNwQ1p2bXFvUlJySGNSQ2pLUGMzbklFX19wbkxLUVc3Y01jMHlQdGZ4RHItbG8?oc=5",
-   "excerpt": "Publicado por El Imparcial.",
-   "image": "",
-   "published": "2026-11-23T20:05:43Z",
-   "source": "Imparcial",
-   "source_name": "El Imparcial",
-   "kind": "news",
-   "mirror": true,
-   "weight": 3.0,
-   "lang": "es",
-   "region": "mx",
-   "region_fuente": "mx",
-   "tags": [
-    "politica"
-   ],
-   "via": "El Imparcial",
-   "also": [],
-   "updated": "2026-11-23T20:05:43Z",
-   "id": "f9f444a5ca00",
-   "score": 5.35
   }
  ]
 }

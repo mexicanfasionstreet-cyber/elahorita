@@ -156,6 +156,11 @@
    "hora": "12:01",
    "tipo": "token_youtube",
    "texto": "vencido"
+  },
+  {
+   "hora": "12:06",
+   "tipo": "franja_fallida",
+   "texto": "manana"
   }
  ]
 }

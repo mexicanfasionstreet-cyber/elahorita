@@ -1,21 +1,20 @@
-2026-11-25 12:01 Tijuana · franja pendiente: manana
+2026-11-25 12:05 Tijuana · franja pendiente: manana
 sin novedades
 corriendo la franja manana
   $ --days 2
-  (21.7 s)
+  (20.0 s)
 radar · 42 fuentes · ventana 2 dias
-enlaces de Google News resueltos: 61
-  ! SDP: HTTPError: HTTP Error 429: Too Many Requests
+enlaces de Google News resueltos: 96
 
-1220 noticias · 41/42 fuentes · 1 errores
+1241 noticias · 42/42 fuentes · 0 errores
 datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
-archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+549 nuevas, 15721 en 30 dias)
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+34 nuevas, 15755 en 30 dias)
 
-  secciones revisadas con IA: 10 cambio(s)
-  233 historias desde 25 05:00
-    92.2 peso  24.5 · Claudia Sheinbaum confirma que Inés Gómez Mont fue deportada a España 
+  secciones revisadas con IA: 12 cambio(s)
+  235 historias desde 25 05:00
+    92.1 peso  23.0 · Sheinbaum afirma que cuentas de Rocha Moya nunca se descongelaron tras
+    84.7 peso  16.5 · México conserva el trato preferente con Estados Unidos y se libra de l
     76.8 peso  12.0 · Ejército de EE. UU. detona más de cuatro toneladas de explosivos de pl
     73.6 peso   8.0 · Cecilia Ramírez Montoya recibe escoltas tras violencia en Guasave
-    72.1 peso   9.5 · El zoológico de León, en Guanajuato, cierra indefinidamente por un bro
   YouTube: token vencido; no se arma el video
 sin novedades

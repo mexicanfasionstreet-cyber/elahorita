@@ -1,30 +1,38 @@
 {
- "pendientes": {
-  "n1": {
-   "titulo": "Hay un Frida Kahlo que no se vende (todavía): México paraliza una subasta en Christie’s",
-   "link": "https://elpais.com/mexico/2026-11-18/hay-un-frida-kahlo-que-no-se-vende-todavia-mexico-paraliza-una-subasta-en-christies.html",
-   "seccion": "politica",
-   "score": 97.6,
-   "medios": 8,
-   "imagen": true
-  },
-  "n2": {
-   "titulo": "El presidente del consejo de Nvidia asegura que la junta no tiene intención de restituir a Jensen Huang como CEO",
-   "link": "https://elpais.com/us/economia/2026-11-17/jensen-huang-dice-que-esta-dispuesto-a-regresar-como-consejero-delegado-de-nvidia.html",
-   "seccion": "politica",
-   "score": 85.7,
-   "medios": 6,
-   "imagen": true
-  },
-  "n3": {
-   "titulo": "Directo Latam y el viaje de Sheinbaum a China para la cumbre de la APEC",
-   "link": "https://www.france24.com/es/video/20261117-directo-latam-y-el-viaje-de-sheinbaum-a-china-para-la-cumbre-de-la-apec",
-   "seccion": "mundo",
-   "score": 80.4,
-   "medios": 5,
-   "imagen": true
-  }
- },
  "offset": 135201056,
- "elegidas": []
+ "elegidas": [],
+ "lotes": {
+  "11250501": {
+   "n1": {
+    "titulo": "Cómo el asesinato de las hermanas Mirabal en República Dominicana dio origen al Día Internacional de la Eliminación de la Violencia contra la Mujer",
+    "link": "https://www.bbc.com/mundo/articles/c94gn8rvjg6xo?at_medium=RSS&at_campaign=rss",
+    "score": 75.7,
+    "medios": 3,
+    "peso": 13.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": "sexual_menores"
+   },
+   "n2": {
+    "titulo": "Inés Gómez Mont abandona Estados Unidos y diluye los planes de México para desentrañar el negocio de las factureras",
+    "link": "https://elpais.com/mexico/2026-11-25/ines-gomez-mont-abandona-estados-unidos-y-diluye-los-planes-de-mexico-para-desentranar-el-negocio-de-las-factureras.html",
+    "score": 73.0,
+    "medios": 3,
+    "peso": 11.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   },
+   "n3": {
+    "titulo": "‘Russia wants more than Ukraine,’ Germany’s Merz warns – Europe live",
+    "link": "https://www.theguardian.com/world/live/2026/nov/25/ukraine-russia-energy-strikes-mark-rutte-donald-trump-friedrich-merz-germany-latest-news-updates",
+    "score": 71.9,
+    "medios": 2,
+    "peso": 8.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   }
+  }
+ }
 }

@@ -34,5 +34,66 @@
  },
  "resumen": "2026-11-24",
  "comandos": 2,
- "intentos": {}
+ "intentos": {},
+ "pendiente": {
+  "clave": "2026-11-25-madrugada",
+  "nombre": "madrugada",
+  "lote": "11250501",
+  "motivo": "sensible",
+  "publica_a": "2026-11-25T05:30:52-08:00",
+  "opciones": [
+   {
+    "titulo": "Cómo el asesinato de las hermanas Mirabal en República Dominicana dio origen al Día Internacional de la Eliminación de la Violencia contra la Mujer",
+    "link": "https://www.bbc.com/mundo/articles/c94gn8rvjg6xo?at_medium=RSS&at_campaign=rss",
+    "score": 75.7,
+    "medios": 3,
+    "peso": 13.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": "sexual_menores"
+   },
+   {
+    "titulo": "Inés Gómez Mont abandona Estados Unidos y diluye los planes de México para desentrañar el negocio de las factureras",
+    "link": "https://elpais.com/mexico/2026-11-25/ines-gomez-mont-abandona-estados-unidos-y-diluye-los-planes-de-mexico-para-desentranar-el-negocio-de-las-factureras.html",
+    "score": 73.0,
+    "medios": 3,
+    "peso": 11.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   },
+   {
+    "titulo": "‘Russia wants more than Ukraine,’ Germany’s Merz warns – Europe live",
+    "link": "https://www.theguardian.com/world/live/2026/nov/25/ukraine-russia-energy-strikes-mark-rutte-donald-trump-friedrich-merz-germany-latest-news-updates",
+    "score": 71.9,
+    "medios": 2,
+    "peso": 8.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   }
+  ],
+  "sin_respuesta": [
+   {
+    "titulo": "Inés Gómez Mont abandona Estados Unidos y diluye los planes de México para desentrañar el negocio de las factureras",
+    "link": "https://elpais.com/mexico/2026-11-25/ines-gomez-mont-abandona-estados-unidos-y-diluye-los-planes-de-mexico-para-desentranar-el-negocio-de-las-factureras.html",
+    "score": 73.0,
+    "medios": 3,
+    "peso": 11.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   },
+   {
+    "titulo": "‘Russia wants more than Ukraine,’ Germany’s Merz warns – Europe live",
+    "link": "https://www.theguardian.com/world/live/2026/nov/25/ukraine-russia-energy-strikes-mark-rutte-donald-trump-friedrich-merz-germany-latest-news-updates",
+    "score": 71.9,
+    "medios": 2,
+    "peso": 8.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   }
+  ]
+ }
 }

@@ -1,16 +1,4 @@
 {
- "2026-11-18": [
-  {
-   "hora": "13:42",
-   "tipo": "nota_video",
-   "texto": "hackeo nvidia y banco japonés"
-  },
-  {
-   "hora": "17:18",
-   "tipo": "nota_video",
-   "texto": "Putin en APEC 2026"
-  }
- ],
  "2026-11-19": [
   {
    "hora": "08:58",
@@ -136,6 +124,18 @@
    "hora": "20:08",
    "tipo": "franja_fallida",
    "texto": "noche"
+  }
+ ],
+ "2026-11-25": [
+  {
+   "hora": "05:31",
+   "tipo": "voz_respaldo",
+   "texto": "<urlopen error timed out>"
+  },
+  {
+   "hora": "05:33",
+   "tipo": "youtube",
+   "texto": "lcache/Python/3.12.16/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 400: Bad Request\n"
   }
  ]
 }

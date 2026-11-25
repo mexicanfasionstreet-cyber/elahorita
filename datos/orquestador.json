@@ -34,7 +34,9 @@
  },
  "resumen": "2026-11-24",
  "comandos": 2,
- "intentos": {},
+ "intentos": {
+  "2026-11-25-madrugada": 1
+ },
  "pendiente": {
   "clave": "2026-11-25-madrugada",
   "nombre": "madrugada",

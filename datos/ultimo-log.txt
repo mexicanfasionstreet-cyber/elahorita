@@ -1,4 +1,63 @@
-2026-11-25 05:25 Tijuana · franja pendiente: ninguna
+2026-11-25 05:31 Tijuana · franja pendiente: ninguna
 sin novedades
-  esperando tu eleccion para madrugada hasta 05:30
+  $ --franja madrugada --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-madrugada.json --link https://elpais.com/mexico/2026-11-25/ines-gomez-mont-abandona-estados-unidos-y-diluye-los-planes-de-mexico-para-desentranar-el-negocio-de-las-factureras.html --previo  --link https://www.theguardian.com/world/live/2026/nov/25/ukraine-russia-energy-strikes-mark-rutte-donald-trump-friedrich-merz-germany-latest-news-updates --previo 
+  (13.9 s)
+
+  verificador: respuesta ilegible (Expecting ',' delimiter: line 23 column 8 (char 2541)); se reintenta
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 2 nota(s) · 185 palabras ~ 69 s ---
+
+TITULO YOUTUBE: Inés Gómez Mont sale de EU y frena la investigación de factureras
+GANCHO: México la esperaba para detenerla, pero Estados Unidos la dejó irse.
+
+[JUSTICIA] Inés Gómez Mont ya no está bajo arresto del ICE. La actriz aceptó salir de Estados Unidos de forma voluntaria, aunque no se sabe a qué país se fue. México la esperaba para detenerla por presuntos delitos de delincuencia organizada, blanqueo y evasión fiscal. El ICE la había arrestado el 30 de octubre en Florida porque su permiso migratorio llevaba años vencido. Además, la ficha roja de Interpol que pedía detenerla y extraditarla estaba cancelada desde hacía semanas.
+
+[MUNDO] Polonia quiere que sus aliados de la OTAN consideren derribar drones y misiles rusos sobre territorio ucraniano, antes de que crucen la frontera de la alianza. La discusión volvió después de que tres misiles de crucero rusos entraron al espacio aéreo polaco y cayeron dentro de su territorio el viernes pasado. El canciller Radosław Sikorski dijo que la OTAN debe anticipar las amenazas y no solo responder cuando alguien sale herido. Para él, derribarlos sobre Ucrania, a petición de Ucrania, entra en la definición de legítima defensa.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Inés Gómez Mont abandona Estados Unidos y diluye los planes de México  (3 medios)
+  fuente: ‘Russia wants more than Ukraine,’ Germany’s Merz warns – Europe live (2 medios)
+  foto nota 1: Inés Gómez Mont -> El Hormiguero Mx (CC BY 3.0), Wikimedia Commons
+  foto2 nota 1: sin foto libre para 'Interpol'
+  foto nota 2: Radosław Sikorski -> Ministry of Foreign Affairs of Poland (CC BY 3.0 pl), Wikimedia Commons
+  foto2 nota 2: sin foto libre para 'OTAN'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-madrugada.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-madrugada.json
+  (47.1 s)
+guion 2026-11-25-madrugada.json · 185 palabras · proveedor voicebox
+
+  Voicebox no responde (<urlopen error timed out>); se usa la voz de respaldo
+  gancho     4.56 s  [edge-tts]  11 palabras con tiempo  México la esperaba para detenerla, pero Esta…
+  nota1     27.41 s  [edge-tts]  76 palabras con tiempo  Inés Gómez Mont ya no está bajo arresto del …
+  nota2     28.73 s  [edge-tts]  87 palabras con tiempo  Polonia quiere que sus aliados de la OTAN co…
+  cierre     4.13 s  [edge-tts]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 65.94 s (4 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-25-madrugada/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-madrugada.json
+  (96.3 s)
+  diapositiva 00-gancho.png · tomas: principal(4.8)
+  diapositiva 01-nota1.png · tomas: principal(4.1) limpia(4.1) principal(4.1) limpia(4.1) dato(3.0) principal(2.7) limpia(2.7) dato(3.0)
+  diapositiva 02-nota2.png · tomas: principal(4.7) limpia(4.7) dato(3.0) principal(2.8) limpia(2.8) dato(3.0) principal(4.0) limpia(4.0)
+  diapositiva 03-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 8 tomas
+  video nota2: 8 tomas
+  video cierre: 1 tomas
+subtitulos: 175 estados · 989 cuadros · 65.9 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-25-madrugada/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-madrugada.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-madrugada-portada.jpg
+duracion: 65.9 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-madrugada.mp4
+  titulo: Inés Gómez Mont sale de EU y frena la investigación de factureras
+
 sin novedades

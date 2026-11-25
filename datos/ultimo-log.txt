@@ -1,3 +1,34 @@
-2026-11-25 13:10 Tijuana · franja pendiente: ninguna
-sin novedades
-sin novedades
+2026-11-25 13:15 Tijuana · franja pendiente: ninguna
+[
+ {
+  "accion": "nota_manual",
+  "texto": "corta"
+ }
+]
+  nota a mano: corta
+  $ corta
+  (91.7 s)
+l: 2 articulo(s), 269 palabras
+  foto nota 1: Valle de Zaragoza -> MikSed (CC BY 4.0), Wikimedia Commons
+  foto2 nota 1: Chihuahua -> Antonio Meneses L from México (CC BY 2.0), Wikimedia Commons
+
+--- GUION · 179 palabras ~ 66 s · SEGURIDAD · mx ---
+TITULO YOUTUBE: Fiscalía de Chihuahua investiga dos cuerpos hallados en la vía corta a Parral
+GANCHO: Dos personas sin vida en una carretera de Chihuahua y la fiscalía todavía no sabe si hay relación con otros homicidios de la zona.
+
+[SEGURIDAD] La Fiscalía General del Estado de Chihuahua abrió una investigación por el hallazgo de dos personas sin vida en la carretera vía corta Chihuahua-Parral, a la altura del municipio de Valle de Zaragoza. El primer reporte lo atendió la Policía Municipal de Valle de Zaragoza, que avisó a las autoridades estatales; después llegó personal de la Fiscalía a hacer las diligencias y recabar los primeros indicios. El encargado del despacho de la FGE, Gilberto Loya Chávez, dijo que se hacen estudios periciales para establecer las causas de muerte y las condiciones en que fueron localizadas las víctimas. Uno de los objetivos es determinar si estos hechos coinciden con otros homicidios ocurridos en la misma zona y si hay posibles conexiones. Sobre si los cuerpos presentaban impactos de arma de fuego, Loya Chávez prefirió no adelantar información porque esperaba los resultados de los peritajes.
+
+CIERRE: Esto es El Ahorita; seguimos pendientes de lo que confirme la fiscalía.
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-1316-nota.json
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-1316-nota.mp4
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-1316-nota.mp4
+  titulo: Fiscalía de Chihuahua investiga dos cuerpos hallados en la vía corta a Parral
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/5b8IAlXkgQ8
+
+enviado al chat · https://youtube.com/shorts/5b8IAlXkgQ8
+

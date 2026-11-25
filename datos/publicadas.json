@@ -1,55 +1,5 @@
 [
  {
-  "cuando": "2026-11-21T20:03:53-08:00",
-  "origen": "franja-noche",
-  "titulo": "Detenido El Chapo Isidro en un operativo que desata el terror en Sinaloa",
-  "link": "https://elpais.com/mexico/2026-11-21/detenido-el-chapo-isidro-en-un-operativo-que-desata-el-terror-en-sinaloa.html",
-  "entidades": [
-   "chapo",
-   "detenido",
-   "isidro",
-   "sinaloa"
-  ],
-  "video": "https://youtube.com/shorts/wT0Kl20IvpQ"
- },
- {
-  "cuando": "2026-11-21T20:03:53-08:00",
-  "origen": "franja-noche",
-  "titulo": "Trump confirma que el FBI sufrió un ciberataque a su base de datos",
-  "link": "https://lopezdoriga.com/internacional/trump-confirma-que-el-fbi-sufrio-un-ciberataque-a-su-base-de-datos/",
-  "entidades": [
-   "fbi",
-   "trump"
-  ],
-  "video": "https://youtube.com/shorts/wT0Kl20IvpQ"
- },
- {
-  "cuando": "2026-11-22T05:03:10-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "Asesinan en Puebla a hombre identificado como sobrino de Caro Quintero",
-  "link": "https://www.jornada.com.mx/2026/11/22/estados/025n1est",
-  "entidades": [
-   "asesinan",
-   "caro",
-   "puebla",
-   "quintero"
-  ],
-  "video": "https://youtube.com/shorts/-v1u1us_Xhs"
- },
- {
-  "cuando": "2026-11-22T12:03:24-08:00",
-  "origen": "franja-manana",
-  "titulo": "Asesinan en Puebla a hombre identificado como sobrino de Caro Quintero",
-  "link": "https://www.jornada.com.mx/2026/11/22/estados/025n1est",
-  "entidades": [
-   "asesinan",
-   "caro",
-   "puebla",
-   "quintero"
-  ],
-  "video": "https://youtube.com/shorts/1VxNgerjhgo"
- },
- {
   "cuando": "2026-11-22T15:03:40-08:00",
   "origen": "franja-tarde",
   "titulo": "Arresta ICE a dos mexicanos al abordar vuelo en Seattle",
@@ -273,5 +223,19 @@
    "santander"
   ],
   "video": "https://youtube.com/shorts/TIzFWKCiey4"
+ },
+ {
+  "cuando": "2026-11-25T13:17:25-08:00",
+  "origen": "nota",
+  "titulo": "Despiden en redes a joven hallado sin vida en la Vía Corta Parral - Chihuahua",
+  "link": "https://www.nmas.com.mx/puebla/seguridad/accidentes/choque-auto-barda-derribada-lateral-via-corta-santa-ana-central-abasto-puebla/",
+  "entidades": [
+   "chihuahua",
+   "corta",
+   "despiden",
+   "parral",
+   "via"
+  ],
+  "video": "https://youtube.com/shorts/5b8IAlXkgQ8"
  }
 ]

@@ -1,0 +1,58 @@
+{
+ "origen": "nota_manual",
+ "tema": "corta",
+ "palabras": 179,
+ "segundos_estimados": 66.3,
+ "articulos_leidos": [
+  "https://www.nmas.com.mx/puebla/seguridad/accidentes/choque-auto-barda-derribada-lateral-via-corta-santa-ana-central-abasto-puebla/",
+  "https://alinstantechihuahua.com/2026/11/24/investigan-hallazgo-de-dos-cuerpos-en-la-via-corta-chihuahua-parral-periciales-determinaran-causas-de-muerte/"
+ ],
+ "historias": [
+  {
+   "titulo": "Despiden en redes a joven hallado sin vida en la Vía Corta Parral - Chihuahua",
+   "link": "https://www.nmas.com.mx/puebla/seguridad/accidentes/choque-auto-barda-derribada-lateral-via-corta-santa-ana-central-abasto-puebla/",
+   "seccion": "seguridad",
+   "sensible": "",
+   "medios": 6,
+   "score": 0,
+   "region": "mx",
+   "horas": 5.8,
+   "foto": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Centro_en_Valle_de_Zaragoza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY 4.0",
+    "autor": "MikSed",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Centro_en_Valle_de_Zaragoza.jpg",
+    "credito": "MikSed (CC BY 4.0), Wikimedia Commons",
+    "termino": "Valle de Zaragoza"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Snowy_landscape_at_Lake_Arareco_in_the_Tarahumara_Mountains_%28Chihuahua%2C_Mexico%29.jpg/1280px-Snowy_landscape_at_Lake_Arareco_in_the_Tarahumara_Mountains_%28Chihuahua%2C_Mexico%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 2.0",
+    "autor": "Antonio Meneses L from México",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Snowy_landscape_at_Lake_Arareco_in_the_Tarahumara_Mountains_(Chihuahua,_Mexico).jpg",
+    "credito": "Antonio Meneses L from México (CC BY 2.0), Wikimedia Commons",
+    "termino": "Chihuahua"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Fiscalía de Chihuahua investiga dos cuerpos hallados en la vía corta a Parral",
+  "gancho": "Dos personas sin vida en una carretera de Chihuahua y la fiscalía todavía no sabe si hay relación con otros homicidios de la zona.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "La Fiscalía General del Estado de Chihuahua abrió una investigación por el hallazgo de dos personas sin vida en la carretera vía corta Chihuahua-Parral, a la altura del municipio de Valle de Zaragoza. El primer reporte lo atendió la Policía Municipal de Valle de Zaragoza, que avisó a las autoridades estatales; después llegó personal de la Fiscalía a hacer las diligencias y recabar los primeros indicios. El encargado del despacho de la FGE, Gilberto Loya Chávez, dijo que se hacen estudios periciales para establecer las causas de muerte y las condiciones en que fueron localizadas las víctimas. Uno de los objetivos es determinar si estos hechos coinciden con otros homicidios ocurridos en la misma zona y si hay posibles conexiones. Sobre si los cuerpos presentaban impactos de arma de fuego, Loya Chávez prefirió no adelantar información porque esperaba los resultados de los peritajes.",
+    "pantalla": "Fiscalía investiga hallazgo de dos cuerpos en Chihuahua",
+    "foto": "Valle de Zaragoza",
+    "foto2": "Chihuahua",
+    "datos": [
+     "Dos personas sin vida",
+     "Carretera Chihuahua-Parral",
+     "Peritajes en curso"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita; seguimos pendientes de lo que confirme la fiscalía.",
+  "gancho_pantalla": "DOS CUERPOS EN CARRETERA"
+ }
+}

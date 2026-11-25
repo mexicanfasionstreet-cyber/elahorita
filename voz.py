@@ -1,13 +1,16 @@
 ﻿"""Genera la voz de la capsula: un audio por segmento y el total concatenado.
 
-Hoy usa edge-tts (voces neuronales de Microsoft, gratis). El adaptador para
-Voicebox esta previsto: si VOICEBOX_URL y VOICEBOX_PROFILE_ID estan puestos se
-intenta primero y, si no responde, se cae a edge-tts avisando.
+Proveedores, en orden (el primero que este configurado):
+  1. ElevenLabs (ELEVENLABS_API_KEY + ELEVENLABS_VOICE_ID): voz principal; trae
+     los tiempos por caracter, asi que los subtitulos no necesitan Whisper.
+  2. Voicebox (VOICEBOX_URL + perfil): servidor propio por Tailscale.
+  3. edge-tts: voz de respaldo gratis.
+Si el principal falla, el video entero va con edge-tts y llega un aviso al chat.
 
 Uso:
     python voz.py                       # el guion mas reciente
     python voz.py --guion docs/guiones/2026-11-17-dia.json
-    python voz.py --proveedor voicebox
+    python voz.py --proveedor elevenlabs
 """
 from __future__ import annotations
 
@@ -75,6 +78,76 @@ async def _edge(texto, salida, voz, ritmo):
 
 def con_edge_tts(texto, salida):
     return asyncio.run(_edge(texto, salida, config.VOZ, config.VOZ_RITMO))
+
+
+API_ELEVEN = "https://api.elevenlabs.io/v1/text-to-speech/{voz}/with-timestamps"
+
+
+def _palabras_de_alineacion(al):
+    """Caracteres con tiempo -> palabras {texto, t0, dur} (como edge-tts)."""
+    chars = al.get("characters") or []
+    ini = al.get("character_start_times_seconds") or []
+    fin = al.get("character_end_times_seconds") or []
+    palabras, actual = [], None
+    for c, a, b in zip(chars, ini, fin):
+        if c.isspace():
+            if actual:
+                palabras.append(actual)
+                actual = None
+            continue
+        if actual is None:
+            actual = {"texto": c, "t0": float(a), "t1": float(b)}
+        else:
+            actual["texto"] += c
+            actual["t1"] = float(b)
+    if actual:
+        palabras.append(actual)
+    return [{"texto": p["texto"], "t0": round(p["t0"], 3),
+             "dur": round(max(0.05, p["t1"] - p["t0"]), 3)} for p in palabras]
+
+
+def con_elevenlabs(texto, salida, llamar=None):
+    """Genera el mp3 del segmento y devuelve sus palabras con tiempo.
+
+    Reintenta una vez si ElevenLabs esta saturado (429/5xx). Los errores de
+    cuenta (llave mala, sin creditos, voz que no existe) se dicen tal cual.
+    """
+    import base64
+    import time
+    import urllib.error
+    import urllib.request
+
+    if not (config.ELEVENLABS_KEY and config.ELEVENLABS_VOZ):
+        raise RuntimeError("faltan ELEVENLABS_API_KEY o ELEVENLABS_VOICE_ID")
+    cuerpo = {"text": texto, "model_id": config.ELEVENLABS_MODELO}
+    if abs(config.ELEVENLABS_VELOCIDAD - 1.0) > 1e-6:
+        cuerpo["voice_settings"] = {"speed": config.ELEVENLABS_VELOCIDAD}
+
+    def _llamar_api(cuerpo):
+        url = API_ELEVEN.format(voz=config.ELEVENLABS_VOZ) + "?output_format=mp3_44100_128"
+        req = urllib.request.Request(url, data=json.dumps(cuerpo).encode("utf-8"), method="POST",
+                                     headers={"xi-api-key": config.ELEVENLABS_KEY,
+                                              "Content-Type": "application/json",
+                                              "Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=config.ELEVENLABS_TIMEOUT) as r:
+            return json.loads(r.read().decode("utf-8"))
+
+    llamar = llamar or _llamar_api
+    for intento in (1, 2):
+        try:
+            datos = llamar(cuerpo)
+            break
+        except urllib.error.HTTPError as e:
+            detalle = e.read()[:300].decode("utf-8", "replace")
+            if intento == 1 and (e.code == 429 or e.code >= 500):
+                time.sleep(4)
+                continue
+            raise RuntimeError(f"ElevenLabs {e.code}: {detalle}") from None
+    audio = base64.b64decode(datos.get("audio_base64") or "")
+    if len(audio) < 1000:
+        raise RuntimeError("ElevenLabs devolvio un audio vacio")
+    Path(salida).write_bytes(audio)
+    return _palabras_de_alineacion(datos.get("alignment") or datos.get("normalized_alignment") or {})
 
 
 def _vb_json(ruta, cuerpo=None, timeout=30):
@@ -173,6 +246,19 @@ def generar_voz(guion, proveedor="edge"):
         s["texto"] = re.sub(r"\s+", " ", s["texto"]).strip()
         s["destino"] = voces / f"{i:02d}-{s['id']}.mp3"
 
+    externa = False                     # True: la voz principal hizo todo el video
+    if proveedor == "elevenlabs":
+        try:
+            for s in segs:
+                s["palabras"] = con_elevenlabs(s["texto"], s["destino"])
+                s["voz"] = "elevenlabs"
+            externa = True
+        except Exception as e:  # noqa: BLE001
+            print(f"  ElevenLabs fallo ({e}); se usa la voz de respaldo")
+            _evento("voz_respaldo", e)
+            _avisar("<b>ElevenLabs no respondio</b>; este video va con la voz de respaldo.\n"
+                    f"<pre>{html.escape(str(e)[:400])}</pre>")
+
     usar_voicebox = proveedor == "voicebox"
     if usar_voicebox:
         try:
@@ -207,7 +293,7 @@ def generar_voz(guion, proveedor="edge"):
     for s in segs:
         destino = s.pop("destino")
         limpio = s["texto"]
-        if not usar_voicebox:
+        if not (usar_voicebox or externa):
             s["palabras"] = con_edge_tts(limpio, destino)
             s["voz"] = "edge-tts"
         palabras = s["palabras"]
@@ -231,10 +317,18 @@ def generar_voz(guion, proveedor="edge"):
     return segs, total
 
 
+def proveedor_auto():
+    if config.ELEVENLABS_KEY and config.ELEVENLABS_VOZ:
+        return "elevenlabs"
+    if config.VOICEBOX_URL and config.VOICEBOX_PROFILE:
+        return "voicebox"
+    return "edge"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--guion", default="")
-    ap.add_argument("--proveedor", default="auto", choices=["auto", "edge", "voicebox"])
+    ap.add_argument("--proveedor", default="auto", choices=["auto", "edge", "voicebox", "elevenlabs"])
     args = ap.parse_args()
 
     if args.guion:
@@ -248,8 +342,7 @@ def main():
     guion = guion.get("guion", guion)  # el archivo envuelve el guion con metadatos
     guion["_nombre"] = ruta.stem
     if args.proveedor == "auto":
-        args.proveedor = ("voicebox" if (config.VOICEBOX_URL and config.VOICEBOX_PROFILE)
-                          else "edge")
+        args.proveedor = proveedor_auto()
 
     n_pal = guion.get("palabras") or sum(
         len(s.split()) for s in [guion.get("gancho", "")] +

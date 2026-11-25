@@ -28,7 +28,7 @@ Promesa: lo más importante de México y el mundo, en menos de un minuto.
                     │            tú: /nota <tema o enlace>
         guion con IA + verificador de datos ◄──┘
                     │
-        voz (Voicebox con tu voz / edge-tts de respaldo)
+        voz (ElevenLabs / Voicebox / edge-tts de respaldo)
         + tiempos por palabra con Whisper
                     │
    video 1080×1920: marca, titular, subtítulos karaoke, cierre
@@ -194,13 +194,28 @@ Zonas seguras respetadas: 65 px laterales, 160 arriba, 420 abajo.
 
 ## La voz
 
-Dos proveedores, **con respaldo automático**:
+Tres proveedores, **con respaldo automático**. Se usa el primero que esté configurado:
 
-1. **Voicebox** (tu voz clonada, *Carla-News*) en `http://100.91.104.124:17493`,
-   accesible por Tailscale. El runner se une a tu tailnet con `TS_AUTHKEY`.
-2. **edge-tts** (`es-MX-DaliaNeural`) si Voicebox no responde. Te avisa por el chat.
+1. **ElevenLabs** (API en la nube, no necesita tu PC ni Tailscale) si existe el
+   secret `ELEVENLABS_API_KEY`. Usa el endpoint `with-timestamps`, así que los
+   subtítulos salen sincronizados sin pasar por Whisper.
+2. **Voicebox** (tu voz clonada, *Carla-News*) por Tailscale, si no hay clave de ElevenLabs.
+3. **edge-tts** (`es-MX-DaliaNeural`) si el proveedor elegido falla. Te avisa por el chat.
 
-La máquina de Voicebox tiene que estar prendida a las horas de las franjas.
+Con ElevenLabs el workflow se salta Tailscale y Whisper. Cobra por caracteres:
+un Short de ~120 palabras son ~800 caracteres.
+
+**Probar la voz**: Actions → *El Ahorita* → Run workflow → acción `probar_voz`.
+Te manda una frase de prueba por Telegram con el proveedor activo.
+
+## Token de YouTube (cada ~7 días si está en "Testing")
+
+Si la pantalla de consentimiento de OAuth está en **Testing**, Google vence el
+`refresh_token` a los 7 días y las subidas fallan con `invalid_grant`. Arreglo:
+Google Cloud Console → *Pantalla de consentimiento de OAuth* → **Publicar app**
+(*In production*), luego `python herramientas/token-youtube.py` y actualizar el
+secret `YT_REFRESH_TOKEN`. El robot ahora avisa una vez al día si el token murió,
+en lugar de gastar voz y fallar la franja.
 
 ---
 
@@ -351,7 +366,9 @@ Todo va en `.env` (local) y en los secretos del repo. Nunca al código.
 | `TELEGRAM_BOT_TOKEN` | secret | mesa de edición |
 | `TELEGRAM_CHAT_ID` | secret | tu chat (el único autorizado) |
 | `YT_CLIENT_ID` / `YT_CLIENT_SECRET` / `YT_REFRESH_TOKEN` | secrets | subir a YouTube |
-| `TS_AUTHKEY` | secret | entrar al tailnet y hablar con Voicebox |
+| `ELEVENLABS_API_KEY` | secret | voz por API de ElevenLabs |
+| `ELEVENLABS_VOICE_ID` | variable o secret | la voz a usar (opcional: `ELEVENLABS_MODEL`, `ELEVENLABS_SPEED`) |
+| `TS_AUTHKEY` | secret | solo si usas Voicebox: entrar al tailnet |
 | `YT_PRIVACIDAD` | variable | `private` mientras se prueba, `public` para publicar |
 | `VOICEBOX_URL` / `VOICEBOX_PROFILE` | variables | tu voz clonada |
 

@@ -109,6 +109,31 @@ def correr(comando, avisar=True):
     return False
 
 
+def youtube_listo():
+    """Revisa el permiso de YouTube ANTES de gastar en guion y voz.
+
+    Si Google ya no acepta el token, no tiene caso armar el video: se avisa
+    (una vez al dia) y la franja queda para cuando se renueve.
+    """
+    if not (config.YT_CLIENT_ID and config.YT_CLIENT_SECRET and config.YT_REFRESH):
+        return True
+    try:
+        import publicar
+        publicar.token_de_acceso()
+        return True
+    except Exception as e:  # noqa: BLE001
+        import publicar
+        if not isinstance(e, publicar.TokenVencido):
+            return True                      # red u otra cosa: que lo intente normal
+        hoy = config.ahora()
+        if not any(ev.get("tipo") == "token_youtube" for ev in franjas.eventos_de(hoy)):
+            franjas.registrar_evento("token_youtube", "vencido")
+            bot.mandar("<b>YouTube: el permiso del robot vencio</b>\n" + html.escape(str(e), quote=False)
+                       + "\nMientras tanto no armo videos para no gastar creditos de voz.")
+        print("  YouTube: token vencido; no se arma el video")
+        return False
+
+
 def subir_a_youtube(video, guion_path):
     """Sube el video al canal si hay credenciales. Devuelve el enlace o None.
 
@@ -142,6 +167,8 @@ def armar_video(links=(), previos=(), nombre="elegida", pie="El Ahorita",
 
     Devuelve True si el video quedo hecho (y subido, salvo en prueba).
     """
+    if not prueba and not youtube_listo():
+        return False
     links = [lk for lk in links if lk]
     # sin enlace, guion.py entra en modo automatico y publicaria otra historia
     if not links:
@@ -242,7 +269,14 @@ def atender_telegram(estado):
     Devuelve True si armo (o intento armar) algun video: entonces esa pasada no
     corre ademas la franja.
     """
-    decisiones = bot.recoger_todas(texto_libre=True)
+    try:
+        decisiones = bot.recoger_todas(texto_libre=True)
+    except BaseException as e:  # noqa: BLE001  (_llamar usa SystemExit)
+        if isinstance(e, KeyboardInterrupt):
+            raise
+        # Telegram caido (502, red): no se tumba la corrida; se lee en la siguiente
+        print(f"  Telegram no respondio al leer el chat ({e}); sigo sin ordenes nuevas")
+        return False
     if decisiones:
         guardar_offset()
     hubo = False

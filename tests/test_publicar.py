@@ -42,3 +42,19 @@ def test_declara_contenido_sintetico_y_respeta_privacidad(tmp_path, monkeypatch)
     assert publicar.subir(video, "t", "d", "private") == "abc"
     status = enviado["meta"]["status"]
     assert status["containsSyntheticMedia"] is True and status["privacyStatus"] == "private"
+
+
+def test_invalid_grant_dice_que_hacer(monkeypatch):
+    import io
+    import urllib.error
+    import pytest
+    monkeypatch.setattr(publicar.config, "YT_CLIENT_ID", "id")
+    monkeypatch.setattr(publicar.config, "YT_CLIENT_SECRET", "s")
+    monkeypatch.setattr(publicar.config, "YT_REFRESH", "r")
+
+    def falla(req, timeout=60):
+        raise urllib.error.HTTPError("u", 400, "Bad Request", {},
+                                     io.BytesIO(b'{"error":"invalid_grant","error_description":"Token has been expired or revoked."}'))
+    monkeypatch.setattr(publicar.urllib.request, "urlopen", falla)
+    with pytest.raises(publicar.TokenVencido, match="In production"):
+        publicar.token_de_acceso()

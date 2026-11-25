@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -33,6 +34,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont  # noqa: E402
 BUILD = RAIZ / "build"
 SALIDA = RAIZ / "docs" / "videos"
 MUSICA = RAIZ / "musica" / "fondo.mp3"
+VOL_MUSICA = float(os.getenv("VOL_MUSICA", "0.22"))   # antes del sidechain; baja sola al hablar
 
 ANCHO, ALTO = 1080, 1920
 FPS = 30
@@ -615,12 +617,20 @@ def construir(args):
     filtros.append(f"[{capa}][barra]overlay=x='-w+w*t/{max(dur_mudo, 0.1):.3f}':y=0"
                    f":eof_action=pass[v]")
     mapas = ["-map", "[v]"]
+    # la voz se nivela a un volumen de Shorts (-14 LUFS) y la musica se baja sola
+    # cuando habla (sidechain): asi la voz no se pierde, sea cual sea el proveedor
+    nivelar = "loudnorm=I=-14:TP=-1.5:LRA=7"
     if idx_musica is not None:
-        filtros.append(f"[{idx_musica}:a]volume=0.16,afade=t=in:st=0:d=0.6[m]")
-        filtros.append("[1:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]")
+        filtros.append(f"[1:a]{nivelar},asplit=2[vz][vsc]")
+        filtros.append(f"[{idx_musica}:a]volume={VOL_MUSICA},afade=t=in:st=0:d=0.6[m]")
+        filtros.append("[m][vsc]sidechaincompress=threshold=0.02:ratio=10:attack=15"
+                       ":release=350[md]")
+        filtros.append("[vz][md]amix=inputs=2:duration=first:dropout_transition=0"
+                       ":normalize=0[a]")
         mapas += ["-map", "[a]"]
     else:
-        mapas += ["-map", "1:a"]
+        filtros.append(f"[1:a]{nivelar}[a]")
+        mapas += ["-map", "[a]"]
 
     orden = ["ffmpeg", "-y", "-v", "error", *entradas]
     if filtros:

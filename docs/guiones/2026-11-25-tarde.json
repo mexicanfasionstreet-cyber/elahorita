@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 173,
+ "segundos_estimados": 64.1,
+ "historias": [
+  {
+   "titulo": "México propone a China rastrear precursores químicos y reforzar controles aduaneros",
+   "link": "https://lopezdoriga.com/internacional/mexico-propone-a-china-rastrear-precursores-quimicos-y-reforzar-controles-aduaneros/",
+   "seccion": "politica",
+   "medios": 3,
+   "score": 76.0,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Mexico_City_%282018%29_-_271.jpg/1280px-Mexico_City_%282018%29_-_271.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Another Believer",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mexico_City_(2018)_-_271.jpg",
+    "credito": "Another Believer (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Secretaría de Relaciones Exteriores (México)"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Skyline_of_Beijing_CBD_with_B-5906_approaching_%2820211016171955%29_%281%29.jpg/1280px-Skyline_of_Beijing_CBD_with_B-5906_approaching_%2820211016171955%29_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 4.0",
+    "autor": "N509FZ",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Skyline_of_Beijing_CBD_with_B-5906_approaching_(20211016171955)_(1).jpg",
+    "credito": "N509FZ (CC BY 4.0), Wikimedia Commons",
+    "termino": "Pekín"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "México pide a China frenar precursores de fentanilo",
+  "gancho": "México llevó a Pekín una lista de cuatro prioridades para que los químicos del fentanilo no se sigan colando por la puerta legal.",
+  "notas": [
+   {
+    "kicker": "POLÍTICA",
+    "texto": "México propuso a China reforzar el seguimiento aduanero de los precursores químicos, esas sustancias que se usan para fabricar fentanilo, y también investigar laboratorios clandestinos. La propuesta se presentó en la tercera reunión del Grupo de Trabajo México-China sobre Precursores Químicos, que se celebró en Pekín, según informó la cancillería mexicana. Son cuatro prioridades: regular estas sustancias, seguir los cargamentos en las aduanas y a lo largo de la cadena de suministro, hacer labores de inteligencia para interceptar envíos ilícitos, y el análisis técnico y forense de laboratorios clandestinos. Por México participaron la Sedena, la Semar, la SSPC, la SRE y la Agencia Nacional de Aduanas; por China, los ministerios de Seguridad Pública y Comercio y la Administración General de Aduanas. Las delegaciones acordaron dar continuidad a los trabajos para combatir el desvío de estas sustancias y cuidar el comercio lícito.",
+    "pantalla": "México propone a China rastrear precursores químicos",
+    "foto": "Secretaría de Relaciones Exteriores (México)",
+    "foto2": "Pekín",
+    "datos": [
+     "Tercera reunión en Pekín",
+     "Cuatro prioridades",
+     "Sustancias para fentanilo"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "MÉXICO Y CHINA FRENTE AL FENTANILO"
+ }
+}

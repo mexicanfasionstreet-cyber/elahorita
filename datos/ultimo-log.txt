@@ -1,19 +1,4 @@
-2026-11-25 05:00 Tijuana · franja pendiente: madrugada
+2026-11-25 05:05 Tijuana · franja pendiente: ninguna
 sin novedades
-corriendo la franja madrugada
-  $ --days 2
-  (18.6 s)
-radar · 42 fuentes · ventana 2 dias
-enlaces de Google News resueltos: 57
-
-1227 noticias · 42/42 fuentes · 0 errores
-datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
-archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+571 nuevas, 15172 en 30 dias)
-
-  secciones revisadas con IA: 10 cambio(s)
-  259 historias desde 24 20:00
-    75.7 peso  13.5 · Cómo el asesinato de las hermanas Mirabal en República Dominicana dio 
-    73.0 peso  11.5 · Inés Gómez Mont abandona Estados Unidos y diluye los planes de México 
-    71.9 peso   8.5 · ‘Russia wants more than Ukraine,’ Germany’s Merz warns – Europe live
-    71.4 peso   8.5 · Harfuch vuelve a Sinaloa para poner en valor los golpes al narco
-  tema sensible (sexual_menores): se pregunta
+  esperando tu eleccion para madrugada hasta 05:30
+sin novedades

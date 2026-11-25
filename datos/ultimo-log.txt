@@ -1,3 +1,2 @@
-2026-11-25 10:47 Tijuana · franja pendiente: ninguna
-sin novedades
-sin novedades
+2026-11-25 10:50 Tijuana · franja pendiente: ninguna
+Telegram respondio 502: {"ok":false,"error_code":502,"description":"Bad Gateway"}

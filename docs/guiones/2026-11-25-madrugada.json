@@ -1,7 +1,7 @@
 {
  "origen": "ia",
- "palabras": 185,
- "segundos_estimados": 68.5,
+ "palabras": 183,
+ "segundos_estimados": 67.8,
  "historias": [
   {
    "titulo": "Inés Gómez Mont abandona Estados Unidos y diluye los planes de México para desentrañar el negocio de las factureras",
@@ -25,7 +25,7 @@
    "link": "https://www.theguardian.com/world/live/2026/nov/25/ukraine-russia-energy-strikes-mark-rutte-donald-trump-friedrich-merz-germany-latest-news-updates",
    "seccion": "mundo",
    "medios": 2,
-   "score": 71.4,
+   "score": 71.3,
    "sensible": "",
    "foto": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Min._Rados%C5%82aw_Sikorski_2024_%283x4_cropped%29.jpg/1280px-Min._Rados%C5%82aw_Sikorski_2024_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -39,18 +39,18 @@
   }
  ],
  "guion": {
-  "titulo": "Inés Gómez Mont sale de EU y frena la investigación de factureras",
-  "gancho": "México la esperaba para detenerla, pero Estados Unidos la dejó irse.",
+  "titulo": "Inés Gómez Mont sale de EU y frena el caso de las factureras",
+  "gancho": "México la esperaba para detenerla, pero Inés Gómez Mont ya salió de Estados Unidos por su propia voluntad.",
   "gancho_pantalla": "GÓMEZ MONT SALE DE EU",
   "notas": [
    {
     "kicker": "JUSTICIA",
-    "pantalla": "Inés Gómez Mont abandona EU y México pierde su arresto",
-    "texto": "Inés Gómez Mont ya no está bajo arresto del ICE. La actriz aceptó salir de Estados Unidos de forma voluntaria, aunque no se sabe a qué país se fue. México la esperaba para detenerla por presuntos delitos de delincuencia organizada, blanqueo y evasión fiscal. El ICE la había arrestado el 30 de octubre en Florida porque su permiso migratorio llevaba años vencido. Además, la ficha roja de Interpol que pedía detenerla y extraditarla estaba cancelada desde hacía semanas.",
+    "pantalla": "Inés Gómez Mont abandona EU de forma voluntaria",
+    "texto": "Inés Gómez Mont ya no está bajo arresto del ICE. La actriz aceptó salir de Estados Unidos de forma voluntaria, aunque no se ha precisado a dónde. México esperaba que Washington la deportara para detenerla de este lado de la frontera por los presuntos delitos de delincuencia organizada, blanqueo y evasión fiscal. El ICE la detuvo el 30 de octubre en Florida por irregularidades en su estancia migratoria.",
     "foto": "Inés Gómez Mont",
     "foto2": "Interpol",
     "datos": [
-     "Arrestada el 30 de octubre en Florida",
+     "Detenida el 30 de octubre",
      "Ficha roja de Interpol cancelada",
      "Prófuga desde hace cinco años"
     ]
@@ -58,11 +58,12 @@
    {
     "kicker": "MUNDO",
     "pantalla": "Polonia pide a la OTAN derribar misiles sobre Ucrania",
-    "texto": "Polonia quiere que sus aliados de la OTAN consideren derribar drones y misiles rusos sobre territorio ucraniano, antes de que crucen la frontera de la alianza. La discusión volvió después de que tres misiles de crucero rusos entraron al espacio aéreo polaco y cayeron dentro de su territorio el viernes pasado. El canciller Radosław Sikorski dijo que la OTAN debe anticipar las amenazas y no solo responder cuando alguien sale herido. Para él, derribarlos sobre Ucrania, a petición de Ucrania, entra en la definición de legítima defensa.",
+    "texto": "Polonia quiere que sus aliados de la OTAN consideren derribar drones y misiles rusos sobre territorio ucraniano, incluso antes de que crucen la frontera de la alianza. La discusión volvió después de que tres misiles de crucero rusos entraron al espacio aéreo polaco y cayeron dentro de su territorio el viernes pasado. El canciller Radosław Sikorski dijo que la OTAN debe anticipar las amenazas y no solo responder cuando alguien sale herido. Para él, derribarlos sobre Ucrania, a petición de Ucrania, entra en la definición de legítima defensa.",
     "foto": "Radosław Sikorski",
     "foto2": "OTAN",
     "datos": [
      "Tres misiles cayeron en Polonia",
+     "Reunión de cancilleres en Bruselas",
      "Sikorski pide anticipar amenazas"
     ]
    }

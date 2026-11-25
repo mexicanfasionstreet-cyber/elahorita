@@ -35,11 +35,27 @@ LINEA_DE_LA_VIDA = ("Si tú o alguien que conoces está pasando por un momento d
                     "a la Línea de la Vida: 800 911 2000 (24 horas, confidencial).")
 
 
+class TokenVencido(RuntimeError):
+    """Google ya no acepta el refresh token: hay que generar otro."""
+
+
+AYUDA_TOKEN = ("El permiso del robot para subir a YouTube vencio (invalid_grant). Si la app de "
+               "Google Cloud sigue en modo 'Testing', el permiso dura solo 7 dias: pasala a "
+               "'In production' y genera un token nuevo con herramientas/token-youtube.py, "
+               "luego actualiza el secret YT_REFRESH_TOKEN.")
+
+
 def _post_form(url, datos):
     cuerpo = urllib.parse.urlencode(datos).encode()
     req = urllib.request.Request(url, data=cuerpo, method="POST")
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        detalle = e.read()[:300].decode("utf-8", "replace")
+        if "invalid_grant" in detalle:
+            raise TokenVencido(AYUDA_TOKEN) from None
+        raise RuntimeError(f"Google respondio {e.code}: {detalle}") from None
 
 
 def token_de_acceso():

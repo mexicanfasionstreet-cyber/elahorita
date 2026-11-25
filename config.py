@@ -47,6 +47,14 @@ YT_REFRESH = os.environ.get("YT_REFRESH_TOKEN", "").strip()
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 
+# ElevenLabs: voz principal. Da los tiempos por caracter junto con el audio, asi
+# que los subtitulos salen exactos sin Whisper.
+ELEVENLABS_KEY = (os.environ.get("ELEVENLABS_API_KEY", "") or os.environ.get("ELEVENLABS_KEY", "")).strip()
+ELEVENLABS_VOZ = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
+ELEVENLABS_MODELO = os.environ.get("ELEVENLABS_MODEL", "").strip() or "eleven_multilingual_v2"
+ELEVENLABS_VELOCIDAD = float(os.environ.get("ELEVENLABS_SPEED", "") or 1.0)   # 0.7 a 1.2
+ELEVENLABS_TIMEOUT = int(os.environ.get("ELEVENLABS_TIMEOUT", "120") or 120)
+
 VOICEBOX_URL = os.environ.get("VOICEBOX_URL", "").rstrip("/")
 VOICEBOX_PROFILE = (os.environ.get("VOICEBOX_PROFILE_ID", "")
                     or os.environ.get("VOICEBOX_PROFILE", "")).strip()

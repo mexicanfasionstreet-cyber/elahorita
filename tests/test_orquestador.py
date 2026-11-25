@@ -226,3 +226,27 @@ def test_telegram_caido_no_tumba_la_corrida_despues_de_subir(tg, monkeypatch, tm
 def test_el_flujo_toma_la_punta_de_la_rama():
     flujo = (orq.RAIZ / ".github" / "workflows" / "ahorita.yml").read_text(encoding="utf-8")
     assert "ref: ${{ github.ref_name }}" in flujo
+
+
+# ------------------------------------------------------------------ permiso de YouTube
+def test_token_vencido_no_gasta_voz_y_avisa_una_vez(tg, monkeypatch):
+    import publicar
+    monkeypatch.setattr(orq.config, "YT_CLIENT_ID", "id")
+    monkeypatch.setattr(orq.config, "YT_CLIENT_SECRET", "s")
+    monkeypatch.setattr(orq.config, "YT_REFRESH", "r")
+
+    def vencido():
+        raise publicar.TokenVencido(publicar.AYUDA_TOKEN)
+    monkeypatch.setattr(publicar, "token_de_acceso", vencido)
+    monkeypatch.setattr(orq, "correr", lambda *a, **k: pytest.fail("no debia armar nada"))
+    assert orq.armar_video(["https://a"]) is False
+    assert orq.armar_video(["https://a"]) is False
+    avisos = [m["text"] for m in tg.mensajes() if "vencio" in m["text"]]
+    assert len(avisos) == 1 and "In production" in avisos[0]
+
+
+def test_telegram_caido_al_leer_no_tumba_la_corrida(monkeypatch):
+    def cae(**k):
+        raise SystemExit("Telegram respondio 502: Bad Gateway")
+    monkeypatch.setattr(orq.bot, "recoger_todas", cae)
+    assert orq.atender_telegram({"franjas": {}}) is False

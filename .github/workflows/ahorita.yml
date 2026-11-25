@@ -16,7 +16,7 @@ on:
         options: ["no", "madrugada", "manana", "tarde", "noche"]
         default: "no"
       probar_voz:
-        description: "Solo probar Voicebox: genera una frase y te la manda al chat"
+        description: "Solo probar la voz (ElevenLabs): genera una frase y te la manda al chat"
         type: boolean
         default: false
       probar_nota:
@@ -86,19 +86,27 @@ jobs:
             echo "VOICEBOX_PROFILE_ID=${{ vars.VOICEBOX_PROFILE || vars.VOICEBOX_PROFILE_ID || secrets.VOICEBOX_PROFILE || secrets.VOICEBOX_PROFILE_ID }}"
             echo "VOICEBOX_ENGINE=${{ vars.VOICEBOX_ENGINE }}"
             echo "WHISPER_MODELO=${{ vars.WHISPER_MODELO || 'small' }}"
+            # ElevenLabs: la llave como Secret; la voz y el modelo como Variable o Secret
+            echo "ELEVENLABS_API_KEY=${{ secrets.ELEVENLABS_API_KEY }}"
+            echo "ELEVENLABS_VOICE_ID=${{ vars.ELEVENLABS_VOICE_ID || secrets.ELEVENLABS_VOICE_ID }}"
+            echo "ELEVENLABS_MODEL=${{ vars.ELEVENLABS_MODEL }}"
+            echo "ELEVENLABS_SPEED=${{ vars.ELEVENLABS_SPEED }}"
           } > .env
           grep -c . .env
 
       # `secrets` no se puede usar en un `if`, pero si en `env`: este paso dice si
       # hay Voicebox y llave de Tailscale, y el siguiente decide con eso.
+      # Con ElevenLabs configurado no se usa Voicebox: ni Tailscale ni Whisper.
       - name: Hay Voicebox
         id: vb
         env:
           URL: ${{ vars.VOICEBOX_URL || secrets.VOICEBOX_URL }}
           LLAVE: ${{ secrets.TS_AUTHKEY }}
+          ELEVEN: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
-          if [ -n "$URL" ] && [ -n "$LLAVE" ]; then echo "si=true" >> "$GITHUB_OUTPUT"
-          else echo "si=false" >> "$GITHUB_OUTPUT"; echo "sin VOICEBOX_URL o sin TS_AUTHKEY: va la voz de respaldo"; fi
+          if [ -n "$ELEVEN" ]; then echo "si=false" >> "$GITHUB_OUTPUT"; echo "voz: ElevenLabs"
+          elif [ -n "$URL" ] && [ -n "$LLAVE" ]; then echo "si=true" >> "$GITHUB_OUTPUT"
+          else echo "si=false" >> "$GITHUB_OUTPUT"; echo "sin ElevenLabs ni Voicebox: va la voz de respaldo"; fi
 
       # Voicebox no da tiempos por palabra: Whisper los saca para los subtitulos.
       # El modelo (~480 MB) se guarda en cache para no bajarlo en cada pasada.
@@ -126,9 +134,9 @@ jobs:
         run: python herramientas/estado-claves.py || true
 
       # modo prueba: no toca Telegram ni el estado, solo la voz
-      - name: Probar Voicebox
+      - name: Probar voz
         if: ${{ inputs.probar_voz }}
-        run: python herramientas/probar-voicebox.py
+        run: python herramientas/probar-voz.py
 
       # el tema va por env, no pegado en el comando: asi un tema con comillas o
       # $(...) no puede ejecutar nada en el runner

@@ -200,7 +200,7 @@ Tres proveedores, **con respaldo automático**. Se usa el primero que esté conf
    secret `ELEVENLABS_API_KEY`. Usa el endpoint `with-timestamps`, así que los
    subtítulos salen sincronizados sin pasar por Whisper.
 2. **Voicebox** (tu voz clonada, *Carla-News*) por Tailscale, si no hay clave de ElevenLabs.
-3. **edge-tts** (`es-MX-DaliaNeural`) si el proveedor elegido falla. Te avisa por el chat.
+3. **edge-tts** (`es-US-PalomaNeural`) si el proveedor elegido falla. Te avisa por el chat.
 
 Con ElevenLabs el workflow se salta Tailscale y Whisper. Cobra por caracteres:
 un Short de ~120 palabras son ~800 caracteres.

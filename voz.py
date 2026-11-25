@@ -233,7 +233,7 @@ def generar_voz(guion, proveedor="edge"):
     """Devuelve la lista de segmentos con su audio y su duracion real.
 
     Con Voicebox es todo o nada: si un segmento falla, el video entero se hace
-    con la voz de respaldo, para no mezclar la voz de Carla con la de Dalia.
+    con la voz de respaldo, para no mezclar la voz principal con la de respaldo.
     """
     import html
 

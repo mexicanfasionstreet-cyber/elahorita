@@ -1,0 +1,45 @@
+{
+ "origen": "ia",
+ "palabras": 147,
+ "segundos_estimados": 54.4,
+ "historias": [
+  {
+   "titulo": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
+   "link": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
+   "seccion": "mundo",
+   "medios": 5,
+   "score": 83.9,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Abbas_Araghchi_in_a_interview_with_khamenei.ir_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY 4.0",
+    "autor": "KHAMENEI.ir",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Abbas_Araghchi_in_a_interview_with_khamenei.ir_(cropped).jpg",
+    "credito": "KHAMENEI.ir (CC BY 4.0), Wikimedia Commons",
+    "termino": "Abbas Araghchi",
+    "archivo": "Abbas_Araghchi_in_a_interview_with_khamenei.ir_(cropped).jpg"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Dos italianos mueren en Kuwait por drones que se atribuyen a Irán",
+  "gancho": "Dos técnicos italianos murieron en Kuwait y el país culpa a Irán, que lo niega todo.",
+  "notas": [
+   {
+    "kicker": "MUNDO",
+    "texto": "Dos italianos murieron en un ataque con drones en Kuwait. Trabajaban como técnicos para la empresa alemana de armamento Rheinmetall, según el ministerio de Exteriores de Italia. Kuwait dijo que detectó e interceptó drones provenientes de Irán y que los dos italianos, un kuwaití y un paquistaní resultaron heridos por la metralla. El ejército kuwaití calificó el ataque como agresión iraní. Irán lo niega: su canciller, Abbas Araghchi, dijo que el incidente le parecía sospechoso y que colaborará con Kuwait e Italia para determinar la causa. El canciller italiano afirmó que la investigación muestra que el dron fue fabricado en Irán. Los dos italianos trabajaban en una estación de detección de defensa aérea, dando mantenimiento a sistemas de las fuerzas armadas kuwaitíes.",
+    "pantalla": "Dos italianos mueren en ataque en Kuwait",
+    "foto": "Kuwait",
+    "foto2": "Abbas Araghchi",
+    "datos": [
+     "Dos italianos muertos",
+     "Técnicos de Rheinmetall",
+     "Irán niega responsabilidad"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "KUWAIT E IRÁN HOY"
+ }
+}

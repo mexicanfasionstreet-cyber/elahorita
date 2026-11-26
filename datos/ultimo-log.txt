@@ -1,3 +1,75 @@
-2026-11-26 14:55 Tijuana · franja pendiente: ninguna
+2026-11-26 15:00 Tijuana · franja pendiente: tarde
 sin novedades
-sin novedades
+corriendo la franja tarde
+  $ --days 2
+  (24.3 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 69
+
+1212 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+293 nuevas, 17892 en 30 dias)
+
+  secciones revisadas con IA: 12 cambio(s)
+  125 historias desde 26 12:00
+    93.8 peso  22.0 · Posponen desfile del Día de Acción de Gracias por el mal clima de Nuev
+    93.0 peso  23.5 · Sube Banxico a 1.9% previsión de crecimiento del PIB en 2026
+    85.0 peso  16.0 · Cae otro Chapo; detienen a Félix, operador de las "Fuerzas Especiales 
+    83.9 peso  21.0 · Two Italians killed in strike in Kuwait, as Iran denies responsibility
+  $ --franja tarde --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-26-tarde.json --link https://24-horas.mx/mundo/suspenden-desfile-del-dia-de-accion-de-gracias-por-el-mal-clima-de-nueva-york/ --previo  --link https://www.reforma.com/sube-banxico-a-1-9-prevision-de-crecimiento-del-pib-en-2026/ar3322240 --previo  --reserva https://www.eluniversal.com.mx/nacion/cae-otro-chapo-detienen-a-felix-operador-de-las-fuerzas-especiales-zambada-de-los-mayos/ --reserva https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss
+  (11.3 s)
+  material nota 1: 0 palabras de https://24-horas.mx/mundo/suspenden-desfile-del-dia-de-accio
+  material nota 2: 28 palabras de https://www.reforma.com/sube-banxico-a-1-9-prevision-de-crec
+aviso: la nota 1 tiene poco material (40 palabras); se quita
+aviso: la nota 2 tiene poco material (54 palabras); se quita
+  material nota 1: 0 palabras de https://www.eluniversal.com.mx/nacion/cae-otro-chapo-detiene
+  material nota 1: 466 palabras de https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=
+aviso: se usa la historia de reserva: Two Italians killed in strike in Kuwait, as Iran denies resp
+--- GUION (ia) · 1 nota(s) · 147 palabras ~ 54 s ---
+
+TITULO YOUTUBE: Dos italianos mueren en Kuwait por drones que se atribuyen a Irán
+GANCHO: Dos técnicos italianos murieron en Kuwait y el país culpa a Irán, que lo niega todo.
+
+[MUNDO] Dos italianos murieron en un ataque con drones en Kuwait. Trabajaban como técnicos para la empresa alemana de armamento Rheinmetall, según el ministerio de Exteriores de Italia. Kuwait dijo que detectó e interceptó drones provenientes de Irán y que los dos italianos, un kuwaití y un paquistaní resultaron heridos por la metralla. El ejército kuwaití calificó el ataque como agresión iraní. Irán lo niega: su canciller, Abbas Araghchi, dijo que el incidente le parecía sospechoso y que colaborará con Kuwait e Italia para determinar la causa. El canciller italiano afirmó que la investigación muestra que el dron fue fabricado en Irán. Los dos italianos trabajaban en una estación de detección de defensa aérea, dando mantenimiento a sistemas de las fuerzas armadas kuwaitíes.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Two Italians killed in strike in Kuwait, as Iran denies responsibility (5 medios)
+  foto nota 1: sin foto libre nueva para 'Kuwait'
+  foto2 nota 1: Abbas Araghchi -> KHAMENEI.ir (CC BY 4.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-26-tarde.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-26-tarde.json
+  (11.6 s)
+guion 2026-11-26-tarde.json · 147 palabras · proveedor elevenlabs
+
+  gancho     5.60 s  [elevenlabs]  16 palabras con tiempo  Dos técnicos italianos murieron en Kuwait y …
+  nota1     46.40 s  [elevenlabs]  122 palabras con tiempo  Dos italianos murieron en un ataque con dron…
+  cierre     3.20 s  [elevenlabs]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 56.04 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-26-tarde/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-26-tarde.json
+  (58.3 s)
+  diapositiva 00-gancho.png · tomas: principal(5.9)
+  diapositiva 01-nota1.png · tomas: principal(2.2) dato(4.3) dato(3.0) principal(4.6) foto2(4.6) principal(4.6) foto2(4.6) principal(4.6) foto2(4.6) principal(4.6) foto2(4.6)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 11 tomas
+  video cierre: 1 tomas
+subtitulos: 139 estados · 841 cuadros · 56.0 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-26-tarde/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-26-tarde.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-26-tarde-portada.jpg
+duracion: 56.0 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-26-tarde.mp4
+  titulo: Dos italianos mueren en Kuwait por drones que se atribuyen a Irán
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/szmyteigaWs
+

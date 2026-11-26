@@ -1,29 +1,5 @@
 [
  {
-  "cuando": "2026-11-23T05:03:57-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "La indignación por la detención de dos mexicanos por agentes de ICE en el aeropuerto de Seattle",
-  "link": "https://www.bbc.com/mundo/articles/ckx27qql52g1o?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "ice",
-   "seattle"
-  ],
-  "video": "https://youtube.com/shorts/z4OW6oO0eUQ"
- },
- {
-  "cuando": "2026-11-23T05:03:57-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "Detienen a ocho presuntos integrantes de la facción del “Chapo Isidro” en Sinaloa; aseguran arsenal y vehículos",
-  "link": "https://lopezdoriga.com/nacional/detienen-a-ocho-presuntos-integrantes-de-la-faccion-del-chapo-isidro-en-sinaloa-aseguran-arsenal-y-vehiculos/",
-  "entidades": [
-   "chapo",
-   "detienen",
-   "isidro",
-   "sinaloa"
-  ],
-  "video": "https://youtube.com/shorts/z4OW6oO0eUQ"
- },
- {
   "cuando": "2026-11-23T12:03:53-08:00",
   "origen": "franja-manana",
   "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
@@ -222,5 +198,18 @@
    "taylor"
   ],
   "video": "https://youtube.com/shorts/zYafJ45XD8E"
+ },
+ {
+  "cuando": "2026-11-26T11:47:26-08:00",
+  "origen": "nota",
+  "titulo": "Sheinbaum acusa de injerencia a director de la DEA por abrir línea telefónica para denunciar a integrantes del Cártel de Sinaloa",
+  "link": "https://www.infobae.com/mexico/2026/11/26/claudia-sheinbaum-acusa-de-injerencia-a-terry-cole-por-linea-contra-el-cartel-de-sinaloa-y-pide-a-eeuu-atender-consumo-de-fentanilo/",
+  "entidades": [
+   "cartel",
+   "dea",
+   "sheinbaum",
+   "sinaloa"
+  ],
+  "video": "https://youtube.com/shorts/RpGsvZWVQps"
  }
 ]

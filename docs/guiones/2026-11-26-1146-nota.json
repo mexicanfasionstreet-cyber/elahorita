@@ -1,0 +1,50 @@
+{
+ "origen": "nota_manual",
+ "tema": "https://www.infobae.com/mexico/2026/11/26/claudia-sheinbaum-acusa-de-injerencia-a-terry-cole-por-linea-contra-el-cartel-de-sinaloa-y-pide-a-eeuu-atender-consumo-de-fentanilo/",
+ "palabras": 155,
+ "segundos_estimados": 57.4,
+ "articulos_leidos": [
+  "https://www.infobae.com/mexico/2026/11/26/claudia-sheinbaum-acusa-de-injerencia-a-terry-cole-por-linea-contra-el-cartel-de-sinaloa-y-pide-a-eeuu-atender-consumo-de-fentanilo/"
+ ],
+ "historias": [
+  {
+   "titulo": "Sheinbaum acusa de injerencia a director de la DEA por abrir línea telefónica para denunciar a integrantes del Cártel de Sinaloa",
+   "link": "https://www.infobae.com/mexico/2026/11/26/claudia-sheinbaum-acusa-de-injerencia-a-terry-cole-por-linea-contra-el-cartel-de-sinaloa-y-pide-a-eeuu-atender-consumo-de-fentanilo/",
+   "seccion": "politica",
+   "sensible": "",
+   "medios": 1,
+   "score": 0,
+   "region": "mx",
+   "horas": 99.0,
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg/1280px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Bryan Berlin",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_(3x4_close_up_cropped).jpg",
+    "credito": "Bryan Berlin (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Claudia Sheinbaum"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Sheinbaum acusa a la DEA de injerencia por línea contra el Cártel de Sinaloa",
+  "gancho": "La DEA abre una línea para denunciar al Cártel de Sinaloa y Sheinbaum le responde que eso es injerencia.",
+  "gancho_pantalla": "SHEINBAUM CONTRA LA DEA",
+  "notas": [
+   {
+    "kicker": "POLÍTICA",
+    "pantalla": "Sheinbaum llama injerencia a la línea de la DEA",
+    "texto": "La presidenta Claudia Sheinbaum acusó a la DEA de injerencia por abrir una línea telefónica para denunciar a personas presuntamente relacionadas con el Cártel de Sinaloa, incluso a funcionarios con presuntos vínculos con el cártel. El anuncio lo hizo el director de la agencia, Terry Cole. En la mañanera, Sheinbaum preguntó cómo vería el gobierno de Estados Unidos que la Secretaría de Seguridad y Protección Ciudadana abriera un WhatsApp para denunciar corrupción en su país. Dijo que la DEA tiene mucho qué hacer en su propio territorio y pidió investigar presuntos nexos de sus agencias con organizaciones criminales. Recordó un reportaje de AP sobre miembros de la DEA que habrían permitido el tráfico de fentanilo durante una investigación, y lo comparó con el operativo Rápido y Furioso.",
+    "foto": "Claudia Sheinbaum",
+    "foto2": "Administración para el Control de Drogas",
+    "datos": [
+     "Línea para denunciar al cártel",
+     "Director de la DEA: Terry Cole",
+     "Compara caso con Rápido y Furioso"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente."
+ }
+}

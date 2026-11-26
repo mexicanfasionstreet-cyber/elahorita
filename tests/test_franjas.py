@@ -35,7 +35,7 @@ def items():
     ]
 
 
-PUBLICADA_SISMO = [{"cuando": datetime(2026, 11, 18, 12, 20, tzinfo=TZ).isoformat(),
+PUBLICADA_SISMO = [{"cuando": datetime(2026, 11, 18, 8, 30, tzinfo=TZ).isoformat(),
                     "titulo": "Sismo de magnitud 6 sacude Oaxaca", "link": "b/2",
                     "entidades": ["sismo", "oaxaca"]}]
 
@@ -52,7 +52,7 @@ def test_seguimiento_si_hay_notas_nuevas(items):
 
 
 def test_no_repite_sin_novedad(items):
-    items[1]["updated"] = utc_de(2026, 11, 18, 12, 10)       # antes del video de las 12:20
+    items[1]["updated"] = utc_de(2026, 11, 18, 8, 10)       # antes del video de las 08:30
     assert all(f["link"] != "b/2" for f in franjas.candidatas(items, TARDE, AHORA, PUBLICADA_SISMO))
 
 
@@ -88,3 +88,23 @@ def test_registrar_publicada_guarda_entidades(reloj):
     guardada = franjas._leer(franjas.PUBLICADAS, [])[0]
     assert guardada["link"] == "b/2" and "oaxaca" in guardada["entidades"]
     assert config.ahora().isoformat(timespec="seconds") == guardada["cuando"]
+
+
+def test_misma_muerte_en_otro_idioma_no_se_repite(items):
+    """BBC en espanol (20:03) y NPR en ingles (05:02) son la misma noticia."""
+    items.append(noticia("Andy Taylor, guitarist of new wave icons Duran Duran, dies at 65",
+                         "npr/1", utc_de(2026, 11, 18, 12, 30)))
+    previa = [{"cuando": datetime(2026, 11, 17, 20, 3, tzinfo=TZ).isoformat(),
+               "titulo": "Muere a los 65 años el guitarrista de la banda de pop Duran Duran",
+               "link": "bbc/1", "entidades": ["duran", "muere"]}]
+    madrugada = franjas.franja_por_nombre("madrugada")
+    ahora = datetime(2026, 11, 18, 5, 2, tzinfo=TZ)
+    assert any(f["link"] == "npr/1" for f in franjas.candidatas(items, madrugada, ahora, []))
+    assert all(f["link"] != "npr/1" for f in franjas.candidatas(items, madrugada, ahora, previa))
+
+
+def test_seguimiento_reciente_no_sale(items):
+    """Contada hace 2 horas: aunque haya notas nuevas, no se repite el tema."""
+    reciente = [dict(PUBLICADA_SISMO[0],
+                     cuando=datetime(2026, 11, 18, 12, 50, tzinfo=TZ).isoformat())]
+    assert all(f["link"] != "b/2" for f in franjas.candidatas(items, TARDE, AHORA, reciente))

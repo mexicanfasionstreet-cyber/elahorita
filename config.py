@@ -51,7 +51,7 @@ TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 # que los subtitulos salen exactos sin Whisper.
 ELEVENLABS_KEY = (os.environ.get("ELEVENLABS_API_KEY", "") or os.environ.get("ELEVENLABS_KEY", "")).strip()
 ELEVENLABS_VOZ = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
-ELEVENLABS_MODELO = os.environ.get("ELEVENLABS_MODEL", "").strip() or "eleven_multilingual_v2"
+ELEVENLABS_MODELO = os.environ.get("ELEVENLABS_MODEL", "").strip() or "eleven_v4_turbo"
 ELEVENLABS_VELOCIDAD = float(os.environ.get("ELEVENLABS_SPEED", "") or 1.0)   # 0.7 a 1.2
 ELEVENLABS_TIMEOUT = int(os.environ.get("ELEVENLABS_TIMEOUT", "120") or 120)
 

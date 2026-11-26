@@ -45,6 +45,13 @@ LIMITE_SUBIDAS = int(os.environ.get("LIMITE_SUBIDAS", "6") or 6)
 # cobertura ponderada (suma del peso de los medios) desde la que una historia es
 # "de alto impacto". Un dia normal la mas cubierta ronda 15-27; un suceso grande
 # lo cubren casi todas las fuentes a la vez.
+# un seguimiento solo sale si la nota previa tiene al menos estas horas: evita que
+# el mismo tema salga en dos franjas seguidas con cambios menores
+SEGUIMIENTO_HORAS = float(os.environ.get("SEGUIMIENTO_HORAS", "6") or 6)
+# acontecimientos donde un mismo personaje/lugar + el mismo hecho es SIEMPRE la misma
+# historia (aunque cada medio la titule distinto o en otro idioma) y no admite
+# seguimiento: no hay segunda parte de un obituario
+EVENTOS_UNICOS = {"muerte", "renuncia", "nombramiento"}
 ALTO_IMPACTO = float(os.environ.get("ALTO_IMPACTO", "35") or 35)
 SEGUNDA_NOTA = 1.15          # la 1a debe ganar por este factor para ir sola
 
@@ -168,14 +175,21 @@ def cupo_para_nota(estado, ahora=None):
 # ------------------------------------------------------------------ seleccion
 def _ya_publicada(fila, publicadas, desde):
     """La publicacion previa de esta misma historia (hoy), o None."""
+    from aggregate import event_class
     ents = fila.get("_ents") or set()
+    ev = event_class(fila.get("title", ""))
     for p in reversed(publicadas):
         cuando = _dt(p.get("cuando"))
         if not cuando or cuando < desde:
             continue
         if p.get("link") and p["link"] == fila.get("link"):
             return p
-        if len(ents & set(p.get("entidades") or [])) >= 2:
+        comun = ents & set(p.get("entidades") or [])
+        if len(comun) >= 2:
+            return p
+        # una sola entidad basta si es el mismo hecho puntual (p. ej. "muere X"):
+        # BBC en espanol y NPR en ingles solo comparten el nombre del grupo
+        if comun and ev in EVENTOS_UNICOS and event_class(p.get("titulo", "")) == ev:
             return p
     return None
 
@@ -194,8 +208,15 @@ def candidatas(items, franja, ahora, publicadas=None):
             continue
         previa = _ya_publicada(f, publicadas, min(desde, inicio_dia))
         if previa:
-            if ultima <= _dt(previa["cuando"]):
+            from aggregate import event_class
+            ev = event_class(f["title"])
+            if ev in EVENTOS_UNICOS and ev == event_class(previa.get("titulo", "")):
+                continue                 # mismo hecho puntual: no hay seguimiento
+            cuando_previa = _dt(previa["cuando"])
+            if ultima <= cuando_previa:
                 continue                 # ya se conto y no hay nada nuevo
+            if ahora - cuando_previa < timedelta(hours=SEGUIMIENTO_HORAS):
+                continue                 # contada hace poco: no repetir el tema
             f["seguimiento_de"] = previa["titulo"]
         # IA o palabras: basta con que una la marque
         if not f.get("sensible"):

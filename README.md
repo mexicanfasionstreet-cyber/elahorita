@@ -192,6 +192,13 @@ Zonas seguras respetadas: 65 px laterales, 160 arriba, 420 abajo.
 
 ---
 
+## Notas repetidas
+
+Cada franja descarta lo ya publicado (mismo enlace, o dos entidades en común). Además:
+- Un hecho puntual (muerte, renuncia, nombramiento) con la misma persona o grupo cuenta como
+  **la misma historia aunque cada medio la titule distinto o en otro idioma**, y no admite seguimiento.
+- Un seguimiento solo sale si la nota anterior tiene al menos `SEGUIMIENTO_HORAS` (6 por defecto).
+
 ## La voz
 
 Tres proveedores, **con respaldo automático**. Se usa el primero que esté configurado:

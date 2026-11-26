@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 183,
+ "segundos_estimados": 67.8,
+ "historias": [
+  {
+   "titulo": "Muere a los 65 años el guitarrista de la banda de pop Duran Duran",
+   "link": "https://www.bbc.com/mundo/articles/cmwy8gjdgwy6o?at_medium=RSS&at_campaign=rss",
+   "seccion": "cultura",
+   "medios": 9,
+   "score": 78.3,
+   "sensible": "",
+   "foto": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Duran_Duran_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Jason Persse",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Duran_Duran_2011.jpg",
+    "credito": "Jason Persse (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Duran Duran"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Library-of-Birmingham-oblique-crop.jpg/1280px-Library-of-Birmingham-oblique-crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Neil Thompson",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Library-of-Birmingham-oblique-crop.jpg",
+    "credito": "Neil Thompson (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Birmingham"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Muere Andy Taylor, guitarrista de Duran Duran, a los 65 años",
+  "gancho": "El guitarrista que le puso el filo a los éxitos de Duran Duran murió a los 65 años.",
+  "notas": [
+   {
+    "kicker": "CULTURA",
+    "texto": "Murió Andy Taylor, guitarrista de Duran Duran, a los 65 años. Sus compañeros de banda informaron que libró una larga y valiente batalla contra el cáncer de próstata y que falleció tranquilamente en su casa, rodeado de su familia, el lunes 23 de noviembre. Taylor nació en Tynemouth, en el noreste de Inglaterra, y era hijo de un pescador. Aprendió solo a tocar guitarra, bajo y batería, y empezó a tocar profesionalmente a los 13 años. En abril de 1980 audicionó para Duran Duran en Birmingham, tras responder un anuncio que buscaba un guitarrista con mucha energía. Coescribió éxitos como Save A Prayer, Rio y Girls On Film, y trabajó con Robert Palmer, Rod Stewart y Belinda Carlisle. Simon Le Bon, Nick Rhodes, John Taylor y Roger Taylor dijeron que Andy estuvo desde el principio de su historia y que su forma de tocar dio vida a las canciones que los llevaron por todo el mundo.",
+    "foto": "Duran Duran",
+    "foto2": "Birmingham",
+    "datos": [
+     "65 años",
+     "Cáncer de próstata",
+     "Audicionó en Birmingham en 1980"
+    ],
+    "pantalla": "Muere Andy Taylor, guitarrista de Duran Duran"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "ADIÓS A ANDY TAYLOR"
+ }
+}

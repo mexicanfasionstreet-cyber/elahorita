@@ -1,3 +1,76 @@
-2026-11-25 19:58 Tijuana · franja pendiente: ninguna
+2026-11-25 20:00 Tijuana · franja pendiente: noche
 sin novedades
-sin novedades
+corriendo la franja noche
+  $ --days 2
+  (18.5 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 75
+
+1239 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+394 nuevas, 16448 en 30 dias)
+
+  secciones revisadas con IA: 13 cambio(s)
+  175 historias desde 25 15:00
+    85.7 peso  24.0 · Claudia Sheinbaum confirma que Inés Gómez Mont fue deportada a España 
+    81.7 peso  16.5 · Choque de camión de combustible provoca un incendio en Egipto, que dej
+    78.3 peso  36.0 · Muere a los 65 años el guitarrista de la banda de pop Duran Duran
+    73.9 peso  11.5 · La escritora Ximena Santaolalla revela años de abuso del empresario Fr
+  $ --franja noche --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-noche.json --link https://elpais.com/mexico/2026-11-25/claudia-sheinbaum-confirma-que-ines-gomez-mont-fue-deportada-a-espana-y-pide-su-extradicion-a-mexico.html --previo  --link https://news.google.com/rss/articles/CBMipAFBVV95cUxPQWV6X3FTT1lkb2VsWjNNREJLbUl0T2VnY3ZSX1BFRmpZVk56M0E4WWFMVG1hTXVYOWw3Y2lyR1p4ZUt0VHdEVFRZNWoyaS04eXdmM2dUUkI5cDlEMEtxVjhqVzBfV1ZNLW9OWHNoRnJxX3JNMF92NDZIY2J3Wjl0cFFlRllBQVhIVUdHRnRWSVRZMUtORFBncWdpcGZCVmRhYjd6Yg?oc=5 --previo  --reserva https://www.bbc.com/mundo/articles/cmwy8gjdgwy6o?at_medium=RSS&at_campaign=rss --reserva https://24-horas.mx/estados/ine-en-puebla-descarta-investigacion-sobre-gestion-de-blanca-cruz-en-el-iee/
+  (11.2 s)
+/mexico/2026-11-25/claudia-sheinbaum-confi
+  material nota 2: 0 palabras de https://apnews.com/article/egipto-autopista-vehiculo-incendi
+aviso: la nota 1 tiene poco material (35 palabras); se quita
+aviso: la nota 2 tiene poco material (18 palabras); se quita
+  material nota 1: 508 palabras de https://www.bbc.com/mundo/articles/cmwy8gjdgwy6o?at_medium=R
+aviso: se usa la historia de reserva: Muere a los 65 años el guitarrista de la banda de pop Duran 
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 1 nota(s) · 183 palabras ~ 68 s ---
+
+TITULO YOUTUBE: Muere Andy Taylor, guitarrista de Duran Duran, a los 65 años
+GANCHO: El guitarrista que le puso el filo a los éxitos de Duran Duran murió a los 65 años.
+
+[CULTURA] Murió Andy Taylor, guitarrista de Duran Duran, a los 65 años. Sus compañeros de banda informaron que libró una larga y valiente batalla contra el cáncer de próstata y que falleció tranquilamente en su casa, rodeado de su familia, el lunes 23 de noviembre. Taylor nació en Tynemouth, en el noreste de Inglaterra, y era hijo de un pescador. Aprendió solo a tocar guitarra, bajo y batería, y empezó a tocar profesionalmente a los 13 años. En abril de 1980 audicionó para Duran Duran en Birmingham, tras responder un anuncio que buscaba un guitarrista con mucha energía. Coescribió éxitos como Save A Prayer, Rio y Girls On Film, y trabajó con Robert Palmer, Rod Stewart y Belinda Carlisle. Simon Le Bon, Nick Rhodes, John Taylor y Roger Taylor dijeron que Andy estuvo desde el principio de su historia y que su forma de tocar dio vida a las canciones que los llevaron por todo el mundo.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Muere a los 65 años el guitarrista de la banda de pop Duran Duran (9 medios)
+  foto nota 1: Duran Duran -> Jason Persse (CC BY-SA 2.0), Wikimedia Commons
+  foto2 nota 1: Birmingham -> Neil Thompson (CC BY-SA 2.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-noche.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-noche.json
+  (12.3 s)
+guion 2026-11-25-noche.json · 183 palabras · proveedor elevenlabs
+
+  gancho     5.68 s  [elevenlabs]  18 palabras con tiempo  El guitarrista que le puso el filo a los éxi…
+  nota1     56.48 s  [elevenlabs]  156 palabras con tiempo  Murió Andy Taylor, guitarrista de Duran Dura…
+  cierre     3.12 s  [elevenlabs]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 66.12 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-25-noche/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-25-noche.json
+  (93.2 s)
+  diapositiva 00-gancho.png · tomas: principal(6.0)
+  diapositiva 01-nota1.png · tomas: principal(3.1) dato(3.0) limpia(3.6) dato(3.0) foto2(3.9) principal(3.9) limpia(3.9) foto2(3.9) dato(3.0) principal(4.2) limpia(4.2) foto2(4.2) principal(4.2) limpia(4.2) foto2(4.2)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 15 tomas
+  video cierre: 1 tomas
+subtitulos: 175 estados · 992 cuadros · 66.1 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-25-noche/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-noche.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-noche-portada.jpg
+duracion: 66.2 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-25-noche.mp4
+  titulo: Muere Andy Taylor, guitarrista de Duran Duran, a los 65 años
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/dpFpHpDufAU
+

@@ -1,29 +1,5 @@
 [
  {
-  "cuando": "2026-11-22T15:03:40-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Arresta ICE a dos mexicanos al abordar vuelo en Seattle",
-  "link": "https://www.reforma.com/arresta-ice-a-dos-mexicanos-al-abordar-vuelo-en-seattle/ar3319480",
-  "entidades": [
-   "arresta",
-   "ice",
-   "seattle"
-  ],
-  "video": "https://youtube.com/shorts/-OIqic7BVGE"
- },
- {
-  "cuando": "2026-11-22T15:03:40-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Detienen al futbolista, Héctor Herrera por conducir en estado de ebriedad",
-  "link": "https://zetatijuana.com/2026/11/detienen-al-futbolista-hector-herrera-por-conducir-en-estado-de-ebriedad/",
-  "entidades": [
-   "detienen",
-   "hector",
-   "herrera"
-  ],
-  "video": "https://youtube.com/shorts/-OIqic7BVGE"
- },
- {
   "cuando": "2026-11-22T20:03:07-08:00",
   "origen": "franja-noche",
   "titulo": "Liguilla del Apertura 2026: así quedaron los cruces de cuartos de final",
@@ -248,5 +224,16 @@
    "mexico"
   ],
   "video": "https://youtube.com/shorts/36l4ILzLua0"
+ },
+ {
+  "cuando": "2026-11-25T20:03:02-08:00",
+  "origen": "franja-noche",
+  "titulo": "Muere a los 65 años el guitarrista de la banda de pop Duran Duran",
+  "link": "https://www.bbc.com/mundo/articles/cmwy8gjdgwy6o?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "duran",
+   "muere"
+  ],
+  "video": "https://youtube.com/shorts/dpFpHpDufAU"
  }
 ]

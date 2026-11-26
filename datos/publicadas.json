@@ -1,31 +1,5 @@
 [
  {
-  "cuando": "2026-11-23T12:03:53-08:00",
-  "origen": "franja-manana",
-  "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
-  "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "huang",
-   "jensen",
-   "nvidia"
-  ],
-  "video": "https://youtube.com/shorts/F3hbM9GopGw"
- },
- {
-  "cuando": "2026-11-23T12:03:53-08:00",
-  "origen": "franja-manana",
-  "titulo": "‘El Chapo Isidro’: así fue el operativo de México y Estados Unidos para capturarlo",
-  "link": "https://elceo.com/actualidad/chapo-isidro-operativo-mexico-estados-unidos-captura/",
-  "entidades": [
-   "chapo",
-   "estados",
-   "isidro",
-   "mexico",
-   "unidos"
-  ],
-  "video": "https://youtube.com/shorts/F3hbM9GopGw"
- },
- {
   "cuando": "2026-11-23T15:03:47-08:00",
   "origen": "franja-tarde",
   "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
@@ -211,5 +185,19 @@
    "sinaloa"
   ],
   "video": "https://youtube.com/shorts/RpGsvZWVQps"
+ },
+ {
+  "cuando": "2026-11-26T12:36:24-08:00",
+  "origen": "franja-manana",
+  "titulo": "El Gobierno mexicano pide a España que aplique el tratado de extradición con Inés Gómez Mont",
+  "link": "https://elpais.com/mexico/2026-11-26/el-gobierno-mexicano-pide-a-espana-que-aplique-el-tratado-de-extradicion-con-ines-gomez-mont.html",
+  "entidades": [
+   "espana",
+   "gobierno",
+   "gomez",
+   "ines",
+   "mont"
+  ],
+  "video": "https://youtube.com/shorts/DzXRJPJu-8k"
  }
 ]

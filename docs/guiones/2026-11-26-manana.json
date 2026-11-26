@@ -1,0 +1,44 @@
+{
+ "origen": "ia",
+ "palabras": 74,
+ "segundos_estimados": 27.4,
+ "historias": [
+  {
+   "titulo": "El Gobierno mexicano pide a España que aplique el tratado de extradición con Inés Gómez Mont",
+   "link": "https://elpais.com/mexico/2026-11-26/el-gobierno-mexicano-pide-a-espana-que-aplique-el-tratado-de-extradicion-con-ines-gomez-mont.html",
+   "seccion": "justicia",
+   "medios": 7,
+   "score": 91.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg/1280px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Bryan Berlin",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_(3x4_close_up_cropped).jpg",
+    "credito": "Bryan Berlin (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Claudia Sheinbaum"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "México pide a España extraditar a Inés Gómez Mont",
+  "gancho": "El gobierno de México pidió a España que aplique el tratado de extradición en el caso de la presentadora, y ahora espera respuesta.",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "texto": "El Gobierno de México pidió a España que aplique el tratado de extradición en el caso de Inés Gómez Mont. La presidenta Claudia Sheinbaum dijo este jueves que espera la respuesta del país europeo. La mandataria lamentó la situación de la presentadora.",
+    "foto": "Claudia Sheinbaum",
+    "foto2": "España",
+    "datos": [
+     "Sheinbaum espera respuesta",
+     "Tratado de extradición",
+     "Caso Inés Gómez Mont"
+    ],
+    "pantalla": "Sheinbaum pide a España aplicar la extradición"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "MÉXICO ESPERA A ESPAÑA"
+ }
+}

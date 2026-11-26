@@ -1,3 +1,19 @@
-2026-11-26 11:55 Tijuana · franja pendiente: ninguna
+2026-11-26 12:00 Tijuana · franja pendiente: manana
 sin novedades
-sin novedades
+corriendo la franja manana
+  $ --days 2
+  (20.3 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 65
+
+1223 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+587 nuevas, 17599 en 30 dias)
+
+  secciones revisadas con IA: 11 cambio(s)
+  223 historias desde 26 05:00
+    94.0 peso  24.5 · Hijo de Francisco Aguirre se solidariza con Ximena Santaolalla tras de
+    92.5 peso  23.5 · El Gobierno mexicano pide a España que aplique el tratado de extradici
+    77.8 peso  11.0 · PAN exige al INE corregir sobrerrepresentación de Morena
+    73.6 peso  16.0 · Banxico mejora estimación del PIB para 2026: México crecería 1.9%
+  tema sensible (sexual_menores): se pregunta

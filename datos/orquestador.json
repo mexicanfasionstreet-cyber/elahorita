@@ -39,5 +39,46 @@
  },
  "resumen": "2026-11-25",
  "comandos": 2,
- "intentos": {}
+ "intentos": {},
+ "pendiente": {
+  "clave": "2026-11-26-manana",
+  "nombre": "manana",
+  "lote": "11261201",
+  "motivo": "sensible",
+  "publica_a": "2026-11-26T12:30:38-08:00",
+  "opciones": [
+   {
+    "titulo": "Hijo de Francisco Aguirre se solidariza con Ximena Santaolalla tras denuncia pública",
+    "link": "https://lopezdoriga.com/nacional/hijo-de-francisco-aguirre-se-solidariza-con-ximena-santaolalla-tras-denuncia-publica/",
+    "score": 94.0,
+    "medios": 7,
+    "peso": 24.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": "sexual_menores"
+   },
+   {
+    "titulo": "El Gobierno mexicano pide a España que aplique el tratado de extradición con Inés Gómez Mont",
+    "link": "https://elpais.com/mexico/2026-11-26/el-gobierno-mexicano-pide-a-espana-que-aplique-el-tratado-de-extradicion-con-ines-gomez-mont.html",
+    "score": 92.5,
+    "medios": 7,
+    "peso": 23.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   }
+  ],
+  "sin_respuesta": [
+   {
+    "titulo": "El Gobierno mexicano pide a España que aplique el tratado de extradición con Inés Gómez Mont",
+    "link": "https://elpais.com/mexico/2026-11-26/el-gobierno-mexicano-pide-a-espana-que-aplique-el-tratado-de-extradicion-con-ines-gomez-mont.html",
+    "score": 92.5,
+    "medios": 7,
+    "peso": 23.5,
+    "seguimiento_de": "",
+    "tipo": "franja",
+    "sensible": ""
+   }
+  ]
+ }
 }

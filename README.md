@@ -199,6 +199,12 @@ Cada franja descarta lo ya publicado (mismo enlace, o dos entidades en común). 
   **la misma historia aunque cada medio la titule distinto o en otro idioma**, y no admite seguimiento.
 - Un seguimiento solo sale si la nota anterior tiene al menos `SEGUIMIENTO_HORAS` (6 por defecto).
 
+## Fotos sin repetir
+
+Cada foto libre que sale se anota en `datos/fotos-usadas.json` y **no vuelve a salir en 4 días**.
+Si la foto principal del artículo ya se usó (p. ej. la de Sheinbaum), se toma otra de la galería
+del mismo artículo (sin logos ni mapas); si no queda ninguna nueva, la nota va con el fondo de diseño.
+
 ## La voz
 
 Tres proveedores, **con respaldo automático**. Se usa el primero que esté configurado:

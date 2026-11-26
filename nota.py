@@ -130,16 +130,44 @@ def agrupar(items, claves):
     return grupos
 
 
+def consultas(tema):
+    """Formas de preguntarle a Google News, de la mas fiel a la mas flexible.
+
+    "sheinbuan vs DEA y CIA" no devuelve nada tal cual (la errata y las palabras
+    sueltas lo rompen): se prueba sin 'vs'/'y', y luego quitando una palabra a la
+    vez, para que una errata no tumbe la busqueda.
+    """
+    claves = terminos(tema)
+    salida = [tema.strip()]
+    if claves:
+        salida.append(" ".join(claves))
+        if len(claves) >= 3:
+            for i in range(len(claves)):
+                salida.append(" ".join(claves[:i] + claves[i + 1:]))
+    vistas, unicas = set(), []
+    for q in salida:
+        if q and q.lower() not in vistas:
+            vistas.add(q.lower())
+            unicas.append(q)
+    return unicas
+
+
 def buscar_tema(tema):
     """Busca en Google News y devuelve los grupos de historias, el mejor primero."""
     from aggregate import fetch, parse_feed, strip_pub_suffix
 
-    url = GOOGLE.format(q=urllib.parse.quote(tema))
-    try:
-        items = parse_feed(fetch(url), {"name": "Busqueda"})
-    except Exception as e:  # noqa: BLE001
-        print(f"  la busqueda fallo ({type(e).__name__}: {e})")
-        return []
+    items = []
+    for q in consultas(tema):
+        url = GOOGLE.format(q=urllib.parse.quote(q))
+        try:
+            items = parse_feed(fetch(url), {"name": "Busqueda"})
+        except Exception as e:  # noqa: BLE001
+            print(f"  la busqueda fallo ({type(e).__name__}: {e})")
+            items = []
+        if items:
+            if q != tema.strip():
+                print(f"  sin resultados con el texto tal cual: se busco '{q}'")
+            break
     for it in items:
         it["title"] = strip_pub_suffix(it["title"])
     if not items:

@@ -266,13 +266,14 @@ def latest(tmp_path, monkeypatch):
 
 
 @pytest.fixture(autouse=True)
-def sin_wikipedia(monkeypatch):
+def sin_wikipedia(monkeypatch, tmp_path):
     """Ninguna prueba sale a Wikipedia: sin red, cada nota va con fondo de diseño."""
     import fotos
 
     def _sin_red(*a, **k):
         raise OSError("sin red en pruebas")
     monkeypatch.setattr(fotos, "_get", _sin_red)
+    monkeypatch.setattr(fotos, "RECIENTES", tmp_path / "fotos-usadas.json")
 
 
 @pytest.fixture(autouse=True)

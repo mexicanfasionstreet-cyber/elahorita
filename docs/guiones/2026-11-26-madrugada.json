@@ -1,0 +1,51 @@
+{
+ "origen": "ia",
+ "palabras": 173,
+ "segundos_estimados": 64.1,
+ "historias": [
+  {
+   "titulo": "Andy Taylor, guitarist of new wave icons Duran Duran, dies at 65",
+   "link": "https://www.npr.org/2026/11/26/g-s1-155934/andy-taylor-duran-duran-obit",
+   "seccion": "cultura",
+   "medios": 7,
+   "score": 82.8,
+   "sensible": "",
+   "foto": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Duran_Duran_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Jason Persse",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Duran_Duran_2011.jpg",
+    "credito": "Jason Persse (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Duran Duran"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Rock_and_Roll_Hall_of_Fame.jpg/1280px-Rock_and_Roll_Hall_of_Fame.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY 2.0",
+    "autor": "Jason Pratt from Pittsburgh, PA ( FishSpeaker )",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Rock_and_Roll_Hall_of_Fame.jpg",
+    "credito": "Jason Pratt from Pittsburgh, PA ( FishSpeaker ) (CC BY 2.0), Wikimedia Commons",
+    "termino": "Salón de la Fama del Rock and Roll"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Muere Andy Taylor, guitarrista original de Duran Duran, a los 65 años",
+  "gancho": "El guitarrista que puso el filo a los himnos de MTV se despide a los 65 años.",
+  "notas": [
+   {
+    "kicker": "CULTURA",
+    "texto": "Murió Andy Taylor, el guitarrista original de Duran Duran, la banda inglesa de new wave de los ochenta. Tenía 65 años. Su familia y sus compañeros confirmaron la muerte en un comunicado publicado en redes sociales y en la página del grupo. La banda lo despidió recordando que llegó a Birmingham desde el North East con una guitarra y una convicción firme sobre lo que podían llegar a ser. Dijo que su forma de tocar impulsó las canciones que los llevaron por todo el mundo. En noviembre de 2022, la noche en que entró al Salón de la Fama del Rock and Roll, Taylor reveló que llevaba años enfrentando un cáncer de próstata metastásico en etapa 4, y no pudo asistir. Con Duran Duran ganó dos Grammy y sonó con éxitos como Hungry Like the Wolf, The Reflex y Rio, ligados al arranque de MTV.",
+    "pantalla": "Muere Andy Taylor, guitarrista de Duran Duran",
+    "foto": "Duran Duran",
+    "foto2": "Salón de la Fama del Rock and Roll",
+    "datos": [
+     "Muere a los 65 años",
+     "Cáncer de próstata etapa 4",
+     "Dos premios Grammy"
+    ]
+   }
+  ],
+  "cierre": "En El Ahorita seguimos la conversación. Nos vemos en el siguiente.",
+  "gancho_pantalla": "DUELO EN EL NEW WAVE"
+ }
+}

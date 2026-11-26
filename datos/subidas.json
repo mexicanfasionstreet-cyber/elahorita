@@ -1,26 +1,4 @@
 {
- "2026-11-19": [
-  {
-   "hora": "05:07",
-   "id": "rlMNnPOrZrE",
-   "titulo": "Dinamarca ratifica por unanimidad el acuerdo con EU por Groenlandia"
-  },
-  {
-   "hora": "12:04",
-   "id": "N0fb3N8kbVs",
-   "titulo": "La Corte de la ONU declara genocidio contra los rohingya en Myanmar"
-  },
-  {
-   "hora": "15:07",
-   "id": "TQ8vkwU5IrU",
-   "titulo": "José Luis Abarca es sentenciado a 60 años por el ataque a Los Avispones"
-  },
-  {
-   "hora": "20:05",
-   "id": "krZmdUJ3xCA",
-   "titulo": "Trump, Putin y Xi firman declaración de paz en su primer encuentro"
-  }
- ],
  "2026-11-20": [
   {
    "hora": "05:07",
@@ -146,6 +124,13 @@
    "hora": "20:03",
    "id": "dpFpHpDufAU",
    "titulo": "Muere Andy Taylor, guitarrista de Duran Duran, a los 65 años"
+  }
+ ],
+ "2026-11-26": [
+  {
+   "hora": "05:02",
+   "id": "zYafJ45XD8E",
+   "titulo": "Muere Andy Taylor, guitarrista original de Duran Duran, a los 65 años"
   }
  ]
 }

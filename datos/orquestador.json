@@ -34,7 +34,8 @@
   "2026-11-25-madrugada": "fallida 05:37",
   "2026-11-25-manana": "fallida 12:06",
   "2026-11-25-tarde": "automatica 15:03",
-  "2026-11-25-noche": "automatica 20:03"
+  "2026-11-25-noche": "automatica 20:03",
+  "2026-11-26-madrugada": "automatica 05:02"
  },
  "resumen": "2026-11-25",
  "comandos": 2,

@@ -119,7 +119,7 @@ def con_elevenlabs(texto, salida, llamar=None):
 
     if not (config.ELEVENLABS_KEY and config.ELEVENLABS_VOZ):
         raise RuntimeError("faltan ELEVENLABS_API_KEY o ELEVENLABS_VOICE_ID")
-    cuerpo = {"text": texto, "model_id": config.ELEVENLABS_MODELO}
+    cuerpo = {"text": texto, "model_id": config.ELEVENLABS_MODELO, "language_code": "es"}
     if abs(config.ELEVENLABS_VELOCIDAD - 1.0) > 1e-6:
         cuerpo["voice_settings"] = {"speed": config.ELEVENLABS_VELOCIDAD}
 

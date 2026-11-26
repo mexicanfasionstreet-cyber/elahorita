@@ -99,3 +99,37 @@ def test_retrato_angosto_va_nitido_y_debajo_del_titular():
 def test_foto_de_666_px_ya_cuenta():
     pag = [{"title": "Vladímir Putin", "pageimage": "Vladimir_Putin_(2026_02_23)_(cropped).jpg"}]
     assert fotos.buscar("Vladimir Putin", wiki(pag, ii(licencia="CC BY 4.0", ancho=666))) is not None
+
+
+def wiki_galeria(imagenes, principal="principal.jpg"):
+    """Articulo con foto principal y una galeria de otras imagenes."""
+    def llamar(api, params):
+        if "commons" in api:
+            return {"query": {"pages": [{"imageinfo": [ii()]}]}}
+        if params.get("prop") == "images":
+            return {"query": {"pages": [{"images": [{"title": f"Archivo:{n}"} for n in imagenes]}]}}
+        return {"query": {"pages": [{"title": "Claudia Sheinbaum", "pageimage": principal}]}}
+    return llamar
+
+
+def test_si_la_foto_principal_ya_salio_se_busca_otra_del_articulo():
+    llamar = wiki_galeria(["Sheinbaum_Logo.svg", "Mapa.jpg", "Sheinbaum_en_Palacio.jpg", "Otra.jpg"])
+    info = fotos.buscar("Claudia Sheinbaum", llamar, evitar={"principal.jpg"})
+    assert info["archivo"] == "Sheinbaum_en_Palacio.jpg"      # sin logos ni mapas
+    info = fotos.buscar("Claudia Sheinbaum", llamar, evitar={"principal.jpg", "sheinbaum_en_palacio.jpg"})
+    assert info["archivo"] == "Otra.jpg"
+
+
+def test_si_todas_ya_salieron_va_fondo_de_diseno():
+    llamar = wiki_galeria(["Otra.jpg"])
+    assert fotos.buscar("Claudia Sheinbaum", llamar, evitar={"principal.jpg", "otra.jpg"}) is None
+
+
+def test_una_foto_no_se_repite_entre_videos():
+    llamar = wiki_galeria(["Otra.jpg", "Tercera.jpg"])
+    guion = {"notas": [{"foto": "Claudia Sheinbaum"}]}
+    primero = fotos.para_historias([{}], guion, llamar)[0]["foto"]
+    segundo = fotos.para_historias([{}], guion, llamar)[0]["foto"]
+    tercero = fotos.para_historias([{}], guion, llamar)[0]["foto"]
+    assert [primero["archivo"], segundo["archivo"], tercero["archivo"]] == \
+        ["principal.jpg", "Otra.jpg", "Tercera.jpg"]

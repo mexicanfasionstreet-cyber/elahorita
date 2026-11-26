@@ -178,3 +178,23 @@ def test_el_guionista_sabe_que_pediste(monkeypatch):
 
 def test_con_enlace_no_hay_pedido():
     assert nota.pedido_del_editor("https://elpais.com/x") == ""
+
+
+def test_busqueda_con_errata_y_palabras_sueltas_prueba_variantes(monkeypatch):
+    """'sheinbuan vs DEA y CIA' no trae nada tal cual: se reintenta sin el ruido."""
+    import aggregate
+    pedidas = []
+
+    def fetch(url, *a, **k):
+        pedidas.append(url)
+        return url
+
+    def parse(url, fuente):
+        # solo responde cuando la consulta ya no trae la errata
+        return [dict(x) for x in RESULTADOS] if "sheinbuan" not in url else []
+
+    monkeypatch.setattr(aggregate, "fetch", fetch)
+    monkeypatch.setattr(aggregate, "parse_feed", parse)
+    grupos = nota.buscar_tema("sheinbuan vs DEA y CIA")
+    assert grupos and len(pedidas) >= 2
+    assert nota.consultas("sheinbuan vs DEA y CIA")[:2] == ["sheinbuan vs DEA y CIA", "sheinbuan dea cia"]

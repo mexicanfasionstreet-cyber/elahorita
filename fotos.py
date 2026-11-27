@@ -115,6 +115,20 @@ def otras_fotos(titulo, lang, llamar=None):
     return salida
 
 
+def _info_de(ii):
+    """URL a 1280 px, credito y licencia de un imageinfo, solo si es libre y sirve."""
+    meta = {k: (v or {}).get("value", "") for k, v in (ii.get("extmetadata") or {}).items()}
+    licencia = _limpio(meta.get("LicenseShortName"), 40)
+    if str(meta.get("NonFree", "")).lower() == "true" or not LICENCIA_LIBRE.match(licencia):
+        return None
+    if int(ii.get("width") or 0) < ANCHO_MIN:
+        return None
+    autor = _limpio(meta.get("Artist")) or "autor en Wikimedia Commons"
+    return {"url": ii.get("thumburl") or ii.get("url"), "licencia": licencia, "autor": autor,
+            "pagina": ii.get("descriptionurl", ""),
+            "credito": f"{autor} ({licencia}), Wikimedia Commons"}
+
+
 def info_commons(archivo, llamar=None):
     """URL a 1280 px, credito y licencia, solo si la foto es libre y sirve."""
     llamar = llamar or _get
@@ -126,17 +140,35 @@ def info_commons(archivo, llamar=None):
     paginas = (datos.get("query") or {}).get("pages", [])
     if not paginas or not paginas[0].get("imageinfo"):
         return None
-    ii = paginas[0]["imageinfo"][0]
-    meta = {k: (v or {}).get("value", "") for k, v in (ii.get("extmetadata") or {}).items()}
-    licencia = _limpio(meta.get("LicenseShortName"), 40)
-    if str(meta.get("NonFree", "")).lower() == "true" or not LICENCIA_LIBRE.match(licencia):
+    return _info_de(paginas[0]["imageinfo"][0])
+
+
+def buscar_en_commons(termino, llamar=None, evitar=()):
+    """Fotos libres de Commons cuyo nombre trae lo pedido ("Abbas Araghchi").
+
+    Para cuando el articulo no tiene mas fotos nuevas: Commons guarda mucho mas
+    material que el articulo. Se exige que el nombre del archivo contenga todas las
+    palabras del termino, para no traer a otra persona.
+    """
+    llamar = llamar or _get
+    claves = _norm(termino)
+    if not claves:
         return None
-    if int(ii.get("width") or 0) < ANCHO_MIN:
-        return None
-    autor = _limpio(meta.get("Artist")) or "autor en Wikimedia Commons"
-    return {"url": ii.get("thumburl") or ii.get("url"), "licencia": licencia, "autor": autor,
-            "pagina": ii.get("descriptionurl", ""),
-            "credito": f"{autor} ({licencia}), Wikimedia Commons"}
+    datos = llamar("https://commons.wikimedia.org/w/api.php", {
+        "action": "query", "generator": "search", "gsrnamespace": 6, "gsrlimit": 25,
+        "gsrsearch": f"{termino} filetype:bitmap", "prop": "imageinfo",
+        "iiprop": "url|size|extmetadata", "iiurlwidth": ANCHO_BAJADA})
+    paginas = sorted((datos.get("query") or {}).get("pages", []), key=lambda p: p.get("index", 0))
+    for pag in paginas:
+        nombre = (pag.get("title") or "").split(":", 1)[-1].replace(" ", "_")
+        if (not nombre.lower().endswith(EXTENSIONES) or NO_FOTO.search(nombre)
+                or _arch(nombre) in evitar or not claves <= _norm(nombre)):
+            continue
+        info = _info_de((pag.get("imageinfo") or [{}])[0]) if pag.get("imageinfo") else None
+        if info:
+            info["archivo"] = nombre
+            return info
+    return None
 
 
 def buscar(termino, llamar=None, evitar=()):
@@ -172,6 +204,14 @@ def buscar(termino, llamar=None, evitar=()):
         except Exception as e:  # noqa: BLE001  (red, JSON raro: se sigue sin foto)
             print(f"  aviso: busqueda de foto fallo en {lang} ({type(e).__name__})")
             continue
+    try:
+        info = buscar_en_commons(termino, llamar, evitar)
+    except Exception as e:  # noqa: BLE001
+        print(f"  aviso: busqueda en Commons fallo ({type(e).__name__})")
+        info = None
+    if info:
+        info["termino"] = termino
+        return info
     return None
 
 

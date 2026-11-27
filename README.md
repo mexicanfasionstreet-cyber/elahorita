@@ -203,7 +203,9 @@ Cada franja descarta lo ya publicado (mismo enlace, o dos entidades en común). 
 
 Cada foto libre que sale se anota en `datos/fotos-usadas.json` y **no vuelve a salir en 4 días**.
 Si la foto principal del artículo ya se usó (p. ej. la de Sheinbaum), se toma otra de la galería
-del mismo artículo (sin logos ni mapas); si no queda ninguna nueva, la nota va con el fondo de diseño.
+del mismo artículo (sin logos ni mapas); si no hay más, se busca en Wikimedia Commons por el nombre (solo archivos que lo traen y con licencia libre);
+si aun así no queda ninguna nueva, la nota va con el fondo de diseño.
+No se usan fotos de prensa (AP, Reuters, Getty, EFE): dar crédito no es una licencia y un reclamo es un strike.
 
 ## La voz
 

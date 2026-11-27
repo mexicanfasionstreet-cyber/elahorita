@@ -1,57 +1,5 @@
 [
  {
-  "cuando": "2026-11-23T15:03:47-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
-  "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "huang",
-   "jensen",
-   "nvidia"
-  ],
-  "video": "https://youtube.com/shorts/7yyoYwv4CJc"
- },
- {
-  "cuando": "2026-11-23T15:03:47-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Mikel Arriola anticipa “decenas de partidos” del Mundial Femenil 2031 en México",
-  "link": "https://lopezdoriga.com/deportes/mikel-arriola-anticipa-decenas-de-partidos-del-mundial-femenil-2031-en-mexico/",
-  "entidades": [
-   "arriola",
-   "femenil",
-   "mexico",
-   "mikel",
-   "mundial"
-  ],
-  "video": "https://youtube.com/shorts/7yyoYwv4CJc"
- },
- {
-  "cuando": "2026-11-23T20:03:08-08:00",
-  "origen": "franja-noche",
-  "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
-  "link": "https://zetatijuana.com/2026/11/godoy-descarta-extradicion-inmediata-de-el-chapo-isidro-a-eu-y-confirma-juicio-en-mexico/",
-  "entidades": [
-   "chapo",
-   "eu",
-   "godoy",
-   "isidro",
-   "mexico"
-  ],
-  "video": "https://youtube.com/shorts/wKglBvyS2y4"
- },
- {
-  "cuando": "2026-11-23T20:03:08-08:00",
-  "origen": "franja-noche",
-  "titulo": "Las acciones del gigante tecnológico Nvidia se disparan tras anunciarse el regreso de Jensen Huang como director ejecutivo 11 días después de su renuncia",
-  "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
-  "entidades": [
-   "huang",
-   "jensen",
-   "nvidia"
-  ],
-  "video": "https://youtube.com/shorts/wKglBvyS2y4"
- },
- {
   "cuando": "2026-11-24T05:04:11-08:00",
   "origen": "franja-madrugada",
   "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
@@ -212,5 +160,33 @@
    "two"
   ],
   "video": "https://youtube.com/shorts/szmyteigaWs"
+ },
+ {
+  "cuando": "2026-11-26T20:03:46-08:00",
+  "origen": "franja-noche",
+  "titulo": "El Gobierno mexicano pide a España que aplique el tratado de extradición con Inés Gómez Mont",
+  "link": "https://elpais.com/mexico/2026-11-26/el-gobierno-mexicano-pide-a-espana-que-aplique-el-tratado-de-extradicion-con-ines-gomez-mont.html",
+  "entidades": [
+   "espana",
+   "gobierno",
+   "gomez",
+   "ines",
+   "mont"
+  ],
+  "video": "https://youtube.com/shorts/A7KSnj7B3pQ"
+ },
+ {
+  "cuando": "2026-11-26T20:03:46-08:00",
+  "origen": "franja-noche",
+  "titulo": "Detenido el presidente municipal de Atzitzintla, en Puebla, durante la Operación Enjambre",
+  "link": "https://elpais.com/mexico/2026-11-26/detenido-el-presidente-municipal-de-atzintzinla-en-puebla-durante-la-operacion-enjambre.html",
+  "entidades": [
+   "atzitzintla",
+   "detenido",
+   "enjambre",
+   "operacion",
+   "puebla"
+  ],
+  "video": "https://youtube.com/shorts/A7KSnj7B3pQ"
  }
 ]

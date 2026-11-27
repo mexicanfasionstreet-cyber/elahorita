@@ -1,0 +1,91 @@
+{
+ "origen": "ia",
+ "palabras": 186,
+ "segundos_estimados": 68.9,
+ "historias": [
+  {
+   "titulo": "El Gobierno mexicano pide a España que aplique el tratado de extradición con Inés Gómez Mont",
+   "link": "https://elpais.com/mexico/2026-11-26/el-gobierno-mexicano-pide-a-espana-que-aplique-el-tratado-de-extradicion-con-ines-gomez-mont.html",
+   "seccion": "justicia",
+   "medios": 8,
+   "score": 89.1,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg/1280px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "Bryan Berlin",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_(3x4_close_up_cropped).jpg",
+    "credito": "Bryan Berlin (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Claudia Sheinbaum",
+    "archivo": "Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_(3x4_close_up_cropped).jpg"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Madrid_-_Sky_Bar_360%C2%BA_%28Hotel_Riu_Plaza_Espa%C3%B1a%29%2C_vistas_19.jpg/1280px-Madrid_-_Sky_Bar_360%C2%BA_%28Hotel_Riu_Plaza_Espa%C3%B1a%29%2C_vistas_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC0",
+    "autor": "Zarateman",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Madrid_-_Sky_Bar_360%C2%BA_(Hotel_Riu_Plaza_Espa%C3%B1a),_vistas_19.jpg",
+    "credito": "Zarateman (CC0), Wikimedia Commons",
+    "termino": "Madrid",
+    "archivo": "Madrid_-_Sky_Bar_360º_(Hotel_Riu_Plaza_España),_vistas_19.jpg"
+   }
+  },
+  {
+   "titulo": "Detenido el presidente municipal de Atzitzintla, en Puebla, durante la Operación Enjambre",
+   "link": "https://elpais.com/mexico/2026-11-26/detenido-el-presidente-municipal-de-atzintzinla-en-puebla-durante-la-operacion-enjambre.html",
+   "seccion": "seguridad",
+   "medios": 4,
+   "score": 79.9,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Garc%C3%ADa_Harfuch_%28cropped_3%29.jpg/1280px-Garc%C3%ADa_Harfuch_%28cropped_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 4.0",
+    "autor": "EneasMx",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Garc%C3%ADa_Harfuch_(cropped_3).jpg",
+    "credito": "EneasMx (CC BY-SA 4.0), Wikimedia Commons",
+    "termino": "Omar García Harfuch",
+    "archivo": "García_Harfuch_(cropped_3).jpg"
+   },
+   "foto2": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Mexico-Popocatepetl.jpg/1280px-Mexico-Popocatepetl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 3.0",
+    "autor": "Jakub Hejtmánek",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mexico-Popocatepetl.jpg",
+    "credito": "Jakub Hejtmánek (CC BY-SA 3.0), Wikimedia Commons",
+    "termino": "Puebla",
+    "archivo": "Mexico-Popocatepetl.jpg"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "México pide a España extraditar a Inés Gómez Mont y cae alcalde en Puebla",
+  "gancho": "El gobierno mexicano ya reclamó formalmente a España la entrega de Inés Gómez Mont, mientras en Puebla cae otro presidente municipal por sus presuntos vínculos con un grupo criminal.",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "texto": "La presidenta Claudia Sheinbaum pidió este jueves que España aplique el tratado de extradición en el caso de Inés Gómez Mont. La mandataria lamentó que su gobierno aún no reciba respuesta de Madrid. La Fiscalía General de la República solicitó formalmente al Ejecutivo de Pedro Sánchez que extradite a la presentadora, que llegó a la capital española el martes tras ser deportada por Estados Unidos. La FGR la acusa de delincuencia organizada, operaciones con recursos de procedencia ilícita y defraudación fiscal equiparada.",
+    "foto": "Claudia Sheinbaum",
+    "foto2": "Madrid",
+    "datos": [
+     "Casi 3.000 millones de pesos",
+     "Delitos: delincuencia organizada",
+     "Deportada por EU a España"
+    ],
+    "pantalla": "Sheinbaum pide a España extraditar a Inés Gómez Mont"
+   },
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "El secretario de Seguridad federal, Omar García Harfuch, anunció la detención de Eduardo Velázquez Medina, presidente municipal de Atzitzintla, en Puebla. Está acusado de secuestro exprés y robo de vehículo agravado relacionados con la célula criminal Los Zúñiga. Las autoridades siguieron la pista del grupo hasta llegar al alcalde, que según fuentes oficiales mantenía una relación de compadrazgo con Genaro Zúñiga Alvarado, líder de la banda.",
+    "foto": "Omar García Harfuch",
+    "foto2": "Puebla",
+    "datos": [
+     "Seis servidores públicos detenidos",
+     "Tres presidentes municipales",
+     "28 acciones operativas"
+    ],
+    "pantalla": "Detenido alcalde de Atzitzintla por Operación Enjambre"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "EXTRADICIÓN Y OPERACIÓN ENJAMBRE"
+ }
+}

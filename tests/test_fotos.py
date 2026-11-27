@@ -133,3 +133,21 @@ def test_una_foto_no_se_repite_entre_videos():
     tercero = fotos.para_historias([{}], guion, llamar)[0]["foto"]
     assert [primero["archivo"], segundo["archivo"], tercero["archivo"]] == \
         ["principal.jpg", "Otra.jpg", "Tercera.jpg"]
+
+
+def test_si_el_articulo_no_tiene_mas_fotos_se_busca_en_commons():
+    def llamar(api, params):
+        if "commons" in api and params.get("generator") == "search":
+            return {"query": {"pages": [
+                {"title": "File:Otro_Persona.jpg", "index": 1, "imageinfo": [ii()]},
+                {"title": "File:Abbas_Araghchi_2025.jpg", "index": 2, "imageinfo": [ii()]},
+                {"title": "File:Abbas_Araghchi_logo.jpg", "index": 3, "imageinfo": [ii()]}]}}
+        if "commons" in api:
+            return {"query": {"pages": [{"imageinfo": [ii()]}]}}
+        if params.get("prop") == "images":
+            return {"query": {"pages": [{"images": []}]}}
+        return {"query": {"pages": [{"title": "Abbas Araghchi", "pageimage": "principal.jpg"}]}}
+    info = fotos.buscar("Abbas Araghchi", llamar, evitar={"principal.jpg"})
+    assert info["archivo"] == "Abbas_Araghchi_2025.jpg"        # la de otra persona y el logo no
+    assert fotos.buscar("Abbas Araghchi", llamar,
+                        evitar={"principal.jpg", "abbas_araghchi_2025.jpg"}) is None

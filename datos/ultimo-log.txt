@@ -1,3 +1,71 @@
-2026-11-27 14:57 Tijuana · franja pendiente: ninguna
+2026-11-27 15:00 Tijuana · franja pendiente: tarde
 sin novedades
-sin novedades
+corriendo la franja tarde
+  $ --days 2
+  (24.4 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 63
+
+1241 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+284 nuevas, 19707 en 30 dias)
+
+  secciones revisadas con IA: 4 cambio(s)
+  131 historias desde 27 12:00
+    90.4 peso  20.0 · Una atípica tormenta invernal provocará lluvias muy fuertes que activa
+    80.7 peso  21.0 · "Ni EE.UU. llegó tan lejos": por qué Costa Rica le impidió la entrada 
+    77.6 peso  19.5 · EU ofrece a Caro Quintero declararse culpable por narcotráfico y el as
+    69.8 peso   7.5 · Activan Alertas Roja y Naranja en la CDMX por fuertes lluvias hoy vier
+  $ --franja tarde --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-tarde.json --link https://elpais.com/mexico/2026-11-27/la-primera-tormenta-invernal-provocara-lluvias-muy-fuertes-en-ciudad-de-mexico-y-caida-de-nieve-en-las-zonas-altas.html --previo  --link https://www.bbc.com/mundo/articles/cmpqrv8e8n32o?at_medium=RSS&at_campaign=rss --previo  --reserva https://zetatijuana.com/2026/11/eu-ofrece-a-caro-quintero-declararse-culpable-por-narcotrafico-y-el-asesinato-del-agente-camarena/ --reserva https://lopezdoriga.com/nacional/activan-alertas-roja-y-naranja-en-la-cdmx-por-fuertes-lluvias-hoy-viernes-27-de-noviembre/
+  (8.7 s)
+  material nota 1: 0 palabras de https://elpais.com/mexico/2026-11-27/la-primera-tormenta-inv
+  material nota 2: 463 palabras de https://www.bbc.com/mundo/articles/cmpqrv8e8n32o?at_medium=R
+aviso: la nota 1 tiene poco material (41 palabras); se quita
+--- GUION (ia) · 1 nota(s) · 156 palabras ~ 58 s ---
+
+TITULO YOUTUBE: Costa Rica le niega la entrada a la relatora de la ONU Francesca Albanese
+GANCHO: Costa Rica le cerró la puerta a una relatora de la ONU y ella respondió desde el aeropuerto.
+
+[MUNDO] Costa Rica le negó la entrada a Francesca Albanese, relatora especial de la ONU sobre los territorios palestinos ocupados. El director de Migración, Omer Badilla, dijo que la rechazaron por seguridad nacional y porque pesa sobre ella una alerta internacional por presuntos vínculos con actos terroristas. Albanese venía invitada a recibir un doctorado honoris causa de la Universidad de Costa Rica. El acto se hizo igual: participó por videollamada desde el aeropuerto Juan Santamaría. Ahí dijo que le indigna que el gobierno costarricense haya difundido informaciones falsas que la vinculan con el terrorismo, y que defender los derechos humanos no es terrorismo. Volker Türk, alto comisionado de la ONU para los derechos humanos, pidió a Costa Rica reconsiderar la medida, y Amnistía Internacional le reclamó respetar la libertad académica.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: "Ni EE.UU. llegó tan lejos": por qué Costa Rica le impidió la entrada  (5 medios)
+  foto nota 1: Francesca Albanese -> Fotografía oficial de la Presidencia de Colombia - Andrea Puentes (Public domain), Wikimedia Commons
+  foto2 nota 1: Costa Rica -> LG Nyqvist (CC BY-SA 4.0), Wikimedia Commons
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-tarde.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-tarde.json
+  (11.6 s)
+guion 2026-11-27-tarde.json · 156 palabras · proveedor elevenlabs
+
+  gancho     5.60 s  [elevenlabs]  18 palabras con tiempo  Costa Rica le cerró la puerta a una relatora…
+  nota1     50.32 s  [elevenlabs]  129 palabras con tiempo  Costa Rica le negó la entrada a Francesca Al…
+  cierre     3.20 s  [elevenlabs]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 59.96 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-27-tarde/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-tarde.json
+  (103.3 s)
+  diapositiva 00-gancho.png · tomas: principal(5.9)
+  diapositiva 01-nota1.png · tomas: principal(3.7) limpia(3.7) foto2(3.7) dato(3.0) principal(3.1) limpia(3.1) dato(3.0) foto2(4.6) principal(4.6) limpia(4.6) foto2(4.6) principal(4.6) limpia(4.6)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 13 tomas
+  video cierre: 1 tomas
+subtitulos: 148 estados · 899 cuadros · 60.0 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-27-tarde/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-27-tarde.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-27-tarde-portada.jpg
+duracion: 59.9 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-27-tarde.mp4
+  titulo: Costa Rica le niega la entrada a la relatora de la ONU Francesca Albanese
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/b2hiWr56mnk
+

@@ -1,34 +1,5 @@
 [
  {
-  "cuando": "2026-11-24T12:06:04-08:00",
-  "origen": "franja-manana",
-  "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
-  "link": "https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html",
-  "entidades": [
-   "congreso",
-   "furia",
-   "huang",
-   "nvidia",
-   "trump"
-  ],
-  "video": "https://youtube.com/shorts/z4djuCewwKU"
- },
- {
-  "cuando": "2026-11-24T12:06:04-08:00",
-  "origen": "franja-manana",
-  "titulo": "Luis Donaldo Colosio va por la gubernatura de Sonora con Movimiento Ciudadano",
-  "link": "https://elpais.com/mexico/2026-11-24/luis-donaldo-colosio-va-por-la-gubernatura-de-sonora-con-movimiento-ciudadano.html",
-  "entidades": [
-   "ciudadano",
-   "colosio",
-   "donaldo",
-   "luis",
-   "movimiento",
-   "sonora"
-  ],
-  "video": "https://youtube.com/shorts/z4djuCewwKU"
- },
- {
   "cuando": "2026-11-24T15:03:58-08:00",
   "origen": "franja-tarde",
   "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
@@ -200,5 +171,19 @@
    "mexico"
   ],
   "video": "https://youtube.com/shorts/2jVTzPvJqgk"
+ },
+ {
+  "cuando": "2026-11-27T15:03:10-08:00",
+  "origen": "franja-tarde",
+  "titulo": "\"Ni EE.UU. llegó tan lejos\": por qué Costa Rica le impidió la entrada al país a Francesca Albanese, relatora especial de la ONU sobre los territorios palestinos",
+  "link": "https://www.bbc.com/mundo/articles/cmpqrv8e8n32o?at_medium=RSS&at_campaign=rss",
+  "entidades": [
+   "albanese",
+   "costa",
+   "francesca",
+   "onu",
+   "rica"
+  ],
+  "video": "https://youtube.com/shorts/b2hiWr56mnk"
  }
 ]

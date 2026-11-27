@@ -1,0 +1,45 @@
+{
+ "origen": "ia",
+ "palabras": 159,
+ "segundos_estimados": 58.9,
+ "historias": [
+  {
+   "titulo": "Italians killed in Kuwait: Why is Iran denying responsibility?",
+   "link": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility?traffic_source=rss",
+   "seccion": "mundo",
+   "medios": 5,
+   "score": 74.2,
+   "sensible": "",
+   "foto": {},
+   "foto2": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Minister_Antonio_Tajani_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "licencia": "Public domain",
+    "autor": "U.S. Department of State",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Minister_Antonio_Tajani_2025.jpg",
+    "credito": "U.S. Department of State (Public domain), Wikimedia Commons",
+    "termino": "Antonio Tajani",
+    "archivo": "Minister_Antonio_Tajani_2025.jpg"
+   }
+  }
+ ],
+ "guion": {
+  "titulo": "Drones matan a dos italianos en Kuwait y Teherán lo niega",
+  "gancho": "Dos técnicos italianos murieron en Kuwait y por primera vez Irán dice que no fue él.",
+  "notas": [
+   {
+    "kicker": "MUNDO",
+    "pantalla": "Dos italianos mueren por drones en Kuwait",
+    "texto": "Dos técnicos italianos murieron en un ataque con drones contra una instalación militar en Kuwait. Trabajaban para Rheinmetall Italia, la filial italiana de la empresa alemana de defensa, dando mantenimiento a antenas de detección del sistema antiaéreo Skyguard que usa el ejército kuwaití. Según reportes de Kuwait e Italia, los mató la metralla de los drones cuando fueron interceptados. También resultaron heridos un kuwaití y un paquistaní. Kuwait y Italia responsabilizan a Irán. Teherán, que en esta guerra no ha negado de forma categórica sus golpes a activos militares de EU alojados por sus vecinos del Golfo y los describe como defensa propia, esta vez niega cualquier papel y sugiere que fue una operación de falsa bandera. Quedan dos preguntas abiertas: quién lanzó el ataque y, si fue Irán, por qué no lo asume.",
+    "foto": "Kuwait",
+    "foto2": "Antonio Tajani",
+    "datos": [
+     "Dos técnicos de Rheinmetall",
+     "Sistema Skyguard",
+     "Irán niega el ataque"
+    ]
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "IRÁN NIEGA EL ATAQUE"
+ }
+}

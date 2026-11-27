@@ -1,31 +1,4 @@
 {
- "2026-11-20": [
-  {
-   "hora": "05:07",
-   "id": "MNDO9bJCkdM",
-   "titulo": "Sean Cairncross deja la ciberseguridad de la Casa Blanca tras fallos"
-  },
-  {
-   "hora": "12:05",
-   "id": "qmPyPzMTAQM",
-   "titulo": "Detienen a Lili Campos, exalcaldesa de Playa del Carmen, en CDMX"
-  },
-  {
-   "hora": "15:04",
-   "id": "dKUIf_RdN2E",
-   "titulo": "Trump amenaza con prohibir a empresas de EU construir centros de datos de IA en el extranjero"
-  },
-  {
-   "hora": "20:03",
-   "id": "6DeFjy0OTfk",
-   "titulo": "Lili Campos, exalcaldesa de Playa del Carmen, detenida en CDMX"
-  },
-  {
-   "hora": "23:43",
-   "id": "8HQGmZRaHHY",
-   "titulo": "Detienen a El Chapo Isidro en Guasave, buscado por el FBI"
-  }
- ],
  "2026-11-21": [
   {
    "hora": "05:02",
@@ -151,6 +124,13 @@
    "hora": "20:03",
    "id": "A7KSnj7B3pQ",
    "titulo": "México pide a España extraditar a Inés Gómez Mont y cae alcalde en Puebla"
+  }
+ ],
+ "2026-11-27": [
+  {
+   "hora": "05:02",
+   "id": "hqFKC3Br0Nw",
+   "titulo": "Drones matan a dos italianos en Kuwait y Teherán lo niega"
   }
  ]
 }

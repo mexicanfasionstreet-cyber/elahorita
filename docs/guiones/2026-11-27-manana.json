@@ -1,0 +1,45 @@
+{
+ "origen": "ia",
+ "palabras": 148,
+ "segundos_estimados": 54.8,
+ "historias": [
+  {
+   "titulo": "ICE destaca colaboración con México en captura de “El Chapo Isidro” en Guasave",
+   "link": "https://zetatijuana.com/2026/11/ice-destaca-colaboracion-con-mexico-en-captura-de-el-chapo-isidro-en-guasave/",
+   "seccion": "seguridad",
+   "medios": 3,
+   "score": 77.4,
+   "sensible": "",
+   "foto": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Iglesia_en_Guasave.jpg/1280px-Iglesia_en_Guasave.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "licencia": "CC BY-SA 2.0",
+    "autor": "Matt Borden",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_en_Guasave.jpg",
+    "credito": "Matt Borden (CC BY-SA 2.0), Wikimedia Commons",
+    "termino": "Guasave",
+    "archivo": "Iglesia_en_Guasave.jpg"
+   },
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Detienen a \"El Chapo Isidro\" en Guasave; ICE destaca apoyo de México",
+  "gancho": "El FBI lo tenía entre los diez fugitivos más buscados y cayó en un operativo que dejó 16 muertos.",
+  "notas": [
+   {
+    "kicker": "SEGURIDAD",
+    "texto": "Fuerzas militares mexicanas detuvieron a Fausto Isidro Meza Flores, alias \"El Chapo Isidro\", en Guasave, Sinaloa, el 20 de noviembre. ICE lo identificó como presunto alto dirigente del Cártel de Sinaloa y uno de los diez fugitivos más buscados por el FBI. La captura ocurrió durante la Operación Centella, con 361 elementos y 14 aeronaves del Ejército y la Guardia Nacional. La SEDENA reportó 16 presuntos integrantes de la organización muertos, cuatro militares fallecidos y ocho detenidos, entre ellos Germán Rolando Gálvez Meza, señalado como segundo al mando. Un juez de control le dictó prisión preventiva y el detenido ingresó al Altiplano el 23 de noviembre. La FGR y el Gabinete de Seguridad definirán si es extraditado a Estados Unidos.",
+    "foto": "Guasave",
+    "foto2": "Secretaría de la Defensa Nacional",
+    "datos": [
+     "Uno de los diez más buscados por el FBI",
+     "361 elementos y 14 aeronaves",
+     "16 muertos y cuatro militares fallecidos"
+    ],
+    "pantalla": "Cae \"El Chapo Isidro\" en operativo en Guasave"
+   }
+  ],
+  "cierre": "Esto es El Ahorita; nos vemos en el siguiente.",
+  "gancho_pantalla": "CAE EL CHAPO ISIDRO"
+ }
+}

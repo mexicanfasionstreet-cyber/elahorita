@@ -1,19 +1,5 @@
 [
  {
-  "cuando": "2026-11-24T05:04:11-08:00",
-  "origen": "franja-madrugada",
-  "titulo": "Godoy descarta extradición inmediata de “El Chapo Isidro” a EU y confirma juicio en México",
-  "link": "https://zetatijuana.com/2026/11/godoy-descarta-extradicion-inmediata-de-el-chapo-isidro-a-eu-y-confirma-juicio-en-mexico/",
-  "entidades": [
-   "chapo",
-   "eu",
-   "godoy",
-   "isidro",
-   "mexico"
-  ],
-  "video": "https://youtube.com/shorts/AxRcLcOj1ao"
- },
- {
   "cuando": "2026-11-24T12:06:04-08:00",
   "origen": "franja-manana",
   "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
@@ -200,5 +186,19 @@
    "kuwait"
   ],
   "video": "https://youtube.com/shorts/hqFKC3Br0Nw"
+ },
+ {
+  "cuando": "2026-11-27T12:02:46-08:00",
+  "origen": "franja-manana",
+  "titulo": "ICE destaca colaboración con México en captura de “El Chapo Isidro” en Guasave",
+  "link": "https://zetatijuana.com/2026/11/ice-destaca-colaboracion-con-mexico-en-captura-de-el-chapo-isidro-en-guasave/",
+  "entidades": [
+   "chapo",
+   "guasave",
+   "ice",
+   "isidro",
+   "mexico"
+  ],
+  "video": "https://youtube.com/shorts/2jVTzPvJqgk"
  }
 ]

@@ -1,36 +1,5 @@
 [
  {
-  "cuando": "2026-11-24T15:03:58-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Furia y consternación en el Congreso de EE UU por el regreso de Huang a Nvidia y el papel de Trump en él",
-  "link": "https://elpais.com/us/2026-11-24/furia-y-consternacion-en-el-congreso-de-ee-uu-por-el-regreso-de-huang-a-nvidia-y-el-papel-de-trump-en-el.html",
-  "entidades": [
-   "congreso",
-   "furia",
-   "huang",
-   "nvidia",
-   "trump"
-  ],
-  "video": "https://youtube.com/shorts/TIzFWKCiey4"
- },
- {
-  "cuando": "2026-11-24T15:03:58-08:00",
-  "origen": "franja-tarde",
-  "titulo": "Santander México cambia de presidente: Ángel Alverde Losada sustituirá a Laura Diez Barroso",
-  "link": "https://elceo.com/negocios/santander-mexico-cambia-de-presidente-angel-alverde-losada-sustituira-a-laura-diez-barroso/",
-  "entidades": [
-   "alverde",
-   "angel",
-   "barroso",
-   "diez",
-   "laura",
-   "losada",
-   "mexico",
-   "santander"
-  ],
-  "video": "https://youtube.com/shorts/TIzFWKCiey4"
- },
- {
   "cuando": "2026-11-25T13:17:25-08:00",
   "origen": "nota",
   "titulo": "Despiden en redes a joven hallado sin vida en la Vía Corta Parral - Chihuahua",
@@ -185,5 +154,18 @@
    "rica"
   ],
   "video": "https://youtube.com/shorts/b2hiWr56mnk"
+ },
+ {
+  "cuando": "2026-11-27T20:02:47-08:00",
+  "origen": "franja-noche",
+  "titulo": "Estados Unidos ofrece un acuerdo a Caro Quintero para que se declare culpable",
+  "link": "https://elpais.com/mexico/2026-11-27/estados-unidos-ofrece-un-acuerdo-a-caro-quintero-para-que-se-declare-culpable.html",
+  "entidades": [
+   "caro",
+   "estados",
+   "quintero",
+   "unidos"
+  ],
+  "video": "https://youtube.com/shorts/h143Ni_uzi8"
  }
 ]

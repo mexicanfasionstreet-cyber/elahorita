@@ -1,3 +1,71 @@
-2026-11-27 19:55 Tijuana · franja pendiente: ninguna
+2026-11-27 20:00 Tijuana · franja pendiente: noche
 sin novedades
-sin novedades
+corriendo la franja noche
+  $ --days 2
+  (31.7 s)
+radar · 42 fuentes · ventana 2 dias
+enlaces de Google News resueltos: 58
+
+1219 noticias · 42/42 fuentes · 0 errores
+datos   -> /home/runner/work/elahorita/elahorita/docs/data/latest.json
+archivo -> /home/runner/work/elahorita/elahorita/datos/noticias.jsonl (+363 nuevas, 20070 en 30 dias)
+
+  secciones revisadas con IA: 8 cambio(s)
+  151 historias desde 27 15:00
+    90.3 peso  39.0 · Estados Unidos ofrece un acuerdo a Caro Quintero para que se declare c
+    76.3 peso  15.0 · Luis de Llano dice que no puede pagar la indemnización a Sasha Sokol y
+    68.5 peso   7.5 · Detienen en Michoacán a presunto implicado en el feminicidio de la inf
+    67.2 peso   5.0 · Buscan a adolescente de 17 años desaparecida en la colonia Natura en A
+  $ --franja noche --json /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-noche.json --link https://elpais.com/mexico/2026-11-27/estados-unidos-ofrece-un-acuerdo-a-caro-quintero-para-que-se-declare-culpable.html --previo  --reserva https://24-horas.mx/estados/detienen-en-michoacan-a-presunto-implicado-en-el-feminicidio-de-la-influencer-valeria-marquez/ --reserva https://www.milenio.com/comunidad/brigada-tormenta-cuauhtemoc-implementa-trabajos-desazolve
+  (8.0 s)
+  material nota 1: 516 palabras de https://elpais.com/mexico/2026-11-27/estados-unidos-ofrece-u
+aviso: guion recortado para caber en 60-75 s
+
+--- GUION (ia) · 1 nota(s) · 165 palabras ~ 61 s ---
+
+TITULO YOUTUBE: Caro Quintero recibe oferta de acuerdo en EU para declararse culpable
+GANCHO: Estados Unidos le puso sobre la mesa un acuerdo a Caro Quintero, pero el juicio sigue en pie.
+
+[JUSTICIA] Estados Unidos le ofreció un acuerdo a Rafael Caro Quintero, cofundador del extinto Cartel de Guadalajara, para que se declare culpable de algunos de los cargos que enfrenta. El fiscal Joseph Nocella informó en una carta al juez que el gobierno ya extendió la oferta por escrito, y que la defensa del excapo la va a revisar. Sobre Caro Quintero pesan señalamientos como principal culpable del secuestro, tortura y asesinato del agente de la DEA Enrique Kiki Camarena, en febrero de 1985 en Guadalajara. El juicio está previsto para el 8 de marzo del próximo año, y el fiscal pidió al juez Frederic Block mantener esa fecha porque no se ha alcanzado un acuerdo con la defensa. Si las partes llegan a un arreglo antes, avisarán al juez para programar una audiencia de cambio de declaración de culpabilidad.
+
+CIERRE: Esto es El Ahorita. Nos vemos en el siguiente.
+
+  fuente: Estados Unidos ofrece un acuerdo a Caro Quintero para que se declare c (11 medios)
+  foto nota 1: sin foto libre nueva para 'Rafael Caro Quintero'
+  foto2 nota 1: sin foto libre nueva para 'Enrique Camarena'
+
+guion -> /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-noche.json
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-noche.json
+  (12.0 s)
+guion 2026-11-27-noche.json · 165 palabras · proveedor elevenlabs
+
+  gancho     5.60 s  [elevenlabs]  18 palabras con tiempo  Estados Unidos le puso sobre la mesa un acue…
+  nota1     49.76 s  [elevenlabs]  138 palabras con tiempo  Estados Unidos le ofreció un acuerdo a Rafae…
+  cierre     3.20 s  [elevenlabs]  9 palabras con tiempo  Esto es El Ahorita. Nos vemos en el siguient…
+
+total voz: 59.40 s (3 segmentos)
+audio -> /home/runner/work/elahorita/elahorita/build/2026-11-27-noche/voz-completa.mp3
+
+  $ --guion /home/runner/work/elahorita/elahorita/docs/guiones/2026-11-27-noche.json
+  (73.3 s)
+  diapositiva 00-gancho.png · tomas: principal(5.9)
+  diapositiva 01-nota1.png · tomas: principal(3.8) principal(3.8) principal(3.8) principal(3.8) dato(3.0) principal(3.9) principal(3.9) principal(3.9) principal(3.9) dato(3.0) principal(4.4) principal(4.4) principal(4.4)
+  diapositiva 02-cierre.png (cierre de marca)
+  video gancho: 1 tomas
+  video nota1: 13 tomas
+  video cierre: 1 tomas
+subtitulos: 157 estados · 891 cuadros · 59.4 s
+salida -> /home/runner/work/elahorita/elahorita/build/2026-11-27-noche/subtitulos.mov
+
+video -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-27-noche.mp4
+portada -> /home/runner/work/elahorita/elahorita/docs/videos/2026-11-27-noche-portada.jpg
+duracion: 59.4 s
+
+  subiendo a YouTube (public)
+subiendo /home/runner/work/elahorita/elahorita/docs/videos/2026-11-27-noche.mp4
+  titulo: Caro Quintero recibe oferta de acuerdo en EU para declararse culpable
+  canal: El Ahorita  ·  id UCBw_c7Qm4Fb0WHqRdx6EUoQ
+
+listo: https://youtube.com/shorts/h143Ni_uzi8
+

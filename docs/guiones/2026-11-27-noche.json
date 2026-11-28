@@ -1,0 +1,37 @@
+{
+ "origen": "ia",
+ "palabras": 165,
+ "segundos_estimados": 61.1,
+ "historias": [
+  {
+   "titulo": "Estados Unidos ofrece un acuerdo a Caro Quintero para que se declare culpable",
+   "link": "https://elpais.com/mexico/2026-11-27/estados-unidos-ofrece-un-acuerdo-a-caro-quintero-para-que-se-declare-culpable.html",
+   "seccion": "justicia",
+   "medios": 11,
+   "score": 90.3,
+   "sensible": "",
+   "foto": {},
+   "foto2": {}
+  }
+ ],
+ "guion": {
+  "titulo": "Caro Quintero recibe oferta de acuerdo en EU para declararse culpable",
+  "gancho": "Estados Unidos le puso sobre la mesa un acuerdo a Caro Quintero, pero el juicio sigue en pie.",
+  "notas": [
+   {
+    "kicker": "JUSTICIA",
+    "texto": "Estados Unidos le ofreció un acuerdo a Rafael Caro Quintero, cofundador del extinto Cartel de Guadalajara, para que se declare culpable de algunos de los cargos que enfrenta. El fiscal Joseph Nocella informó en una carta al juez que el gobierno ya extendió la oferta por escrito, y que la defensa del excapo la va a revisar. Sobre Caro Quintero pesan señalamientos como principal culpable del secuestro, tortura y asesinato del agente de la DEA Enrique Kiki Camarena, en febrero de 1985 en Guadalajara. El juicio está previsto para el 8 de marzo del próximo año, y el fiscal pidió al juez Frederic Block mantener esa fecha porque no se ha alcanzado un acuerdo con la defensa. Si las partes llegan a un arreglo antes, avisarán al juez para programar una audiencia de cambio de declaración de culpabilidad.",
+    "foto": "Rafael Caro Quintero",
+    "foto2": "Enrique Camarena",
+    "datos": [
+     "Oferta por escrito de EU",
+     "Juicio el 8 de marzo",
+     "74 años del excapo"
+    ],
+    "pantalla": "EU ofrece acuerdo a Caro Quintero"
+   }
+  ],
+  "cierre": "Esto es El Ahorita. Nos vemos en el siguiente.",
+  "gancho_pantalla": "OFERTA PARA CARO QUINTERO"
+ }
+}
